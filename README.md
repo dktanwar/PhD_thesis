@@ -7,5 +7,5 @@
 
 ## Visualizing file
 
-- [HTML format](https://dktanwar.github.io/PhD_thesis/_book/index.html)
-- [PDF format](https://dktanwar.github.io/PhD_thesis/_book/thesis.pdf)
+- [HTML format](https://dktanwar.github.io/PhD_thesis/thesis/_book)
+- [PDF format](https://dktanwar.github.io/PhD_thesis/thesis/_book/thesis.pdf)
