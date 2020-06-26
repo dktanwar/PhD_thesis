@@ -1,14 +1,14 @@
 ---
-title: 'Understanding the molecular mechanisms of germline-dependent epigenetic inheritance: Computational analysis of multi-omics data'
-author: 'Deepak K. Tanwar'
-date: 'August 2021'
-institution: ''
-division: ''
-advisor: 'Prof. Dr. Isabelle M. Mansuy'
-altadvisor: 'Prof. Dr. Mark D. Robinson'
-altadvisor: 'Prof. Dr. Tuncay Baubec'
-department: 'Health Sciences and Technology'
-degree: 'Masters of Science'
+title: 'My Final College Paper'
+author: 'Your R. Name'
+date: 'May 20xx'
+institution: 'Reed College'
+division: 'Mathematics and Natural Sciences'
+advisor: 'Advisor F. Name'
+# If you have more two advisors, un-silence line 7
+#altadvisor: 'Your Other Advisor'
+department: 'Mathematics'
+degree: 'Bachelor of Arts'
 knit: bookdown::render_book
 site: bookdown::bookdown_site
 
@@ -20,10 +20,10 @@ params:
 # Remove the hashtag to specify which version of output you would like.
 # Can only choose one at a time.
 output:
-  # thesisdown::thesis_pdf: default 
-  thesisdown::thesis_gitbook: default
-  # thesisdown::thesis_word: default
-  # thesisdown::thesis_epub: default
+  thesisdown::thesis_pdf: default 
+#  thesisdown::thesis_gitbook: default         
+#  thesisdown::thesis_word: default
+#  thesisdown::thesis_epub: default
 
 # If you are creating a PDF you'll need to write your preliminary content 
 # (e.g., abstract, acknowledgements) below or use code similar to line 25-26 
