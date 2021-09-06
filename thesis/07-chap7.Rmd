@@ -1,3 +1,0 @@
-# OmniSperm: An optimized pipeline for parallel multiomics analyses and offspring production using sperm from a single mouse for cross-generation research.
-
-## Manuscript
