@@ -2,22 +2,25 @@
 
 ## Epigenetics
 
+## Germline epigenetics
+
+### Spermatogonial Stem Cells
+### Reprogramming
+
 ## Epigenetic Inheritance
-
-## Transgenerational Epigenetic Inheritance
-
-## Vectors of TEI
-
-## Epigenetic modifications in the germ cells
+### Transgenerational Epigenetic Inheritance
 
 ## Models of Epigenetic Inheritance
 
 ## MSUS mouse model
 
-## Spermatogonial Stem Cells
+## Vectors of TEI
 
 ## Extracellular vesicles
 
 ## Small RNAs
+### Challenges for analyzing sRNA-seq dataset
 
 ## Aims
+
+## Thesis overview
