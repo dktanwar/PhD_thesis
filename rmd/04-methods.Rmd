@@ -1,0 +1,23 @@
+# Methods {- #methods}
+
+## FACS
+
+## Immunocytochemistry
+
+## RNA extraction and library preparation
+
+## Library preparation for Omni-ATAC
+
+## Version controlled data analysis using git
+
+## Data analysis directory organization
+
+## Pipelines for data analysis
+
+### Bulk RNA-seq
+
+### ATAC-seq
+
+### ChIP-seq
+
+### WGBS & RRBS

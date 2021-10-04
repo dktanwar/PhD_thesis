@@ -295,53 +295,74 @@
   \baselineskip = 1.4\baselineskip
   \setbox0=\hbox{of the Requirements for the Degree}
 
+  % \setmainfont{Arial}
+
   \begin{center}
     \setcounter{page}{1}
+    {\fontsize{16}{2}\selectfont  DISS. ETH NO. ..........}
     \null\vfil
-    {\fontsize{12}{14}\selectfont \@title}
+    {\fontsize{20}{2}\selectfont \bf \@title}
     \vfil
-    \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
+    % \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
+    % \vfil
+    {\fontsize{16}{2} A thesis submitted to attain the degree of} \\
+    DOCTOR OF SCIENCES of ETH ZURICH \\
+    (Dr. sc. ETH Zurich)
     \vfil
-    A Thesis \\
-    Presented to \\
-    \@thedivisionof \ \@division \\
-    \@institution
+    presented by\\
+    \@author\\
+    M.Sc., McGill University, Canada
     \vfil
-    \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
+    born on 30.10.1991\\
+    citizen of India
     \vfil
-    In Partial Fulfillment \\
-    of the Requirements for the Degree \\
-    \@degree
+    accepted on the recommendation of
     \vfil
-    \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
-    \bigskip
-    \centerline{}
-    \bigskip
-    {\fontsize{12}{14}\selectfont \lineskip .75em
-    \begin{tabular}[t]{c}%
-      \@author
-    \end{tabular}\par}
-    \vskip 1.5em
-    {\fontsize{12}{14}\selectfont \@date \par}
+    Prof. Isabelle Mansuy, examiner\\
+    Prof. Tuncay Baubec, co-examiner\\
+    Prof. Mark Robinson, co-examiner
+    \vfil
+    2021
+    
+    
+    % \@thedivisionof \ \@division \\
+    % \@institution
+    % \vfil
+    % \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
+    % \vfil
+    % In Partial Fulfillment \\
+    % of the Requirements for the Degree \\
+    % \@degree
+    % \vfil
+    % \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
+    % \bigskip
+    % \centerline{}
+    % \bigskip
+    % {\fontsize{12}{14}\selectfont \lineskip .75em
+    % \begin{tabular}[t]{c}%
+      % \@author
+    % \end{tabular}\par}
+    % \vskip 1.5em
+    % {\fontsize{12}{14}\selectfont \@date \par}
   \end{center}\par
   \end{titlepage}
 
 %% Approved for the division page
-  \cleardoublepage
-  {\fontsize{12}{14}
-  \setbox0=\hbox{Approved for the \@approvedforthe}
-  \thispagestyle{empty}
-  \null\vfil		% just below center of page
-  \par\vskip 6cm	% below center, not center
-  \centerline{\copy0}	% approved
-  \centerline{(\@department)} %major
-  \vskip 1cm		%space to sign
-  \centerline{\makebox[\wd0][c]{\hrulefill}
-	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\hrulefill} \fi}
-  \centerline{\makebox[\wd0][c]{\@advisor}
-	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\@altadvisor} \fi}
-  \par\vfil\null}
-  \cleardoublepage
+%   \cleardoublepage
+%   {\fontsize{12}{14}
+%   \setbox0=\hbox{Approved for the \@approvedforthe}
+%   \thispagestyle{empty}
+%   \null\vfil		% just below center of page
+%   \par\vskip 6cm	% below center, not center
+%   \centerline{\copy0}	% approved
+%   \centerline{(\@department)} %major
+%   \vskip 1cm		%space to sign
+%   \centerline{\makebox[\wd0][c]{\hrulefill}
+% 	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\hrulefill} \fi}
+%   \centerline{\makebox[\wd0][c]{\@advisor}
+% 	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\@altadvisor} \fi}
+%   \par\vfil\null}
+%   \cleardoublepage
   }
 }
 
@@ -351,7 +372,7 @@
 %\newcommand{\Shorttitle}[1]{\def\@Shorttitle{#1}}
 \newcommand{\Plainauthor}[1]{\def\@Plainauthor{#1}}
 \newcommand{\Abstract}[1]{\def\@Abstract{#1}}
-%\newcommand{\Keywords}[1]{\def\@Keywords{#1}}
+% \newcommand{\Keywords}[1]{\def\@Keywords{#1}}
 %\newcommand{\Plainkeywords}[1]{\def\@Plainkeywords{#1}}
 \newcommand{\Acknowledgements}[1]{\def\@Acknowledgements{#1}}
 \newcommand{\Dedication}[1]{\def\@Dedication{#1}}
