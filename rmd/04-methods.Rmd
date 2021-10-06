@@ -13,3 +13,5 @@
 ### ChIP-seq
 
 ### WGBS & RRBS
+
+### small RNA-seq
