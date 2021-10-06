@@ -12,10 +12,6 @@ small-rnas
 challenges-for-analyzing-srna-seq-dataset
 aims
 thesis-overview
-facs
-immunocytochemistry
-rna-extraction-and-library-preparation
-library-preparation-for-omni-atac
 version-controlled-data-analysis-using-git
 data-analysis-directory-organization
 pipelines-for-data-analysis
@@ -39,7 +35,7 @@ methods-1
 mouse-husbandry
 germ-cells-isolation
 spermatogonial-cells-enrichment-by-facs
-immunocytochemistry-1
+immunocytochemistry
 rna-extraction-and-rna-seq-library-preparation-for-rna-seq
 omni-atac-llibrary-preparation-for-omni-atac-and-sequencing
 rna-sequencing-rna-seq
