@@ -1,4 +1,4 @@
-# Methods {- #methods}
+# Bioinformatics methods {- #methods}
 
 ## Version controlled data analysis using git
 
@@ -15,3 +15,5 @@
 ### WGBS & RRBS
 
 ### small RNA-seq
+
+#### Challenges for analyzing sRNA-seq dataset

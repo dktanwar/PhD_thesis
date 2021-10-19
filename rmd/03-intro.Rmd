@@ -12,15 +12,10 @@
 
 ## Models of Epigenetic Inheritance
 
-## MSUS mouse model
+### MSUS mouse model
 
 ## Vectors of TEI
 
-## Extracellular vesicles
+### Extracellular vesicles
 
-## Small RNAs
-### Challenges for analyzing sRNA-seq dataset
-
-## Aims
-
-## Thesis overview
+### Small RNAs

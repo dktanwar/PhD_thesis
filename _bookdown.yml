@@ -1,9 +1,10 @@
 book_filename: "thesis"
 chapter_name: "Chapter "
-rmd_files: ["index.Rmd", "rmd/01-abstract.Rmd", "rmd/02-abstractDE.Rmd", "rmd/03-intro.Rmd", "rmd/04-methods.Rmd", "rmd/05-dev.Rmd", "rmd/06-ev.Rmd", "rmd/07-shortRNA.Rmd", "rmd/08-discussion.Rmd", "rmd/09-conclusion.Rmd", "rmd/10-appendix1.Rmd", "rmd/11-appendix2.Rmd", "rmd/12-appendix3.Rmd", "rmd/99-references.Rmd"]
+rmd_files: ["index.Rmd", "rmd/01-summary.Rmd", "rmd/02-summaryDE.Rmd", "rmd/03-intro.Rmd", "rmd/04-methods.Rmd", "rmd/05-aims.Rmd", "rmd/06-dev.Rmd", "rmd/07-ev.Rmd", "rmd/08-shortRNA.Rmd", "rmd/09-discussion.Rmd", "rmd/10-conclusion.Rmd", "rmd/11-appendix1.Rmd", "rmd/12-appendix2.Rmd", "rmd/13-appendix3.Rmd", "rmd/99-references.Rmd"]
 download: [
     ["thesis.pdf", "PDF"],
     ["thesis.epub", "EPUB"],
     ["thesis.docx", "Word"]
   ]
 delete_merged_file: true
+bibliography: [bib/anaraEV.bib]
