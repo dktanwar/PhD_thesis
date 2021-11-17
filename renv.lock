@@ -74,10 +74,10 @@
     },
     "cli": {
       "Package": "cli",
-      "Version": "3.0.1",
+      "Version": "3.1.0",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "e3ae5d68dea0c55a12ea12a9fda02e61"
+      "Hash": "66a3834e54593c89d8beefb312347e58"
     },
     "colorspace": {
       "Package": "colorspace",
@@ -144,10 +144,10 @@
     },
     "generics": {
       "Package": "generics",
-      "Version": "0.1.0",
+      "Version": "0.1.1",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "4d243a9c10b00589889fe32314ffd902"
+      "Hash": "3f6bcfb0ee5d671d9fd1893d2faa79cb"
     },
     "ggplot2": {
       "Package": "ggplot2",
@@ -270,10 +270,10 @@
     },
     "pillar": {
       "Package": "pillar",
-      "Version": "1.6.3",
+      "Version": "1.6.4",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "3323bc1a0988d63b5c65771ba0d3935d"
+      "Hash": "60200b6aa32314ac457d3efbb5ccbd98"
     },
     "pkgconfig": {
       "Package": "pkgconfig",
@@ -305,10 +305,10 @@
     },
     "rlang": {
       "Package": "rlang",
-      "Version": "0.4.11",
+      "Version": "0.4.12",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "515f341d3affe0de9e4a7f762efb0456"
+      "Hash": "0879f5388fe6e4d56d7ef0b7ccb031e5"
     },
     "rmarkdown": {
       "Package": "rmarkdown",
@@ -373,15 +373,15 @@
     },
     "tinytex": {
       "Package": "tinytex",
-      "Version": "0.34.1",
+      "Version": "0.34.3",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "tinytex",
       "RemoteUsername": "yihui",
       "RemoteRef": "HEAD",
-      "RemoteSha": "f834345deb071c88164c8d698fec51ec37254b4d",
-      "Hash": "61683b12bd63a8d14c9ea74c5c90d036"
+      "RemoteSha": "8e6dc53342cf53437f1e6634a9a032fe665211ab",
+      "Hash": "ecaba70868ce1439c29a67374c323928"
     },
     "utf8": {
       "Package": "utf8",
@@ -413,10 +413,10 @@
     },
     "xfun": {
       "Package": "xfun",
-      "Version": "0.26",
+      "Version": "0.27",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "a270216f7ffda25e53298293046d1d05"
+      "Hash": "12b69332f085d350fc1f2ea6cca58397"
     },
     "yaml": {
       "Package": "yaml",

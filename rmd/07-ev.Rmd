@@ -59,9 +59,60 @@ Transmission of information about paternal exposure to the offspring depends on 
 
 ### Isolation of cauda epididymosomes confirmed by several methods
 
-```{r fig1, echo=FALSE, fig.align='center', fig.cap="testFig", fig.width=, fig.height=}
-knitr::include_graphics("figure/1.png")
+```{r fig1, echo=TRUE, fig.align='center', fig.cap="testFig1", fig.width=6.65, fig.height=4.45}
+img <- readJPEG("figure/anaraEV/1.jpeg")
+grid.raster(img)
+# knitr::include_graphics("figure/anaraEV/1.jpeg")
+# magick::image_read("figure/anaraEV/1.jpeg")
 ```
+
+```{r fig2, echo=TRUE, fig.align='center', fig.cap="testFig2", fig.width=5.85, fig.height=5.78}
+img <- readJPEG("figure/anaraEV/2.jpeg")
+grid.raster(img)
+```
+
+```{r fig3, echo=TRUE, fig.align='center', fig.cap="testFig3", fig.width=5.11, fig.height=7.53}
+img <- readJPEG("figure/anaraEV/3.jpeg")
+grid.raster(img)
+```
+
+```{r fig4, echo=TRUE, fig.align='center', fig.cap="testFig4", fig.width=6.7, fig.height=5.79}
+img <- readJPEG("figure/anaraEV/4.jpeg")
+grid.raster(img)
+```
+
+```{r sfig1, echo=TRUE, fig.align='center', fig.cap="testFig4", fig.width=5.15, fig.height=1.93}
+img <- readPNG("figure/anaraEV/s1.png")
+grid.raster(img)
+```
+
+```{r sfig2, echo=TRUE, fig.align='center', fig.cap="testFig4", fig.width=5.66, fig.height=4.83}
+img <- readPNG("figure/anaraEV/s2.png")
+grid.raster(img)
+```
+
+```{r sfig3, echo=TRUE, fig.align='center', fig.cap="testFig4", fig.width=1.9, fig.height=1.9}
+img <- readPNG("figure/anaraEV/s3.png")
+grid.raster(img)
+```
+
+```{r sfig4, echo=TRUE, fig.align='center', fig.cap="testFig4", fig.width=5.58, fig.height=3.99}
+img <- readPNG("figure/anaraEV/s4.png")
+grid.raster(img)
+```
+
+```{r sfig5, echo=TRUE, fig.align='center', fig.cap="testFig4", fig.width=5.33, fig.height=4.06}
+img <- readPNG("figure/anaraEV/s5.png")
+grid.raster(img)
+```
+
+```{r sfig6, echo=TRUE, fig.align='center', fig.cap="testFig4", fig.width=5.54, fig.height=2.19}
+img <- readPNG("figure/anaraEV/s6.png")
+grid.raster(img)
+```
+
+
+
 
 
 \ref{fig:fig1} is a figure

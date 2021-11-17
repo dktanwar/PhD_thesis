@@ -27,7 +27,6 @@ header-includes:
     - \usepackage{float}
     - \usepackage{placeins}
     - \usepackage{lmodern}
-
     # - \usepackage{indentfirst}
 
 
@@ -47,6 +46,10 @@ output:
 
 acknowledgements: |
   I want to thank a few people.
+  # https://tex.stackexchange.com/questions/25798/how-can-i-add-abstract-and-acknowledgement-pages-into-the-table-of-contents/25799
+  
+  dedication: |
+  To Palni
   
 # Specify the location of the bibliography below
 bibliography: [bib/anaraEV.bib]
@@ -97,6 +100,9 @@ if (!require(thesisdown)) {
   }
 }
 library(thesisdown)
+library(png)
+library(grid)
+library(jpeg)
 # Set how wide the R output will go
 options(width = 70)
 ```
