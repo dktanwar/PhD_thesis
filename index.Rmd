@@ -25,7 +25,7 @@ header-includes:
     - \usepackage{fancyhdr}
     - \usepackage{graphics}
     - \usepackage{float}
-    - \usepackage{placeins}
+    # - \usepackage{placeins}
     - \usepackage{lmodern}
     - \usepackage{pdflscape}
     - \usepackage{caption}
@@ -33,6 +33,8 @@ header-includes:
     - \usepackage[labelfont=bf]{caption}
     - \usepackage{wrapfig}
     - \usepackage{pdfpages}
+    - \usepackage{afterpage}
+    - \usepackage[section]{placeins}
 
 # This will automatically install the {remotes} package and {thesisdown}
 # Change this to FALSE if you'd like to install them manually on your own.
@@ -50,7 +52,8 @@ output:
  # thesisdown::thesis_epub: default
 # # 
 acknowledgements: |
-  I want to thank a few people.
+  This doctoral thesis has been an accomplishment that would not have been possible, or anywhere near as enjoyable, without the help and support of a number of incredible individuals. Thank you for all that you have contributed to this thesis. \newline\newline I am eternally grateful to Prof. Dr. Isabelle Mansuy for allowing me to do Doctoral research in her lab. It is a pleasure to be a member of the Neuroepigenetics lab. Thank you to all the members of the Neuroepigenetics lab, past and present. The Neuroepigenetics group was always fun to work with and I learned a lot about experiments. Thank you so much! A special thanks to the present and past members of Y38 for motivating, and various scientific and non-scientific discussions. \newline\newline My sincere thanks to Prof. Dr. Mark Robinson and Prof. Dr. Tuncay Baubec for accepting to be my co-examiners and supporting me throughout my doctoral research. Thank you so much Mark for always being available and providing all the help in writing proposals, helping in supervising students, and discussing and providing solutions to the problems I was facing. \newline\newline I am indebted to Dr. Pierre-Luc Germain for his expert supervision and all the support he has provided. I am grateful for all discussions and suggestions on both scientific and non-scientific issues. Thank you for being so nice and for all the support which was extremely helpful to reach this point. I have learnt a lot from you. \newline\newline I would also like to thank the Directors and members of the Brain Research Institute for creating such a stimulating environment for research. \newline\newline I am extremely grateful for my doctoral funding, the Swiss Government Excellence Scholarship. Thank you so much Sandra Zweifel for always being there. \newline\newline Looking back into the past, this thesis would not have happened without my bachelor’s thesis supervisors Rainer König and Sandro Lindig, who got me interested in the field of bioinformatics data science. \newline\newline Finally, I am very grateful to my family for their continuous support and belief in me. Visiting you always helped me to relax and to not worry about work so much. Last of all, I want to thank my wife, Palni Kundra, for always cheering me up when I was down and for helping me with stupid issues.
+
 #   # https://tex.stackexchange.com/questions/25798/how-can-i-add-abstract-and-acknowledgement-pages-into-the-table-of-contents/25799
 #   
 # dedication: |
@@ -115,7 +118,7 @@ library(dplyr)
 library(kableExtra)
 # Set how wide the R output will go
 # options(width = 70)
-knitr::opts_chunk$set(fig.pos = "h", out.extra = "")
+knitr::opts_chunk$set(fig.pos = "H", out.extra = "")
 ```
 
 ```{=html}
@@ -136,9 +139,4 @@ Alternatively, you can put that content in files like 00--prelim.Rmd and
 
 # List of Abbreviations {.unnumbered}
 
-```{=tex}
-\begin{acronym}[MPC]
-\acro{MPC}{model predictive control}
-\acro{TLA}{Three Letter Acronym}
-\end{acronym}
-```
+

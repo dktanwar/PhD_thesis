@@ -5,7 +5,7 @@ editor_options:
 bibliography: rmd/references.bib
 ---
 
-# Dynamic chromatin accessibility in spermatogonial cells for transcriptional programmings from early postnatal to adult stages {#developmental}
+# Dynamic chromatin accessibility in spermatogonial cells for transcriptional programmings from early postnatal to adult stages {#chapter1}
 
 **Deepak K Tanwar**\textsuperscript{1,2,3,$\dagger$}, Irina
 Lazar-Contes\textsuperscript{1,2,3,$\dagger$}, Pierre-Luc
@@ -20,7 +20,8 @@ Zurich, Zurich, Switzerland. \newline  \textsuperscript{4}Statistical
 Bioinformatics Group, Swiss Institute of Bioinformatics, Zurich,
 Switzerland. \newline \newline  \textsuperscript{$\dagger$}Equal
 contributions \newline\newline \textsuperscript{\#}Corresponding author
-\newline\newline  **Contributions:** *I performed data analysis,
+\newline\newline  
+**Contributions:** *I performed data analysis,
 generated figures, wrote computational methods and figure captions,
 revised manuscript.*
 
@@ -67,8 +68,7 @@ PNW8 and PND15 because the PND14 and PND15 samples were sequenced
 separately and could have unaccountable batch effects. These analyses
 were then updated in the manuscript and appear in Chapter 1.
 
-(ref:dnc1)
-\textbf{Log\textsubscript{2} fold-change comparison of RNA-seq data from the literature and lab (old and new).}
+(ref:dnc1) \textbf{Log\textsubscript{2} fold-change comparison of RNA-seq data from the literature and lab (old and new).}
 (ref:dnsc1) Log\textsubscript{2} fold-change comparison of RNA-seq data
 from the literature and lab (old and new)
 
@@ -98,8 +98,7 @@ in the lab previously and data from the literature. The data from the
 PNW21 stage is also well correlated with the literature (result not
 shown).
 
-(ref:dnc2)
-\textbf{Volcano plot of differentially expressed genes (adjusted \textit{P} $\leq$ 0.05 and absolute Log\textsubscript{2}FC $\geq$ 1)}.\newline \textbf{A:}
+(ref:dnc2) \textbf{Volcano plot of differentially expressed genes (adjusted \textit{P} $\leq$ 0.05 and absolute Log\textsubscript{2}FC $\geq$ 1)}.\newline \textbf{A:}
 PND15 and PND8. \textbf{B:} PNW21 and PND15.
 
 ```{r dn2, echo=FALSE, fig.align='center', fig.cap="(ref:dnc2)", fig.scap="Volcano plot of differentially expressed genes"}
@@ -140,8 +139,7 @@ PND8 samples as the baseline. Based on visual inspection, we select 7
 clusters (k = 7) and merge the clusters with visually observed similar
 expression profiles to obtain 5 clusters, Figure 3.
 
-(ref:dnc3)
-\textbf{K-means clustering (k = 5) of genes with differential expression in postnatal versus adult spermatogonial cells.}
+(ref:dnc3) \textbf{K-means clustering (k = 5) of genes with differential expression in postnatal versus adult spermatogonial cells.}
 Each row depicts a gene and each column depicts a sample. Gene
 expression fold-change is calculated by subtracting mean
 log\textsubscript{2} counts per million (CPM) of PND8 from PND15 and
@@ -199,32 +197,28 @@ represents the signal. For RNA-seq, the fold-change in gene expression
 is calculated by subtracting the mean log\textsubscript{2} CPM of PND8
 from all samples.
 
-(ref:dnc4)
-\textbf{Enriched heatmap of distal differentially accessible regions.}
+(ref:dnc4) \textbf{Enriched heatmap of distal differentially accessible regions.}
 
 ```{r dn4, echo=FALSE, fig.align='center', fig.cap="(ref:dnc4)", fig.scap="Enriched heatmap of distal DARs"}
 img <- readPNG("figure/dev/new/04.png")
 grid.raster(img)
 ```
 
-(ref:dnc5)
-\textbf{Enriched heatmap of proximal differentially accessible regions.}
+(ref:dnc5) \textbf{Enriched heatmap of proximal differentially accessible regions.}
 
 ```{r dn5, echo=FALSE, fig.align='center', fig.cap="(ref:dnc5)", fig.scap="Enriched heatmap of proximal DARs"}
 img <- readPNG("figure/dev/new/05.png")
 grid.raster(img)
 ```
 
-(ref:dnc6)
-\textbf{Enriched heatmap of distal differentially accessible regions with ChIP-seq and BS-seq data.}
+(ref:dnc6) \textbf{Enriched heatmap of distal differentially accessible regions with ChIP-seq and BS-seq data.}
 
 ```{r dn6, echo=FALSE, fig.align='center', fig.cap="(ref:dnc6)", fig.scap="Enriched heatmap of distal DARs with ChIP-seq and BS-seq data"}
 img <- readPNG("figure/dev/new/06.png")
 grid.raster(img)
 ```
 
-(ref:dnc7)
-\textbf{Enriched heatmap of proximal differentially accessible regions with ChIP-seq and BS-seq data.}
+(ref:dnc7) \textbf{Enriched heatmap of proximal differentially accessible regions with ChIP-seq and BS-seq data.}
 
 ```{r dn7, echo=FALSE, fig.align='center', fig.cap="(ref:dnc7)", fig.scap="Enriched heatmap of proximal DARs with ChIP-seq and BS-seq data"}
 img <- readPNG("figure/dev/new/07.png")

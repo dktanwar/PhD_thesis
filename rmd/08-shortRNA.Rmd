@@ -3,7 +3,7 @@ bibliography: rmd/references.bib
 ---
 
 
-# shortRNA: a flexible framework for the analysis of short RNA sequencing data {#shortRNA}
+# shortRNA: a flexible framework for the analysis of short RNA sequencing data {#chapter3}
 
 ## Abstract
 

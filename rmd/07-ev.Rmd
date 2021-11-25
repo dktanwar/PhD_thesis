@@ -5,7 +5,7 @@ editor_options:
 bibliography: [rmd/references.bib]
 ---
 
-# Early life stress affects the miRNA cargo of epididymal extracellular vesicles in mouse {#ev}
+# Early life stress affects the miRNA cargo of epididymal extracellular vesicles in mouse {#chapter2}
 
 Anar Alshanbayeva\textsuperscript{1,2,3}, **Deepak K
 Tanwar**\textsuperscript{1,2,3}, Martin
@@ -138,12 +138,10 @@ cellular marker Glyceraldehyde 3-phosphate dehydrogenase (GAPDH)
 collected particles are 50--300nm in diameter ([Figure 1D]). Imaging by
 transmission electron microscopy showed the typical cup-shaped
 structures of epididymosomes ([Figure 1C], [Supplementary Figure
-S1A](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/biolreprod/105/3/10.1093_biolre_ioab156/2/supplementary_figure1_ioab156.pdf?Expires=1640381143&Signature=ZVMNtS3QxVw~dVZhM9gqOooVrzEx00yRs~6JbxCUuXNT5gu9tUAo2yiGIzdqhqx56PXcV7lBvywNtFhqVS4qxsrkMRk9rSTzJkcDYNgbPA8ovszE09KHMKSFHGeU39vKCR8NtrD1s5ZJcnCuaJ8vd2yQOLcu6aQ6wONICRjOPlHeJYK6qATRTv2XzxOVD8ekoHDarkNbIAgZElI5NDqTAgf0e8h6GGJWVjtjsRQKhI-1xtVvFrEiUCgX~gtE1ndsPUM4zFse1bv3ufszF1-sZQJWNfHSesA5U8s7l4BBlaFc8qRfrrsZBGpXisttr4dbfc2kNSZhAuR0leR5XZXMzw__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA))
-[[17]]. RNA profiling by high-resolution automated electrophoresis
+S1A]) [[17]]. RNA profiling by high-resolution automated electrophoresis
 showed enrichment for small RNAs of different length, similar to
 previous studies on cauda epididymosomal RNA ([Supplementary Figure
-S1B](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/biolreprod/105/3/10.1093_biolre_ioab156/2/supplementary_figure1_ioab156.pdf?Expires=1640381143&Signature=ZVMNtS3QxVw~dVZhM9gqOooVrzEx00yRs~6JbxCUuXNT5gu9tUAo2yiGIzdqhqx56PXcV7lBvywNtFhqVS4qxsrkMRk9rSTzJkcDYNgbPA8ovszE09KHMKSFHGeU39vKCR8NtrD1s5ZJcnCuaJ8vd2yQOLcu6aQ6wONICRjOPlHeJYK6qATRTv2XzxOVD8ekoHDarkNbIAgZElI5NDqTAgf0e8h6GGJWVjtjsRQKhI-1xtVvFrEiUCgX~gtE1ndsPUM4zFse1bv3ufszF1-sZQJWNfHSesA5U8s7l4BBlaFc8qRfrrsZBGpXisttr4dbfc2kNSZhAuR0leR5XZXMzw__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA))
-[@sharma2016; @conine2018].
+S1B]) [@sharma2016; @conine2018].
 
 ```{r fig1, echo=TRUE, eval = F, fig.align='center', fig.cap="testFig1", fig.width=6.65, fig.height=4.45}
 img <- readJPEG("figure/anaraEV/1.jpeg")
@@ -252,23 +250,22 @@ majority of nonsignificant differences in small RNAs appeared to be in
 miRNAs, although some differences in tRNAs and piRNAs were also detected
 ([Figure 3B]). We next performed size-selection on the same libraries to
 enrich for miRNAs and then, we re-sequenced the libraries
-([Supplementary Figure S2A and
-C](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/biolreprod/105/3/10.1093_biolre_ioab156/2/supplementary_figure2_ioab156.pdf?Expires=1640381143&Signature=A9dB7ERupo4JLPnQdqDhxuHcCMk1K3YEl~GjiPtQL5f1C-52xg4PCIbr1I7Yn3OILogZQj81DCgZMOPo-aCl9GL0qDAgKiVBfDk8w31CjcXt3~Az7nMOrU1lTk68CXlxahhYgJpNkdrBiKrI0BNSaC0P6zGRVVBp~x~paJECHF6h~Y7aWZD1JU8-e7crspVYinZ63GhBVYsPxC9GhdW1Ha3jC3cxoZp98MWgWg-D8btfz9ifmCYHFGNe8r-bFzzK3JmavyrUv2-dDPZI31QGx3pWXpQDkYPR29fv--OJw7An6D3RUE97dbPMLK9J2DdoGbIFxJkvaXs5XYZeEs7j1w__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)).
+([Supplementary Figure S2A and C]).
 As expected, size-selection did not alter the abundance of miRNAs and
 uniformly enriched the miRNA fraction in all samples ([Supplementary
 Figure
-S2B--D](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/biolreprod/105/3/10.1093_biolre_ioab156/2/supplementary_figure2_ioab156.pdf?Expires=1640381143&Signature=A9dB7ERupo4JLPnQdqDhxuHcCMk1K3YEl~GjiPtQL5f1C-52xg4PCIbr1I7Yn3OILogZQj81DCgZMOPo-aCl9GL0qDAgKiVBfDk8w31CjcXt3~Az7nMOrU1lTk68CXlxahhYgJpNkdrBiKrI0BNSaC0P6zGRVVBp~x~paJECHF6h~Y7aWZD1JU8-e7crspVYinZ63GhBVYsPxC9GhdW1Ha3jC3cxoZp98MWgWg-D8btfz9ifmCYHFGNe8r-bFzzK3JmavyrUv2-dDPZI31QGx3pWXpQDkYPR29fv--OJw7An6D3RUE97dbPMLK9J2DdoGbIFxJkvaXs5XYZeEs7j1w__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)).
+S2B--D]).
 Differential expression analysis of miRNAs biotypes from the combined
 sequencing datasets after batch effect correction revealed changes in
 several miRNAs in MSUS cauda epididymosomes ([Supplementary Table
-S1](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/biolreprod/105/3/10.1093_biolre_ioab156/2/supplementary_table1_ioab156.pdf?Expires=1640381143&Signature=hQcT70uRlXsKWUAua7URrvbqLq5WTxU4vwd1~Ga6mb0OKJV3yeG40CowmXuaApf7~lM6wbBjGmXZyr4IhMXwHDIYihrJEVpftAhtcWEH1e1zED6fL~IV0m8EHCOxwxnNdbWbzNcT0al-t7qyFt2qzIAo95SJa0NTxxZxc0urlRFiP9pZmkfaLrw89~jBvpXXS7aYjAV5pqPqHAoWdIT6Bg4oM4x5wGaTFRY5XCgkJbOCXh7N6lbu1Fgv4yuOCnq8KLE4uKvg2O7XPava6-ok~ChEmt177tFVCMR56fLuVB6cirx0W~h7n8GyIe4V63uez8t~WQWDi2ljJO3nQ0JkQg__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)).
+S1]).
 These include upregulation of miR-878-5p, miR34c-5p, miR-881-3p and
 downregulation of miR-31-5p and miR-155-5p (adjusted *P* $\geq$ 0.1).
 Differential expression analysis on all small RNA biotypes from the
 combined datasets showed that 70% of all significantly altered small
 RNAs correspond to miRNAs, 15% to tRNAs, 15% to piRNAs and snoRNAs,
 while rRNAs are not changed ([Supplementary Table
-S4](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/biolreprod/105/3/10.1093_biolre_ioab156/2/supplementary_table4_ioab156.pdf?Expires=1640381143&Signature=bfZA5igfuhyNlXc6Dxd~RknEysYoTp8mMADemsoydrYHwhqplbsSK1FcJmQh6q9rqgp~dvhwTjjJ8eL6oXAMYAYmkosxkm8GHbvfl9B3DMNHYM29qOAxat~Kpc7uI8b1n-bUiW5oXMDYxsIXLDD5Hs-6tLUBQZABwaVARlClNlm5zEwx8ahhXgOMJJIaJ08BN2Kz8~kJg9vpb2CQ3TaF2uFW0jyt0mOGajN1aAg4ZW8b48NsCTQ2XNCUn~BiijHGyLQwZLwJdFWzh73IaIJ4CPaGE4N9FFJttpUWD-NvW2fOPWi7afJAOdtfQM-wetBk4sZRD7AHIuGt3q9Zjbdx3Q__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)).
+S4]).
 Pathway analysis of top candidate RNAs from miRNA-based analysis after
 size-selection revealed that the most up- and down-regulated miRNAs
 (*P*\<0.05) have target mRNAs that encode proteins involved in fatty
@@ -294,7 +291,7 @@ occurring in early postnatal life.
 ### mRNA targets of miRNAs from cauda epididymosomes are altered by postnatal stress in sperm and in zygotes
 
 The relative abundance of miRNAs in cauda epididymosomes and mature
-sperm significantly correlated ([Figure 4C](javascript:;)), consistent
+sperm significantly correlated ([Figure 4C]), consistent
 with prior findings [@sharma2016; @chan2020]. Since cauda epididymosomes
 carry small RNA payloads matching those of mature sperm and are part of
 the ejaculate [@frenette2005; @belleannée2013], they may contribute to
@@ -302,29 +299,29 @@ the information delivered to the oocyte upon fertilization. Therefore,
 we looked at the mRNA targets of miRNAs significantly changed in MSUS
 cauda epididymosomes in two previously published analysis of genes
 identified in MSUS sperm and in zygotes derived from MSUS males
-(*P* \< 0.05) [@gapp2020]. For this, we plotted the cumulative log
+(*P* \< 0.05) [@gapp2020]. For this, we plotted the cumulative log
 fold-change distribution of all genes from differential expression
 analysis of sperm or zygotes versus the number of conserved binding
 sites for miRNAs significantly changed by MSUS in cauda epididymosomes
-([Figure 4A and B](javascript:;), [Supplementary Figure
-S5](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/biolreprod/105/3/10.1093_biolre_ioab156/2/supplementary_figure5_ioab156.pdf?Expires=1640381143&Signature=E~BuqHM4R2ZK~lNtgk5CRb9PgOed5iN-la-Suu7HgpjzLeRI6ovIk8ysUsjN5puCiDrwSv95yx9NpQQhRcNqnYhTjvje3dE1LuPf3x6QvxhXWFw7MGkASggRJdKIJ1NQzrS40Y9tq11UGz94I89r3j4U80gYJByTR6-WY7ZTfGHKzXQnssydgIwA~1fGJkTXPmnjrWInWshaBy~uNBiiMvZZiXSg5-6e6Q94tlzyEsDImYUNSOj1eNuFjdeT53l7a~tRPcL1VuQPPQrvQgdMqp3v-5EZ~MoaP8jAGTWSndH5~aKvlrKqNBWSEfcNfq4gSzp-bAr~yQ8B31SDg4BGow__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)).
+([Figure 4A and B], [Supplementary Figure
+S5]).
 Target genes with three binding sites for miR-31-5p, a miRNA
 differentially expressed in MSUS cauda epididymosomes, had increased
 expression in sperm and decreased expression in zygotes from MSUS males
-([Figure 4A and B](javascript:;), [Supplementary Table
-S2](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/biolreprod/105/3/10.1093_biolre_ioab156/2/supplementary_table2_ioab156.pdf?Expires=1640381143&Signature=QmnOeu5RZ4r98SRI57lsR~NVOUzfn0z8gA7iJ~~vonmAWBAvkVnukZ0kMLERMarkyJNolF5Xo8WA0uZVZHzegq1Xo1pmrIGY74GIobjDK2BNJmx1ko77jeoP3PyOlsgCgIBJlzAZEU6q8xp82RWvuPahsRiawgp4mBrRE3Pidz5PzX-6wzfQHrsf35gbSo7gU5OPRENoyu9uFioxFyvdX0mzlLfAQWMdp3YHL67f0mPECylGQt9PkaYSkSTQUvxr6OVKEw5vJ2UaBwDNaHLcM3bRD2rDH~6Jz5muKOZ17escW7K~wKGozeQnag-eCRUbczCwSEHoN18WMTYiG-2n7g__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)
+([Figure 4A and B], [Supplementary Table
+S2]
 and
-[S3](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/biolreprod/105/3/10.1093_biolre_ioab156/2/supplementary_table3_ioab156.pdf?Expires=1640381143&Signature=GgWFyt6kTEqX1mpRI-OUSRXOZrlX6r8FRZ8TG01RqT-KNaotN7LJ8W29qnBDcbrtcu09DeWu8HYQeGV4Q0m6r9ZB24WomVGBGrYmkpNRBc5n~VtxqniqMh38-1pQVG69Kp~JYDAljPsFHt0FnxI6SjyVKipccLwyFzHRevfz~bXNEc8NG781VSXIaogr0z1tDW~ki4sgt6KSuTeSCkbvBuAENodHRwV5KSZSgV96Qz7LmtWiW8PcMTYJ9B0zNk~aslYjRwS36AUbna2pd6D7zMB7BqcE5cyEzvBR9Kn05uHLylTa7S42O6MpPvpXKhxIxgZamrq5h4wgC0HaZB6uGQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)).
+[S3]).
 However, not all targets of miRNAs significantly altered in MSUS cauda
 epididymosomes showed corresponding changes in expression in sperm and
 zygotes ([Supplementary Figure
-S5](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/biolreprod/105/3/10.1093_biolre_ioab156/2/supplementary_figure5_ioab156.pdf?Expires=1640381143&Signature=E~BuqHM4R2ZK~lNtgk5CRb9PgOed5iN-la-Suu7HgpjzLeRI6ovIk8ysUsjN5puCiDrwSv95yx9NpQQhRcNqnYhTjvje3dE1LuPf3x6QvxhXWFw7MGkASggRJdKIJ1NQzrS40Y9tq11UGz94I89r3j4U80gYJByTR6-WY7ZTfGHKzXQnssydgIwA~1fGJkTXPmnjrWInWshaBy~uNBiiMvZZiXSg5-6e6Q94tlzyEsDImYUNSOj1eNuFjdeT53l7a~tRPcL1VuQPPQrvQgdMqp3v-5EZ~MoaP8jAGTWSndH5~aKvlrKqNBWSEfcNfq4gSzp-bAr~yQ8B31SDg4BGow__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)).
+S5]).
 We then conducted miRNA-gene interaction analysis based on
 experimentally validated data from Tarbase [@vlachos2017]. This analysis
 showed that, overall, the five miRNAs significantly changed in MSUS
 cauda epididymosomes target genes that are part of pathways involved in
 steroid biosynthesis, extracellular matrix (ECM)--receptor interaction,
-and cell-adhesion molecules ([Figure 4D](javascript:;)).
+and cell-adhesion molecules ([Figure 4D]).
 
 ## Discussion
 

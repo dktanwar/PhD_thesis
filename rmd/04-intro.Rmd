@@ -1,7 +1,7 @@
 ---
 bibliography: rmd/references.bib
 ---
-
+\FloatBarrier
 # Introduction {#intro .unnumbered}
 
 ## Epigenetics {.unnumbered}
@@ -24,7 +24,7 @@ of" or "in addition to."
 Epigenetic mechanisms regulate the transcriptional programs in response
 to developmental and environmental cues and encompass a variety of
 pre-transcriptional to post-translational events, including DNA
-methylation, post-translational histone modifications (e.g. acetylation
+methylation (DNAme), post-translational histone modifications (e.g. acetylation
 and methylation), histone variations, non-coding RNA (ncRNA) and their
 modifications, and nucleosome remodelling [@susiarjo2016]. Epigenetic
 mechanisms in the somatic cell regulate vital cellular function,
@@ -75,7 +75,7 @@ genome from generation to generation while also possessing the ability
 to differentiate into pluripotent stem cells.
 
 In mice, the primordial germ cells (PGCs), the precursors of
-prospermatogonia, appear at 5.5 days post-coitum (dpc). Prospermatogonia
+prospermatogonia, appear at 5.5 days post-coitum. Prospermatogonia
 establishes SSCs shortly after birth (gonocytes). PGCs undergo global
 DNA demethylation (which involves the full erasure of parental imprints)
 through both active and passive mechanisms as they migrate toward the
@@ -114,7 +114,7 @@ grid.raster(img)
 
 It is difficult to distinguish SSCs from progenitor spermatogonia that
 don't have stem cell activity and are committed to
-differentiation.Specific cell surface markers like Thy1 and TSPAN8 can
+differentiation. Specific cell surface markers like Thy1 and TSPAN8 can
 be used to enrich SSCs. Further, cells extracted from Id4-eGFP
 transgenic mice that express a high amount of GFP signal, and
 combinations of reporter gene and cell surface marker signal can be used
@@ -147,7 +147,7 @@ silencing, centromeric/telomeric structural stability, and gene
 expression [@surani2007]. After a sperm fertilizes an ovum, nearly all
 epigenetic marks are reprogrammed in two short intervals early in
 development. By eliminating random changes in epigenetic marks (i.e.,
-epimutations) that have occurred in the germ cells, restores the ability
+epimutations) that have occurred in the germ cells, reprogramming restores the ability
 of the fertilized egg cell (i.e., zygote) to develop into all the
 different cells types and tissues [@reik2001]. During embryo
 development, there are two waves of epigenetic reprogramming, Figure \ref{fig:if3}.
@@ -155,15 +155,14 @@ After fertilization in the preimplantation embryo (i.e., the
 blastocyst), the first phase begins; preimplantation refers to the time
 between the embryo implanting and forming a placenta. The embryo in mice
 undergoes genome-wide demethylation after fertilization, which is
-finished by embryonic day 5. (E5) [@reik2001; @smallwood2012]. The
+finished by E5 [@reik2001; @smallwood2012]. The
 paternal genome undergoes rapid, active demethylation, whereas the
 maternal genome experiences passive demethylation. The embryonic DNA
 begins to be re-methylated on day E5 and is finished before birth. The
 second wave of epigenetic reprogramming takes place in the germ cells of
 the developing embryo, which will eventually give rise to gametes with
 sex-specific epigenetic markers (gametogenesis). The methylation
-signatures of the parental genomes are found in the primordial germ
-cells (PGCs), which are progenitors to both male and female germ cells
+signatures of the parental genomes are found in the PGCs, which are progenitors to both male and female germ cells
 in the developing embryo. PGCs are epiblast cells that first appear in
 the posterior primitive streak at E7.5, after which they begin to
 migrate from E8.5 to the genital ridge, arriving by E11.5. PGCs undergo
@@ -175,7 +174,7 @@ female germline until adolescence.
 
 (ref:ifc3) \textbf{Methylation reprogramming in the germline.} \newline \textbf{A:} Primordial germ cells (PGCs) in the mouse become demethylated early in development. Remethylation begins in prospermatogonia on E16 in male germ cells, and after birth in growing oocytes. Some stages of germ cell development are shown. \newline \textbf{B:} Methylation reprogramming in preimplantation embryos. The paternal genome (blue) is demethylated by an active mechanism immediately after fertilization. The maternal genome (red) is demethylated by a passive mechanism that depends on DNA replication. Both are remethylated around the time of implantation to different extents in embryonic (EM) and extraembryonic (EX) lineages. Methylated imprinted genes and some repeat sequences (dashed line) do not become demethylated. Unmethylated imprinted genes (dashed line) do not become methylated. Taken from [@reik2001].
 
-```{r if3, echo=FALSE, fig.align='center', fig.cap="(ref:ifc3)", fig.scap="Graphical summary of the biology of germline stem cell specification and transitions", fig.width=4.5, fig.height=6}
+```{r if3, echo=FALSE, fig.align='center', fig.cap="(ref:ifc3)", fig.scap="Graphical summary of the biology of germline stem cell specification and transitions", fig.width=3.5, fig.height=4.5}
 img <- readJPEG("figure/intro/3.jpeg")
 grid.raster(img)
 ```
@@ -194,7 +193,7 @@ environmental factors. However, epigenetic information can be inherited
 through the germline (or after fertilization) on occasion, which is most
 likely due to insufficient germline erasure. Finally, demethylation in
 the germline may have the added benefit of reducing the frequency of
-mutations caused by 5-methylcytosine deamination.
+mutations caused by 5-methylcytosine (5mC) deamination.
 
 ## Epigenetic Inheritance {.unnumbered}
 
@@ -237,13 +236,13 @@ somatic cells. This is referred to as the Weismann barrier.
 However, recent epigenetic discoveries have revealed that acquired
 traits can be passed down to future generations. Our recent work showed
 that serum from adult male mice exposed to postnatal stress, injected
-chronically to naïve males can induce metabolic symptoms associated with
+chronically to naïve males, can induce metabolic symptoms associated with
 stress in the offspring of the injected males [@vansteenwyk2020]. Also,
 we identified circulating extracellular vesicles as vectors of
 communication with germ cells that can reproduce symptoms of exposure in
 the offspring when injected into fathers in vivo [@alshanbayeva2021].
 These results highlight the importance of circulating factors in the
-mechanisms of epigenetic inheritance, Chapter 2.
+mechanisms of epigenetic inheritance, [Chapter 2](#chapter2).
 
 ### Transgenerational Epigenetic Inheritance {#tei .unnumbered}
 
@@ -273,12 +272,12 @@ which is in line with the germ-plasm theory of Weissman [@weismann1893].
 The extent of epigenetic reprogramming, however, is unknown, leaving the
 question of how much epigenetic information from adult gametes is
 preserved in the embryo unanswered. In mammals, DNAme and histone marks
-are effectively reset during reprogramming both in the germline and in
+are effectively reset during reprogramming both in the germline, and in
 the zygote immediately after conception, leaving epigenetic changes with
 minimal possibility of passing down. Evidence for the survival of
 histone modifications across reprogramming has been identified in sperm,
 where histones are largely replaced by protamines. Surprisingly,
-H2K27me3 enrichment has been discovered in reprogramming resistant sperm
+H3K27me3 enrichment has been discovered in reprogramming resistant sperm
 nucleosomes [@casas2020], suggesting that this mark may be a hereditary
 signal. Further, findings in [@kremsky2020] imply that transcription
 factors can operate as epigenetic information carriers during germ cell
@@ -297,7 +296,7 @@ dietary changes, stress, medications, and environmental toxins have all
 been linked to altered phenotypes in offspring [@gapp2018]. Epigenetic
 inheritance appears to be initiated or modulated by mutations in the
 epigenetic machinery, such as DNA/RNA methylation enzymes or histone
-modification complexes, such as overexpression of Kdm1a, an H3K4me3
+modification complexes, such as overexpression of _Kdm1a_, an H3K4me3
 demethylase in mice [@siklenka2015].
 
 Alternatively, environmental perturbations may initiate epigenetic
@@ -305,11 +304,11 @@ inheritance, with various insults leading to offspring phenotypes in a
 variety of model systems [@jawaid2019]. Environmental factors like
 vinclozolin (an antiandrogenic compound), methoxychlor (an estrogenic
 compound), stress responses, high-fat diet, high-sugar diet, low-protein
-diet, air pollutant exposure in pregnant mice, In utero Bisphenol-A
-bis(2- Ethylhexyl) phthalate (DEHP) and dibutyl phthalate (DBP) exposure
-in rats, In utero exposure to jet fuel (JP-8) in mice, In utero valproic
-acid exposure in mice, Olfactory fear conditioning in F0 mice, and
-Female mice fed a high-fat/high-sugar diet have been linked to
+diet, air pollutant exposure in pregnant mice, in utero Bisphenol-A (BPA),
+di(2- Ethylhexyl) phthalate (DEHP) and dibutyl phthalate (DBP) exposure
+in rats, in utero exposure to jet fuel (JP-8) in mice, in utero valproic
+acid exposure in mice, olfactory fear conditioning in Filial 0 (F0) mice, and
+Female mice fed a high-fat/ high-sugar diet have been linked to
 epigenetic inheritance [@rando2016; @bohacek2015; @hanson2016; @mao2017;
 @nagy2015; @heard2014; @schaefer2015]. These models shed new light on
 the mechanisms of epigenetic inheritance. However, distinguishing
@@ -321,30 +320,45 @@ transmission is difficult.
 **A unique transgenerational model to assess the effects of trauma:**
 unpredictable maternal separation combined with unpredictable maternal
 stress (MSUS) is a firmly established transgenerational model in the
-Mansuy lab, that does not involve any chemical or mutagenic agent but
-depends only on psychological and emotional trauma, Figure 4. It is an
+Mansuy lab, that does not involve any chemical or mutagenic agent but,
+depends only on psychological and emotional trauma, Figure \ref{fig:if4}. It is an
 ideal model to study the possible transgenerational effects of life
 experiences on the genome and the epigenome. MSUS consists in separating
 mouse pups from their mother unpredictably (any time during the day)
-each day for 3 hours from postnatal day 1 (PND1) to PND14 and in
-exposing the mothers to stressful situations such as restraint stress or
-forced swim in cold water (18ºC) unpredictably during separation. Filial
-1 (F1) generation males are mated with naïve control females, and F2
+each day for 3 hours from postnatal day 1 (PND1) to PND14 and exposing the mothers to stressful situations such as restraint stress or
+forced swim in cold water (18ºC), unpredictably during separation. F1 generation males are mated with naïve control females, and F2
 males are mated with control females to obtain F3. MSUS induces several
 behavioural symptoms including depression, increased risk-taking,
 antisocial behaviours and memory deficits, and metabolic alterations
 across several generations [@franklin2010; @vansteenwyk2018]. Further,
 metabolic phenotypes like decreased bodyweight, insulin hypersensitivity
 and glucose intolerance are also observed. For studying the molecular
-mechanisms of epigenetic inheritance, a number of datasets have been
-collected and sequenced, Figure 5.
+mechanisms of epigenetic inheritance, a number of high-throughput sequencing (HTS) datasets have been
+collected and sequenced, Figure \ref{fig:if5}.
+
+
+(ref:ifc4) \textbf{MSUS paradigm.} MSUS consists of \textbf{(A)} separating mouse pups (F1) from their mother (F0, naïve primiparous control females mated with naïve males) daily for 3 hours per day at an unpredictable time during the 12 hours active cycle, starting 1 day after birth (postnatal day 1, PND1) until PND14. \textbf{(B)} During separation, dams are exposed to an additional unpredictable stressor by being subjected to either, a forced swim in 18°C water for 5 minutes or a 20-minute physical restraint in a tube, anytime (unpredictably) during the 3 hours. From PND15, mice are left undisturbed with their mother until PND21 (no further MSUS), are then weaned at PND21 and raised normally until adulthood \textbf{(C)}. Control litters are raised normally (left). Males used to generate the pups are removed from the breeding cage shortly after mating thus, fathers never encounter their offspring and do not contribute to their rearing. When adult (3–8 months of age), F1 males are paired with naïve primiparous control females to sire the F2 generation, then F2 and F3 males are bred with naïve primiparous control females to generate an F3 and F4 offspring, respectively. Males from each generation are tested on the elevated plus-maze, forced swim test, weight measurements and glucose response after physical restraint. MSUS is applied only to F1 mice, mice from F2, F3 and F4 generations are not exposed to any manipulation. Phenotypes transmitted from father to offspring are intergenerational, phenotypes that persist from father to offspring then grand-offspring or great grand-offspring are transgenerational. Taken from [@vansteenwyk2018].
+
+```{r if4, echo=FALSE, fig.align='center', fig.cap="(ref:ifc4)", fig.scap="MSUS paradigm", fig.width=6.42, fig.height=4.45}
+img <- readPNG("figure/intro/4.png")
+grid.raster(img)
+```
+
+
+(ref:ifc5) \textbf{Dataset collected from the MSUS model.}
+
+```{r if5, echo=FALSE, fig.align='center', fig.cap="(ref:ifc5)", fig.scap="Dataset collected from the MSUS model", fig.width=6.42, fig.height=4.45}
+img <- readPNG("figure/intro/5.png")
+grid.raster(img)
+```
+
 
 ## Vectors of epigenetic inheritance {.unnumbered}
 
 Epigenetic marks, such as DNAme, histone modifications, and non-coding
 RNAs, have been proposed as information-carrying vectors passed down
 through generations. These three candidates have been investigated in a
-variety of EI paradigms. It is hypothesized that stable changes in
+variety of epigenetic inheritance paradigms. It is hypothesized that stable changes in
 epigenetic marks caused by an environmental insult (epimutations) may
 affect gene expression or chromatin stability, increasing the risk of a
 phenotype or disease in offspring (Miska and Ferguson-Smith, 2016).
@@ -374,7 +388,7 @@ associated with gene repression, its precise role in gene regulation is
 likely locus dependent [@deaton2011]. Methylated DNA is a true
 epigenetic mark because there are "readers" that preferentially
 recognize 5mC and can interpret the methylation mark's meaning
-[@zhu2016a]. Many properties of DNAmemake it an appealing mechanistic
+[@zhu2016a]. Many properties of DNAme make it an appealing mechanistic
 candidate for epigenetic inheritance, including the following: it can be
 environmentally modulated; machinery exists to replicate methylation
 patterns onto newly synthesised DNA, making it mitotically heritable;
@@ -402,7 +416,7 @@ modifications can function as either active or repressive marks.
 Methylation of H3K4, H3K36, and H3K79 is associated with transcriptional
 activation, whereas methylation of H3K9, H3K27, and H4K20 is associated
 with transcriptional repression [@vakoc2006; @sims2006]. These
-modifications can influence chromatin packaging and nucleosome
+modifications can influence chromatin packaging and nucleosome
 positioning. Histone modifications, like DNAme, are spatially and
 temporally dynamic. Certain histone modifications, such as
 trimethylation of lysine 27 on histone 3 (H3K27me3), are generally
@@ -411,7 +425,7 @@ associated with gene repression, whereas acetylation of the same residue
 Histone modifications regulate gene expression by recruiting protein
 complexes and controlling the accessibility of DNA to the transcription
 machinery [@lawrence2016]. Histone modifications are a plausible
-mechanistic candidate in EI because they can be modulated by the
+mechanistic candidate in epigenetic inheritance because they can be modulated by the
 environment. During epigenetic reprogramming, some histone modifications
 in the germline and zygote are retained. Histones are spread onto newly
 assembled chromatin by sophisticated machinery [@marmorstein2009].
@@ -422,7 +436,7 @@ Sperm contains protamine modifications that are similar to histone
 modifications [@brunner2014], despite this, their functional
 significance remains unknown, particularly during epigenetic
 inheritance. Disruption of the machinery that regulates histone
-modification could also be a key initiator of EI [@siklenka2015]. H3K9
+modification could also be a key initiator of epigenetic inheritance [@siklenka2015]. H3K9
 and H3K27 methylation appear to be the most likely to be epigenetic
 among the various histone lysine methylation states, not only because
 they are key regulators of classic epigenetic phenomena [@huang2013].
@@ -446,7 +460,7 @@ from elsewhere. Because RNAs are easily degraded, they are most likely
 transported with protein chaperones and, more likely, enclosed in
 extracellular vesicles. For example, in epididymosomes, which are
 extracellular vesicles that are released from the epididymal epithelium
-contain proteins, noncoding RNAs and a distinct set of lipids that are
+contain proteins, ncRNAs and a distinct set of lipids that are
 transferred to spermatozoa while they pass through the different
 epididymal regions [@sullivan2016]. Aside from epididymosomes, RNAs have
 been found in exosomes and high-density lipoproteins (HDLs) in the
@@ -487,10 +501,10 @@ of adult-life environmental insults. However, it is currently unknown
 how epigenetic messages transmitted by RNA are maintained across
 multiple cell divisions, let alone multiple generations.
 
-### Transcription factors
+### Transcription factors{.unnumbered}
 
 Transcription factors (TFs) may also act as epigenetic information
-carriers. Transcription factors are proteins that play a role in the
+carriers. TFs are proteins that play a role in the
 process of transcribing DNA to RNA. TFs are found on the genomes of
 mature gametes, and there is evidence that TF binding can influence
 DNAme at the binding sites [@smith2013; @jones2001]. CpG sites bound by
@@ -501,10 +515,10 @@ demethylation. This is due to the fact that TF binding during the
 re-methylation phase maintains the methylation status between
 generations [@kremsky2020]. This suggests that transcription factors can
 act as carriers of epigenetic information during germ cell and
-pre-implantation development by maintaining CpG methylation status and
+pre-implantation development by maintaining CpG methylation status, and
 serve as the foundation for a mechanistic description of the
 transgenerational transmission of such information in mammals
-[@kremsky2020]. Mammalian gametes contain complex patterns of 3D
+[@kremsky2020]. Mammalian gametes contain complex patterns of 3D
 interactions that can also be transmitted to the zygote after
 fertilization [@jung2019]. TFs may remain bound to chromatin after
 fertilization and influence gene expression in the developing embryo.
@@ -534,29 +548,29 @@ the formation of exosomes. Exosomes and microvesicles contain cargoes
 such as nucleic acids, proteins and lipids, RNAs (extracellular RNAs,
 exRNAs) and DNA [@obrien2020]. The majority of known ncRNA biotypes,
 including small nuclear RNAs, small nucleolar RNAs (snoRNAs), rRNAs,
-lncRNAs, PIWI-interacting RNAs (piRNAs), transfer RNAs (tRNAs),
+lncRNAs, piRNAs, tRNAs,
 mitochondrial RNAs, Y RNAs, and vault RNAs (vtRNAs), have been
 discovered in EVs in more comprehensive studies [@obrien2020;
 @abels2016]. ExRNA extraction, purification, and sequencing methods are
 much more susceptible to contamination and artefacts than cellular RNA
-preparations, due to the low amount of RNA available from EVs.  As a
+preparations, due to the low amount of RNA available from EVs. As a
 result, analyzing exRNA samples can be difficult, and a specific tool
 for EV ncRNA data analysis has been developed [@rozowsky2019]. A number
 of studies have shown the role of extracellular vesicles in epigenetic
 inheritance. Also, we found that extracellular vesicles are vectors of
 communication with the germline that play a role in epigenetic
-inheritance [@alshanbayeva2021], Chapter 2.
+inheritance [@alshanbayeva2021], [Chapter 2](#chapter2).
 
 ## Challenges in data analysis {.unnumbered}
 
 ### Multi-omics data integration {.unnumbered}
 
 A single omics analysis may not provide enough information to provide a
-deep understanding of a biological system, but combining multiple 'omics
+deep understanding of a biological system, but combining multiple omics
 experiments and data analyses can provide a more holistic view of a
 system. Performing different experiments on the same or different
-samples from the same biological conditions, such as RNA-seq, ATAC-seq,
-ChIP-seq, and BS-seq, results in multi-dimensional omics datasets, which
+samples from the same biological conditions, such as RNA sequencing (RNA-seq), Assay for Transposase-Accessible Chromatin sequencing (ATAC-seq),
+chromatin immunoprecipitation with sequencing (ChIP-seq), and Bisulfite sequencing (BS-seq), results in multi-dimensional omics datasets, which
 enable the study of relationships between different biological
 processes, such as gene expression, chromatin accessibility, histone
 modifications, transcription factor binding, and DNAme, as well as the
@@ -566,13 +580,13 @@ sources of information in order to gain a better understanding of
 complex systems. The researchers execute two forms of data integration:
 custom or ad-hoc integration and more systematic integration.
 
-#### Ad-hoc approaches
+#### Ad-hoc approaches {.unnumbered}
 
 Integrating BS-seq data with RNA-seq is one example of an ad-hoc
 technique. The expressed genes are known to be demethylated. As a
 result, the methylation values of the promoters can be linked to the
 genes that are expressed. Integrating ATAC-seq data with RNA-seq data
-can be used to analyze transcription factor activity. Regions with
+can be used to analyze TF activity. Regions with
 increased accessibility and expression would show a TF's role as an
 activator, while regions with increased accessibility and decreased
 expression would represent a TF's role as a repressor. For this, a tool
@@ -584,7 +598,7 @@ need for extensive exploratory investigation and the inability to be
 applied consistently to all projects. Furthermore, these methods are
 frequently applied to a maximum of two omics datasets.
 
-#### Systematic approaches
+#### Systematic approaches{.unnumbered}
 
 Systematic methods developed for data integration in biological research
 can be classified into three types: supervised, unsupervised, and
@@ -644,7 +658,7 @@ been used in omics research since the beginning of the era, and it is
 both a challenge and an opportunity. It is surely growing more popular.
 We devised and implemented a more straightforward and scientifically
 motivated approach to integrate multi-omics datasets, involving more
-than two omics datasets, please see Methods and Chapter 1.
+than two omics datasets, please see [Methods](#methods) and [Chapter 1](#chapter1).
 
 ### Short RNA data analysis {.unnumbered}
 
@@ -653,7 +667,7 @@ nearly all aspects of organismal development in both health and disease.
 Despite their importance in a wide range of biological processes,
 analyzing short RNA sequencing data remains a difficult task.
 Specifically, a number of computational challenges arise when analyzing
-short RNA sequencing: 
+short RNA sequencing:
 
 -   Even after size selection, we expect to sequence other RNA biotypes
     in addition to short RNAs.
@@ -682,7 +696,7 @@ short RNA sequencing: 
 All the aforementioned issues could lead to misalignment and low
 mappability of the sequenced data. Several tools have been developed to
 analyze short RNA-seq data, however, they typically fall prey to some of
-these issues. In Chapter 3, we, therefore, developed a novel approach to
+these issues. In [Chapter 3](#chapter3), we, therefore, developed a novel approach to
 address them.
 
 ## Goals of thesis {.unnumbered}
@@ -690,16 +704,15 @@ address them.
 We defined the following goals for my thesis:
 
 1.  Collaboration with all the members of the Mansuy lab to study
-    epigenetic inheritance in the MSUS mouse model. Please see Chapter
-    3, Appendix A, and Appendix B for this part. I was responsible for:
+    epigenetic inheritance in the MSUS mouse model. Please see [Chapter 2](#chapter2), [Appendix A](#aa), and [Appendix B](#ab) for this part. I was responsible for:
 
     -   Version controlled and reproducible data analysis for data
-        generated from RNA-seq, sRNA-seq, ATAC-seq, WGBS, and RRBS
+        generated from RNA-seq, short RNA-seq (sRNA-seq), ATAC-seq, whole-genome bisulfite sequencing (WGBS), and reduced representation bisulfite sequencing (RRBS)
 
     -   Determine the qualitative and quantitative effects of early life
         experiences on the epigenome, particularly in germ cells. This
         includes identifying the epigenetic changes, including DNAme,
-        RNA expression, non-coding RNAs (ncRNAs), and chromatin
+        RNA expression, ncRNAs, and chromatin
         accessibility, induced in germ cells due to early life
         experiences like traumatic stress in mice relating these changes
         to genome activity. This also includes determining whether and
@@ -717,9 +730,8 @@ We defined the following goals for my thesis:
 
     -   Figure generation and interpretation for the manuscripts
 
-<!-- -->
 
-2.  Development of data analysis pipelines. Please see the Methods, for
+2.  Development of data analysis pipelines. Please see the [Methods](#methods), for
     this part. I was responsible for:
 
     -   Benchmarking methods for including in the pipeline
@@ -728,7 +740,7 @@ We defined the following goals for my thesis:
         pipeline
 
 3.  Collaboration with Dr. Irina Lazar for studying changes in
-    spermatogonial stem cells across development. Please see Chapter 2
+    spermatogonial stem cells across development. Please see [Chapter 1](#chapter1)
     for this part. I was responsible for:
 
     -   Computational design of the project
@@ -755,11 +767,10 @@ We defined the following goals for my thesis:
     -   Writing methods, figure legends, and updating/ revising
         manuscript
 
-<!-- -->
 
 4.  Collaboration with Dr. Pierre-Luc Germain for the development of
-    shortRNA, a tool for comprehensive analysis of small RNA-seq data
-    in R. Please see Chapter 4 for this part. I was responsible for:
+    `shortRNA`, a tool for comprehensive analysis of sRNA-seq data
+    in R. Please see [Chapter 3](#chapter3) for this part. I was responsible for:
 
     -   Development and testing of the tool
 
