@@ -1,3 +1,53 @@
 # Appendix B {- #ab}
 
-## Other manuscripts during PhD
+\markboth{Other publications or manuscripts}{Appendix B}
+
+\noindent
+
+\setlength\parindent{0pt}
+
+
+## Other publications and manuscripts during doctoral thesis work {-}
+
+
+### Involvement of circulating factors in the transmission of paternal experiences through the germline{-}
+Gretchen van Steenwyk\textsuperscript{$\dagger$}, Katharina Gapp\textsuperscript{$\dagger$}, Ali Jawaid, Pierre-Luc Germain, Francesca Manuella, **Deepak K Tanwar**, Nicola Zamboni, Niharika Gaur, Anastasiia Efimova, Kristina M Thumfart, Eric A Miska,  Isabelle Mansuy\textsuperscript{\#} \newline 
+
+\textsuperscript{$\dagger$}Equal contributions \newline 
+\textsuperscript{\#}Corresponding author \newline 
+
+**Journal:** *The EMBO Journal* \newline 
+\textbf{DOI:} [10.15252/embj.2020104579](https://doi.org/10.15252/embj.2020104579)\newline 
+
+**Contributions:** *Analysis of RNA-seq data.*
+
+### Symposium summary: Epigenetic inheritance-impact for biology and society 26–28 August 2019, Zurich, Switzerland{-}
+
+Irina Lazar-Contes, Martin Roszkowski, **Deepak K Tanwar** and Isabelle M Mansuy\textsuperscript{\#}
+
+\textsuperscript{\#}Corresponding author \newline 
+
+**Journal:** *Environmental Epigenetics* \newline 
+\textbf{DOI:} [10.15252/embj.2020104579](https://doi.org/10.15252/embj.2020104579)\newline 
+
+**Contributions:** *Writing manuscript.*
+
+### OmniSperm: Multiomic analyses of sperm and offspring production from a single male{-}
+
+Martin Roszkowski, Irina Lazar-Contes, Pierre-Luc Germain, **Deepak K Tanwar**, Anara Alshanbayeva, Niharika Obrist, Ali Jawaid, Gretchen van Steenwyk, Eloise Kremer, Dalila Korkmaz, Mark Ormiston, Francesca Manuella, Johannes vom Berg, Jorg Tost, Johannes Bohacek, Isabelle M Mansuy\textsuperscript{\#}
+
+\textsuperscript{\#}Corresponding author \newline 
+
+\textbf{DOI:} [10.3929/ethz-b-000489446](https://doi.org/10.3929/ethz-b-000489446) (Doctoral thesis, Chapter 2)\newline 
+
+**Contributions:** *Analysis of RNA-seq from sperm and embryos, and WGBS data from sperm.*
+
+### Early life stress alters chromatin accessibility landscape and transcript usage in spermatogonial cells during postnatal testis maturation{-}
+
+Irina Lazar-Contes, Gretchen van Steenwyk, **Deepak K Tanwar**, Pierre-Luc Germain, Francesca Manuella, Martin Roszkowski, Niharika Gaur, Isabelle M Mansuyy\textsuperscript{\#}
+
+\textsuperscript{\#}Corresponding author \newline 
+
+\textbf{DOI:} [10.1101/2020.08.20.259374](https://doi.org/10.1101/2020.08.20.259374) (Doctoral thesis, Chapter 3)\newline 
+
+**Contributions:** *Analysis of RNA-seq and ATAC-seq data, and figure generation.*

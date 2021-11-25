@@ -1,0 +1,961 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+bibliography: rmd/references.bib
+---
+
+## Graphical Abstract
+
+```{r dga, echo=FALSE, fig.align='center', fig.cap="Graphical abstract.", fig.scap="Graphical abstract"}
+img <- readPNG("figure/dev/ga.png")
+grid.raster(img)
+```
+
+\newpage
+
+## Abstract
+
+Stem cells have the capacity to self-renew and differentiate to give
+rise to tissues. In mammals, spermatogonial stem cells are unique
+undifferentiated cells in the male germline that are present throughout
+life and produce functional sperm. They have a remarkable dynamic
+transcriptome between postnatal life and adulthood, thought to allow
+adaptation to the maturing gonadal environment. To assess if chromatin
+remodelling is associated with this dynamic, we characterized chromatin
+accessibility in postnatal and adult spermatogonial cells in mice using
+ATAC-seq. Extensive changes in chromatin accessibility were observed in
+spermatogonial cells across postnatal development, that correlate with
+distinct gene expression profiles and transcription factor motif
+enrichment. We identify genomic regions with differential chromatin
+accessibility in adult spermatogonial cells, that are marked by distinct
+histone modifications and are situated in proximity to the transcription
+start site of genes important for cell maintenance and proliferation.
+Some of these regions correspond to transposable element subtypes
+enriched in multiple transcription factor motifs and with increased
+transcription. Together, our results reveal profiles of chromatin
+organization, histone modifications and gene expression in
+spermatogonial cells, and underscore the dynamic nature of the germline
+genome.
+
+\newpage
+
+## Introduction
+
+Spermatogonial cells are cells in male gonads that actively self-renew
+and differentiate into spermatogenic cells to produce adult gametes. In
+mice, they become active one to two days after birth, when they exit
+mitotic arrest and start dividing, to populate the basement membrane of
+seminiferous tubules. During the first week of postnatal life, a
+population of spermatogonial cells continues to proliferate and gives
+rise to undifferentiated Asingle (As), Apaired (Apr) and Aaligned (Aal)
+cells. The remaining spermatogonia differentiate to form chains of
+daughter cells that become primary and secondary spermatocytes around
+postnatal day (PND) 10 to 12. Spermatocytes undergo meiosis and give
+rise to haploid spermatids that develop into spermatozoa. Spermatozoa
+are then released in the lumen of the seminiferous tubules and continue
+to mature in the epididymis until becoming capable of fertilization by
+PND 42-48 [@thebiol2017; @rooij2017; @kubota2018].
+
+Recent work using population or single-cell RNA sequencing (RNA-seq)
+showed that distinct transcriptional profiles characterize
+spermatogonial cells in postnatal and adult life [@hammoud2014;
+@hammoud2015; @hermann2018; @law2019; @green2018]. During the first week
+after birth, spermatogonia have unique features necessary for their
+rapid establishment and expansion along the basement membrane. This
+includes high expression of genes involved in cell cycle regulation,
+stem cell proliferation, transcription and RNA [@grive2019]. In
+comparison, in the adult testis, genes are involved in the maintenance
+of a steady spermatogonial cells population, with a balance between
+proliferation and differentiation to ensure sperm formation
+predominates. This includes pathways related to paracrine signalling and
+niche communication, as well as mitochondrial function and oxidative
+phosphorylation [@hermann2018; @grive2019]. Epigenetic changes such as
+histone tail posttranslational modifications and DNA methylation
+accompany transcriptional differences in spermatogonial cells across
+postnatal stages [@hammoud2014; @hammoud2015]. However, little is known
+about the accessible chromatin landscape, during the transition from
+postnatal to the adult stage.
+
+We examined chromatin reorganization in the transition from postnatal to
+adult spermatogonia and its functional relevance by profiling chromatin
+accessibility by ATAC-seq (assay for transposase-accessible chromatin
+with high-throughput sequencing) using an Omni-ATAC protocol
+[@corces2017] and integrating data with transcriptomic and epigenetic
+profiles. The results show that chromatin is extensively remodelled in
+spermatogonial cells during development, and its accessibility is
+increased at several genomic regions particularly transposable elements
+(TEs), that correlate with transcriptional and epigenetic signatures.
+
+\newpage
+
+## Results
+
+### Enrichment of spermatogonial cells from postnatal and adult mouse testis
+
+We collected testes from mouse pups at postnatal days (PND) 8 and 15 and
+from males at postnatal week (PNW) 20, and prepared cell suspensions by
+enzymatic digestion. Spermatogonial cells were enriched by
+fluorescence-activated cell sorting (FACS) using surface markers (Supp. Figure \ref{fig:ds1a}A) [@kubota2004a]. Immunocytochemistry using PLZF, a well-established
+marker of undifferentiated spermatogonia [@costoya2004], confirmed that
+our preparation was enriched in spermatogonial cells, with 85-95% PLZF+
+cells after FACS compared to 3-6% PLZF+ cells before (Supp. Figure \ref{fig:ds1a}B).
+Transcriptomic analyses by RNA-seq validated the spermatogonial identity
+of the cells, showing high expression of stem cell and undifferentiated
+spermatogonial markers, and low expression of somatic cells (Leydig and
+Sertoli cells) markers both at PND 8 and 15 (Supp. Figure \ref{fig:ds1b}C).
+
+### Chromatin is remodelled in spermatogonial cells during the development
+
+We profiled chromatin accessibility in postnatal and adult
+spermatogonial cells using an Omni-ATAC protocol [@corces2017].
+Omni-ATAC has a higher signal-to-noise ratio than classical ATAC-seq and
+can be used with low input material (a few hundred cells). Accessible
+regions in the genome were identified by peak-calling on merged
+nucleosome-free fragments (NFF). Following the removal of lowly enriched
+regions, 158,978 regions were selected for downstream analyses (see
+Methods section for details). Most Tn5-accessible regions are intergenic
+(38%) and located in gene bodies (33%) or in the proximity of a
+transcription start site (TSS) (28% +/-1 kb from TSS) (Supp. Figure \ref{fig:ds2a}A). 3212
+differentially accessible regions were identified between PND15 and
+adult spermatogonia with the majority showing a gain in accessibility in
+adult cells (Figure \ref{fig:df1a}A and Table S1). Regions of differential
+accessibility are predominantly intergenic (45%) and intronic (34%), and
+15% of all differentially accessible regions are +/- 1kb from a TSS
+(Figure \ref{fig:df1a}B). Gene ontology (GO) analysis, showed that regions with
+increased accessibility in adult spermatogonia are associated with cell
+fate and stem cell population maintenance, protein metabolism and RNA
+metabolic processes (Figure \ref{fig:df1b}C and Table S1). Separate GO analyses
+depending on genomic location showed that regions located in gene bodies
+(mainly introns) are enriched for terms related to reproduction and
+protein metabolism, whilst regions close to or overlapping with a TSS
+relate to cell fate specification and tissue morphogenesis (Supp. Figure \ref{fig:ds2b}B and
+Table S1). Regions with decreased accessibility in adult spermatogonia
+are predominantly located in intergenic regions and associated with
+multiple terms related to embryonic development (Figure \ref{fig:df1b}C and Table S1).
+
+### Differentially accessible chromatin regions associated with distinct gene expression dynamics
+
+To assess the relevance of changes in chromatin accessibility, we first
+integrated our ATAC-Seq data with transcriptomic datasets and examined
+the correlation between chromatin states and transcriptome. We conducted
+RNA-seq analyses on postnatal spermatogonial cells and used published
+data from Thy1+ adult spermatogonial cells. We found that 719 genes are
+differentially expressed in spermatogonial cells between PND8 and PND15,
+with 515 being upregulated and 212 downregulated (Figure \ref{fig:df2a}A and Table S2).
+Fast Gene Set Enrichment Analysis (FGSEA) showed that pathways related
+to RNA processing and splicing, cell cycle, redox homeostasis and
+protein catabolism are downregulated between PND8 and PND15 while
+pathways associated with cellular transport, exocytosis and signal
+transduction are upregulated (Figure \ref{fig:df2a}B and Table S2). Comparable analyses
+using published RNA-seq data from PND14 and adult spermatogonia cells
+[@hammoud2014; @hammoud2015] similarly identified transcriptional
+changes between postnatal and adult stages (Fig. S?A and Table S2) and
+downregulation of pathways related to RNA processing, ribosome
+biogenesis and cell cycle in adults compared to postnatal cells.
+Pathways related to developmental programs and mitochondrial functions
+were also downregulated and those related to spermatogenesis or
+involving cytokine signalling were upregulated (Fig. S? and Table S2).
+
+To integrate chromatin accessibility and transcriptomic datasets, we
+first divided differentially-accessible regions into proximal (situated
+less than +/- 2.5 kb from a TSS) and distal (situated more than +/- 2.5
+kb from a TSS) following ENCODE practice [@harrow2012; @ausers2011;
+@thurman2012]. For proximal regions, we further defined 6 different
+categories based on the change in expression of the nearest gene. The
+first two include proximal regions with increased chromatin
+accessibility and upregulated (Category 1) or downregulated (Category 2)
+expression of the nearest gene. Category 3 and 4 include regions of less
+chromatin accessibility with the nearest gene either downregulated or
+upregulated, respectively. Category 5 and 6 include regions with
+increased or decreased chromatin accessibility respectively, whose
+nearest gene is not expressed in spermatogonial cells (Figure \ref{fig:df3a}A and Table
+S3).
+
+### Differentially accessible chromatin regions associated with distinct epigenetic profiles
+
+Next, we examined the relationship between chromatin accessibility and
+epigenetic marks using published ChIP-seq and bisulfite sequencing (BS)
+datasets from Thy1+ spermatogonia [@hammoud2014; @hammoud2015]. Profiles
+of histone marks including H3K4me3, H3K27ac and H3K27me3 in adult
+spermatogonial cells, and DNA methylation in PND7, PND14 and adult
+spermatogonial cells were used. .....analyses showed that for a subset
+of regions in Category 1, there is an overlap with active H3K4me3,
+H3K27ac or dual H3K4me3/K27ac modifications, and an overall lack of
+H3K27me3 (Figure \ref{fig:df3a}B and Table S3). Notably, several of the genes in
+Category 1 with chromatin opening marked by histone modification(s) are
+known regulators of stem cell potency. Pdpk1 promoter region was marked
+by dual H3K4me3/K27ac, while Pdpk1 mRNA was upregulated in adult
+spermatogonia (Supp. Figure \ref{fig:ds3}A). Pdpk1 (phosphoinositide-dependent protein
+kinase 1) is a glycolysis factor important for stem cell self-renewal
+[@kanatsu-shinohara2016; @chen2020]. In contrast, the Gata2 promoter
+region was marked by the bivalent H3K4me3/K27me3 mark, while Gata2
+expression showed an upregulation across testis maturation (Supp. Figure \ref{fig:ds3}).
+Gata2 (GATA-binding factor 2) is a known target of NANOS2, an essential
+regulator of spermatogonial stem cell potential [@barrios2010;
+@sada2009]. Other exemplary genes in Category 1 include pyruvate
+cellular carriers Slc25a18, Slc23a1 and Slc2a5, suggesting differences
+in glycolysis regulation in adult spermatogonial cells (Table S3).
+Notably, we found increased chromatin accessibility at the TSS of GDNF
+receptor Gfra2 (Figure \ref{fig:df3b}C). At the mRNA level, Gfra2displayed a marked
+upregulation in adult spermatogonial cells, indicating an increased
+utilization of GFRA2 receptors in adult spermatogonial cells compared to
+early postnatal stages, in which GFRA1-mediated signalling is dominant
+(Figure \ref{fig:df3b}C) [@hammoud2015; @grive2019]. We also observed increased
+chromatin accessibility and upregulation of DNA damage responsive gene
+Fus, and the multifunctional redox gene Prdx4 (Table S3).
+
+Interestingly, the highest number of differentially accessible chromatin
+regions were in Category 2, and included proximal regions with increased
+chromatin accessibility and decreased expression of nearby genes in
+adult spermatogonia, indicative of active repression taking place (Fig.
+3A and Table S3). A subset of Category 2 regions was marked by H3K27me3
+together with H3K4me3 and mainly associated with developmental genes
+such as Satb1 and Hmx1, (Supp. Figure \ref{fig:ds3}B). Other developmental genes such as
+Tbx4 also displayed a decreased accessibility and an increase in mRNA
+expression (Figure \ref{fig:df3b}C). GO enrichment analysis revealed that regions in
+Category 2 are associated with regulation of cell cycle, RNA processing,
+DNA repair and cell division (Table S4). Such an example is is Fgf8,
+important for Fgf8-Fgfr1 mediated maintenance of undifferentiated
+spermatogonia [@hasegawa2014]. Fgf8 showed increased chromatin
+accessibility close to its TSS and a downregulated expression in adult
+spermatogonia, in agreement with recent findings from scRNA-seq data
+suggesting downregulation of Fgfr1-mediated signalling with age(Fig.
+S3B) [@grive2019; @hasegawa2014].
+
+Regions in Category 3 displayed decreased chromatin accessibility and
+downregulation of nearby genes in adult spermatogonia and were mostly
+depleted of any of the 3 histone marks investigated (Figure \ref{fig:df3a}A and 3B). GO
+enrichment on the nearby genes revealed an association with
+developmental processes and WNT signalling (Table S4). A notable example
+we identified in this category is Pdgfra, a gene involved in the hepatic
+stellate cell activation pathway, which was recently identified by
+scRNA-seq to be upregulated in spermatogonial stem cells in the immature
+testis compared to the adult stage [@hermann2018]. Pdgfra displayed a
+marked downregulation in adult spermatogonia, and a decrease in
+chromatin accessibility overlapping its TSS (Figure \ref{fig:df3b}C). Another example
+of a gene important for early postnatal spermatogonial cell
+establishment is Dap2ip, which we also found to carry a marked decrease
+in chromatin accessibility at its TSS and lower expression in adult
+spermatogonial cells (Supp. Figure \ref{fig:ds3}C). Surprisingly, we also identified a
+category of proximal regions (Category 4) with decreased accessibility
+(\<20 regions) at genes that were upregulated in adult spermatogonial
+cells and with a previously uncharacterized role in spermatogonial cells
+(Figure \ref{fig:df3a}A). Notably, DNAme profiles across postnatal stages did not show
+any significant change across any of the 6 categories of proximal
+regions, suggesting a relatively stable DNAme profile in the transition
+from early postnatal to adult stage (Supp. Figure \ref{fig:ds3}D). Aside from proximal
+regions, we also identified numerous distal regions with differential
+chromatin accessibility between PND15 and adult spermatogonial cells
+(Supp. Figure \ref{fig:ds4}A). Similar to proximal regions, accessibility in distal regions
+mainly increased in adult spermatogonial cells compared to the early
+postnatal stage. When integrating the literature ChIP-seq data, we
+observed enrichment for H3K4me3, H3K27ac and H3K27me3 at a small number
+of the differentially accessible distal regions, indicative of potential
+regulatory roles (Supp. Figure \ref{fig:ds4}B and Table S3). Similar to proximal regions,
+DNAme levels did not display major changes in the transition from early
+postnatal to adult stage (Supp. Figure \ref{fig:ds4}B). Taken together, our data
+integration reveals novel associations between chromatin regions of
+differential accessibility, histone marks and gene transcription in
+spermatogonial cells from postnatal to adult stages of development. They
+suggest that chromatin accessibility is a mechanism of control of
+transcriptional programs and of certain signalling pathways during
+development.
+
+### Accessibility changes at open chromatin regions carry binding sites for distinct families of transcription factors
+
+Transcription factors (TFs) are essential for establishing and
+maintaining transcriptional programs across developmental stages in
+cells [@shavlakadze2019 @fushan2015]. To examine if regions of different
+chromatin accessibility between PND15 and adult spermatogonia are
+enriched in regulatory elements such as TF binding motifs, we performed
+motif enrichment analysis using the Hypergeometric Optimization of Motif
+EnRichment (HOMER) tool [@heinz2010]. In regions with increased
+chromatin accessibility, we identified 41 enriched TF motifs (q-value
+$\leq$ 0.05) (Figure \ref{fig:df4a}A). Top candidates by significance (q-value $\leq$
+0.0001) are members of the Fos/Jun family (FOS, FOSB, FOSL1 and FOSL2,
+JUN, JUNB and JUND) (Figure \ref{fig:df4a}B). Notably, at the mRNA level, some of the
+TFs displayed age-specific differences (Log2CPM $\geq$ 1 and abs Log2
+fold change $\geq$ 1): Fos,Junb and Jund were downregulated in adult
+spermatogonial cells (Figure \ref{fig:df4b}C). JUN, FOS and CREB are all part of the
+AP-1 (activating protein-1) superfamily, and play an important role in
+regulating cell proliferation and death, by mediating the
+senescence-associated chromatin and transcriptional landscape
+[@martínez-zamudio2020; @shaulian2002]. JUND and c-FOS specifically
+promote the proliferative potential of spermatogonial stem cells
+[@he2008; @wang2018]. USF1 and POU3F1, 2 factors important in the
+maintenance of the spermatogonial stem cell pool also displayed enriched
+binding motifs in the more accessible regions. However, their mRNA
+levels were downregulated in adult spermatogonial cells (Figure \ref{fig:df4b}C)
+[[@faisal2019; @faisal2019]. POU3F1 is a GDNF-regulated TF, which has
+been shown to play an important role in promoting spermatogonial cell
+self-renewal capacity [@wu2010a; @niu2011]. Notably, Pou3f1
+downregulation in adult spermatogonial cells coincides with marked
+downregulation of Gfra1 and upregulation of Gfra2 (Figure \ref{fig:df3b}C and Table
+S2).TF motif analysis using HOMER also revealed enriched binding sites
+for retinoic acid receptors such as RXR$$\alpha$$ and RAR$$\alpha$$
+(Figure \ref{fig:df4a}A). Recently, expression of RA receptors Rxr$$\alpha$$ and
+Rar$$\alpha$$ was reported in the stem cell-containing population of
+spermatogonial cells in both pup and adult testis, together with
+evidence that their utilization in spermatogonial cells is vastly
+dependent on the niche microenvironment [@lord2018].
+
+To check if some TF binding motifs are preferentially enriched in
+certain genomic locations, we performed motif enrichment analysis for
+more accessible chromatin regions situated in gene bodies, intergenic
+regions and in regions +/- 1kb from TSS. We identified several TF motifs
+specifically enriched in intergenic regions, specifically members of the
+ubiquitously expressed NF-Y complex, NF-YA, NF-YB and NF-YC (Figure \ref{fig:df4b}D).
+In mESCs, NF-Y TF family members located in distal regions facilitate a
+permissive chromatin conformation and play an important role in the
+expression of core ESC pluripotency genes [@oldfield2014]. Furthermore,
+NF-YA/B motif enrichment has also been found in regions of open
+chromatin in human spermatogonial cells [@guo2017].
+
+Although regions of more accessible chromatin encompass the majority of
+the differentially accessible regions in adult spermatogonia compared to
+PND15, less accessible chromatin also displayed a high number of
+enriched TF binding motifs (Figure \ref{fig:df4a}A). Notably, almost all of these TF
+motifs were uniquely enriched in the regions of decreased chromatin
+accessibility and predominantly associated with developmental factors.
+Top hits included members of the FOX family (FOXO1, FOXO3, FOXP2, FOXK1,
+FOXA2) and members of the ETS and ETS-related families (ETS1, GABPA,
+ETV4, ELF1, ELF3) (Figure \ref{fig:df4a}B). The gene expression levels of most of these
+TFs were decreased in adult spermatogonial cells (Figure \ref{fig:df4a}A). FOXO1 is a
+pivotal regulator of the self-renewal and differentiation of
+spermatogonial stem cells in both pup and adult testis, via the PI3K-Akt
+signalling pathway [@goertz2011; @chan2014]. The roles of the various
+ETS-related TFs in spermatogonial cells have not been clarified, however
+recently published data found ETV4 in the stem-cell enriched fraction of
+the spermatogonial population, particularly during the spermatogonial
+stem cell pool establishment immediately after birth [@law2019;
+@cheng2020]. Motif enrichment analysis on the regions with decreased
+chromatin accessibility situated in the gene body and intergenic regions
+revealed that TFs are important in numerous developmental processes
+(FOXC1, FOXJ2, FOXM1, LHX6) were specifically enriched in intergenic
+regions of decreased chromatin accessibility (Figure \ref{fig:df4b}D). This is
+consistent with the association of intergenic regions with embryonic
+development-related GO terms that we previously detected (Figure \ref{fig:df1b}C). Our
+findings provide a detailed characterization of the enriched TF motifs
+present at the regions of dynamic accessibility between PND15 and adult
+spermatogonial populations and point towards novel candidate regulators
+of the differential transcriptome of the pup and adult mouse
+spermatogonia.
+
+### Chromatin accessibility at transposable elements undergoes significant remodelling in the transition from postnatal to adult spermatogonia
+
+Transposable elements (TEs) are under tight control in the germline,
+through coordinated epigenetic mechanisms involving DNA methylation,
+chromatin silencing and PIWI proteins -- piRNA pathway [@thompson2016;
+@deniz2019]. Recent evidence suggests an important role for long
+terminal repeat (LTR) - type elements, specifically for ERVKs, the
+youngest class of endogenous retroviruses (ERVs), in the transcriptional
+regulation of mRNAs and long non-coding RNAs (lncRNAs) during
+mitosis-to-meiosis transition [@sakashita2020; @davis2017]. Furthermore,
+accessibility analysis at LTRs in mitotic and meiotic germ cells,
+revealed a unique chromatin accessibility landscape in spermatogonial
+cells, compared to the rest of the germ cells in the testis
+[@sakashita2020]. To explore potential differences in TEs regulation
+driven by postnatal age, we compared the accessibility of TEs in PND15
+and adult spermatogonia. For this purpose, we quantified the ATAC-seq
+reads overlapping TEs defined by UCSC RepeatMasker and performed
+differential accessibility analysis at the subtype level (see Methods
+section). Our results revealed that the transition from PND15 to the
+adult stage is accompanied by significant chromatin accessibility
+differences at 135 TE subtypes (Figure \ref{fig:df5a}A and 5B and Table S5). Although
+most of the differentially accessible TE subtypes displayed a decrease
+in chromatin accessibility between PND15 and adult stages (68,9%,
+93/135) (Figure \ref{fig:df5a}A), we also observed 42 TE subtypes which increased in
+accessibility in adult spermatogonia (Figure \ref{fig:df5a}B). Of note, more accessible
+subtypes also displayed an increased expression in adult spermatogonia
+compared to the early postnatal stage (Figure \ref{fig:df5a}B). TE loci within the
+subtypes harbouring changes in chromatin accessibility were situated in
+intergenic and intronic regions (68% intergenic and 25% intronic), and
+around 6% were located in the proximity of a gene (+/- 1kb from a TSS)
+(Figure \ref{fig:df5a}C). LTRs were the most abundant TEs to display changes in
+chromatin accessibility, specifically ERVK and ERV1 subtypes (Figure \ref{fig:df5a}A
+and 5B). Exemplary ERVK subtypes harbouring less accessible chromatin
+included RLTR17, RLTR9A3, RLTR12B and RMER17B (Table S5). Enrichment of
+RLTR17 and RLTR9 repeats have been reported previously in mESCs,
+specifically at TFs important for pluripotency maintenance such as Oct4
+and Nanog [@fort2014]. Interestingly, we identified the promoter region
+of the lncRNA Lncenc1, an important regulator of pluripotency in mESCs
+[@fort2014; @sun2018], harboring several LTR loci with decreased
+accessibility in our adult spermatogonia, with the RLTR17 locus falling
+within the TSS of Lncenc1. This decrease in accessibility correlated
+with a marked decrease in expression of Lncenc1 in adult spermatogonia
+(Figure \ref{fig:df5a}D). Lncenc1 (also known as Platr18) is part of the
+pluripotency-associated transcript (Platr) family of lncRNAs which were
+recently identified as potential regulators of the
+pluripotency-associated genes Oct4, Nanog and Zfp42 in mESCs [@wu2018;
+@dann2008; @bergmann2015]. We were also able to identify several other
+Platr genes, such as Platr27 and Platr14, for which the TSS overlapped
+LTRs with reduced accessibility, RLTR17 and RLTR16B_MM, respectively
+(Figure \ref{fig:df5a}D and Table S5). These 2 pluripotency-associated transcripts also
+showed a decrease in mRNA expression in adult spermatogonia, while their
+expression was unchanged between PND8 and PND15 (Figure \ref{fig:df5a}D and Table S5).
+The remaining LTR subtypes with decreased accessibility in adult
+spermatogonia belonged to the ERV1, ERVL and MaLR families (Figure \ref{fig:df5a}A).
+Only very few other non-LTR TEs showed a decrease in chromatin
+accessibility, with 7 DNA element subtypes, 2 Satellite subtypes and 1
+LINE subtype, respectively (Figure \ref{fig:df5a}A and Table S5). Emerging evidence
+suggests an important contribution of TEs in providing tissue-specific
+substrates for TF binding [@fort2014; @sundaram2020; @sundaram2014]. To
+investigate the regulatory potential of the less accessible LTR
+subtypes, we assessed the enrichment of TF motifs in these regions using
+HOMER. To do so, we focused on the family level and grouped together all
+LTR subtypes coming from one family (EVK, ERV1, ERVL and ERVL-MaLR
+families). Among the less accessible LTR families, ERVKs showed the
+highest number of enriched TF motifs in adult spermatogonial cells. Top
+hits included TFs with known regulatory roles in cell proliferation and
+differentiation such as FOXL1 and FOXQ1, stem cell maintenance factors
+ELF1, EBF1 and THAP11 and TFs important in spermatogenesis PBX3, ZNF143
+and NFYA/B (Figure \ref{fig:df5b}E and S6A). ERVLs displayed motif enrichment for very
+few TFs, among which the previously undescribed ETV2, newly reported
+spermatogonial stem cell factor ZBTB7A and the testis-specific CTCF
+paralog CTCFL (Figure \ref{fig:df5b}E) [@green2018].
+
+Among the TE subtypes which increased in chromatin accessibility,
+members of the ERVK, ERVL and ERV1 families were predominant (57,1%,
+24/42) (Figure \ref{fig:df5a}B). Interestingly, we also found a considerable number of
+LINE L1 subtypes with increased chromatin accessibility in adult
+spermatogonial cells (Figure \ref{fig:df5a}B). When parsing the data for more
+accessible loci within the L1 subtypes, we found several L1 loci
+situated less than +/- 5 kb from the TSS of numerous olfactory (Olfr)
+genes.Most of them were located in Olfr gene clusters on chromosomes 2,
+7 and 11 (Table S5). Furthermore, the increase in accessibility of the
+L1 loci correlated with an increase in mRNA expression of the nearby
+Olfr gene in adult spermatogonial cells (Figure \ref{fig:df6}A). Representative
+examples were Olfr362 and Olfr1307, both situated in the Olfr gene
+cluster on Chr2 (Figure \ref{fig:df6}B). Interestingly, when visualizing the data in
+IGV, we also observed that the Olfr gene cluster on chromosome 2
+exhibited a higher density of L1 loci compared to neighbouring regions
+(Supp. Figure \ref{fig:ds6}B). Similar to before, we performed TF motif enrichment analysis
+at the family level by grouping together all differentially accessible
+TE subtypes coming from one family. More accessible LINE L1s were highly
+enriched in TF motifs, particularly in multiple members of the ETS, E2F
+and FOX families (Figure \ref{fig:df6}C). The most significant motifs belonged to
+spermatogonial stem cell maintenance and stem cell potential regulators
+FOXO1 and ZEB1, as well as TFs which have been recently associated with
+active enhancers of the stem cell-enriched population of spermatogonia
+such as ZBTB17 and KLF5 (Figure \ref{fig:df6}C and S6C) [@cheng2020]. More accessible
+ERV1s also displayed enrichment of several TF binding sites, including
+spermatogenesis-related TFs (PBX3, PRDM1, NFYA/B), hypoxia-inducible
+HIF1A and cytokine regulators STAT5A/B, suggestive of different
+spermatogonial cell metabolic demands between early postnatal and adult
+stage (Figure \ref{fig:df6}C and S6C). Overall, we provide an extensive
+characterization of the chromatin accessibility landscape of TEs in
+PND15 and adult spermatogonia, reveal differences in accessibility and
+TF motif landscape at distinct subtypes of TEs between these 2-time
+points, and suggest potential gene programs that may be regulated by
+these changes.
+
+\newpage
+
+## Discussion
+
+As initiators of the spermatogenic cascade, spermatogonial cells are
+essential in germ cell proliferation and differentiation throughout
+postnatal life. Although recent studies employing bulk and scRNA-seq
+have revealed distinct transcriptional signatures of spermatogonial
+cells across postnatal life, very few have focused on describing the
+underlying landscape of open chromatin, and the extent to which it can
+contribute to the gene expression dynamics [@hammoud2015; @hermann2018;
+@grive2019].
+
+Our ATAC-seq revealed a reorganization of open chromatin in adult
+spermatogonia compared to the PND15 cell population. This striking
+reorganization of accessible chromatin, which we detected mainly in
+intergenic and intronic regions, may be indicative of novel regulatory
+regions governing at least in part the vast transcriptome changes that
+spermatogonial cells undergo in their transition from early postnatal to
+adult stage [@hammoud2015; @grive2019]. Indeed, we found that the
+regions of differential accessibility were associated with distinct gene
+pathways, with morphogenesis and developmental pathways associated to
+the regions of decreased chromatin accessibility, while regions of
+increased chromatin openness were enriched for DNA repair pathways, stem
+cell maintenance, RNA processing and protein metabolic processes.
+Furthermore, we identified numerous enriched TF motifs in the regions of
+differential accessibility, indicative of their potential regulatory
+role. AP-1 TFs with previously described roles in spermatogonial cell
+proliferation such as JUND and c-FOS, and pluripotency factors such as
+POU3F1, displayed enriched binding sites in the regions of increased
+chromatin accessibility. In contrast, FOX and ETS TF motifs, known
+regulators of developmental pathways, mainly mapped to regions that
+decreased in accessibility in adult spermatogonial cells. For some of
+the enriched TF motifs, a preference for certain genomic locations was
+evident: NF-YA and B binding sites exhibited enrichment specifically in
+intergenic regions of more accessible chromatin which interestingly,
+were also associated with spermatogenesis-related pathways. NF-YA/B is
+also localized in intergenic regions of open chromatin in humans
+spermatogonial cells [@guo2017], prompting an additional investigation
+of their roles in regulating spermatogonial cell programs, with
+potential consequences for sperm formation.
+
+Our comparison of the gene expression changes from PND8 to PND15
+spermatogonial cells confirmed the dynamic transcriptome associated with
+developing spermatogonial cell states [@hammoud2015; @grive2019].
+Notably, PND15 corresponds to the maturation of the Sertoli cell niche
+in the mouse testis [@shinohara2001; @flickinger1967]. Upregulation of
+pathways associated with signal transduction and cellular transport in
+PND15 spermatogonia suggests an increased cellular communication with
+the somatic niche, compared to the first week of postnatal development.
+We complemented these findings with literature RNA-seq data from PND14
+and adult spermatogonia and confirmed further transcriptome changes in
+signalling pathways related to mitochondria, developmental processes and
+cell-to-cell signalling. Furthermore, we revealed numerous pathways
+related to cytokine signalling upregulated in adult spermatogonia, which
+point to the recently suggested role of testis resident macrophages in
+maintaining and regulating spermatogonial proliferation [@defalco2015;
+@garbuzov2018]. These findings suggest that, as the testis matures and
+the somatic niche develops, spermatogonial cells rely more on paracrine
+signalling and undergo vast changes in gene expression programs.
+
+To obtain a comprehensive profile of the chromatin and the transcriptome
+differences between early postnatal and adult spermatogonial cells, we
+have integrated the chromatin accessibility and gene expression, with
+known histone H3 modifications and global DNAme patterns of THY1+
+spermatogonial cells from [@hammoud2014; @hammoud2015]. This allowed us
+to identify 4 distinct categories of differentially accessible chromatin
+regions for which the nearest gene was dynamically expressed between
+early postnatal and adult stages. Interestingly, we found a similar
+number of genes with increased chromatin accessibility around their TSS
+which exhibited either an up- or a downregulated expression between pup
+and adult spermatogonia. In the category of upregulated genes with
+increased nearby chromatin accessibility, we identified several factors
+associated with redox processes, mitochondria function and cell
+proliferation. In contrast, genes marked by an increase in chromatin
+accessibility and downregulated expression in adult spermatogonia
+comprised factors important for cell cycle, RNA processing and
+developmental genes, suggesting that active repression is taking place
+at these genes [@starks2019]. For some of the developmental genes, more
+accessible chromatin was also marked by a bivalent H3K4me3/H3K27me3,
+indicative of a poised state. Notably, previous findings in THY1+ adult
+spermatogonial cells and in sperm also revealed a poised state at
+promoters of developmental genes [@hammoud2014; @erkek2013; @jung2017].
+Therefore, our findings suggest that open chromatin reorganization may
+contribute to the poised status that is already established at the
+spermatogonial cell stage for certain developmental genes. We also
+identified a category of regions for which the decrease in chromatin
+accessibility correlated with a decreased expression, the category which
+also included developmental factors. The stable methylation patterns we
+detected at the differentially accessible chromatin regions, in both
+distal and proximal genomic regions, suggest a minimal impact for DNAme
+in regulating gene expression dynamics of spermatogonial cells across
+postnatal age.
+
+Lastly, by investigating chromatin accessibility specifically at TEs, we
+revealed that distinct TE subtypes undergo changes in chromatin
+accessibility between PND15 and adult spermatogonial populations. ERVK
+and ERV1 subtypes were the most abundant categories of TEs to become
+less accessible in adult spermatogonia, whilst LINE L1 subtypes gained
+in accessibility. Although the majority of these TEs resided in
+intergenic and intronic regions, we were able to detect specific loci
+belonging to the differentially accessible ERVK and LINE L1 subtypes,
+which localized nearby TSS of distinct gene families. RLTR17, one of the
+LTR subtypes with decreased chromatin accessibility in adult
+spermatogonial cells, overlapped the TSS of several downregulated
+long-non coding RNAs from the Platr family. Platr genes, including the
+ones identified in our study, Lncenc1 and Platr14, are LTR-associated
+long non-coding RNAs important for embryonic stem cell gene expression
+programs [@bergmann2015]. Interestingly, RLTR17 has also been previously
+linked to pluripotency maintenance. In mouse embryonic stem cells,
+RLTR17 is highly expressed and enriched in open chromatin regions and
+has been shown to provide binding sites for pluripotency factors Oct4
+and Nanog [@fort2014]. On the basis of these findings, we suggest that
+RLTR17 chromatin organization may play a significant role in regulating
+pluripotency programs between early postnatal and adult spermatogonial
+cells. In contrast to the decreased accessibility of LTRs, LINE L1
+subtypes displayed an increase in chromatin accessibility in adult
+spermatogonial cells. Some of these L1 loci were situated in the
+vicinity of olfactory receptor genes with upregulated mRNA expression in
+adult spermatogonia. Recent findings in mouse and human embryonic stem
+cells have suggested a non-random genomic localization for L1 elements,
+specifically at genes that encode proteins with specialized functions
+[@lu2020]. Among these, the Olfr gene family was the most enriched in L1
+elements [@lu2020]. Although their role in spermatogonial cells is
+currently not established, Olfr proteins have been implicated in the
+swimming behaviour of sperm [@fukuda2005; @vanderhaeghen1997]. Given
+their dynamic regulation across age in spermatogonial cells, we
+speculate that Olfr genes could play additional roles in
+spermatogenesis, other than in sperm physiology. This data together with
+the high number of enriched TF motifs identified at the differentially
+accessible ERVKs and LINE L1 elements underscores previously undescribed
+regulatory roles for chromatin organization of TEs in spermatogonial
+cells during the transition from developing to adult stages
+[@sundaram2020; @sundaram2014].
+
+One limitation of our study is the incomplete purification achieved
+using FACS, which doesn't fully remove other testis cell types from our
+cell preparations. Therefore, we cannot entirely exclude the influence
+of contaminating cells on some of the transcriptome and chromatin
+accessibility data interpretation. Secondly, differences can also stem
+from the literature datasets which involve similar but not identically
+enriched populations of spermatogonial cells. Nevertheless, by comparing
+open chromatin landscape between developing and adult spermatogonial
+cells, our results reveal for the first time that there is an
+age-dependent dynamic reorganization of chromatin accessibility in
+spermatogonial cells. By integrating this newly generated data with gene
+expression profiles and known histone modifications, we provide novel
+insight into the chromatin - transcriptome dynamics of mouse
+spermatogonial cells between developing and adult stages and compile an
+information-rich resource for further germline studies.
+
+\newpage
+
+## Methods
+
+### Mouse husbandry
+
+Male C57Bl/6J mice were purchased from Janvier Laboratories (France) and
+bred in-house to generate male mice used for experiments. All animals
+were kept on a reversed 12-h light/12-h dark cycle in a temperature- and
+humidity-controlled facility, with food (M/R Haltung Extrudat, Provimi
+Kliba SA, Switzerland) and water provided ad libitum. Cages were changed
+once weekly. Animals from 2 independent breedings were used for the
+experiments.
+
+### Germ cells isolation
+
+Germ cells were isolated from male mice at postnatal day (PND) 8 or 15
+for RNA-seq and ATAC-seq experiments, and adults at 20 weeks of age
+(PNW20) for ATAC-seq. Testicular single-cell suspensions were prepared
+as previously described with slight modifications [@kubota2004a;
+@kubota2004]. For preparations using PND8 and PND15 pups, testes from 2
+animals were pooled for each sample. Pup testes were collected in
+sterile HBSS on ice. Tunica albuginea was gently removed from each
+testis, making sure to keep the seminiferous tubules as intact as
+possible. Tubules were enzymatically digested in 0.25% trypsin-EDTA
+(ThermoFisher Scientific) and 7mg/ml DNase I (Sigma-Aldrich) solution
+for 5 min at 37oC. The suspension was vigorously pipetted up and down 10
+times and incubated again for 3 min at 37oC. The digestion was stopped
+by adding 10% fetal bovine serum (ThermoFisher Scientific) and the cells
+were passed through a 20\textmu m-pore-size cell strainer (Miltenyi
+Biotec) and pelleted by centrifugation at 600g for 7 min at 4oC. Cells
+were resuspended in PBS-S (PBS with 1% PBS, 10 mM HEPES, 1 mM pyruvate,
+1mg/ml glucose, 50 units/ml penicillin and 50 \textmu g/ml streptomycin)
+and used for sorting. For preparations from adult testis, one adult male
+was used for each sample. The tunica was removed and seminiferous
+tubules were digested in 2 steps. The first consisted of incubation in
+1mg/ml collagenase type IV (Sigma-Aldrich) for 5 min at 37oC and
+vigorous swirling until the tubules were completely separated. Then
+tubules were placed on ice for 5 min to sediment, the supernatant was
+removed and washed with HBSS. Washing/sedimentation steps were repeated
+3 times and were necessary to remove interstitial cells. After the last
+washing step, sedimented tubule fragments were digested again with 0.25%
+trypsin-EDTA and 7mg/ml DNase I solution, and the digestion was stopped
+by adding 10% FBS. The resulting single-cell suspension was filtered
+through a 20\textmu m strainer (Corning Life Sciences) and washed with
+HBSS. After centrifugation at 600g for 7 min at 4oC, the cells were
+resuspended in PBS-S, layered on a 30% Percoll solution (Sigma-Aldrich)
+and centrifuged at 600g for 8 min at 4oC without braking. The top 2
+layers (HBSS and Percoll) were removed and the cell pellets were
+resuspended in PBS-S and used for sorting.
+
+### Spermatogonial cells enrichment by FACS
+
+For pup testis, dissociated cells were stained with BV421-conjugated
+anti-$$\beta$$2M, biotin-conjugated anti-THY1 (53-2.1), and
+PE-conjugated anti-$$\alpha$$v-integrin (RMV-7) antibodies. THY1 was
+detected by staining with Alexa Fluor 488-Sav. For adult testes, cells
+were stained with anti-$$\alpha$$6-integrin (CD49f; GoH3),
+BV421-conjugated anti-$$\beta$$2 microglobulin ($$\beta$$2M; S19.8), and
+R-phycoerythrin (PE)-conjugated anti-THY1 (CD90.2; 30H-12) antibodies.
+$$\alpha$$6-Integrin was detected by Alexa Fluor 488-SAv after staining
+with biotin-conjugated rat anti-mouse IgG1/2a (G28-5) antibody. Prior to
+FACS, 1 \textmu g/ml propidium iodide (Sigma) was added to the cell
+suspensions to discriminate dead cells. All antibody incubations were
+performed in PBS-S for at least 30 min at 4oC followed by washing in
+PBS-S. Antibodies were obtained from BD Biosciences (San Jose, United
+States) unless otherwise stated. Cell sorting was performed at 4oC on a
+FACS Aria III 5L using an 85\textmu m nozzle at the Cytometry Facility
+of the University of Zurich. For RNA-seq on PND8 and PND15
+spermatogonia, cells were collected in 1.5 ml Eppendorf tubes in 500
+\textmu L PBS-S, immediately pelleted by centrifugation and snap-frozen
+in liquid N2. Cell pellets were stored at -80oC until RNA extraction.
+For OmniATAC on PND15 spermatogonia, 25'000 cells were collected in a
+separate tube, pelleted by centrifugation and immediately processed
+using the OmniATAC library preparation protocol 10. For OmniATAC on
+adult spermatogonia, 5000 cells from each animal were collected in a
+separate tube and further processed using the same protocol.
+
+### Immunocytochemistry
+
+The protocol used for assessing spermatogonial cell enrichment after
+sorting was kindly provided by the Oatley Lab at Washington State
+University, Pullman, USA [@yang2013]. Briefly, 30,000-50,000 cells
+adhered to poly-L-Lysine coated coverslips (Corning Life Sciences) in
+24-well plates for 1 h. Cells were fixed in freshly prepared 4% PFA for
+10 min at room temperature then washed in PBS with 0.1% Triton X-100
+(PBS-T). Non-specific antibody binding was blocked by incubation with
+10% normal goat serum for 1 h at room temperature. Cells were incubated
+overnight at 4oC with mouse anti-PLZF (0.2 \textmu g/ml, Active Motif,
+clone 2A9) primary antibody. Alexa488 goat anti-mouse IgG (1 \textmu
+g/mL, ThermoFisher Scientific) was used for secondary labelling at 4oC
+for 1 h. Coverslips were washed 3x and mounted onto glass slides with
+VectaShield mounting medium containing DAPI (Vector Laboratories) and
+examined by fluorescence microscopy. Stem cell enrichment was determined
+by counting PLZF+ cells in 10 random fields of view from each coverslip
+and dividing by the total number of cells present in the field of view
+(DAPI-stained nuclei).
+
+### RNA extraction and library preparation for RNA-seq
+
+For RNA-seq on PND8 and PND15 spermatogonial cells, total RNA was
+extracted from sorted cells using AllPrep RNA/DNA Micro kit (Qiagen).
+RNA quality was assessed using a Bioanalyzer 2100 (Agilent
+Technologies). Samples were quantified using Qubit RNA HS Assay
+(ThermoFisher Scientific). 10 ng of total RNA from each sample were used
+to prepare total long RNA sequencing libraries using SMARTer® Stranded
+Total RNA-Seq Kit v2 - Pico Input Mammalian (Takara Bio USA, Inc.) at
+the Functional Genomics Center Zurich (FGCZ) according to the
+manufacturer's instructions.
+
+### Library preparation for Omni-ATAC
+
+Chromatin accessibility was profiled in PND15 and adult spermatogonial
+cells. Libraries were prepared starting from 25 000 PND15 and 5000
+adults sorted spermatogonia, respectively 10. Briefly, sorted cells were
+lysed in cold lysis buffer (10 mM Tris-HCl pH 7.4, 10 mM NaCl, 3 mM
+MgCl2, 0.1% NP40, 0.1% Tween-20, and 0.01% digitonin) and nuclei were
+pelleted and transposed using Nextera Tn5 (Illumina) for 30 min at 37oC
+in a thermomixer with shaking at 1000 rpm. Transposed fragments were
+purified using the MinElute Reaction Cleanup Kit (Qiagen). Following
+purification, libraries were generated by PCR amplification using the
+NEBNext High-Fidelity 2X PCR Master Mix (New England Biolabs), and
+purified using Agencourt AMPure XP magnetic beads (Beckman Coulter) to
+remove primer dimers (78bp) and fragments \>1000bp. Library quality was
+assessed on an Agilent High Sensitivity DNA chip using the Bioanalyzer
+2100 (Agilent Technologies).
+
+### RNA sequencing
+
+Quality control and alignment:Single-end (SE) sequencing was performed
+using an Illumina HiSeq4000 at the FGCZ. PND8 raw data (FASTQ files) was
+merged from two individual runs. For analysis of published RNA-seq data
+(PND14 and PNW8 spermatogonia), FASTQ files were obtained using
+fastq-dump (version 2.10.8), quality-controlled using FastQC
+[@andrews2012] (version 0.11.8). TrimGalore [@krueger2015] (version
+0.6.2) was used to trim adapters and low-quality ends from reads with
+Phred score less than 30 (-q 30), and for discarding trimmed reads
+shorter than 30 bp (--length 30). Trimmed reads were pseudo-aligned
+using Salmon [@patro2017] (version 0.9.1) with automatic detection of
+the library type (-l A), correcting for sequence-specific bias
+(--seqBias) and correcting for fragment GC bias correction (--gcBias) on
+a transcript index prepared for the Mouse genome (GRCm38) from GENCODE
+(version M18) [@harrow2012], with additional piRNA precursors and
+transposable elements (concatenated by family) from Repeat Masker as in
+[@gapp2020].
+
+Downstream analysis:Analysis was conducted with R[@rcoreteam2019]
+(version 3.6.2) using packages from The Comprehensive R Archive Network
+(CRAN)
+([[cran.r-project.org](https://cran.r-project.org/)]([cran.r-project.org](https://cran.r-project.org/)))
+and Bioconductor [@huber2015]. Pre-filtering of genes was performed
+using the filterByExpr function from edgeR [@robinson2010] (version
+3.28.1) with a design matrix and requiring at least 15 counts
+(min.counts = 15). Normalization factors were obtained using TMM
+normalization [@robinson2010a] from edgeR package and differential gene
+expression (DGE) analysis was performed using limma-voom [@law2014]
+pipeline from limma [@ritchie2015] (version 3.42.2). Log2 fold change
+between samples was calculated by subtracting Log2 normalized expression
+values. Gene ontology (GO) analysis was performed on expressed genes
+with fGSEA (version 1.15.2) using fGSEAMultilevel function on sets with
+10 to 1000 annotated genes (minSize = 10, maxSize = 1000), and p-values
+boundary of 1E-100 (eps = 1e-100) [@korotkevich2016]. For PND8 versus
+PND15 comparison, genes were pre-ranked using t-statistic; for PND14
+versus PNW8 comparison, Log2 fold change was used due to the lack of
+multiple replicates for each time point. REVIGO was used to summarize GO
+terms obtained following fGSEA [@supek2011].
+
+### Omni-ATAC
+
+Quality control, alignment, and peak calling:Paired-end (PE) sequencing
+was performed on PND15 and adult spermatogonial cells samples on an
+Illumina HiSeq2500 platform (FGCZ). FASTQ files were assessed for
+quality using FastQC [@andrews2012] (version 0.11.8). Quality control
+(QC) was performed using TrimGalore [@krueger2015] (version 0.6.2) in PE
+mode (--paired), trimming adapters, low-quality ends (-q 30) and
+discarding reads \< 30 bp after trimming (--length 30). Alignment on the
+GRCm38 genome was performed using Bowtie2 [@langmead2012] (version
+2.3.5) with the following parameters: fragments up to 2 kb were allowed
+to align (-X 2000), entire read alignment (--end-to-end), suppressing
+unpaired alignments for paired reads (--no-mixed), suppressing
+discordant alignments for paired reads (--no-discordant) and minimum
+acceptable alignment score with respect to the read length (--score-min
+L,-0.4,-0.4). Using alignmentSieve (version 3.3.1) from deepTools
+[@ramirez2016] (version 3.4.3), aligned data (BAM files) were adjusted
+for the read start sites to represent the centre of the transposon
+cutting event (--ATACshift), and filtered for reads with a high mapping
+quality (--minMappingQuality 30). Reads mapping to the mitochondrial
+chromosome and ENCODE blacklisted regions were filtered out. To call
+nucleosome-free regions, all aligned files were merged within groups
+(PND15 and adult), sorted, and indexed using SAMtools [@li2009] (version
+0.1.19), and nucleosome-free fragments (NFFs) were obtained by selecting
+alignments with a template length between 40 and 140 inclusively. Peak
+calling (identifying areas in a genome that have been enriched for
+transcription factors) on the NFFs was performed using MACS2
+[@zhang2008] (version 2.2.7.1) with mouse genome size (-g 2744254612)
+and PE BAM file format (-f BAMPE).
+
+Differential accessibility analysis:The downstream analysis was
+performed in R(version 3.6.2), using packages from CRAN and Bioconductor
+[@huber2015]. The peaks were annotated based on overlap with GENCODE
+(version M18) [@harrow2012] transcript, and/or the distance to the
+nearest transcription start site (available at the following link:
+[https://github.com/mansuylab/SC_postnatal_adult/bin/annoPeaks.R)](https://github.com/mansuylab/SC_postnatal_adult/bin/annoPeaks.R).The)
+number of extended reads overlapping in the peak regions was calculated
+using the csaw package [@lun2015] (version 1.20.0). Peak regions that
+did not have at least 15 reads in at least 40% of the samples were
+filtered out. Normalization factors were obtained on the filtered peak
+regions using the TMM normalization method [@robinson2010a] and
+differential analysis on the peaks (adults vs PND15) was performed using
+the Genewise Negative Binomial Generalized Linear Models with
+Quasi-likelihood (glmQLFit) Tests from the edgeR package [@robinson2010]
+(version 3.28.1). Peak regions that had an absolute Log2 fold change
+$\geq$ 1 and an FDR $\leq$ 0.05 were categorized as differentially
+accessible regions. GO analysis was performed on DARs with the rGREAT
+package [@gu2021] (version 1.18.0), which is a wrapper around the GREAT
+tool [@mclean2010] (version 4.0). Transcription factor motif enrichment
+analysis was performed using the marge package [@amezquita2018] (version
+0.0.4.9999), which is a wrapper around the Homer tool [@heinz2010]
+(version 4.11.1).
+
+Differential accessibility analysis at transposable elements: TE gene
+transfer format (GTF) file was obtained from
+[[labshare.cshl.edu/shares/mhammelllab/www-data/TEtranscripts/TE_GTF/mm10_rmsk_TE.gtf.gz%20on%2003.02.2020](http://labshare.cshl.edu/shares/mhammelllab/www-data/TEtranscripts/TE_GTF/mm10_rmsk_TE.gtf.gz)](http://labshare.cshl.edu/shares/mhammelllab/www-data/TEtranscripts/TE_GTF/mm10_rmsk_TE.gtf.gz%20on%2003.02.2020)
+on 03.02.2020. The GTF file provides hierarchical information about TEs:
+**Class** (level 1, eg. LTR), **Family** (level 2, eg. LTR L1),
+**Subtype** (level 3, eg. LTR L1 L1_Rod), and **Locus** (level 4, eg.
+LTR L1 L1_Rod L1_Rod_dup1). TE loci were annotated based on overlap with
+GENCODE (version M18) as described above for ATAC-seq peaks. Filtered
+BAM files (without reads mapping to blacklisted or mitochondrial
+regions) were used for analyzing TEs. Mapped reads were assigned to TEs
+using featureCounts from the R package Rsubread [@liao2019] (version
+2.0.1) and were summarized to Subtypes (level 3), allowing for
+multi-overlap with fractional counts, while ignoring duplicates. The
+number of extended reads overlapping at the TE loci were obtained using
+the csaw package [@lun2015] (version 1.20.0). Subtypes which did not
+have at least 15 reads, and loci that did not have at least 5 reads in
+at least 40% of the samples, were filtered out. Normalization and
+differential accessibility analysis were performed as described above.
+Subtypes that had an absolute Log2fold change $\geq$ 0.5 and an FDR
+$\leq$ 0.05 were categorized as differentially accessible subtypes and
+the loci with an absolute Log2 fold change $\geq$ 1 and an FDR $\leq$
+0.05 were categorized as differentially accessible loci. For further
+downstream data analysis, only the differentially accessible loci of
+differentially accessible subtypes were considered. GO and motif
+enrichment analysis were performed as described above.
+
+### Chromatin immunoprecipitation sequencing
+
+Quality control, alignment, and peak calling:ChIP-Seq SE data for PNDW8
+(adults) were obtained from GEO accession GSE49621 [@hammoud2014]. FASTQ
+files were obtained using fastq-dump (version 2.10.8), and different
+runs were merged. The FASTQ files were assessed for quality using FastQC
+[@andrews2012] (version 0.11.8). Quality control (QC) was performed
+using TrimGalore [@krueger2015] (version 0.6.0), trimming adapters,
+low-quality ends (-q 30) and discarding trimmed reads shorter than 30 bp
+(--length 30). Alignment to the GRCm38 genome was performed using
+Bowtie2 [@langmead2012] (version 2.3.5). Reads reads with low mapping
+quality (--minMappingQuality 30) or mapping to the mitochondrial
+chromosome or aforementioned blacklisted regions were filtered out. Peak
+calling was performed using MACS2 [@zhang2008] (version 2.2.7.1) with
+mouse genome size (-g 2744254612) and SE BAM file format (-f BAM).
+
+### Bisulfite sequencing (BS)
+
+Quality control and alignment:BS paired-end data for PND7, PND14, and
+PNW8 (adults) were obtained from GEO accession GSE49623 [@hammoud2015].
+FASTQ files were obtained using fastq-dump (version 2.10.8), and
+different runs were merged. FASTQ files were assessed for quality using
+FastQC [@andrews2012] (version 0.11.8). QC was performed using
+TrimGalore [@krueger2015] (version 0.6.4_dev) in PE mode (--paired),
+trimming adapters, low-quality ends (-q 30) and discarding trimmed reads
+shorter than 30 bp (--length 30). Alignment of the QC data was performed
+using Bismark [@krueger2011] (version 0.22.3) on a GRCm38 index built
+using bismark_genome_preparation (version 0.17.0). Methylation
+information for individual cytosines was extracted using the
+bismark_methylation_extractor tool from the Bismark package (version
+0.22.3).
+
+### High-throughput sequencing data analysis
+
+Data availability:the datasets used in this study are available from the
+following GEO accessions: \*\*GSE\_\_\_\*\*, GSE49621, GSE49622,
+GSE62355, and GSE49623. An overview of the datasets included in the
+study is shown in Table \ref{tab:devtab1}
+
+```{r, devtab1, echo = FALSE}
+
+df <- data.frame(Source = c("GSE", "GSM1525703", "GSM1415671", "GSE",
+                            "GSM1202705", "GSM1202708", "GSM1202713", 
+                            "GSM1202723", "GSE49623"),
+           Sequencing = c("RNA-seq", "RNA-seq", "RNA-seq",
+                          "ATAC-seq", "ChIP-seq (H3K4me3)",
+                          "ChIP-seq (H3K27me3)", "ChIP-seq (H3K27ac)",
+                          "ChIP-seq (Input)", "BS-seq"),
+           'Stages (n)' = c("PND8 (8), PND15 (9)", "PND14 (1)",
+                            "PNW8 (1)", "PND15 (6), PNW20 (5)",
+                            "PNW8 (1)", "PNW8 (1)", "PNW8 (1)", "PNW8 (1)",
+                            "PND7 (1), PND14 (1), PNW8 (7)"), check.names = F)
+
+
+kable(df, 
+    caption = "Datasets used in this manuscript", 
+    caption.short = "Datasets used in this manuscript",
+    longtable = TRUE,
+    booktabs = TRUE, format = "latex", escape = FALSE)
+```
+
+### Figures
+
+All figures in this study were generated using ggplot2 [@wickham2016],
+EnrichedHeatmap [@gu2018], and ComplexHeatmap [@gu2016] packages, and
+using base plotting functions in R. Genomic tracks were generated in IGV
+and colour coded in Inkscape.
+
+## Authors contribution
+
+ILC and IMM conceived and designed the study. ILC prepared samples,
+performed all RNA-seq, ICC and ATAC-seq experiments. DKT analyzed
+RNA-seq, ATAC-seq, ChIP-seq and BS data, with significant support from
+PLG. ILC and DKT prepared figures. ILC interpreted the data with
+significant input from DKT, PLG and IMM. ILC wrote the manuscript with
+significant help from DKT, PLG and IMM. All authors read and accepted
+the final version of the manuscript.
+
+## Acknowledgements
+
+We thank Francesca Manuella and Martin Roszkowski for taking care of
+animal breeding, Yvonne Zipfel for animal care, Andrew McDonald for
+assistance with basic lab needs, Silvia Schelbert and Alberto Corcoba
+for taking care of the animal licenses and lab organization.We thank
+Rodrigo Arzate for conceptual support and critical reading of the
+manuscript. We thank Catherine Aquino and Emilio Yángüez from the
+Functional Genomics Center Zurich for support and advice with library
+preparation and sequencing. We are very grateful to Jon Oatley, Melissa
+Oatley, Tessa Lord and Nathan Law for conceptual advice, hands-on
+training, and for providing detailed protocols for testis dissection and
+preparation, and immunocytochemistry of spermatogonial cells. We thank
+Zuguang Gu for support with heatmaps. We thank Service and Support for
+Science IT ([www.s3it.uzh.ch](http://www.s3it.uzh.ch/)) for
+computational infrastructure.
+
+## Competing interest
+
+The authors declare that they have no competing interests.
+
+## Funding
+
+The lab is funded by the University Zurich, ETH Zurich, the Swiss
+National Science Foundation Grant No. 31003A_175742 / 1, ETH fellowship
+ETH-25 19-2. DKT is supported by a Swiss Government Excellence
+Scholarship.
+
+## Data and materials availability
+
+Repository accession numbers will be available at publication or by
+request to the corresponding author. The code employed for the data
+analysis is available from
+<https://github.com/mansuylab/SC_postnatal_adult>.

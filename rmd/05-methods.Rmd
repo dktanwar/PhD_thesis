@@ -1,0 +1,692 @@
+---
+bibliography: rmd/references.bib
+link-citations: true
+biblatexoptions: [refsegment=chapter]
+---
+
+
+```{r setup, include=FALSE}
+# knitr::opts_chunk$set(dpi=300)
+```
+
+# Bioinformatics methods {#methods .unnumbered}
+
+
+## Version controlled data analysis using git {#m1 .unnumbered}
+
+Version control (also known as source control or revision control) is a
+software engineering process that involves managing changes to a
+computer program or document using a version control system (VCS). In
+graph theory, revisions form a directed acyclic graph that represents
+the growth line. The revisions to a computer program occur over time and
+can be tracked using revision numbers, timestamps, or descriptive text.
+While file copies have been used in the past to provide some form of
+version control, they are error-prone and time-consuming. The file is
+typically copied to another location, and unless the files are cleverly
+time-stamped, this simple approach may be error-prone.
+
+(ref:mfc1) \textbf{Overview of version control system (VCS).} Adapted from [@chacon2021].
+
+```{r mf1, echo=FALSE, fig.align='center', fig.cap="(ref:mfc1)", fig.scap="Overview of version control system", fig.width = 4.96, fig.height=5.6}
+img <- readPNG("figure/methods/in/1.png")
+grid.raster(img)
+```
+
+Programmers developed a local VCS with a database that records all
+modifications to the files under revision control to keep track of the
+versions. A local VCS is an example of a revision control system (RCS).
+Since it is difficult to collaborate with a local VCS, a centralized VCS
+was developed, such as Apache Subversion (SVN). All changes to files are
+monitored under the centralized server using Centralized VCS. A
+centralized VCS, on the other hand, has significant drawbacks. No one
+can connect or save versioned changes to something they are working on
+if the server goes down for an hour. This leads to the development of
+the distributed VCS, such as git. In a distributed VCS, the repository
+can be completely mirrored, including the entire version history. A
+schematic of distributed VCS is shown in Figure \ref{fig:mf1}, adapted from
+[@chacon2021].
+
+
+GitHub ([github.com)](https://github.com)) a distributed
+version control system, was used to manage data analysis projects and
+software development projects throughout this doctoral thesis work. One
+downside of using GitHub is that files greater than 50 megabytes cannot
+be hosted, which means that large files such as sequencing data, FASTQ
+files, and BAM files are not version managed. To solve this issue,
+git-fat was used, a version-controlled tool that offloads files to a
+local directory or another server [@brown2018].
+
+## Data analysis directory organization {#m2 .unnumbered}
+
+ScienceCloud service of the University of Zurich was used for computing.
+On ScienceCloud, a data volume is mounted on my instance (virtual
+computer). In the data volume, two directories were created, namely
+"Data" and "Project". The "Data" repository stores raw sequencing files,
+FASTQ files, and "gitfat" objects, while the Project directory stores
+all analysis and code and is version controlled with git. A schematic
+representation of this workflow can be seen in Figure \ref{fig:mf2}. This is done
+for each dataset analysed.
+
+(ref:mfc2) \textbf{Organization of data analysis projects.}
+```{r mf2, echo=FALSE, fig.align='center', fig.cap="(ref:mfc2)", fig.scap="Organization of data analysis projects", fig.width = 5.25, fig.height=2.98}
+img <- readPNG("figure/methods/in/2.png")
+grid.raster(img)
+```
+
+This organization of the data analysis projects ensures open and
+reproducible research. As all the analyses are version controlled, one
+can look at the analysis conducted back in time. Also, each analysis
+script has a log file, which stores the information of the tools version
+and any warnings or errors encountered during the analyses. Further, at
+the end of the project, the GitHub repository can be made public and all
+the code for intermediate data analysis are available to the research
+community.
+
+## Pipelines for data analysis {#m3 .unnumbered}
+
+I worked on multi-omics datasets for my doctoral research, which led to
+the development of data analysis pipelines for RNA sequencing (RNA-seq),
+Assay of Transposase Accessible Chromatin sequencing (ATAC-seq),
+small-RNA-seq, Whole-genome bisulfite sequencing (WGBS), Reduced
+representation bisulfite sequencing (RRBS), Chromatin
+immunoprecipitation followed by sequencing (ChIP-seq), and short RNA
+sequencing (sRNA-seq).
+
+### Quality check and trimming of sequencing datasets {#m3.1 .unnumbered}
+
+The goal of data quality check and trimming is to find and clean any
+data quality issues in the dataset and possibly account for them. The
+sequencer determines the nucleotide bases in a DNA or RNA library during
+sequencing. A small sequence, known as a read, is created for each
+fragment in the library, which is a sequence of nucleotides. In a single
+experiment, sequencing technologies, such as Illumina, can generate a
+large number of sequence reads. The first step after receiving the
+sequenced data is to assess the data quality to determine the
+reliability of the sequenced reads. The FASTQ files are examined using
+FastQC [@andrews2012]. FastQC provides a comprehensive view of the data,
+including the number of sequenced reads, base sequence quality, "N"
+content (if a sequencer cannot call a base, due to the technical
+limitations, it enters "N"; of each sequencing platform.), sequence
+duplication levels, and adapter information. A Hypertext Markup Language
+(HTML) report generated by the software, for each sample, helps to
+understand the pre-processing steps required. The quality assessment is
+done using the quality scores (Q-scores) in the FASTQ files, which are
+translated to quality statistics in FastQC reports and plotted as
+boxplots. Q score is defined as the base-calling error probabilities and
+is calculated by the formula: **Q = -log10 (P)**. For instance, if a
+nucleotide base is assigned a Q score of 30, this is equivalent to the
+probability of an incorrect base call of 1/1000 times, which means that
+the accuracy of base calling is 99.9%. A Q score of 30 represents
+perfect base calling with no errors and ambiguities and is considered a
+benchmark for quality in high-throughput sequencing (HTS) [@ewing1998].
+
+(ref:mfc3) \textbf{Workflow for quality check and quality control for sequencing data.} QC: Quality Control.
+
+```{r mf3, echo=FALSE, fig.align='center', fig.cap="(ref:mfc3)", fig.scap="Workflow for quality check and quality control for sequencing data", fig.width = 4, fig.height=3.9}
+img <- readPNG("figure/methods/in/3.png")
+grid.raster(img)
+```
+
+Adaptors are artificial DNA oligonucleotides and are required for
+sequencing by platforms like Illumina. During the process of Illumina
+library preparation, adaptors are ligated to the short DNA sequences.
+Because of the adapters (attached at the end of reads), the sequencing Q
+score is usually low. Therefore, these are required to be removed before
+downstream processing of the data. Furthermore, the sequenced DNA reads
+could have trailing and leading 'N' (if a base caller fails to call a
+base at a genomic location, it will put 'N' instead of 'A', 'T', 'G' or
+'C'). Also, there is a chance that although long reads were sequenced,
+small reads appeared after sequencing, or they became shorter after
+removal of trailing or leading 'N'. It is always better to get rid of
+small reads below a certain length, as they would be mapped to multiple
+locations and will lead to misinterpretation. Trimming is the process of
+modifying the ends of reads. Trimming can help to increase the number of
+reads that the aligner or assembler can successfully use, lowering the
+amount of unmapped or unassembled reads. TrimGalore is used to trim
+adapters and inferior ends of reads with a Phred score of less than 30
+(-q 30), to remove Ns from both sides of reads (--trim-n), and to
+discard trimmed reads that are too short to be informative (e.g.
+--length 30, or 15 for small RNA-seq data). After this, all results are
+used to generate an overview report with multiQC [@ewels2016], which is
+a reporting tool that parses summary statistics from results of other
+bioinformatics data analysis tools. Finally, it is critical to
+recognize, identify, and rule out issues that may affect downstream
+analysis interpretation.
+
+The trimmed data is then aligned to the reference genome, indexed with
+the specific tool needed for alignment. For example, for aligning WGBS
+data with the reference genome, the reference genome is first indexed
+with Bismark. This workflow is shown in Figure \ref{fig:mf3}.
+
+Some library preparation kits use the unique molecular identifier (UMI),
+which are complex indices and are added to the sequencing libraries
+before the polymerase chain reaction (PCR) amplification step. UMIs were
+first implemented in the iCLIP protocol [@könig2010] but has been
+implemented for RNA-seq, small RNA-seq, single-cell sequencing,
+ChIP-seq, and WGS.
+
+### RNA-seq {#m3.2 .unnumbered}
+
+RNA sequencing (RNA-seq) is a technique that uses high-throughput
+sequencing (HTS) to investigate the quantity and sequences of RNA. It
+examines the transcriptome to determine, which of our DNA-encoded genes
+are turned on or off, and to what degree. RNA-seq pipeline schematic is
+shown in Figure \ref{fig:mf4}.
+
+(ref:mfc4) \textbf{Workflow for RNA sequencing data analysis.}
+```{r mf4, echo=FALSE, fig.align='center', fig.cap="(ref:mfc4)", fig.scap="Workflow for RNA sequencing data analysis", fig.width = 6.5, fig.height=3.5}
+img <- readPNG("figure/methods/in/4.png")
+grid.raster(img)
+```
+
+
+#### Pseudo-alignment and alignment {#m3.2.1 .unnumbered}
+
+Sequence alignment is used to determine where the sequences are similar
+to the reference genome and how similar they are. We can estimate where
+a read came from by aligning or "mapping" it to a reference genome or
+transcriptome. There are two families of methods for mapping reads in
+RNA-seq data: alignment and pseudo-alignment. For alignment, aligners
+such as STAR or Rsubread are used. They align reads to a genome or
+transcriptome and perform spliced alignment. They return the reads'
+base-level alignments. Transcript quantification tools such as Salmon
+[@patro2017] and Kallisto [@bray2016] instead perform pseudo-alignment.
+These tools use statistical inference to determine transcript abundances
+by mapping reads to the transcriptome. Alignments from the aligners can
+then be used for a variety of purposes, such as for feeding transcript
+assembly tools, for variant calling pipelines, or for transcript
+quantification tools.
+
+Quality-controlled reads were pseudo-aligned using Salmon with automatic
+detection of the library type (-l A), correcting for sequence-specific
+bias (--seqBias), and correcting for fragment GC bias correction
+(--gcBias) on a transcript index prepared from GENCODE, with additional
+piRNA precursors and transposable elements (concatenated by family) from
+Repeat Masker as in [@gapp2020]. Downstream analyses including
+differential analysis, section \_\_; differential transcript usage and
+differential isoform switching, section\_\_; and functional analyses,
+section\_\_, are performed on the pseudo-alignment from Salmon.
+
+
+Additionally, alignment is performed using the Rsubread package
+[@liao2019] using the subjunc function, specific for RNA-seq data.
+Analysis of duplicates; section \_\_; differential exon usage, section
+\_\_; and differential 3' usage, section \_\_, are performed on
+alignment obtained from Rsubread.
+
+
+A direct comparison of genome alignment with transcriptome
+pseudo-alignment was performed in [@yi2018] and the authors found that
+both approaches produce similar quantifications. However, [@wu2018]
+suggested that it is not optimal to use alignment-free methods to
+analyze and quantify lowly expressed genes and small RNAs.
+
+#### Duplicated reads analysis {#m3.2.2 .unnumbered}
+
+Duplicated reads are different copies of the exact same sequence. Unless
+a genomic region is highly expressed, most mRNA fragments are expected
+to be unique. A low degree of repetition may indicate that the target
+sequence is well-covered, whereas a high level of duplication is more
+likely to signal bias. Duplicate reads might be caused by PCR
+duplication or legitimately overrepresented sequences. Because PCR
+amplification is more efficient for some sequences than others, it can
+misrepresent the true proportion of sequences in the input, whereas
+truly overrepresented sequences are the result of very abundant
+transcripts in an RNA-Seq library and are an expected case and not of
+concern because they accurately represent the input.
+
+
+Throughout the research, duplicated reads were marked in the aligned
+data using sambamba [@tarasov2015], and further, the quality issues with
+PCR duplicates are analyzed using dupRadar [@sayols2016]. dupRadar aids
+in separating the fraction of readings produced by artefacts from the
+fraction resulting from high expression.
+
+#### Differential expression analysis {#m3.2.3 .unnumbered}
+
+Differential expression analysis (at the transcript or gene level) is
+the statistical examination of normalised read count data to find
+quantitative differences in expression levels between experimental
+groups.
+
+
+Read counts at the transcript level are obtained from pseudo-aligned
+data and are aggregated at the gene level. Low counts of candidate
+genes/transcripts across samples give minimal evidence for differential
+expression. When evaluating false discovery rates, they also add to the
+multiple testing burden, lowering the ability to find differentially
+expressed genes. A pre-filtering of counts is therefore performed using
+the filterByExpr function from edgeR [@robinson2010] with a design
+matrix (matrix containing data about multiple characteristics of several
+samples, such as biological group, age, and batch for library
+preparation) and requiring at least 20 counts (min.counts = 20)
+[@germain2020]. Next, the counts are normalized for different sequencing
+depths between samples and to eliminate composition biases between
+samples, for example, if there are a few highly expressed genes
+dominating in some samples, leading to fewer reads from other genes.
+Normalization factors are obtained using the TMM normalization method
+[@robinson2010] from the edgeR package, using the calcNormFactors
+function. TMM stands for Trimmed Mean of M values, in which the counts
+for the samples are scaled using a weighted trimmed mean of the log
+expression ratios. Differential expression analysis at gene and
+transcript level is performed using limma-voom [@law2014] pipeline from
+limma [@ritchie2015] package.
+
+#### Exploratory data analysis {#m3.2.4 .unnumbered}
+
+Exploratory data analysis of counts (using principal component analysis,
+PCA), differential analysis results (volcano plot, MA plot, and
+heatmap), and assessment of library composition is performed using
+plgINS, a versatile R package, ([github.com/ETHZ-INS/plgINS](https://github.com/ETHZ-INS/plgINS)),
+under development by Dr. Pierre-Luc Germain. The package also comes with
+a shiny application.
+
+
+#### Differential transcript usage and differential isoform switching {#m3.2.5 .unnumbered}
+
+Differential transcript usage (DTU) analysis looks for proportional
+differences in the makeup of a gene's transcripts between conditions.
+
+DTU is performed using IsoformSwitchAnalyzeR [@vitting-seerup2017;
+@vitting-seerup2019]. Isoforms are annotated via integration of a wide
+range of (predicted) annotations: Pfam was used for prediction of
+protein domains, CPC2 (version 2.0) for calculation of the coding
+potential, SignalP (version 5.0) for prediction of Signal Peptides, and
+IUPred2A was used to predict Intrinsically Disordered Region (IDRs) and
+Intrinsically Disordered Binding Regions (IDBRs). The results from Pfam,
+CPC2, IUPred2A, and SignalP are used with IsoformSwitchAnalyzeR for
+annotation and prediction of functional consequences for the identified
+isoform changes.
+
+
+#### Differential exon usage and differential 3' untranslated regions usage {#m3.2.6 .unnumbered}
+
+Differential exon usage (DEU) analysis looks for variations in exon
+usage between experimental conditions. mRNAs' 3' untranslated regions
+(3' UTRs) are best recognized for regulating mRNA-based functions such
+as mRNA localization, stability, and translation [@mayr2019].
+Differential UTR usage looks for variations in 3' UTR usage between
+experimental conditions.
+
+DEU and differential 3' UTR usage are performed using the diffUTR R
+package [@gerber2021].
+
+
+
+#### Functional analysis {#m3.2.7 .unnumbered}
+
+The output of RNA-seq differential expression analysis is a list of
+significant differentially expressed genes (DEGs). The goal of
+functional analysis is to provide biological insight of DEGs. Functional
+analysis on Kyoto Encyclopedia of Genes and Genomes (KEGG)
+[@kanehisa2021], Reactome [@jassal2020], Gene Ontology (GO)
+[@consortium2021] and curated pathway list from the Gene Set Enrichment
+Analysis (GSEA) [@subramanian2005] databases is performed using
+multiGSEA ([github.com/lianos/multiGSEA](https://github.com/lianos/multiGSEA)), which facilitates the
+analysis with GOseq [@young2010], fGSEA [@korotkevich2016], Correlation
+Adjusted MEan RAnk gene set test (CAMERA) and camera pre-ranked
+(CAMERA-PR) [@wu2012], ROtation testing using MEan Ranks (ROMER) and fry
+[@ritchie2015], and ROtAtion gene Set Testing (ROAST) [@wu2010]. An
+advantage of using multiGSEA is that it has standardized input and
+output and provides a Shiny app for exploratory data analysis ([github.com/lianos/multiGSEA.shiny](https://github.com/lianos/multiGSEA.shiny)). With multiGSEA, it is
+easy to specify to use testing relative to a threshold (TREAT) method
+[@mccarthy2009], which takes a user-specified log fold change cut-off
+and recalculates the moderated t-statistics and p-values. Using TREAT
+only affects enrichment tests that first threshold the genes in the
+experiment as "significant" or not, like GOseq and not tests like the
+camera.
+
+
+### ATAC-seq {#m3.3 .unnumbered}
+
+The Assay of Transposase Accessible Chromatin sequencing (ATAC-seq) is
+widely used in studying chromatin biology to study chromatin
+accessibility and to identify open chromatin regions (OCRs). The
+nucleosome is the most basic component of chromatin. Each nucleosome is
+made up of about two turns of DNA wrapped around a set of eight proteins
+called histones known as histone octamer. With the help of nucleosomes,
+the genome is securely packed and structured, known as chromatin. The
+organization and accessibility of DNA are influenced by a number of
+factors, including chromatin structure, nucleosome location,
+transcription factors, and histone modifications. As a result, these
+factors have a role in the activation and inactivation of genes. The
+genome is treated with a hyperactive version of the Tn5 transposase to
+insert sequencing adapters into OCRs [@buenrostro2015]. Because it is
+easier, faster, and uses fewer cells than competing approaches like
+FAIRE-Seq and DNase-Seq, ATAC-Seq has become popular for discovering
+accessible regions of the genome. The schematic of the ATAC-seq pipeline
+is shown in Figure \ref{fig:mf5}.
+
+
+(ref:mfc5) \textbf{Workflow for ATAC sequencing data analysis.} QC: Quality Control, NFF: Nucleosome Free Fragments.
+```{r mf5, echo=FALSE, fig.align='center', fig.cap="(ref:mfc5)", fig.scap = "Workflow for ATAC sequencing data analysis", fig.width = 3.55, fig.height=7}
+img <- readPNG("figure/methods/in/5.png")
+grid.raster(img)
+```
+
+
+#### Alignment, post-alignment quality control, and peak calling {#m3.3.1 .unnumbered}
+
+Alignment of the ATAC-seq data is performed using Bowtie2
+[@langmead2012] with the following parameters: fragments up to 2 kb were
+allowed to align (-X 2000), entire read alignment (--end-to-end),
+suppressing unpaired alignments for paired reads (--no-mixed),
+suppressing discordant alignments for paired reads (--no-discordant) and
+minimum acceptable alignment score with respect to the read length
+(--score-min L,-0.4,-0.4). Tn5 inserts adapters separated by 9bp when it
+cuts an accessible chromatin region [@kia2017]. This indicates that
+reads on the positive strand should be adjusted 4 bp to the right and
+reads on the negative strands should be shifted 5 bp to the left in
+order for the read start site to reflect the centre of where Tn5 binds
+as done in [@buenrostro2013], which is important for the footprint
+analysis. Using alignmentSieve from deepTools [@ramirez2016], aligned
+data (BAM files) are adjusted for the read start sites to represent the
+centre of the transposon cutting event (--ATACshift), and filtered for
+reads with a high mapping quality (--minMappingQuality 30). In addition,
+because the mitochondrial genome is devoid of chromatin packaging
+[@bogenhagen2012] a large number of mitochondrial reads can be a concern
+in ATAC-seq. Some ATAC-Seq samples have been found to include 80%
+mitochondrial reads, prompting the development of wet-lab approaches to
+address the problem [@corces2017]. Also, because the open chromatin
+regions of interest are typically found in the nuclear genome,
+mitochondrial reads are typically excluded from the analysis. Hence,
+reads mapping to the mitochondrial chromosome and ENCODE blacklisted
+regions (regions where genome assembly results in erroneous signal) were
+filtered using alignmentSieve. Because ATAC-seq does not require
+rigorous size selection during library preparation, it can identify
+nucleosome positions using fragments representing nucleosome-free
+fragments (NFFs) nucleosome monomers, and multimers. There is
+approximately 147 bp of DNA wrapped around a nucleosome, and in order to
+obtain NFFs, which are indicative of transcription factor bindings, the
+fragments less than 147 bp must be extracted. To extract NFFs, all
+aligned files are merged within experimental groups, reads are sorted by
+left-most coordinates and indexed using SAMtools [@li2009], and NFFs
+were obtained by selecting alignments with a template length between 40
+and 140 inclusively [@jung2017; @goodnight2019]. Peak calling is a
+statistical approach that leverages data coverage properties to identify
+locations that are enriched as a result of protein/ transcription factor
+binding. To find regions corresponding to potential OCRs in the
+nucleosome-free regions, we want to identify regions where reads have
+piled up greater than the background read coverage. Peak calling on the
+NFFs is performed using MACS2 [@zhang2008] with genome size in base-pair
+(-g genomeSize) and specifying the paired-end BAM file format (-f
+BAMPE).
+
+
+#### Peaks annotation and differential accessibility analysis {#m3.3.2 .unnumbered}
+
+The goal of peak annotation is to map peaks to the regulatory
+elements.The peaks are annotated with transcript, and the distance to
+the nearest transcription start site, based on overlap with gene
+transfer format (GTF) file obtained from the GENCODE. The number of
+extended reads overlapping in the peak regions is calculated using the
+csaw package [@lun2015]. Peak regions that did not have at least 15
+reads in at least 40% of the samples were filtered out. Normalization
+factors were obtained on the filtered peak regions using the TMM
+normalization method [@robinson2010] and differential accessibility
+analysis is performed using the Genewise Negative Binomial Generalized
+Linear Models with Quasi-likelihood (glmQLFit) test from the edgeR
+package. edgeR has recently been benchmarked and
+recommended for differential chromatin accessibility analysis
+[@gontarz2020].
+
+
+#### Functional analysis {#m3.3.3 .unnumbered}
+
+GO analysis is performed on differentially accessible regions (DARs)
+with the rGREAT package ([github.com/jokergoo/rGREAT](https://github.com/jokergoo/rGREAT)), which is
+a wrapper around the Genomic Regions Enrichment of Annotations Tool
+(GREAT) [@mclean2010]. Transcription factor motif enrichment analysis is
+performed using the marge package [@amezquita2018], which is a wrapper
+around the Homer tool [@heinz2010].
+
+
+#### Differential accessibility analysis at transposable elements {#m3.3.4 .unnumbered}
+
+Transposable elements (TEs) GTF file is obtained
+from [http://labshare.cshl.edu/shares/mhammelllab/www-data/TEtranscripts/TE_GTF/mm10_rmsk_TE.gtf.gz](http://labshare.cshl.edu/shares/mhammelllab/www-data/TEtranscripts/TE_GTF/mm10_rmsk_TE.gtf.gz%20on%2003.02.2020). The GTF file provides hierarchical information about TEs: **Class**
+(level 1, eg. LTR), **Family** (level 2, eg. LTR L1), **Subtype** (level
+3, eg. LTR L1 L1_Rod), and **Locus** (level 4, eg. LTR L1 L1_Rod
+L1_Rod_dup1). TE loci are annotated based on overlap with GENCODE as
+described above for ATAC-seq peaks. Filtered BAM files (without reads
+mapping to blacklisted or mitochondrial regions) are used for analyzing
+TEs. Mapped reads are assigned to TEs using featureCounts from the R
+package Rsubread [@liao2019] and were summarized to Subtypes (level 3),
+allowing for multi-overlap with fractional counts, while ignoring
+duplicates. The number of extended reads overlapping at the TE loci is
+obtained using the csaw package [@lun2015]. Subtypes that did not have
+at least 15 reads, and loci that did not have at least 5 reads in at
+least 40% of the samples, were filtered out. Normalization and
+differential accessibility analysis is performed as described above for
+the peaks. GO and motif enrichment analysis is performed as described
+above for the peak regions.
+
+
+
+### ChIP-seq {#m3.4 .unnumbered}
+
+A substantial part of gene expression regulation is controlled by
+protein-DNA interactions. Proteins like transcription factors and
+histones influence how much and where genes are expressed. ChIP,
+followed by sequencing, can be used to investigate the interaction
+between a DNA sequence and a protein. There are two types of ChIP:
+cross-linked ChIP (X-ChIP) and native ChIP (N-ChIP). Formaldehyde is
+utilized to crosslink histones to DNA, and ultrasound sonication is used
+to fragment the DNA in X-ChIP, whereas the native covalent interaction
+between protein and DNA is exploited in N-ChIP [@park2009]. The
+fundamental purpose of ChIP is to map global binding sites for any
+protein of interest, such as transcription factors (TF) and histones, in
+order to investigate specific modifications. In vivo, the approach
+generates a library of DNA locations bound to the protein of interest.
+Following ChIP on samples, library preparation, PCR amplification, and
+ultimately deep sequencing are performed. The schematic of the ChIP-seq pipeline
+is shown in Figure \ref{fig:mf6}.
+
+(ref:mfc6) \textbf{Workflow for ChIP sequencing data analysis.} QC: Quality Control.
+```{r mf6, echo=FALSE, fig.align='center', fig.cap="(ref:mfc6)", fig.scap="Workflow for ChIP sequencing data analysis", fig.width = 4, fig.height=6}
+img <- readPNG("figure/methods/in/6.png")
+grid.raster(img)
+```
+
+
+#### Alignment and peak calling {#m3.4.1 .unnumbered}
+
+Alignment is performed using Bowtie2. Reads with more than 3 mismatches
+are removed from the aligned data, as suggested in [@royo2016], and
+reads with low mapping quality (--minMappingQuality 30) or mapping to
+the mitochondrial chromosome or aforementioned blacklisted regions are
+also filtered out. Peak calling is performed using MACS2 with mouse
+genome size in base-pair (-g genomeSize) and the BAM file format (-f
+BAM/PEBAM), together with the ChIP input sample.
+
+
+#### Peaks annotation, differential analysis, and functional analysis {#m3.4.2 .unnumbered}
+
+These analyses are performed as described above for the ATAC-seq peaks.
+
+
+### Bisulfite sequencing {#m3.5 .unnumbered}
+
+DNA methylation (DNAme) involves the addition of methyl groups to the
+DNA molecule. It most normally occurs at the C5 position of cytosines
+inside CpG dinucleotides, where it is stable during mitosis and meiosis.
+Methylation can change the activity of DNA without changing its
+sequence. DNAme is a reversible, cell-type-specific DNA modification
+that is usually persistent through cell division. It is not equally
+distributed across the genome, but rather is linked to CpG density.
+High-throughput bisulfite sequencing is one of the most reliable methods
+for measuring DNA methylation. In bisulfite conversion, unmethylated
+cytosine residues are converted to uracil, but methylated cytosines
+remain intact [@frommer1992], allowing methylation and unmethylated
+cytosine bases to be distinguished. Following PCR amplification, these
+uracils are converted to thymines. This is followed by the WGBS. WGBS is
+considered a gold-standard technology for DNA methylation detection as
+it provides a qualitative, quantitative, and efficient technique to
+identify 5-methylcytosine at single base-pair resolution. The cost of
+sequencing an entire genome is typically quite high. As a result,
+despite its use on huge genomes like the human genome, significant
+numbers of individual samples are rarely sequenced. For this reason,
+RRBS was developed, in which the bisulfite process occurs but only
+around 1% of the genome is sequenced. This makes it possible to sequence
+the genomes in greater numbers. The idea behind RRBS is to enrich the
+sequencing library with CpG-dense sections of the genome to boost the
+sequencing depth of cytosine-rich areas [@meissner2005]. This is done by
+using CpG-specific restriction enzymes like MspI, which identifies the
+sequence 5'-CCGG-3'. MspI cleaves the complete genome in RRBS, leaving
+at least two cytosines per cleaved DNA fragment (one cytosine at either
+end of the MspI-MspI fragment). Sequencing libraries are made from
+size-selected MspI DNA fragments, followed by bisulfite conversion and
+sequencing of the converted library. The schematic of the BS-seq pipeline
+is shown in Figure \ref{fig:mf6}.
+
+(ref:mfc7) \textbf{Workflow for Bisulfite sequencing data analysis.} QC: Quality Control, DML: differentially methylated loci, DMR: differentially methylated regions, CNV: copy-number variation.
+
+```{r mf7, echo=FALSE, fig.align='center', fig.cap = "(ref:mfc7)", fig.scap="Workflow for Bisulfite sequencing data analysis", fig.width = 6.47, fig.height=2.83}
+img <- readPNG("figure/methods/in/7.png")
+grid.raster(img)
+```
+
+
+#### Alignment and methylation calling {#m3.5.1 .unnumbered}
+
+Mismatches between the reads and the reference genome are introduced
+during bisulfite conversion, resulting in slow and imprecise mapping.
+Further, the DNA code's complexity is reduced. Hence, specialized tools
+are required for aligning the bisulfite sequencing data. Alignment of
+the bisulfite sequencing data is performed using Bismark [@krueger2011]
+on a genome index built using bismark_genome_preparation. Methylation
+information for individual cytosines (methylation calls) is extracted
+using the bismark_methylation_extractor tool from the Bismark package.
+
+#### Differential methylation analysis {#m3.5.2 .unnumbered}
+
+Differential analysis can be performed at the loci level (differentially
+methylated loci, DML) or at the region's level (differentially
+methylated regions, DMRs). For the identification of DML and DMRs, the
+data is first filtered by the coverage among samples. DML are identified
+using edgeR. Identification of DMRs is not so straightforward, as
+defining regions boundaries is not easy the tool has to take into
+account correlation across loci of a region. Hence, during a course, we
+benchmarked different tools for detecting DMRs
+[dktanwar.github.io/sta426-project-dmr-comparison](https://dktanwar.github.io/sta426-project-dmr-comparison/report/project_report.html)
+and found dmrseq to outperform all other methods that we compared. DMRs
+from RRBS data are identified using the parameters recommended by Dr.
+Keegan Korthauer**,** author of dmrseq
+([github.com/kdkorthauer/dmrseq/issues/14](https://github.com/kdkorthauer/dmrseq/issues/14)).
+
+
+#### CNV analysis {#m3.5.3 .unnumbered}
+
+The phenomenon of copy number variation (CNV) occurs when regions of the
+genome are repeated and the amount of repeats differs between
+individuals. CNV is a type of structural variation that occurs when a
+duplication or deletion event occurs that impacts a large number of base
+pairs. To infer and visualize CNV from WGBS data, we use the CNVkit
+[@talevich2016].
+
+
+#### DML and DMR annotation, and functional analysis {#m3.5.4 .unnumbered}
+
+These analyses are performed as described above for the ATAC-seq data.
+
+
+### Short RNA-seq {#m3.6 .unnumbered}
+
+The small RNA-seq pipeline is not described in this section, as a method
+for analyzing small RNA-seq data has been developed and is discussed in
+detail in Chapter 3.
+
+
+### Multi-omics analysis {#m3.7 .unnumbered}
+
+Using different experiments, followed by sequencing, on the same samples
+or cells/tissues, such as RNA-seq, ATAC-seq, ChIP-seq, and BS-seq,
+results in multi-dimensional omics datasets that can be used to
+investigate relationships between different biological processes, such
+as gene expression, chromatin accessibility, histone modifications, and
+DNA methylation. Integrating multi-omics datasets is most challenging
+and is not straightforward to perform, as there are no standard recipes.
+
+
+We present a straightforward and biologically useful approach for
+performing multi-omics analysis on RNA-seq, ATAC-seq, ChIP-seq, and
+BS-seq datasets. First, we overlap the differentially accessible regions
+(DARs) with ChIP-seq peaks enrichment, RNA-seq expression of overlapping
+genes with DARs, and methylation values of DARs overlapping loci from
+BS-seq data into one matrix, overlapMatrix. The DARs are initially
+divided into proximal (less than +/- 2.5 kb from a TSS) and distal (more
+than +/- 2.5 kb from a TSS) regions, as per the ENCODE guidelines
+[@thurman2012; @harrow2012]; the proximal regions are further divided
+into active and inactive (proximal active and proximal inactive) groups
+based on nearby gene expression (if nearby gene expression is detected)
+(**step 1**). Next, these three groups are separated based on whether
+the biological groups are more or less accessible (**step 2**). This
+classification would reveal six separate clusters of DARs, each with its
+own biological profile. Further, proximally active genes are categorised
+based on their up/ down expression (**step 3**). Moreover, we
+categorised DARs depending on whether they had H3K4me3, which is a
+critical marker for the active transcription and developmentally stable
+genes [@fu2019]; H3K27ac, which is associated with the higher activation
+of transcription and therefore defined as an active enhancer mark
+[@zhang2020]; or dual H3K4me3/H3K27ac enrichment [@beacon2021]; as well
+as H3K27me3 enrichment, which is involved in transcriptional silencing
+[@bogliotti2012] (**step 4**). The schematic is shown in Figure \ref{fig:mf8}. Furthermore, gene ontology and
+transcription factor (TF) motif enrichment analysis can be done on these
+categorised DARs. For a more in-depth understanding, all of the regions
+can be further classified based on their methylation state (high or
+low). Please see Chapter 2 for an application of this multi-omics
+analysis.
+
+\newpage
+\begin{landscape}
+
+(ref:mfc8) \textbf{Workflow for multi-omics data integration.}
+
+```{r mf8, echo=FALSE, fig.align='center', fig.cap="(ref:mfc8)", fig.scap="Workflow for multi-omics data integration", fig.width = 9, fig.height=7}
+img <- readPNG("figure/methods/in/8.png")
+grid.raster(img)
+```
+\end{landscape}
+
+Visualization of these regions is an essential step. We used
+EnrichedHeatmap and ComplexHeatmap packages for the visualization of
+categorized DARs.
+
+**ATAC-seq:** ATAC-seq data is the starting point and we first find the
+middle of each DARs. After that, we obtain the coverage for 1kb upstream
+and downstream from the middle of DARs. We use the normalizeToMatrix
+function from the EnrichedHeatmap package and normalized the signal
+using the weighted mean between the intersected parts and un-intersected
+parts(mean_mode = "w0") in a window of 50bp.
+
+
+v\_{w 0}=\\frac{v\_{w} W}{W+W\^{\\prime}}
+
+{W} is the sum of width of the intersected parts \\left(\\sum\_{i}\^{n}
+w\_{i}\\right) and W\^{\\prime} is the sum of width for the
+non-intersected parts.
+
+
+Moreover, we also plot the log2fold-changes of DARs using
+ComplexHeatmap.
+
+
+**ChIP-seq:** ChIP-seq data coverage for 1kb upstream and downstream from
+the mid of DARs is obtained. We use the normalizeToMatrix function from
+the EnrichedHeatmap package and normalized the signal using the weighted
+mean between the intersected parts and un-intersected parts (mean_mode =
+"w0") in a window of 50bp.
+
+
+**BS-seq:** BS-seq data methylation values for 1kb upstream and downstream
+from the mid of DARs is obtained. We use the normalizeToMatrix function
+from the EnrichedHeatmap package and normalized the signal using the
+mean of all the signals (mean_mode = "absolute") in a window of 50bp.
+
+v\_{a}=\\frac{\\sum\_{i}\^{n} x\_{i}}{n}
+
+**RNA-seq:** For RNA-seq data, we used ComplexHeatmap to plot the
+log2-fold-changes of expression values between the groups, and also the
+log2-fold-changes obtained after the differential analysis.
+
+\printbibliography[segment=\therefsegment,heading=subbibliography]

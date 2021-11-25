@@ -1,0 +1,7 @@
+# Appendix E {- #ae}
+
+Curriculum Vitae of the doctoral student.
+
+<!-- \backmatter -->
+<!-- \setcounter{secnumdepth}{-1} -->
+\includepdf[pages=-,addtotoc={1, section, 1, CV, CV}]{data/Deepak_Tanwar.pdf}

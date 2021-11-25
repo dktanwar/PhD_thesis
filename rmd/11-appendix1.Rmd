@@ -1,4 +1,46 @@
 # Appendix A {- #aa}
 
-## Datasets analyzed
+\markboth{Datasets analyzed during the thesis}{Appendix A}
+
+\noindent
+
+\setlength\parindent{0pt}
+
+## Datasets analyzed from lab's MSUS model{-}
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+library(readxl)
+df1 <- data.frame(read_xlsx("figure/appendix/datasets_dkt.xlsx", sheet = 1), check.names = F)
+df1 <- df1[,c(3,4,5,6,7,8,9,10,11,12)]
+df2 <- data.frame(read_xlsx("figure/appendix/datasets_dkt.xlsx", sheet = 2), check.names = F)
+df2 <- df2[,c(3:13)]
+df3 <- read_xlsx("figure/appendix/datasets_dkt.xlsx", sheet = 3)
+df3 <- df3[,-c(1:2)]
+
+df1$GitHub <- sapply(df1$GitHub, function(x) paste(x, collapse = " ", sep = "\n"))
+
+library(kableExtra)
+
+kbl(df1, booktabs = T) %>%
+kable_styling(latex_options = c("striped", "scale_down")) %>%
+  kable_styling(latex_options = c("HOLD_position")) 
+# %>%
+  # landscape()
+```
+
+## Human dataset from the Schratt lab{-}
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+kbl(df3, booktabs = T) %>%
+kable_styling(latex_options = c("striped", "scale_down")) %>%
+  kable_styling(latex_options = c("HOLD_position")) 
+```
+
+## Mouse datasets analyzed from literature{-}
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+kbl(df2, booktabs = T) %>%
+kable_styling(latex_options = c("striped", "scale_down")) %>%
+  kable_styling(latex_options = c("HOLD_position")) 
+```
 

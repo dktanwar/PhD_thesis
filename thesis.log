@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.10.15)  7 NOV 2021 14:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.10.15)  25 NOV 2021 13:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -788,50 +788,210 @@ Package biblatex Info: ... file 'biblatex.cfg' found.
 File: biblatex.cfg 
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
-\@quotelevel=\count450
-\@quotereset=\count451
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 22
-4.
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen192
+\WF@size=\dimen193
+\c@WF@wrappedlines=\count450
+\WF@box=\box62
+\WF@everypar=\toks46
+Package: wrapfig 2003/01/31  v 3.6
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2021/03/06 v0.5t Insert pages of external PDF documents (AM)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen194
+\ESO@tempdimb=\dimen195
+)
+\AM@pagewidth=\dimen196
+\AM@pageheight=\dimen197
+\AM@fboxrule=\dimen198
+(/usr/local/texlive/2021/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2021/03/06 v0.5t Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count451
+\AM@pagebox=\box63
+\AM@global@opts=\toks47
+\AM@pagecnt=\count452
+\AM@toc@title=\toks48
+\c@AM@survey=\count453
+\AM@templatesizebox=\box64
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/base/flafter.sty
+Package: flafter 2018/11/28 v1.4d Standard LaTeX floats after reference (FMi)
+Applying: [2015/01/01] float order in 2-column on input line 49.
+Already applied: [0000/00/00] float order in 2-column on input line 151.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+\c@KVtest=\count454
+\sf@farskip=\skip109
+\sf@captopadj=\dimen199
+\sf@capskip=\skip110
+\sf@nearskip=\skip111
+\c@subfigure=\count455
+\c@subfigure@save=\count456
+\c@lofdepth=\count457
+\c@subtable=\count458
+\c@subtable@save=\count459
+\c@lotdepth=\count460
+\sf@top=\skip112
+\sf@bottom=\skip113
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/subfloat/subfloat.sty
+Package: subfloat 2003/08/21 version 2.14
+Package `subfloat', Version 2.14 of 2003/08/21.
+
+Package subfloat Warning: Numbers of floats not counted:
+(subfloat)                If you use one of the counters subfloatfiguremax or
+(subfloat)                subfloattablemax you will get strange error messages
+(subfloat)                containing \c@subfloatfiguremax or
+(subfloat)                \c@subfloattablemax:
+(subfloat)                Please switch on countmax or remove the code using
+(subfloat)                the counter then..
+
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
+\col@sep=\dimen256
+\ar@mcellbox=\box65
+\extrarowheight=\dimen257
+\NC@list=\toks49
+\extratabsurround=\skip114
+\backup@length=\skip115
+\ar@cellbox=\box66
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip116
+\multirow@cntb=\count461
+\multirow@dima=\skip117
+\bigstrutjot=\dimen258
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks50
+\minrowclearance=\skip118
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/tabu/tabu.sty
+Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box67
+\sift@deathcycles=\count462
+\@vwid@loff=\dimen259
+\@vwid@roff=\dimen260
+)
+\c@taburow=\count463
+\tabu@nbcols=\count464
+\tabu@cnt=\count465
+\tabu@Xcol=\count466
+\tabu@alloc=\count467
+\tabu@nested=\count468
+\tabu@target=\dimen261
+\tabu@spreadtarget=\dimen262
+\tabu@naturalX=\dimen263
+\tabucolX=\dimen264
+\tabu@Xsum=\dimen265
+\extrarowdepth=\dimen266
+\abovetabulinesep=\dimen267
+\belowtabulinesep=\dimen268
+\tabustrutrule=\dimen269
+\tabu@thebody=\toks51
+\tabu@footnotes=\toks52
+\tabu@box=\box68
+\tabu@arstrutbox=\box69
+\tabu@hleads=\box70
+\tabu@vleads=\box71
+\tabu@cellskip=\skip119
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box72
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/threeparttablex/threeparttablex.s
+ty
+Package: threeparttablex 2013/07/23 v0.3 by daleif
+(/usr/local/texlive/2021/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+(/usr/local/texlive/2021/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\TPTL@width=\skip120
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box73
+\UL@hyphenbox=\box74
+\UL@skip=\skip121
+\UL@hook=\toks53
+\UL@height=\dimen270
+\UL@pe=\count469
+\UL@pixel=\dimen271
+\ULC@box=\box75
+Package: ulem 2019/11/18
+\ULdepth=\dimen272
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen273
+\c@nlinenum=\count470
+\TeXr@lab=\toks54
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+\@quotelevel=\count471
+\@quotereset=\count472
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 24
+3.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-10-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count452
-\l__pdf_internal_box=\box62
+\l__color_backend_stack_int=\count473
+\l__pdf_internal_box=\box76
 ) (./thesis.aux
 
-LaTeX Warning: Label `discussion' multiply defined.
+LaTeX Warning: Label `conclusion' multiply defined.
 
 )
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 224.
-LaTeX Font Info:    ... okay on input line 224.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 224.
-LaTeX Font Info:    ... okay on input line 224.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 224.
-LaTeX Font Info:    ... okay on input line 224.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 224.
-LaTeX Font Info:    ... okay on input line 224.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 224.
-LaTeX Font Info:    ... okay on input line 224.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 224.
-LaTeX Font Info:    ... okay on input line 224.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 224.
-LaTeX Font Info:    ... okay on input line 224.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 224.
-LaTeX Font Info:    ... okay on input line 224.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 224.
-LaTeX Font Info:    ... okay on input line 224.
-LaTeX Info: Redefining \microtypecontext on input line 224.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Info: Redefining \microtypecontext on input line 243.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 224.
+LaTeX Info: Redefining \showhyphens on input line 243.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -840,17 +1000,17 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 ) (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count453
-\scratchdimen=\dimen192
-\scratchbox=\box63
-\nofMPsegments=\count454
-\nofMParguments=\count455
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count456
-\MPscratchDim=\dimen193
-\MPnumerator=\count457
-\makeMPintoPDFobject=\count458
-\everyMPtoPDFconversion=\toks47
+\scratchcounter=\count474
+\scratchdimen=\dimen274
+\scratchbox=\box77
+\nofMPsegments=\count475
+\nofMParguments=\count476
+\everyMPshowfont=\toks55
+\MPscratchCnt=\count477
+\MPscratchDim=\dimen275
+\MPnumerator=\count478
+\makeMPintoPDFobject=\count479
+\everyMPtoPDFconversion=\toks56
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -859,7 +1019,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 224.
+Package hyperref Info: Link coloring OFF on input line 243.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
@@ -869,17 +1029,20 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count459
+\c@section@level=\count480
 )
-LaTeX Info: Redefining \ref on input line 224.
-LaTeX Info: Redefining \pageref on input line 224.
-LaTeX Info: Redefining \nameref on input line 224.
+LaTeX Info: Redefining \ref on input line 243.
+LaTeX Info: Redefining \pageref on input line 243.
+LaTeX Info: Redefining \nameref on input line 243.
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write5
 \openout5 = `thesis.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: supertabular package is loaded.
+Package caption Info: threeparttable package is loaded.
+Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -908,8 +1071,8 @@ Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' not found.
 No file thesis.bbl.
-Package biblatex Info: Reference section=0 on input line 224.
-Package biblatex Info: Reference segment=0 on input line 224.
+Package biblatex Info: Reference section=0 on input line 243.
+Package biblatex Info: Reference segment=0 on input line 243.
 [1
 Non-PDF special ignored!
 <special> !% Reed College LaTeX Thesis Class 2001/12/04 SN
@@ -919,80 +1082,55 @@ Non-PDF special ignored!
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
-]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-33.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
-33.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-33.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-233.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-233.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 233.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 233.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 233.
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 23
-3.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 233
-.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 233
-.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-Underfull \hbox (badness 1558) in paragraph at lines 232--234
-\T1/lmr/m/n/12 (+20) I want to thank a few peo-ple. # []$\T1/lmtt/m/n/12 https 
-: / / tex . stackexchange . com / questions /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 232--234
-\T1/lmtt/m/n/12 25798 / how -[] can -[] i -[] add -[] abstract -[] and -[] ackn
-owledgement -[] pages -[] into -[] the -[] table -[] of -[]
- []
-
-[1
+] [1
 
 ] [2
 
 
 ] (./thesis.toc
-Underfull \vbox (badness 1275) has occurred while \output is active []
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
+.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
+.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+3.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+3.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 3.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 3.
 
-[3]
-Underfull \vbox (badness 1377) has occurred while \output is active []
-
-[4]
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+) [3] [4]
 Underfull \vbox (badness 1043) has occurred while \output is active []
 
 [5] [6])
@@ -1007,61 +1145,137 @@ Underfull \vbox (badness 1043) has occurred while \output is active []
 
 [9] [10
 
-] (./thesis.lof)
+] (./thesis.lof
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[11]
+Underfull \vbox (badness 3646) has occurred while \output is active []
+
+[12]
+Overfull \hbox (0.39229pt too wide) detected at line 79
+\T1/lmr/m/n/12 2.18b 
+ []
+
+)
 \tf@lof=\write8
 \openout8 = `thesis.lof'.
 
-[11] [12
+[13] [14
 
 ]
 
-LaTeX Warning: Reference `acro:MPC' on page 1 undefined on input line 257.
+LaTeX Warning: Reference `acro:MPC' on page 1 undefined on input line 272.
 
 
-LaTeX Warning: Reference `acro:MPC' on page 1 undefined on input line 257.
+LaTeX Warning: Reference `acro:MPC' on page 1 undefined on input line 272.
 
 
-LaTeX Warning: Reference `acro:TLA' on page 1 undefined on input line 258.
+LaTeX Warning: Reference `acro:TLA' on page 1 undefined on input line 273.
 
 
-LaTeX Warning: Reference `acro:TLA' on page 1 undefined on input line 258.
+LaTeX Warning: Reference `acro:TLA' on page 1 undefined on input line 273.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.261 \chapter*{Summary}\label{summary}}
+l.276 \chapter*{Summary}\label{summary}}
                                          [1
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.261 \chapter*{Summary}\label{summary}}
+l.276 \chapter*{Summary}\label{summary}}
                                          [2
 
-] [3] [4
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] [5] [6
+[3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] [7] [8
 
-] [9] [10
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[4]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[5] [6
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[8]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[9] [10
 
 ] [11] [12
 
 ]
-Chapter 1.
+<thesis_files/figure-latex/if1-1.pdf, id=962, 463.7325pt x 322.20375pt>
+File: thesis_files/figure-latex/if1-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/if1-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/if1-1.pdf  used on input lin
+e 364.
+(pdftex.def)             Requested size: 463.73135pt x 322.20296pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 [13]
+<thesis_files/figure-latex/if2-1.pdf, id=980, 464.73625pt x 314.17375pt>
+File: thesis_files/figure-latex/if2-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/if2-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/if2-1.pdf  used on input lin
+e 440.
+(pdftex.def)             Requested size: 464.7351pt x 314.17297pt.
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [14]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 1629) has occurred while \output is active []
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1071,15 +1285,26 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [15]
+<thesis_files/figure-latex/if3-1.pdf, id=1013, 325.215pt x 421.575pt>
+File: thesis_files/figure-latex/if3-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/if3-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/if3-1.pdf  used on input lin
+e 512.
+(pdftex.def)             Requested size: 325.2142pt x 421.57396pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [16]
+Underfull \vbox (badness 1629) has occurred while \output is active []
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1091,314 +1316,15 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [17]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [18]
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
-
-[19]
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
-
-[20]
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
-
-[21]
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
-
-[22]
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
-
-[23] [24
-
-]
-Chapter 2.
-
-Underfull \hbox (badness 10000) in paragraph at lines 483--502
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 483--502
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 483--502
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 483--502
-
- []
-
-[25]
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
-
-[26]
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
-
-[27]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
-
-[28]
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
-
-[29]
-<thesis_files/figure-latex/fig1-1.pdf, id=992, 480.79625pt x 258.9675pt>
-File: thesis_files/figure-latex/fig1-1.pdf Graphic file (type pdf)
-<use thesis_files/figure-latex/fig1-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/fig1-1.pdf  used on input li
-ne 551.
-(pdftex.def)             Requested size: 480.79506pt x 258.96684pt.
-
-Overfull \hbox (11.04007pt too wide) in paragraph at lines 551--552
- [][] 
- []
-
-<thesis_files/figure-latex/fig2-1.pdf, id=993, 422.57875pt x 417.56pt>
-File: thesis_files/figure-latex/fig2-1.pdf Graphic file (type pdf)
-<use thesis_files/figure-latex/fig2-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/fig2-1.pdf  used on input li
-ne 571.
-(pdftex.def)             Requested size: 422.57771pt x 417.55896pt.
-
-Underfull \vbox (badness 6961) has occurred while \output is active []
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
-
-[30 <./thesis_files/figure-latex/fig1-1.pdf>]
-<thesis_files/figure-latex/fig3-1.pdf, id=1007, 369.38pt x 544.0325pt>
-File: thesis_files/figure-latex/fig3-1.pdf Graphic file (type pdf)
-<use thesis_files/figure-latex/fig3-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/fig3-1.pdf  used on input li
-ne 585.
-(pdftex.def)             Requested size: 369.37909pt x 544.03117pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
-
-[31 <./thesis_files/figure-latex/fig2-1.pdf>]
-<thesis_files/figure-latex/fig4-1.pdf, id=1018, 484.81125pt x 417.56pt>
-File: thesis_files/figure-latex/fig4-1.pdf Graphic file (type pdf)
-<use thesis_files/figure-latex/fig4-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/fig4-1.pdf  used on input li
-ne 599.
-(pdftex.def)             Requested size: 484.81006pt x 417.55896pt.
-
-Overfull \hbox (15.05507pt too wide) in paragraph at lines 599--600
- [][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
-
-[32 <./thesis_files/figure-latex/fig3-1.pdf>]
-<thesis_files/figure-latex/sfig1-1.pdf, id=1029, 368.37625pt x 139.52126pt>
-File: thesis_files/figure-latex/sfig1-1.pdf Graphic file (type pdf)
-<use thesis_files/figure-latex/sfig1-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/sfig1-1.pdf  used on input l
-ine 613.
-(pdftex.def)             Requested size: 368.37534pt x 139.5209pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
-
-[33 <./thesis_files/figure-latex/fig4-1.pdf>]
-<thesis_files/figure-latex/sfig2-1.pdf, id=1040, 408.52625pt x 349.305pt>
-File: thesis_files/figure-latex/sfig2-1.pdf Graphic file (type pdf)
-<use thesis_files/figure-latex/sfig2-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/sfig2-1.pdf  used on input l
-ine 627.
-(pdftex.def)             Requested size: 408.52525pt x 349.30414pt.
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
-
-[34 <./thesis_files/figure-latex/sfig1-1.pdf> <./thesis_files/figure-latex/sfig
-2-1.pdf>]
-<thesis_files/figure-latex/sfig3-1.pdf, id=1057, 137.51375pt x 137.51375pt>
-File: thesis_files/figure-latex/sfig3-1.pdf Graphic file (type pdf)
-<use thesis_files/figure-latex/sfig3-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/sfig3-1.pdf  used on input l
-ine 641.
-(pdftex.def)             Requested size: 137.51341pt x 137.51341pt.
-<thesis_files/figure-latex/sfig4-1.pdf, id=1058, 403.5075pt x 288.07625pt>
-File: thesis_files/figure-latex/sfig4-1.pdf Graphic file (type pdf)
-<use thesis_files/figure-latex/sfig4-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/sfig4-1.pdf  used on input l
-ine 655.
-(pdftex.def)             Requested size: 403.50652pt x 288.07553pt.
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
-
-[35 <./thesis_files/figure-latex/sfig3-1.pdf> <./thesis_files/figure-latex/sfig
-4-1.pdf>]
-<thesis_files/figure-latex/sfig5-1.pdf, id=1076, 385.44pt x 293.095pt>
-File: thesis_files/figure-latex/sfig5-1.pdf Graphic file (type pdf)
-<use thesis_files/figure-latex/sfig5-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/sfig5-1.pdf  used on input l
-ine 669.
-(pdftex.def)             Requested size: 385.43906pt x 293.09427pt.
-<thesis_files/figure-latex/sfig6-1.pdf, id=1077, 399.4925pt x 157.58875pt>
-File: thesis_files/figure-latex/sfig6-1.pdf Graphic file (type pdf)
-<use thesis_files/figure-latex/sfig6-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/sfig6-1.pdf  used on input l
-ine 683.
-(pdftex.def)             Requested size: 399.49152pt x 157.58835pt.
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
-
-[36 <./thesis_files/figure-latex/sfig5-1.pdf> <./thesis_files/figure-latex/sfig
-6-1.pdf>]
-Overfull \hbox (188.13391pt too wide) in alignment at lines 701--716
- [] [] [] [] [] [] [] [] [] [] 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
-
-[37]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
-
-[38]
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
-
-[39]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
-
-[40]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 7
-71.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 6
+74.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1410,16 +1336,253 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
+[19]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[20]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[21]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[22]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[23]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[24]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[25]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[26]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[27]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[28]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[29 <./thesis_files/figure-latex/if1-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[30 <./thesis_files/figure-latex/if2-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[31 <./thesis_files/figure-latex/if3-1.pdf>] [32
+
+]
+<thesis_files/figure-latex/mf1-1.pdf, id=1301, 356.33125pt x 405.515pt>
+File: thesis_files/figure-latex/mf1-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/mf1-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/mf1-1.pdf  used on input lin
+e 1168.
+(pdftex.def)             Requested size: 356.33037pt x 405.51399pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[33]
+<thesis_files/figure-latex/mf2-1.pdf, id=1318, 357.335pt x 215.80624pt>
+File: thesis_files/figure-latex/mf2-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/mf2-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/mf2-1.pdf  used on input lin
+e 1213.
+(pdftex.def)             Requested size: 357.33412pt x 215.80571pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[34 <./thesis_files/figure-latex/mf1-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[35 <./thesis_files/figure-latex/mf2-1.pdf>]
+<thesis_files/figure-latex/mf3-1.pdf, id=1345, 289.08pt x 254.9525pt>
+File: thesis_files/figure-latex/mf3-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/mf3-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/mf3-1.pdf  used on input lin
+e 1273.
+(pdftex.def)             Requested size: 289.07928pt x 254.95186pt.
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[36 <./thesis_files/figure-latex/mf3-1.pdf>]
+<thesis_files/figure-latex/mf4-1.pdf, id=1362, 469.755pt x 248.93pt>
+File: thesis_files/figure-latex/mf4-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/mf4-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/mf4-1.pdf  used on input lin
+e 1330.
+(pdftex.def)             Requested size: 469.75386pt x 248.92938pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[37]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[38 <./thesis_files/figure-latex/mf4-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[39]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[40]
+<thesis_files/figure-latex/mf5-1.pdf, id=1449, 223.83624pt x 505.89pt>
+File: thesis_files/figure-latex/mf5-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/mf5-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/mf5-1.pdf  used on input lin
+e 1522.
+(pdftex.def)             Requested size: 223.8357pt x 505.88875pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
 [41]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [42]
+Overfull \hbox (67.86757pt too wide) in paragraph at lines 1611--1628
+\T1/lmr/m/n/12 (-20) Transposable el-e-ments (TEs) GTF file is ob-tained from [
+]http://labshare.cshl.edu/shares/mhammelllab/www-
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1429,15 +1592,33 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [43]
+<thesis_files/figure-latex/mf6-1.pdf, id=1530, 218.8175pt x 433.62pt>
+File: thesis_files/figure-latex/mf6-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/mf6-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/mf6-1.pdf  used on input lin
+e 1653.
+(pdftex.def)             Requested size: 218.81696pt x 433.61894pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [44]
+<thesis_files/figure-latex/mf7-1.pdf, id=1546, 466.74374pt x 203.76125pt>
+File: thesis_files/figure-latex/mf7-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/mf7-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/mf7-1.pdf  used on input lin
+e 1716.
+(pdftex.def)             Requested size: 466.7426pt x 203.76074pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1449,11 +1630,11 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [45]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [46]
 
@@ -1467,13 +1648,13 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [47]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[48]
+[48 <./thesis_files/figure-latex/mf5-1.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1482,16 +1663,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[49]
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
-
-[50]
+[49 <./thesis_files/figure-latex/mf6-1.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1500,16 +1672,13 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[51]
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
-
-[52]
+[50 <./thesis_files/figure-latex/mf7-1.pdf>]
+<thesis_files/figure-latex/mf8-1.pdf, id=1618, 650.43pt x 246.9225pt>
+File: thesis_files/figure-latex/mf8-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/mf8-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/mf8-1.pdf  used on input lin
+e 1825.
+(pdftex.def)             Requested size: 650.4284pt x 246.92188pt.
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1518,7 +1687,70 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[53]
+[51
+
+ <./thesis_files/figure-latex/mf8-1.pdf>]
+
+Package biblatex Warning: Split bibliography detected.
+(biblatex)                Many simple split bibliography setups with
+(biblatex)                non-overlapping bibliographies benefit from
+(biblatex)                setting 'defernumbers=true'.
+(biblatex)                See the documentation for details.
+(biblatex)                This warning can be suppressed with
+(biblatex)                '\BiblatexSplitbibDefernumbersWarningOff'.
+
+
+LaTeX Warning: Empty bibliography on input line 1869.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[52
+
+]
+Chapter 1.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 1874.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1874--1890
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1874--1890
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1874--1890
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1874--1890
+
+ []
+
+[53
+
+]
+<thesis_files/figure-latex/dn1-1.pdf, id=1646, 391.4625pt x 325.215pt>
+File: thesis_files/figure-latex/dn1-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/dn1-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/dn1-1.pdf  used on input lin
+e 1942.
+(pdftex.def)             Requested size: 391.46153pt x 325.2142pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 27.11652pt, for example:
@@ -1528,6 +1760,15 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
 
 [54]
+<thesis_files/figure-latex/dn2-1.pdf, id=1659, 469.755pt x 220.825pt>
+File: thesis_files/figure-latex/dn2-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/dn2-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/dn2-1.pdf  used on input lin
+e 1976.
+(pdftex.def)             Requested size: 469.75386pt x 220.82445pt.
+
+Underfull \vbox (badness 3514) has occurred while \output is active []
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1536,7 +1777,9 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[55]
+[55 <./thesis_files/figure-latex/dn1-1.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 27.11652pt, for example:
@@ -1545,20 +1788,20 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
 
-[56]
-Chapter 3.
-pdfTeX warning (ext4): destination with the same identifier (name{discussion}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.967 \chapter*{Discussion}\label{discussion}}
-                                              
+[56 <./thesis_files/figure-latex/dn2-1.pdf>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
+022.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+<thesis_files/figure-latex/dn3-1.pdf, id=1683, 367.3725pt x 325.215pt>
+File: thesis_files/figure-latex/dn3-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/dn3-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/dn3-1.pdf  used on input lin
+e 2025.
+(pdftex.def)             Requested size: 367.37158pt x 325.2142pt.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[57
-
-]
-Overfull \vbox (202.3729pt too high) has occurred while \output is active []
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1568,25 +1811,217 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[58] [59
+[57 <./thesis_files/figure-latex/dn3-1.pdf>]
+<thesis_files/figure-latex/dn4-1.pdf, id=1700, 321.2pt x 325.215pt>
+File: thesis_files/figure-latex/dn4-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/dn4-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/dn4-1.pdf  used on input lin
+e 2082.
+(pdftex.def)             Requested size: 321.19922pt x 325.2142pt.
+<thesis_files/figure-latex/dn5-1.pdf, id=1701, 305.14pt x 325.215pt>
+File: thesis_files/figure-latex/dn5-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/dn5-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/dn5-1.pdf  used on input lin
+e 2092.
+(pdftex.def)             Requested size: 305.13924pt x 325.2142pt.
+<thesis_files/figure-latex/dn6-1.pdf, id=1702, 429.605pt x 325.215pt>
+File: thesis_files/figure-latex/dn6-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/dn6-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/dn6-1.pdf  used on input lin
+e 2102.
+(pdftex.def)             Requested size: 429.60394pt x 325.2142pt.
+<thesis_files/figure-latex/dn7-1.pdf, id=1703, 369.38pt x 325.215pt>
+File: thesis_files/figure-latex/dn7-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/dn7-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/dn7-1.pdf  used on input lin
+e 2112.
+(pdftex.def)             Requested size: 369.37909pt x 325.2142pt.
 
-] [60
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-] [61] [62
 
-] [63] [64
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-] [65] [66
 
-] [67] [68
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 27.11652pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-]
+(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
+
+[58]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[59 <./thesis_files/figure-latex/dn4-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 27.11652pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
+
+[60 <./thesis_files/figure-latex/dn5-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[61 <./thesis_files/figure-latex/dn6-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 27.11652pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-13.11652pt}.
+
+[62 <./thesis_files/figure-latex/dn7-1.pdf>]
+Chapter 2.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[69
+[63
 
 ]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[64]
 Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[65]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[66]
+<thesis_files/figure-latex/3f1-1.pdf, id=1841, 462.72874pt x 518.93875pt>
+File: thesis_files/figure-latex/3f1-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/3f1-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/3f1-1.pdf  used on input lin
+e 2337.
+(pdftex.def)             Requested size: 462.72762pt x 518.93748pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 6348) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[67]
+<thesis_files/figure-latex/3f2-1.pdf, id=1855, 433.62pt x 393.47pt>
+File: thesis_files/figure-latex/3f2-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/3f2-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/3f2-1.pdf  used on input lin
+e 2367.
+(pdftex.def)             Requested size: 433.61894pt x 393.46902pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<thesis_files/figure-latex/3f3-1.pdf, id=1863, 457.71pt x 244.915pt>
+File: thesis_files/figure-latex/3f3-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/3f3-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/3f3-1.pdf  used on input lin
+e 2399.
+(pdftex.def)             Requested size: 457.7089pt x 244.91438pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<thesis_files/figure-latex/3f4-1.pdf, id=1864, 469.755pt x 461.725pt>
+File: thesis_files/figure-latex/3f4-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/3f4-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/3f4-1.pdf  used on input lin
+e 2408.
+(pdftex.def)             Requested size: 469.75386pt x 461.72388pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[68]
+<thesis_files/figure-latex/3f5-1.pdf, id=1880, 245.91875pt x 578.16pt>
+File: thesis_files/figure-latex/3f5-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/3f5-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/3f5-1.pdf  used on input lin
+e 2432.
+(pdftex.def)             Requested size: 245.91814pt x 578.15858pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[69]
+
+Package xcolor Warning: Incompatible color definition on input line 2516.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2524.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2524.
+
+
+Underfull \vbox (badness 1215) detected at line 2524
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 2524.
+
+
+Underfull \vbox (badness 1215) has occurred while \output is active []
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1597,20 +2032,137 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [70]
-Underfull \hbox (badness 1221) in paragraph at lines 1090--1092
-[]\T1/lmr/m/n/12 (+20) Skerget, S., Rosenow, M. A., Petri-tis, K., & Karr, T. L
-. (2015). Sperm pro-
- []
+
+Package xcolor Warning: Incompatible color definition on input line 2524.
 
 
-Underfull \hbox (badness 3417) in paragraph at lines 1090--1092
-\T1/lmr/m/n/12 (+20) teome mat-u-ra-tion in the mouse epi-didymis. \T1/lmr/m/it
-/12 (+20) Plos One\T1/lmr/m/n/12 (+20) , \T1/lmr/m/it/12 (+20) 10\T1/lmr/m/n/12
- (+20) (11), e0140650.
- []
+Package xcolor Warning: Incompatible color definition on input line 2524.
 
+<thesis_files/figure-latex/3f6-1.pdf, id=1928, 455.7025pt x 289.08pt>
+File: thesis_files/figure-latex/3f6-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/3f6-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/3f6-1.pdf  used on input lin
+e 2550.
+(pdftex.def)             Requested size: 455.70137pt x 289.07928pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<thesis_files/figure-latex/3f7-1.pdf, id=1929, 313.17pt x 376.40625pt>
+File: thesis_files/figure-latex/3f7-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/3f7-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/3f7-1.pdf  used on input lin
+e 2559.
+(pdftex.def)             Requested size: 313.16922pt x 376.40532pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<thesis_files/figure-latex/3f8-1.pdf, id=1930, 458.71375pt x 320.19624pt>
+File: thesis_files/figure-latex/3f8-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/3f8-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/3f8-1.pdf  used on input lin
+e 2568.
+(pdftex.def)             Requested size: 458.71263pt x 320.19545pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<thesis_files/figure-latex/3f9-1.pdf, id=1931, 464.73625pt x 199.74625pt>
+File: thesis_files/figure-latex/3f9-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/3f9-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/3f9-1.pdf  used on input lin
+e 2577.
+(pdftex.def)             Requested size: 464.7351pt x 199.74576pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<thesis_files/figure-latex/3f10-1.pdf, id=1932, 464.73625pt x 265.99374pt>
+File: thesis_files/figure-latex/3f10-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/3f10-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/3f10-1.pdf  used on input li
+ne 2586.
+(pdftex.def)             Requested size: 464.7351pt x 265.99309pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<thesis_files/figure-latex/3f11-1.pdf, id=1933, 458.71375pt x 433.62pt>
+File: thesis_files/figure-latex/3f11-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/3f11-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/3f11-1.pdf  used on input li
+ne 2595.
+(pdftex.def)             Requested size: 458.71263pt x 433.61894pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<thesis_files/figure-latex/3f12-1.pdf, id=1934, 380.42125pt x 513.92pt>
+File: thesis_files/figure-latex/3f12-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/3f12-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/3f12-1.pdf  used on input li
+ne 2604.
+(pdftex.def)             Requested size: 380.4203pt x 513.91873pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<thesis_files/figure-latex/3f13-1.pdf, id=1935, 453.695pt x 180.675pt>
+File: thesis_files/figure-latex/3f13-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/3f13-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/3f13-1.pdf  used on input li
+ne 2613.
+(pdftex.def)             Requested size: 453.6939pt x 180.67455pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<thesis_files/figure-latex/3f14-1.pdf, id=1936, 455.7025pt x 322.20375pt>
+File: thesis_files/figure-latex/3f14-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/3f14-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/3f14-1.pdf  used on input li
+ne 2622.
+(pdftex.def)             Requested size: 455.70137pt x 322.20296pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<thesis_files/figure-latex/3f15-1.pdf, id=1937, 462.72874pt x 194.7275pt>
+File: thesis_files/figure-latex/3f15-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/3f15-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/3f15-1.pdf  used on input li
+ne 2631.
+(pdftex.def)             Requested size: 462.72762pt x 194.727pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<thesis_files/figure-latex/3f16-1.pdf, id=1938, 455.7025pt x 351.3125pt>
+File: thesis_files/figure-latex/3f16-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/3f16-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/3f16-1.pdf  used on input li
+ne 2640.
+(pdftex.def)             Requested size: 455.70137pt x 351.31163pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<thesis_files/figure-latex/3f17-1.pdf, id=1939, 457.71pt x 578.16pt>
+File: thesis_files/figure-latex/3f17-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/3f17-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/3f17-1.pdf  used on input li
+ne 2649.
+(pdftex.def)             Requested size: 457.7089pt x 578.15858pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<thesis_files/figure-latex/3f18a-1.pdf, id=1940, 451.6875pt x 608.2725pt>
+File: thesis_files/figure-latex/3f18a-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/3f18a-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/3f18a-1.pdf  used on input l
+ine 2659.
+(pdftex.def)             Requested size: 451.68639pt x 608.27103pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<thesis_files/figure-latex/3f18b-1.pdf, id=1941, 451.6875pt x 410.53375pt>
+File: thesis_files/figure-latex/3f18b-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/3f18b-1.pdf>
+Package pdftex.def Info: thesis_files/figure-latex/3f18b-1.pdf  used on input l
+ine 2668.
+(pdftex.def)             Requested size: 451.68639pt x 410.53275pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1622,6 +2174,56 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [71]
 
+Package xcolor Warning: Incompatible color definition on input line 2711.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2716.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2716.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2720.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2725.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2725.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2728.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2733.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2733.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2735.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2740.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2740.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2744.
+
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 2748.
+
+Package xcolor Warning: Incompatible color definition on input line 2762.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2762.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2762.
+
+
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -1629,7 +2231,1062 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[72] (./thesis.aux)
+[72]
+
+Package xcolor Warning: Incompatible color definition on input line 2762.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2762.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[73]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[74]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[75]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[76]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[77]
+Overfull \hbox (4.32959pt too wide) in paragraph at lines 3056--3057
+\T1/lmr/bx/n/12 (-20) miRNA  
+ []
+
+
+Overfull \hbox (4.63069pt too wide) in paragraph at lines 3061--3061
+[]|\T1/lmr/m/n/12 (-20) miRNA_precursor|  
+ []
+
+
+Overfull \hbox (51.71938pt too wide) in paragraph at lines 3062--3063
+\T1/lmr/m/n/12 (-20) GGTTCTTGGGAGCC|  
+ []
+
+
+Overfull \hbox (9.43057pt too wide) in paragraph at lines 3064--3065
+\T1/lmr/m/n/12 (-20) GTGGGTCCG|  
+ []
+
+
+Overfull \hbox (5.1442pt too wide) in paragraph at lines 3068--3069
+\T1/lmr/m/n/12 (-20) TAGCTTTCC|  
+ []
+
+
+Overfull \hbox (4.63069pt too wide) in paragraph at lines 3071--3071
+[]|\T1/lmr/m/n/12 (-20) miRNA_precursor|  
+ []
+
+
+Overfull \hbox (0.99516pt too wide) in paragraph at lines 3075--3079
+[]|\T1/lmr/m/n/12 (-20) GGCTGGGA 
+ []
+
+
+Overfull \hbox (17.51184pt too wide) in paragraph at lines 3075--3079
+\T1/lmr/m/n/12 (-20) GTAAGTTTGT- 
+ []
+
+
+Overfull \hbox (4.63069pt too wide) in paragraph at lines 3079--3079
+[]|\T1/lmr/m/n/12 (-20) miRNA_precursor|  
+ []
+
+
+Overfull \hbox (15.57013pt too wide) in paragraph at lines 3082--3083
+[]|\T1/lmr/m/n/12 (-20) TCCCTGAGAC 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[78]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[79]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[80]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[81]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[82]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[83]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[84pdfTeX warning (ext4): destination with the same identifier (name{conclusion
+}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.3315 ...nclusion and outlook}\label{conclusion}}
+                                                  ]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[85 <./thesis_files/figure-latex/3f1-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[86 <./thesis_files/figure-latex/3f2-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[87 <./thesis_files/figure-latex/3f3-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[88 <./thesis_files/figure-latex/3f4-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[89 <./thesis_files/figure-latex/3f5-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[90 <./thesis_files/figure-latex/3f6-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[91 <./thesis_files/figure-latex/3f7-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[92 <./thesis_files/figure-latex/3f8-1.pdf> <./thesis_files/figure-latex/3f9-1.
+pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[93 <./thesis_files/figure-latex/3f10-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[94 <./thesis_files/figure-latex/3f11-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[95 <./thesis_files/figure-latex/3f12-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[96 <./thesis_files/figure-latex/3f13-1.pdf> <./thesis_files/figure-latex/3f14-
+1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[97 <./thesis_files/figure-latex/3f15-1.pdf> <./thesis_files/figure-latex/3f16-
+1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[98 <./thesis_files/figure-latex/3f17-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[99 <./thesis_files/figure-latex/3f18a-1.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[100 <./thesis_files/figure-latex/3f18b-1.pdf>] [101
+
+]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[102]
+Underfull \vbox (badness 1152) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[103]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[104]
+Underfull \vbox (badness 7397) has occurred while \output is active []
+
+[105
+
+]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[106]
+Underfull \hbox (badness 10000) in paragraph at lines 3490--3491
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3492--3494
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3495--3497
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3506--3507
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3508--3510
+
+ []
+
+[107
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 3519--3520
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3521--3522
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3531--3532
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3533--3534
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[108]
+
+Package xcolor Warning: Incompatible color definition on input line 3554.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3559.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3559.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3563.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3567.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3567.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3571.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3575.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3575.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3579.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3585.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3585.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3589.
+
+[109
+
+]
+
+Package xcolor Warning: Incompatible color definition on input line 3593.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3593.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3597.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3610.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3610.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3614.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3623.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3623.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3627.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3634.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3634.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3638.
+
+
+Underfull \vbox (badness 1152) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[110]
+
+Package xcolor Warning: Incompatible color definition on input line 3642.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3642.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3646.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3651.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3651.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3655.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3666.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3666.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3670.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3692.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3692.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3692.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[111]
+
+Package xcolor Warning: Incompatible color definition on input line 3692.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3692.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3696.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3721.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3721.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[112]
+
+Package xcolor Warning: Incompatible color definition on input line 3739.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3744.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3744.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3748.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3755.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3755.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3759.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3767.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3767.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3771.
+
+
+Underfull \vbox (badness 1132) has occurred while \output is active []
+
+[113
+
+]
+
+Package xcolor Warning: Incompatible color definition on input line 3779.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3779.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3783.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3802.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3802.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3806.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3835.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3835.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3835.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[114]
+
+Package xcolor Warning: Incompatible color definition on input line 3835.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3835.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3839.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3844.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3844.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[115] [116
+
+]
+<data/Deepak_Tanwar.pdf, id=2377, 614.295pt x 794.97pt>
+File: data/Deepak_Tanwar.pdf Graphic file (type pdf)
+<use data/Deepak_Tanwar.pdf>
+Package pdftex.def Info: data/Deepak_Tanwar.pdf  used on input line 3851.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: data/Deepak_Tanwar.pdf Graphic file (type pdf)
+<use data/Deepak_Tanwar.pdf>
+Package pdftex.def Info: data/Deepak_Tanwar.pdf  used on input line 3851.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+<data/Deepak_Tanwar.pdf, id=2380, page=1, 614.295pt x 794.97pt>
+File: data/Deepak_Tanwar.pdf Graphic file (type pdf)
+<use data/Deepak_Tanwar.pdf, page 1>
+Package pdftex.def Info: data/Deepak_Tanwar.pdf , page1 used on input line 3851
+.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: data/Deepak_Tanwar.pdf Graphic file (type pdf)
+<use data/Deepak_Tanwar.pdf, page 1>
+Package pdftex.def Info: data/Deepak_Tanwar.pdf , page1 used on input line 3851
+.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+[117]
+File: data/Deepak_Tanwar.pdf Graphic file (type pdf)
+<use data/Deepak_Tanwar.pdf, page 1>
+Package pdftex.def Info: data/Deepak_Tanwar.pdf , page1 used on input line 3851
+.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: data/Deepak_Tanwar.pdf Graphic file (type pdf)
+<use data/Deepak_Tanwar.pdf, page 1>
+Package pdftex.def Info: data/Deepak_Tanwar.pdf , page1 used on input line 3851
+.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: data/Deepak_Tanwar.pdf Graphic file (type pdf)
+<use data/Deepak_Tanwar.pdf, page 1>
+Package pdftex.def Info: data/Deepak_Tanwar.pdf , page1 used on input line 3851
+.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+[118 <./data/Deepak_Tanwar.pdf>]
+<data/Deepak_Tanwar.pdf, id=2455, page=2, 614.295pt x 794.97pt>
+File: data/Deepak_Tanwar.pdf Graphic file (type pdf)
+<use data/Deepak_Tanwar.pdf, page 2>
+Package pdftex.def Info: data/Deepak_Tanwar.pdf , page2 used on input line 3851
+.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: data/Deepak_Tanwar.pdf Graphic file (type pdf)
+<use data/Deepak_Tanwar.pdf, page 2>
+Package pdftex.def Info: data/Deepak_Tanwar.pdf , page2 used on input line 3851
+.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: data/Deepak_Tanwar.pdf Graphic file (type pdf)
+<use data/Deepak_Tanwar.pdf, page 2>
+Package pdftex.def Info: data/Deepak_Tanwar.pdf , page2 used on input line 3851
+.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+[119 <./data/Deepak_Tanwar.pdf>]
+<data/Deepak_Tanwar.pdf, id=2461, page=3, 614.295pt x 794.97pt>
+File: data/Deepak_Tanwar.pdf Graphic file (type pdf)
+<use data/Deepak_Tanwar.pdf, page 3>
+Package pdftex.def Info: data/Deepak_Tanwar.pdf , page3 used on input line 3851
+.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: data/Deepak_Tanwar.pdf Graphic file (type pdf)
+<use data/Deepak_Tanwar.pdf, page 3>
+Package pdftex.def Info: data/Deepak_Tanwar.pdf , page3 used on input line 3851
+.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: data/Deepak_Tanwar.pdf Graphic file (type pdf)
+<use data/Deepak_Tanwar.pdf, page 3>
+Package pdftex.def Info: data/Deepak_Tanwar.pdf , page3 used on input line 3851
+.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+[120 <./data/Deepak_Tanwar.pdf>]
+<data/Deepak_Tanwar.pdf, id=2472, page=4, 614.295pt x 794.97pt>
+File: data/Deepak_Tanwar.pdf Graphic file (type pdf)
+<use data/Deepak_Tanwar.pdf, page 4>
+Package pdftex.def Info: data/Deepak_Tanwar.pdf , page4 used on input line 3851
+.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: data/Deepak_Tanwar.pdf Graphic file (type pdf)
+<use data/Deepak_Tanwar.pdf, page 4>
+Package pdftex.def Info: data/Deepak_Tanwar.pdf , page4 used on input line 3851
+.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: data/Deepak_Tanwar.pdf Graphic file (type pdf)
+<use data/Deepak_Tanwar.pdf, page 4>
+Package pdftex.def Info: data/Deepak_Tanwar.pdf , page4 used on input line 3851
+.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+[121 <./data/Deepak_Tanwar.pdf>]
+<data/Deepak_Tanwar.pdf, id=2488, page=5, 614.295pt x 794.97pt>
+File: data/Deepak_Tanwar.pdf Graphic file (type pdf)
+<use data/Deepak_Tanwar.pdf, page 5>
+Package pdftex.def Info: data/Deepak_Tanwar.pdf , page5 used on input line 3851
+.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: data/Deepak_Tanwar.pdf Graphic file (type pdf)
+<use data/Deepak_Tanwar.pdf, page 5>
+Package pdftex.def Info: data/Deepak_Tanwar.pdf , page5 used on input line 3851
+.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: data/Deepak_Tanwar.pdf Graphic file (type pdf)
+<use data/Deepak_Tanwar.pdf, page 5>
+Package pdftex.def Info: data/Deepak_Tanwar.pdf , page5 used on input line 3851
+.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+[122 <./data/Deepak_Tanwar.pdf>]
+Underfull \hbox (badness 1442) in paragraph at lines 3888--3890
+\T1/lmr/m/n/12 (+20) te-gra-tion of multi-omics data sets. \T1/lmr/m/it/12 (+20
+) Molec-u-lar Sys-tems Bi-ol-ogy\T1/lmr/m/n/12 (+20) , \T1/lmr/m/it/12 (+20) 14
+\T1/lmr/m/n/12 (+20) (6), e8124.
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[123
+
+
+]
+Underfull \hbox (badness 2042) in paragraph at lines 3927--3929
+[]\T1/lmr/m/n/12 (+20) Bray, N. L., Pi-mentel, H., Mel-sted, P., & Pachter, L. 
+(2016). Near-optimal
+ []
+
+
+Underfull \hbox (badness 3557) in paragraph at lines 3927--3929
+\T1/lmr/m/n/12 (+20) prob-a-bilis-tic RNA-seq quan-tifi-ca-tion. \T1/lmr/m/it/1
+2 (+20) Na-ture Biotech-nol-ogy\T1/lmr/m/n/12 (+20) , \T1/lmr/m/it/12 (+20) 34\
+T1/lmr/m/n/12 (+20) (5), 525--527.
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[124]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[125]
+Underfull \hbox (badness 2644) in paragraph at lines 3972--3974
+[]\T1/lmr/m/n/12 (+20) Chen, C.-J., Ser-vant, N., Toedling, J., Sarazin, A., Ma
+r-chais, A., Duvernois-
+ []
+
+
+Underfull \hbox (badness 2521) in paragraph at lines 3972--3974
+\T1/lmr/m/n/12 (+20) pro-fil-ing of ncR-NAs in sRNA-seq data. \T1/lmr/m/it/12 (
++20) Bioin-for-mat-ics\T1/lmr/m/n/12 (+20) , \T1/lmr/m/it/12 (+20) 28\T1/lmr/m/
+n/12 (+20) (23), 3147--3149.
+ []
+
+
+Overfull \hbox (5.05743pt too wide) in paragraph at lines 3975--3977
+\T1/lmr/m/it/12 (-20) nal of Bi-o-log-i-cal Chem-istry\T1/lmr/m/n/12 (-20) , \T
+1/lmr/m/it/12 (-20) 286\T1/lmr/m/n/12 (-20) (21), 18347--18353. http://doi.org/
+[]10.1074/jbc.R110.205286[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[126]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[127]
+Underfull \hbox (badness 2529) in paragraph at lines 4074--4076
+\T1/lmr/m/n/12 (+20) an-no-ta-tion for the EN-CODE project. \T1/lmr/m/it/12 (+2
+0) Genome Re-search\T1/lmr/m/n/12 (+20) , \T1/lmr/m/it/12 (+20) 22\T1/lmr/m/n/1
+2 (+20) (9), 1760--1774.
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[128]
+Underfull \hbox (badness 1127) in paragraph at lines 4098--4100
+[]\T1/lmr/m/n/12 (+20) Huang, S., Chaud-hary, K., & Garmire, L. X. (2017). More
+ is bet-ter: Re-cent
+ []
+
+
+Overfull \hbox (23.73978pt too wide) in paragraph at lines 4110--4112
+\T1/lmr/m/n/12 (-20) health in hu-mans. \T1/lmr/m/it/12 (-20) Trends in Ge-net-
+ics\T1/lmr/m/n/12 (-20) , \T1/lmr/m/it/12 (-20) 37\T1/lmr/m/n/12 (-20) (4), 373
+--388. http://doi.org/[]10.1016/j.tig.2020.10.006[] 
+ []
+
+
+Underfull \hbox (badness 1983) in paragraph at lines 4113--4115
+\T1/lmr/m/n/12 (+20) be-hav-ioral phe-no-types. \T1/lmr/m/it/12 (+20) Cur-rent 
+Opin-ion in Be-hav-ioral Sci-ences\T1/lmr/m/n/12 (+20) , \T1/lmr/m/it/12 (+20) 
+25\T1/lmr/m/n/12 (+20) , 96--101.
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[129]
+Underfull \hbox (badness 1776) in paragraph at lines 4116--4118
+\T1/lmr/m/n/12 (+20) ment of multi-mapping small RNAs. \T1/lmr/m/it/12 (+20) G3
+ (Bethesda, Md.)\T1/lmr/m/n/12 (+20) , \T1/lmr/m/it/12 (+20) 6\T1/lmr/m/n/12 (+
+20) (7), 2103--2111.
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[130]
+Underfull \hbox (badness 1845) in paragraph at lines 4158--4160
+\T1/lmr/m/n/12 (+20) la-tion caller for bisulfite-seq ap-pli-ca-tions. \T1/lmr/
+m/it/12 (+20) Bioin-for-mat-ics\T1/lmr/m/n/12 (+20) , \T1/lmr/m/it/12 (+20) 27\
+T1/lmr/m/n/12 (+20) (11), 1571--1572.
+ []
+
+
+Underfull \hbox (badness 1033) in paragraph at lines 4173--4175
+[]\T1/lmr/m/n/12 (+20) Lawrence, M., Dau-jat, S., & Schnei-der, R. (2016). Lat-
+eral think-ing: How hi-s-
+ []
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 4185--4187
+\T1/lmr/m/n/12 (+20) duc-tion dur-ing early meio-sis in mouse testes. \T1/lmr/m
+/it/12 (+20) Molec-u-lar Cell\T1/lmr/m/n/12 (+20) , \T1/lmr/m/it/12 (+20) 50\T1
+/lmr/m/n/12 (+20) (1), 67--81.
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[131]
+Overfull \hbox (25.22023pt too wide) in paragraph at lines 4221--4223
+\T1/lmr/m/n/12 (-20) old is a TREAT. \T1/lmr/m/it/12 (-20) Bioin-for-mat-ics\T1
+/lmr/m/n/12 (-20) , \T1/lmr/m/it/12 (-20) 25\T1/lmr/m/n/12 (-20) (6), 765--771.
+ http://doi.org/[]10.1093/bioinformatics/btp053[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[132]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[133]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[134]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[135]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[136]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[137]
+Overfull \hbox (4.5371pt too wide) in paragraph at lines 4416--4418
+\T1/lmr/m/n/12 (-20) methy-la-tion. \T1/lmr/m/it/12 (-20) Na-ture Re-views Ge-n
+et-ics\T1/lmr/m/n/12 (-20) , \T1/lmr/m/it/12 (-20) 17\T1/lmr/m/n/12 (-20) (9), 
+551--565. http://doi.org/[]10.1038/nrg.2016.83[] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[138] (./thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1637,34 +3294,44 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 60F6879A626DAEDC22CDB334ECD92F90;25776.
+(rerunfilecheck)             Checksum: DF4DD0EEF8605CF2328E4FC2C5213817;31646.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25831 strings out of 478599
- 435519 string characters out of 5854085
- 1237039 words of memory out of 5000000
- 42671 multiletter control sequences out of 15000+600000
- 470169 words of font info for 155 fonts, out of 8000000 for 9000
+ 29143 strings out of 478599
+ 489646 string characters out of 5854085
+ 1339626 words of memory out of 5000000
+ 45447 multiletter control sequences out of 15000+600000
+ 495084 words of font info for 243 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 91i,11n,94p,2165b,806s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
-/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2
-021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2021/texmf-dist
-/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/typ
-e1/public/lm/lmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/l
-m/lmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr8.pfb>
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/loca
-l/texlive/2021/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texlive/
-2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2021/texmf-
-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2021/texmf-dist/fonts
-/type1/public/lm/lmtti10.pfb>
-Output written on thesis.pdf (86 pages, 4387755 bytes).
+ 91i,17n,94p,2394b,806s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{ref-zhao2018} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{ref-lazar-contes2020} has been referenced but does 
+not exist, replaced by a fixed one
+
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/te
+xlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021
+/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</usr/local/texlive/2021/texmf-dist/f
+onts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1
+/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm
+/lmbx8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbxi10.pf
+b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/loc
+al/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/
+2021/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2021/texmf-
+dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/t
+ype1/public/lm/lmri12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/publi
+c/lm/lmro12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy1
+0.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr
+/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/tex
+live/2021/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on thesis.pdf (154 pages, 19388567 bytes).
 PDF statistics:
- 1531 PDF objects out of 1728 (max. 8388607)
- 1370 compressed objects within 14 object streams
- 413 named destinations out of 1000 (max. 500000)
- 38003 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 2985 PDF objects out of 3580 (max. 8388607)
+ 2560 compressed objects within 26 object streams
+ 673 named destinations out of 1000 (max. 500000)
+ 48450 words of extra memory for PDF output out of 51595 (max. 10000000)
 

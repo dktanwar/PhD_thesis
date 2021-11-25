@@ -27,8 +27,12 @@ header-includes:
     - \usepackage{float}
     - \usepackage{placeins}
     - \usepackage{lmodern}
-    # - \usepackage{indentfirst}
-
+    - \usepackage{pdflscape}
+    - \usepackage{caption}
+    - \captionsetup{font=small}
+    - \usepackage[labelfont=bf]{caption}
+    - \usepackage{wrapfig}
+    - \usepackage{pdfpages}
 
 # This will automatically install the {remotes} package and {thesisdown}
 # Change this to FALSE if you'd like to install them manually on your own.
@@ -39,26 +43,30 @@ params:
 # Can only choose one at a time.
 output:
   thesisdown::thesis_pdf:
-    toc_depth: 3
+    toc_depth: 5
+    extra_dependencies: ["flafter", "float", "subfig", "subfloat"]
  # thesisdown::thesis_gitbook: default
  # thesisdown::thesis_word: default
  # thesisdown::thesis_epub: default
-
+# # 
 acknowledgements: |
   I want to thank a few people.
-  # https://tex.stackexchange.com/questions/25798/how-can-i-add-abstract-and-acknowledgement-pages-into-the-table-of-contents/25799
-  
-  dedication: |
-  To Palni
+#   # https://tex.stackexchange.com/questions/25798/how-can-i-add-abstract-and-acknowledgement-pages-into-the-table-of-contents/25799
+#   
+# dedication: |
+#   To Palni
   
 # Specify the location of the bibliography below
 bibliography: [bib/anaraEV.bib]
+link-citations: true
+biblatexoptions: [refsegment=chapter]
 # Download your specific csl file and refer to it in the line below.
 csl: csl/apa.csl
 lot: true
 lof: true
 ---
 
+```{=html}
 <!--
 Above is the YAML (YAML Ain't Markup Language) header that includes a lot of 
 metadata used to produce the document.  Be careful with spacing in this header!
@@ -71,7 +79,7 @@ If you'd like to include a comment that won't be produced in your resulting file
 
 If you receive a duplicate label error after knitting, make sure to delete the index.Rmd file and then knit again.
 -->
-
+```
 ```{r include_packages, include=FALSE}
 # This chunk ensures that the thesisdown package is
 # installed and loaded. This thesisdown package includes
@@ -103,20 +111,22 @@ library(thesisdown)
 library(png)
 library(grid)
 library(jpeg)
+library(dplyr)
+library(kableExtra)
 # Set how wide the R output will go
-options(width = 70)
+# options(width = 70)
+knitr::opts_chunk$set(fig.pos = "h", out.extra = "")
 ```
 
+```{=html}
 <!--
 The acknowledgments, preface, dedication, and abstract are added into the PDF
 version automatically by inputting them in the YAML at the top of this file.
 Alternatively, you can put that content in files like 00--prelim.Rmd and
 00-abstract.Rmd like done below.
 -->
-
-
-
-<!-- ```{r eval=!knitr::is_latex_output(), child=here::here("prelims", "00--prelim.Rmd")} -->
+```
+<!-- ```{r eval=knitr::is_latex_output(), child=here::here("prelims", "00--prelim.Rmd")} -->
 
 <!-- ``` -->
 
@@ -124,10 +134,11 @@ Alternatively, you can put that content in files like 00--prelim.Rmd and
 
 <!-- ``` -->
 
-
 # List of Abbreviations {.unnumbered}
 
+```{=tex}
 \begin{acronym}[MPC]
 \acro{MPC}{model predictive control}
 \acro{TLA}{Three Letter Acronym}
 \end{acronym}
+```

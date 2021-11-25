@@ -7,8 +7,12 @@ rrna(SiLVA) -->|rRNA|db
 pirna("Zamore Lab<br>(only mouse)") -->|piRNA precursor|db
 ens("Ensembl") -->|All RNAs<br>Reference genome|db
 
-db-->|"prepareAnnotation()"|fe["Features annotation<br>as GRanges()"]
-db("Database<br>getDB()") --> |"prepareAnnotation()"|cg[Indexed custom genome]
+db("Database<br>getDB()")-->pa["prepareAnnotation()"]
+pa-->fe["Features annotation<br>as GRanges()"]
+
+
+
+pa-->cg[Indexed custom genome]
 
 fe-->|"featuresAnnoToFL()"|fl["Convert features<br>to FactorList()"]
 fl-->FL>featuresFL]
@@ -28,3 +32,4 @@ style cg stroke:black,stroke-width:2px,fill:#fff2e6;
 style CG stroke:black,stroke-width:2px,fill:#D8EED3;
 style FL stroke:black,stroke-width:2px,fill:#D8EED3;
 style FE stroke:black,stroke-width:2px,fill:#D8EED3;
+style pa stroke:blue,stroke-width:2px,fill:white;

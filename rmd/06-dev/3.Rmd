@@ -1,0 +1,106 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+bibliography: rmd/references.bib
+# header-includes:
+  # \usepackage{float} \floatplacement{figure}{H}
+  # \newcommand{\beginfig}{\setcounter{table}{0}  \renewcommand{\thetable}{\arabic{table}} \setcounter{figure}{0} \renewcommand{\thefigure}{\arabic{figure}}}
+---
+
+<!-- \beginfig -->
+
+\begin{subfigures}
+(ref:dfc1a) \textbf{Regions of differential chromatin accessibility in spermatogonial cells between postnatal and adult stages associate with distinct biological processes.}\newline \textbf{A:} Volcano plot of differentially accessible regions (adjusted P $\leq$ 0.05 and absolute Log2 FC $\geq$ 1) between PND15 (n = 6) and adult (n = 5) spermatogonial cells identified by ATAC-seq.\newline \textbf{B:} Bar plot illustrating the genomic distribution of differentially accessible chromatin regions in PND15 and adult spermatogonial cells. Genomic regions are categorized in exonic, intronic, intergenic and +/- 1kb from the TSS of a gene.
+
+```{r df1a, echo=FALSE, fig.align='center', fig.cap="(ref:dfc1a)", fig.scap="Regions of differential chromatin accessibility in spermatogonial cells between postnatal and adult stages"}
+img <- readPNG("figure/dev/1a.png")
+grid.raster(img)
+```
+
+(ref:dfc1b) \textbf{Regions of differential chromatin accessibility in spermatogonial cells between postnatal and adult stages associate with distinct biological processes.}\newline \textbf{C:} Dot plots of top enriched GO biological processes for regions with increased or decreased chromatin accessibility in adult spermatogonia. Dots size indicates the number of genes in the term, and their colour corresponds to the adjusted P-value of the term’s enrichment.
+
+```{r df1b, echo=FALSE, fig.align='center', fig.cap="(ref:dfc1b)", fig.scap="Regions of differential chromatin accessibility in spermatogonial cells between postnatal and adult stages"}
+img <- readPNG("figure/dev/1b.png")
+grid.raster(img)
+```
+
+\end{subfigures}
+
+\begin{subfigures}
+
+(ref:dfc2a) \textbf{Transcriptomic profile in postnatal and adult spermatogonial cells.}\newline \textbf{A:} Heatmap of differentially expressed genes (coding and non-coding) (adjusted P $\leq$ 0.05 and absolute Log2 FC $\geq$ 1) between PND8 (n = 9) and PND15 (n = 8) spermatogonial cells. Shown are Log2 FC with respect to the average of PND8 data. Samples are clustered using Ward’s method. Genes are ordered by principal component analysis (PCA) method using seriation (R package).\newline \textbf{B:} Dot plots of top 20 enriched GO biological processes  (adjusted P $\leq$ 0.05) from GSEA analysis of PND8 versus PND15. GO terms are summarized by REVIGO and ordered by their normalized enrichment scores (NES). The size of the dot indicates the number of expressed genes annotated in the GO term, and the colour corresponds to the adjusted P-value.
+
+```{r df2a, echo=FALSE, fig.align='center', fig.cap="(ref:dfc2a)", fig.scap="Transcriptomic profile in postnatal and adult spermatogonial cells"}
+img <- readPNG("figure/dev/2a.png")
+grid.raster(img)
+```
+
+(ref:dfc2b) \textbf{Transcriptomic profile in postnatal and adult spermatogonial cells.}\newline \textbf{C:}
+
+```{r df2b, echo=FALSE, fig.align='center', fig.cap="(ref:dfc2b)", fig.scap="Transcriptomic profile in postnatal and adult spermatogonial cells"}
+img <- readPNG("figure/dev/2b.png")
+grid.raster(img)
+```
+\end{subfigures}
+
+
+\begin{subfigures}
+
+(ref:dfc3a) \textbf{Chromatin accessibility and histone modifications at proximal regions of genes dynamically expressed between PND15 and adult spermatogonial cells.} \newline \textbf{A:} Heatmap of mean coverage across conditions showing proximal regions of increased chromatin accessibility and increased (Category 1, n = 171) or decreased (Category 2, n = 233) gene expression, decreased chromatin accessibility and decreased (Category 3, n = 32) or increased (Category 4, n = 14) gene expression when comparing PND15 with adult spermatogonia. Proximal inactive regions were defined as regions with increased (Category 5, n = 291) or decreased (Category 6, n = 88) accessibility for which no expression of the nearest gene could be detected by RNA-seq. \newline \textbf{B:} Heatmap showing the overlap between Category 1-4 regions and ChIP-seq data in PNW8 spermatogonia for H3K4me3, H3K27ac and H3K27me3. For each of the Category 1-4, the following sub-categorization was applied: regions enriched for H3K4me3 (with or w/o H3K27ac and/or H3K27me3), regions enriched for H3K27ac (and lack both H3K4me3 and H3K27me3) and regions enriched for H3K27me3 (and lack both H3K4me3 and H3K27ac). For (\textbf{A}, \textbf{B}), each line represents a peak region and regions are ordered within a category by the ATAC-seq signal. Mid-x-axis corresponds to the middle of a peak region and is extended to +/- 1 kb. The colour-key of the ATAC-seq heatmap represents the ATAC-seq signal in Log2 Reads Per Kilobase per Million (RPKM) reads sequenced. For RNA-seq, log2 FC is shown from PND8 versus PND15 and PND14 versus PNW8 comparisons. Rows are ordered by the enriched scores of ATAC-seq data.
+
+```{r df3a, echo=FALSE, fig.align='center', fig.cap="(ref:dfc3a)", fig.scap="Chromatin accessibility and histone modifications at proximal regions of genes dynamically expressed between PND15 and adult spermatogonial cells"}
+img <- readPNG("figure/dev/3a.png")
+grid.raster(img)
+```
+
+(ref:dfc3b) \textbf{Chromatin accessibility and histone modifications at proximal regions of genes dynamically expressed between PND15 and adult spermatogonial cells.} \newline \textbf{C:} Genomic snapshots from the Integrative Genomics Viewer (IGV, Broad Institute) of exemplary genes from Category 1 (Gfra2), category 2 (Hmx1) and category 3 (Pdgfra) showing the relative abundance of transcripts from RNA-seq and chromatin accessibility from ATAC-seq. RNA-seq data correspond to literature PND14 and PNW8 spermatogonial cells and ATAC-seq data to PND15 and adult spermatogonial cells. Genomic snapshots from the Integrative Genomics Viewer (IGV, Broad Institute) of exemplary genes from Category 1 (Gfra2), Category 2 (Hmx1) and Category 3 (Pdgfra) showing the relative abundance of transcripts from RNA-seq, chromatin accessibility from ATAC-seq and enrichment of 3 different histone marks (H3K27ac, H3K4me3 and H3K27me3) from ChIP-seq. Pup (PND15 ATAC-seq or PND14 RNA-seq samples) spermatogonia are represented in green and adult (PNW20 ATAC-seq samples or PNW8 RNA-seq and ChIP-seq samples) spermatogonia are represented in orange and overlayed in each of the IGV tracks.
+
+```{r df3b, echo=FALSE, fig.align='center', fig.cap="(ref:dfc3b)", fig.scap="Chromatin accessibility and histone modifications at proximal regions of genes dynamically expressed between PND15 and adult spermatogonial cells"}
+img <- readPNG("figure/dev/3b.png")
+grid.raster(img)
+```
+
+\end{subfigures}
+
+\begin{subfigures}
+(ref:dfc4a) \textbf{Transcription factor dynamics at differentially accessible regions is predicted by motif enrichment in adult spermatogonial cells.} \newline \textbf{A:} Dot plot of all transcription factor motifs enriched in the regions of decreased and increased accessibility between adult and PND15 spermatogonia. Each dot corresponds to a motif. The differential gene expression of each transcription factor was extracted from the PND14 and PNW8 literature RNA-seq and is shown as colour-coded Log2 FC. The size of the dot indicates the HOMER motif enrichment adjusted P of each motif. \newline \textbf{B:} Genomic snapshots from the Integrative Genomics Viewer (IGV, Broad Institute) of mRNA expression levels of representative enriched TFs in the regions of increased chromatin accessibility. RNA-seq data corresponds to literature PND14 and adult (PNW8) spermatogonial cells and  ATAC-seq data to PND15 and adult (PNW20) spermatogonial cells, respectively.
+
+```{r df4a, echo=FALSE, fig.align='center', fig.cap="(ref:dfc4a)", fig.scap="Transcription factor dynamics at differentially accessible regions is predicted by motif enrichment in adult spermatogonial cells"}
+img <- readPNG("figure/dev/4a.png")
+grid.raster(img)
+```
+
+(ref:dfc4b) \textbf{Transcription factor dynamics at differentially accessible regions is predicted by motif enrichment in adult spermatogonial cells.} \newline \textbf{C:} HOMER extracted consensus sequences for each transcription factor motif. Representative examples from the most enriched transcription factor families are depicted. \newline \textbf{D:} Dot plots of top transcription factor motifs enriched in differentially accessible chromatin regions situated in gene bodies and in intergenic areas of the genome. Each dot corresponds to a motif. The differential gene expression of each transcription factor was extracted from the PND14 and PNW8 literature RNA-seq and is shown as colour-coded Log2 FC. The size of the dot indicates the HOMER motif enrichment adjusted P of each motif.
+
+```{r df4b, echo=FALSE, fig.align='center', fig.cap="(ref:dfc4b)", fig.scap="Transcription factor dynamics at differentially accessible regions is predicted by motif enrichment in adult spermatogonial cells"}
+img <- readPNG("figure/dev/4b.png")
+grid.raster(img)
+```
+\end{subfigures}
+
+\begin{subfigures}
+
+(ref:dfc5a) \textbf{Differential chromatin accessibility at transposable elements (TEs) in adult spermatogonial cells compared to PND15.} \newline \textbf{A:} Heatmap of the LTR and LINE subtypes with decreased accessibility between adult and PND15 spermatogonia (adjusted P $\leq$ 0.05 and Log2 FC $\geq$ 0.5). \newline \textbf{B:} Heatmap of the LTR and LINE subtypes with increased accessibility between adult and PND15 spermatogonia (adjusted P $\leq$ 0.05 and Log2 FC $\geq$ 0.5). Expression changes of these subtypes between PNW8 and PND14 spermatogonia literature RNA-seq is represented as Log2 FC. \newline (\textbf{A}, \textbf{B}) Log2 FC are shown with respect to the average of the PND15 samples. Samples are clustered using Ward’s method. Subtypes are ordered by principal component analysis (PCA) method using seriation (R package). \newline \textbf{C:} Bar plot illustrating the genomic distribution of differentially accessible TEs between adult and PND15 spermatogonial cells. \newline \textbf{D:} Genomic snapshots from the Integrative Genomics Viewer (IGV, Broad Institute) of Lncenc1 and Platr14 showing LTRs from RepeatMasker and the average normalized RNA-seq and ATAC-seq coverage (RPKM). LTR loci were extracted using RepeatMasker. RNA-seq data corresponds to literature PND14 and adult (PNW8) spermatogonial cells and  ATAC-seq data to PND15 and adult (PNW20) spermatogonial cells, respectively.
+
+```{r df5a, echo=FALSE, fig.align='center', fig.cap="(ref:dfc5a)", fig.scap="Differential chromatin accessibility at transposable elements (TEs) in adult spermatogonial cells compared to PND15"}
+img <- readPNG("figure/dev/5a.png")
+grid.raster(img)
+```
+
+
+(ref:dfc5b)  \textbf{Differential chromatin accessibility at transposable elements (TEs) in adult spermatogonial cells compared to PND15.} \newline \textbf{E:} Dot plots of top transcription factor motifs enriched in the less accessible ERVKs and ERVL subtypes. Each dot corresponds to a motif. The differential gene expression of each transcription factor was extracted from the PNW8 vs PND14 comparison from literature RNA-seq and is shown as colour-coded Log2 FC. The size of the dot indicates the HOMER motif enrichment adjusted P of each motif.
+
+```{r df5b, echo=FALSE, fig.align='center', fig.cap="(ref:dfc5b)", fig.scap="Differential chromatin accessibility at transposable elements (TEs) in adult spermatogonial cells compared to PND15"}
+img <- readPNG("figure/dev/5b.png")
+grid.raster(img)
+```
+
+\end{subfigures}
+
+(ref:dfc6) \textbf{Increased accessibility at LINE L1 subtypes located near Olfr gene clusters.} \newline \textbf{A:} Heatmap of the Olfr genes for which we identified an upregulated expression from PND14 to PNW8 timepoints and an increase in accessibility at a nearby L1 locus. RNA expression levels are expressed as Log2 CPM at each timepoint. Accessibility changes at each of the corresponding L1 locus situated within +/- 5kbp from the gene are expressed as Log2 FC calculated from the ATAC-seq analysis of the differentially accessible TEs between adult and PND15 spermatogonial cells. Locus are ordered by PCA method using seriation (R package). \newline \textbf{B:} Genomic snapshots from the Integrative Genomics Viewer (IGV, Broad Institute) of exemplary genes Olfr1497 and Olfr362 showing relative abundance of transcripts from RNA-seq and chromatin accessibility from ATAC-seq. LINE loci were extracted using Repeat Masker. RNA-seq data corresponds to literature PND14 and adult (PNW8) spermatogonial cells and  ATAC-seq data to PND15 and adult (PNW20) spermatogonial cells, respectively. \newline \textbf{C:} Dot plots of top transcription factor motifs enriched in the more accessible L1 and ERV1 subtypes. Each dot corresponds to a motif. The differential gene expression of each transcription factor was extracted from the PNW8 vs PND14 comparison from literature RNA-seq and is shown as colour-coded Log2 FC. The size of the dot indicates the HOMER motif enrichment adjusted P of each motif.
+
+```{r df6, echo=FALSE, fig.align='center', fig.cap="(ref:dfc6)", fig.scap="Increased accessibility at LINE L1 subtypes located near Olfr gene clusters"}
+img <- readPNG("figure/dev/6.png")
+grid.raster(img)
+```

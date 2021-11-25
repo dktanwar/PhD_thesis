@@ -2,64 +2,150 @@
 output: html_document
 editor_options: 
   chunk_output_type: console
+bibliography: [rmd/references.bib]
 ---
+
 # Early life stress affects the miRNA cargo of epididymal extracellular vesicles in mouse {#ev}
 
-Anar Alshanbayeva\textsuperscript{1,2,3}, **Deepak K Tanwar**\textsuperscript{1,2,3}, Martin Roszkowski\textsuperscript{1,2,3}, Francesca Manuella\textsuperscript{1,2,3}, Isabelle M Mansuy\textsuperscript{1,2,3,\#}
-\newline
-\newline
-\textsuperscript{1}Laboratory of Neuroepigenetics, Brain Research Institute at the Medical Faculty of the University of Zurich.
-\newline
-\textsuperscript{2}Institute for Neuroscience of the Department of Health Sciences and Technology, ETH Zurich, Zurich, Switzerland.
-\newline
-\textsuperscript{3}Zurich Neuroscience Center, ETH and University of Zurich, Zurich, Switzerland.
-\newline
-\newline
-\textsuperscript{\#}Corresponding author
-\newline
-\newline
-**Journal:** _Biology of Reproduction_
-\newline
-DOI: [10.1093/biolre/ioab156](https://doi.org/10.1093/biolre/ioab156)
-\newline
-\newline
-**Contributions:** _I performed data analysis with Anar Alshanbayeva, generated figures  with Anar Alshanbayeva, helped Anar Alshanbayeva in writing the manuscript, and revised manuscript with Anar Alshanbayeva._
+Anar Alshanbayeva\textsuperscript{1,2,3}, **Deepak K
+Tanwar**\textsuperscript{1,2,3}, Martin
+Roszkowski\textsuperscript{1,2,3}, Francesca
+Manuella\textsuperscript{1,2,3}, Isabelle M
+Mansuy\textsuperscript{1,2,3,\#} \newline \\newline
+\textsuperscript{1}Laboratory of Neuroepigenetics, Brain Research
+Institute at the Medical Faculty of the University of Zurich. \newline
+\textsuperscript{2}Institute for Neuroscience of the Department of
+Health Sciences and Technology, ETH Zurich, Zurich, Switzerland.
+\newline \\textsuperscript{3}Zurich Neuroscience Center, ETH and
+University of Zurich, Zurich, Switzerland. \newline \\newline
+\textsuperscript{\#}Corresponding author \newline \\newline
+\*\*Journal:\*\* *Biology of Reproduction* \newline DOI:
+[10.1093/biolre/ioab156](https://doi.org/10.1093/biolre/ioab156)
+\newline \\newline
+
+**Contributions:** *I performed data analysis with Anar Alshanbayeva,
+generated figures with Anar Alshanbayeva, helped Anar Alshanbayeva in
+writing the manuscript, and revised manuscript with Anar Alshanbayeva.*
 
 \newpage
 
 ## Abstract
 
-Sperm RNA can be modified by environmental factors and has been implicated in communicating signals about changes in a father’s environment to the offspring. The small RNA composition of sperm could be changed during its final stage of maturation in the epididymis by extracellular vesicles (EVs) released by epididymal cells. We studied the effect of exposure to stress in early postnatal life on the transcriptome of epididymal EVs using a mouse model of transgenerational transmission. We found that the small RNA signature of epididymal EVs, particularly miRNAs, is altered in adult males exposed to postnatal stress. In some cases, these miRNA changes correlate with differences in the expression of their target genes in sperm and zygotes generated from that sperm. These results suggest that stressful experiences in early life can have persistent biological effects on the male reproductive tract that may in part be responsible for the transmission of the effects of exposure to the offspring.
+Sperm RNA can be modified by environmental factors and has been
+implicated in communicating signals about changes in a father's
+environment to the offspring. The small RNA composition of sperm could
+be changed during its final stage of maturation in the epididymis by
+extracellular vesicles (EVs) released by epididymal cells. We studied
+the effect of exposure to stress in early postnatal life on the
+transcriptome of epididymal EVs using a mouse model of transgenerational
+transmission. We found that the small RNA signature of epididymal EVs,
+particularly miRNAs, is altered in adult males exposed to postnatal
+stress. In some cases, these miRNA changes correlate with differences in
+the expression of their target genes in sperm and zygotes generated from
+that sperm. These results suggest that stressful experiences in early
+life can have persistent biological effects on the male reproductive
+tract that may in part be responsible for the transmission of the
+effects of exposure to the offspring.
 
 ## Summary sentence
 
-miRNA cargo of extracellular vesicles in cauda epididymis is altered by paternal exposure to early life stress. This correlates with changes in the expression of target genes in sperm and in zygotes generated from that sperm.
+miRNA cargo of extracellular vesicles in cauda epididymis is altered by
+paternal exposure to early life stress. This correlates with changes in
+the expression of target genes in sperm and in zygotes generated from
+that sperm.
 
 \newpage
 
 ## Graphical Abstract
 
-## Key words 
-epigenetics, epididymis, epididymosomes, early life stress, extracellular vesicles, miRNAs, sperm.
+## Key words
+
+epigenetics, epididymis, epididymosomes, early life stress,
+extracellular vesicles, miRNAs, sperm.
 
 \newpage
 
 ## Introduction
 
-Post-testicular maturation of spermatozoa in the epididymis is an elaborate process that involves modifications of sperm RNA, protein, and lipid content [@nixon_2015; @rejraji_2006; @sharma_2016; @skerget_2015; @tamessar_2021]. The epididymis is segmented into different parts, including the initial segment, caput, corpus, and cauda. Each segment has a distinct gene expression profile, and different protein and lipid composition. Some modifications in epididymal spermatozoa are conserved across species [@sellem_2020]. For example, ~50% of miRNAs, a class of small RNAs that are modified during caput to cauda epididymis transit, is identical in mouse and bovine spermatozoa [@sellem_2020]. One mechanism by which small RNA load in spermatozoa is modified along the epididymis is by uptake of extracellular vesicles (EVs), also known as epididymosomes, which are produced by epididymal epithelial cells [@reilly_2016]. Studies have shown that epididymosomes can be taken up by maturing sperm through proteins present on the sperm head such as dynamin in mice and tetraspanins or syntenins in humans [@caballero_2013; @reilly_2016; @thimon_2008; @zhou_2019]. Co-incubation experiments provided evidence for epididymosome-mediated transfer of miRNAs to spermatozoa [@reilly_2016]. Exogenous DNA and RNA can also be directly taken up by spermatozoa via artificial liposomes [@bachiller_1991].
+Post-testicular maturation of spermatozoa in the epididymis is an
+elaborate process that involves modifications of sperm RNA, protein, and
+lipid content [@nixon_2015; @rejraji_2006; @sharma_2016; @skerget_2015;
+@tamessar_2021]. The epididymis is segmented into different parts,
+including the initial segment, caput, corpus, and cauda. Each segment
+has a distinct gene expression profile, and different protein and lipid
+composition. Some modifications in epididymal spermatozoa are conserved
+across species [@sellem_2020]. For example, \~50% of miRNAs, a class of
+small RNAs that are modified during caput to cauda epididymis transit,
+is identical in mouse and bovine spermatozoa [@sellem_2020]. One
+mechanism by which small RNA load in spermatozoa is modified along the
+epididymis is by uptake of extracellular vesicles (EVs), also known as
+epididymosomes, which are produced by epididymal epithelial cells
+[@reilly_2016]. Studies have shown that epididymosomes can be taken up
+by maturing sperm through proteins present on the sperm head such as
+dynamin in mice and tetraspanins or syntenins in humans
+[@caballero_2013; @reilly_2016; @thimon_2008; @zhou_2019]. Co-incubation
+experiments provided evidence for epididymosome-mediated transfer of
+miRNAs to spermatozoa [@reilly_2016]. Exogenous DNA and RNA can also be
+directly taken up by spermatozoa via artificial liposomes
+[@bachiller_1991].
 
-However, it is still not clear if changes in small RNA composition of spermatozoa occurring during epididymal transit are required for embryonic development, and studies on the subject have been conflicting [@conine_2018; @suganuma_2005]. Changes in sperm small RNA have nevertheless been suggested to play a role in the transmission of information about paternal experiences to the progeny and can influence their developmental trajectory [@chan_2020; @gapp_2014; @sharma_2016]. Epididymosomal small RNA content can also be altered by exposure, for instance, to dietary insult and stress [@chan_2020; @sharma_2016]. For instance, epididymosomal miRNAs are changed by exposure to chronic stress [@chan_2020] and low-protein diet [@sharma_2016] in mice.
+However, it is still not clear if changes in small RNA composition of
+spermatozoa occurring during epididymal transit are required for
+embryonic development, and studies on the subject have been conflicting
+[@conine_2018; @suganuma_2005]. Changes in sperm small RNA have
+nevertheless been suggested to play a role in the transmission of
+information about paternal experiences to the progeny and can influence
+their developmental trajectory [@chan_2020; @gapp_2014; @sharma_2016].
+Epididymosomal small RNA content can also be altered by exposure, for
+instance, to dietary insult and stress [@chan2020; @sharma_2016]. For
+instance, epididymosomal miRNAs are changed by exposure to chronic
+stress [@chan_2020] and low-protein diet [@sharma_2016] in mice.
 
-Transmission of information about paternal exposure to the offspring depends on the type of exposure, its duration and the developmental window at which it is applied. To date, little is known about the long-term effects of early life stress, particularly stress experienced after birth, on epididymosomal small RNA composition in adulthood, and whether any changes to this composition can influence gene expression in sperm and in zygotes generated from that sperm. Using a transgenerational mouse model of postnatal stress induced by unpredictable maternal separation combined with unpredictable maternal stress, unpredictable maternal separation combined with unpredictable maternal stress (MSUS) [@franklin_2010], we show that the miRNA signature of cauda epididymosomes in adult males is altered by exposure, and that this alteration, correlates with changes in the expression of their target genes in sperm and in zygotes.
+Transmission of information about paternal exposure to the offspring
+depends on the type of exposure, its duration and the developmental
+window at which it is applied. To date, little is known about the
+long-term effects of early life stress, particularly stress experienced
+after birth, on epididymosomal small RNA composition in adulthood, and
+whether any changes to this composition can influence gene expression in
+sperm and in zygotes generated from that sperm. Using a
+transgenerational mouse model of postnatal stress induced by
+unpredictable maternal separation combined with unpredictable maternal
+stress, unpredictable maternal separation combined with unpredictable
+maternal stress (MSUS) [@franklin_2010], we show that the miRNA
+signature of cauda epididymosomes in adult males is altered by exposure,
+and that this alteration, correlates with changes in the expression of
+their target genes in sperm and in zygotes.
 
 \newpage
 
 ## Results
 
-
 ### Isolation of cauda epididymosomes confirmed by several methods
 
-```{r fig1, echo=TRUE, fig.align='center', fig.cap="testFig1", fig.width=6.65, fig.height=4.45}
+To characterize the RNA composition of cauda epididymosomes,
+epididymosomes were isolated by high-speed ultracentrifugation from
+adult control males and males exposed to MSUS ([Figure 1A]). MSUS
+consists of exposing newborn pups to unpredictable maternal separation
+for 3h daily and subjecting dams to unpredictable maternal stress during
+separation [@franklin2010]. Adult MSUS-exposed and control males were
+euthanized and cauda epididymis was collected. Successful isolation of
+cauda epididymosomes was confirmed by electron microscopy,
+immunoblotting, and nanoparticle-tracking analyses ([Figure 1]). The
+presence and purity of epididymosomes was further validated by staining
+with the EV-specific marker CD9 and confirmation of the absence of the
+cellular marker Glyceraldehyde 3-phosphate dehydrogenase (GAPDH)
+([Figure 1B]). Size analysis by nanoparticle-tracking indicated that the
+collected particles are 50--300nm in diameter ([Figure 1D]). Imaging by
+transmission electron microscopy showed the typical cup-shaped
+structures of epididymosomes ([Figure 1C], [Supplementary Figure
+S1A](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/biolreprod/105/3/10.1093_biolre_ioab156/2/supplementary_figure1_ioab156.pdf?Expires=1640381143&Signature=ZVMNtS3QxVw~dVZhM9gqOooVrzEx00yRs~6JbxCUuXNT5gu9tUAo2yiGIzdqhqx56PXcV7lBvywNtFhqVS4qxsrkMRk9rSTzJkcDYNgbPA8ovszE09KHMKSFHGeU39vKCR8NtrD1s5ZJcnCuaJ8vd2yQOLcu6aQ6wONICRjOPlHeJYK6qATRTv2XzxOVD8ekoHDarkNbIAgZElI5NDqTAgf0e8h6GGJWVjtjsRQKhI-1xtVvFrEiUCgX~gtE1ndsPUM4zFse1bv3ufszF1-sZQJWNfHSesA5U8s7l4BBlaFc8qRfrrsZBGpXisttr4dbfc2kNSZhAuR0leR5XZXMzw__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA))
+[[17]]. RNA profiling by high-resolution automated electrophoresis
+showed enrichment for small RNAs of different length, similar to
+previous studies on cauda epididymosomal RNA ([Supplementary Figure
+S1B](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/biolreprod/105/3/10.1093_biolre_ioab156/2/supplementary_figure1_ioab156.pdf?Expires=1640381143&Signature=ZVMNtS3QxVw~dVZhM9gqOooVrzEx00yRs~6JbxCUuXNT5gu9tUAo2yiGIzdqhqx56PXcV7lBvywNtFhqVS4qxsrkMRk9rSTzJkcDYNgbPA8ovszE09KHMKSFHGeU39vKCR8NtrD1s5ZJcnCuaJ8vd2yQOLcu6aQ6wONICRjOPlHeJYK6qATRTv2XzxOVD8ekoHDarkNbIAgZElI5NDqTAgf0e8h6GGJWVjtjsRQKhI-1xtVvFrEiUCgX~gtE1ndsPUM4zFse1bv3ufszF1-sZQJWNfHSesA5U8s7l4BBlaFc8qRfrrsZBGpXisttr4dbfc2kNSZhAuR0leR5XZXMzw__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA))
+[@sharma2016; @conine2018].
+
+```{r fig1, echo=TRUE, eval = F, fig.align='center', fig.cap="testFig1", fig.width=6.65, fig.height=4.45}
 img <- readJPEG("figure/anaraEV/1.jpeg")
 grid.raster(img)
 # knitr::include_graphics("figure/anaraEV/1.jpeg")
@@ -111,10 +197,6 @@ img <- readPNG("figure/anaraEV/s6.png")
 grid.raster(img)
 ```
 
-
-
-
-
 \ref{fig:fig1} is a figure
 
 ```{r tab1, }
@@ -127,28 +209,206 @@ knitr::kable(df,label = "tab1",
 )
 ```
 
-\ref{tab:tab1} is a table
-
+<!-- \ref{tab:tab1} is a table -->
 
 ### The number and size of epididymosomes in adult males are not altered by postnatal stress
 
+We next examined the number and size of cauda epididymosomes in adult
+MSUS and control males by dynamic light scattering. No significant
+difference could be detected between MSUS and control males ([Figure 2A
+and B]). Since most epididymosomal production occurs via apocrine
+secretion from principal cells located in caput epididymis, we also
+examined the expression of genes involved in EVs exocytosis. We chose
+Ras-related protein Rab-5A (*Rab5*) and Ras-related protein Rab-7A
+(*Rab7*), which are involved in vesicle trafficking, the soluble NSF
+attachment protein (SNARE) family protein vesicle-associated membrane
+protein 7 (*Vamp7*) and SNARE recognition molecule synaptobrevin homolog
+YKT6 (*Ykt6*), involved in vesicle fusion. No significant change in the
+expression of these genes could be detected in caput epididymis between
+MSUS and control adult males ([Figure 2C]). However, we observed a
+consistent trend (not statistically significant) for decreased
+expression of all genes involved in EVs secretion in caput epididymis of
+MSUS mice ([Figure 2C]).
+
 ### miRNAs are persistently altered by postnatal stress in cauda epididymosomes
+
+Epididymosomal small RNAs are known to be affected by changing
+environmental conditions in rodents. Small RNAs, like tRNA-derived
+fragments (tRFs), miRNAs and more recently rRNA-derived small RNA
+fragments are believed to act as messengers of a father's experiences
+that can be transferred to the offspring [@sharma2016; @chan2020;
+@wang2021; @zhang2018]. Our previous work showed that early postnatal
+stress alters small and long RNA content in sperm of adult males
+[@gapp2014; @gapp2020]. Since caudal sperm and epididymosomal small RNA
+profiles are highly similar [@sharma2016], we examined whether small RNA
+content of cauda epididymosomes is also altered by postnatal stress. We
+extracted RNA from cauda epididymosomes of adult MSUS and control males
+and prepared small RNA-seq (sRNA-seq) libraries. RNAs of different size
+were observed in cauda epididymosomes, with the majority of small RNA
+reads mapping to tRNAs as previously observed ([Figure 3A])
+[@sharma2016]. When plotting the results of differential expression
+analysis of small RNAs (*P*\<0.05) between MSUS and control sample, the
+majority of nonsignificant differences in small RNAs appeared to be in
+miRNAs, although some differences in tRNAs and piRNAs were also detected
+([Figure 3B]). We next performed size-selection on the same libraries to
+enrich for miRNAs and then, we re-sequenced the libraries
+([Supplementary Figure S2A and
+C](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/biolreprod/105/3/10.1093_biolre_ioab156/2/supplementary_figure2_ioab156.pdf?Expires=1640381143&Signature=A9dB7ERupo4JLPnQdqDhxuHcCMk1K3YEl~GjiPtQL5f1C-52xg4PCIbr1I7Yn3OILogZQj81DCgZMOPo-aCl9GL0qDAgKiVBfDk8w31CjcXt3~Az7nMOrU1lTk68CXlxahhYgJpNkdrBiKrI0BNSaC0P6zGRVVBp~x~paJECHF6h~Y7aWZD1JU8-e7crspVYinZ63GhBVYsPxC9GhdW1Ha3jC3cxoZp98MWgWg-D8btfz9ifmCYHFGNe8r-bFzzK3JmavyrUv2-dDPZI31QGx3pWXpQDkYPR29fv--OJw7An6D3RUE97dbPMLK9J2DdoGbIFxJkvaXs5XYZeEs7j1w__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)).
+As expected, size-selection did not alter the abundance of miRNAs and
+uniformly enriched the miRNA fraction in all samples ([Supplementary
+Figure
+S2B--D](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/biolreprod/105/3/10.1093_biolre_ioab156/2/supplementary_figure2_ioab156.pdf?Expires=1640381143&Signature=A9dB7ERupo4JLPnQdqDhxuHcCMk1K3YEl~GjiPtQL5f1C-52xg4PCIbr1I7Yn3OILogZQj81DCgZMOPo-aCl9GL0qDAgKiVBfDk8w31CjcXt3~Az7nMOrU1lTk68CXlxahhYgJpNkdrBiKrI0BNSaC0P6zGRVVBp~x~paJECHF6h~Y7aWZD1JU8-e7crspVYinZ63GhBVYsPxC9GhdW1Ha3jC3cxoZp98MWgWg-D8btfz9ifmCYHFGNe8r-bFzzK3JmavyrUv2-dDPZI31QGx3pWXpQDkYPR29fv--OJw7An6D3RUE97dbPMLK9J2DdoGbIFxJkvaXs5XYZeEs7j1w__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)).
+Differential expression analysis of miRNAs biotypes from the combined
+sequencing datasets after batch effect correction revealed changes in
+several miRNAs in MSUS cauda epididymosomes ([Supplementary Table
+S1](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/biolreprod/105/3/10.1093_biolre_ioab156/2/supplementary_table1_ioab156.pdf?Expires=1640381143&Signature=hQcT70uRlXsKWUAua7URrvbqLq5WTxU4vwd1~Ga6mb0OKJV3yeG40CowmXuaApf7~lM6wbBjGmXZyr4IhMXwHDIYihrJEVpftAhtcWEH1e1zED6fL~IV0m8EHCOxwxnNdbWbzNcT0al-t7qyFt2qzIAo95SJa0NTxxZxc0urlRFiP9pZmkfaLrw89~jBvpXXS7aYjAV5pqPqHAoWdIT6Bg4oM4x5wGaTFRY5XCgkJbOCXh7N6lbu1Fgv4yuOCnq8KLE4uKvg2O7XPava6-ok~ChEmt177tFVCMR56fLuVB6cirx0W~h7n8GyIe4V63uez8t~WQWDi2ljJO3nQ0JkQg__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)).
+These include upregulation of miR-878-5p, miR34c-5p, miR-881-3p and
+downregulation of miR-31-5p and miR-155-5p (adjusted *P* $\geq$ 0.1).
+Differential expression analysis on all small RNA biotypes from the
+combined datasets showed that 70% of all significantly altered small
+RNAs correspond to miRNAs, 15% to tRNAs, 15% to piRNAs and snoRNAs,
+while rRNAs are not changed ([Supplementary Table
+S4](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/biolreprod/105/3/10.1093_biolre_ioab156/2/supplementary_table4_ioab156.pdf?Expires=1640381143&Signature=bfZA5igfuhyNlXc6Dxd~RknEysYoTp8mMADemsoydrYHwhqplbsSK1FcJmQh6q9rqgp~dvhwTjjJ8eL6oXAMYAYmkosxkm8GHbvfl9B3DMNHYM29qOAxat~Kpc7uI8b1n-bUiW5oXMDYxsIXLDD5Hs-6tLUBQZABwaVARlClNlm5zEwx8ahhXgOMJJIaJ08BN2Kz8~kJg9vpb2CQ3TaF2uFW0jyt0mOGajN1aAg4ZW8b48NsCTQ2XNCUn~BiijHGyLQwZLwJdFWzh73IaIJ4CPaGE4N9FFJttpUWD-NvW2fOPWi7afJAOdtfQM-wetBk4sZRD7AHIuGt3q9Zjbdx3Q__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)).
+Pathway analysis of top candidate RNAs from miRNA-based analysis after
+size-selection revealed that the most up- and down-regulated miRNAs
+(*P*\<0.05) have target mRNAs that encode proteins involved in fatty
+acid metabolism, steroid biosynthesis, lysine degradation, and thyroid
+hormone signaling ([Figure 3C]). Notably, similar pathways are altered
+in plasma of MSUS males during postnatal life and adulthood as shown by
+metabolomic analysis [[20]]. In particular, metabolites implicated in
+polyunsaturated fatty acid biogenesis were up-regulated, whereas
+steroidogenesis and the steroidogenic ligand aldosterone were
+down-regulated [@vansteenwyk2020]. Steroidogenesis was already altered
+at postnatal day 28 in MSUS males, with total cholesterol significantly
+decreased in testis ([Figure 3D]) and HDL cholesterol significantly
+increased in liver ([Figure 3F]). Since the primary role of HDL
+cholesterol in blood is to transport excess cholesterol from peripheral
+tissues to liver, an increase in HDL in liver is consistent with a
+decrease in testis. However, cholesterol was no longer altered in testis
+of adult MSUS males ([Figure 3E]), suggesting a transient alteration.
+The androgen receptor, which the cholesterol derivatives, androgens bind
+to, was decreased in adult caput epididymis ([Figure 3G]), suggesting
+potential secondary effects of lower cholesterol in testis when
+occurring in early postnatal life.
 
 ### mRNA targets of miRNAs from cauda epididymosomes are altered by postnatal stress in sperm and in zygotes
 
-\newpage
+The relative abundance of miRNAs in cauda epididymosomes and mature
+sperm significantly correlated ([Figure 4C](javascript:;)), consistent
+with prior findings [@sharma2016; @chan2020]. Since cauda epididymosomes
+carry small RNA payloads matching those of mature sperm and are part of
+the ejaculate [@frenette2005; @belleannée2013], they may contribute to
+the information delivered to the oocyte upon fertilization. Therefore,
+we looked at the mRNA targets of miRNAs significantly changed in MSUS
+cauda epididymosomes in two previously published analysis of genes
+identified in MSUS sperm and in zygotes derived from MSUS males
+(*P* \< 0.05) [@gapp2020]. For this, we plotted the cumulative log
+fold-change distribution of all genes from differential expression
+analysis of sperm or zygotes versus the number of conserved binding
+sites for miRNAs significantly changed by MSUS in cauda epididymosomes
+([Figure 4A and B](javascript:;), [Supplementary Figure
+S5](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/biolreprod/105/3/10.1093_biolre_ioab156/2/supplementary_figure5_ioab156.pdf?Expires=1640381143&Signature=E~BuqHM4R2ZK~lNtgk5CRb9PgOed5iN-la-Suu7HgpjzLeRI6ovIk8ysUsjN5puCiDrwSv95yx9NpQQhRcNqnYhTjvje3dE1LuPf3x6QvxhXWFw7MGkASggRJdKIJ1NQzrS40Y9tq11UGz94I89r3j4U80gYJByTR6-WY7ZTfGHKzXQnssydgIwA~1fGJkTXPmnjrWInWshaBy~uNBiiMvZZiXSg5-6e6Q94tlzyEsDImYUNSOj1eNuFjdeT53l7a~tRPcL1VuQPPQrvQgdMqp3v-5EZ~MoaP8jAGTWSndH5~aKvlrKqNBWSEfcNfq4gSzp-bAr~yQ8B31SDg4BGow__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)).
+Target genes with three binding sites for miR-31-5p, a miRNA
+differentially expressed in MSUS cauda epididymosomes, had increased
+expression in sperm and decreased expression in zygotes from MSUS males
+([Figure 4A and B](javascript:;), [Supplementary Table
+S2](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/biolreprod/105/3/10.1093_biolre_ioab156/2/supplementary_table2_ioab156.pdf?Expires=1640381143&Signature=QmnOeu5RZ4r98SRI57lsR~NVOUzfn0z8gA7iJ~~vonmAWBAvkVnukZ0kMLERMarkyJNolF5Xo8WA0uZVZHzegq1Xo1pmrIGY74GIobjDK2BNJmx1ko77jeoP3PyOlsgCgIBJlzAZEU6q8xp82RWvuPahsRiawgp4mBrRE3Pidz5PzX-6wzfQHrsf35gbSo7gU5OPRENoyu9uFioxFyvdX0mzlLfAQWMdp3YHL67f0mPECylGQt9PkaYSkSTQUvxr6OVKEw5vJ2UaBwDNaHLcM3bRD2rDH~6Jz5muKOZ17escW7K~wKGozeQnag-eCRUbczCwSEHoN18WMTYiG-2n7g__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)
+and
+[S3](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/biolreprod/105/3/10.1093_biolre_ioab156/2/supplementary_table3_ioab156.pdf?Expires=1640381143&Signature=GgWFyt6kTEqX1mpRI-OUSRXOZrlX6r8FRZ8TG01RqT-KNaotN7LJ8W29qnBDcbrtcu09DeWu8HYQeGV4Q0m6r9ZB24WomVGBGrYmkpNRBc5n~VtxqniqMh38-1pQVG69Kp~JYDAljPsFHt0FnxI6SjyVKipccLwyFzHRevfz~bXNEc8NG781VSXIaogr0z1tDW~ki4sgt6KSuTeSCkbvBuAENodHRwV5KSZSgV96Qz7LmtWiW8PcMTYJ9B0zNk~aslYjRwS36AUbna2pd6D7zMB7BqcE5cyEzvBR9Kn05uHLylTa7S42O6MpPvpXKhxIxgZamrq5h4wgC0HaZB6uGQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)).
+However, not all targets of miRNAs significantly altered in MSUS cauda
+epididymosomes showed corresponding changes in expression in sperm and
+zygotes ([Supplementary Figure
+S5](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/biolreprod/105/3/10.1093_biolre_ioab156/2/supplementary_figure5_ioab156.pdf?Expires=1640381143&Signature=E~BuqHM4R2ZK~lNtgk5CRb9PgOed5iN-la-Suu7HgpjzLeRI6ovIk8ysUsjN5puCiDrwSv95yx9NpQQhRcNqnYhTjvje3dE1LuPf3x6QvxhXWFw7MGkASggRJdKIJ1NQzrS40Y9tq11UGz94I89r3j4U80gYJByTR6-WY7ZTfGHKzXQnssydgIwA~1fGJkTXPmnjrWInWshaBy~uNBiiMvZZiXSg5-6e6Q94tlzyEsDImYUNSOj1eNuFjdeT53l7a~tRPcL1VuQPPQrvQgdMqp3v-5EZ~MoaP8jAGTWSndH5~aKvlrKqNBWSEfcNfq4gSzp-bAr~yQ8B31SDg4BGow__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)).
+We then conducted miRNA-gene interaction analysis based on
+experimentally validated data from Tarbase [@vlachos2017]. This analysis
+showed that, overall, the five miRNAs significantly changed in MSUS
+cauda epididymosomes target genes that are part of pathways involved in
+steroid biosynthesis, extracellular matrix (ECM)--receptor interaction,
+and cell-adhesion molecules ([Figure 4D](javascript:;)).
 
 ## Discussion
 
-The effects of environmental factors on RNA in the male reproductive tract, in particular, the epididymis have been examined in rodent models. Until now, most models have used invasive exposure such as dietary insult or injection of endocrine disruptors, applied prenatally and sometimes before conception. Few studies have examined the effects of non-invasive psychological/emotional exposure such as stress in early life and the effects on epididymal RNA in adulthood [@chan_2020]. This study examines if postnatal stress affects RNAs in EVs released from the cauda epididymis and whether this has consequences for mature sperm and zygotes generated from that sperm.
+The effects of environmental factors on RNA in the male reproductive
+tract, in particular, the epididymis have been examined in rodent
+models. Until now, most models have used invasive exposure such as
+dietary insult or injection of endocrine disruptors, applied prenatally
+and sometimes before conception. Few studies have examined the effects
+of non-invasive psychological/emotional exposure such as stress in early
+life and the effects on epididymal RNA in adulthood [@chan_2020]. This
+study examines if postnatal stress affects RNAs in EVs released from the
+cauda epididymis and whether this has consequences for mature sperm and
+zygotes generated from that sperm.
 
-Using a transgenerational mouse model of early postnatal stress, we show that several miRNAs, including miR-871-3p, miR-31-5p, miR-155-5p, miR-878-5p, and miR-34c-5p are altered in cauda epididymosomes in adult males exposed to postnatal stress, and that the targets of some of these miRNAs are affected in mature sperm and zygotes. Particularly, miR-31-5p is significantly decreased in cauda epididymosomes and its target genes are up-regulated in sperm but down-regulated in zygotes generated from that sperm, suggesting an over-compensation during early development. This may also be due to the heterogeneity of epididymosomes which have different size, biogenesis, and cellular targeting [@sullivan_2015], leading to a dissociation between the RNA content of epididymosomes and transcriptional changes in zygotes. It has been suggested that different subsets of epididymosomes have different roles. While a subset communicates with spermatozoa during sperm epididymal transit [@reilly_2016; @sharma_2016], another subset serves in the communication within epididymal epithelial cells [@belleanne_2013a], and a third one is delivered as part of seminal fluid during fertilization [@belleanne_2013; @frenette_2005]. Thus owing to their heterogeneity, not all cauda epididymosomes or their cargo is delivered to the oocyte upon fertilization, which may explain the differences in miRNAs targets that are affected in sperm and zygotes.
+Using a transgenerational mouse model of early postnatal stress, we show
+that several miRNAs, including miR-871-3p, miR-31-5p, miR-155-5p,
+miR-878-5p, and miR-34c-5p are altered in cauda epididymosomes in adult
+males exposed to postnatal stress, and that the targets of some of these
+miRNAs are affected in mature sperm and zygotes. Particularly, miR-31-5p
+is significantly decreased in cauda epididymosomes and its target genes
+are up-regulated in sperm but down-regulated in zygotes generated from
+that sperm, suggesting an over-compensation during early development.
+This may also be due to the heterogeneity of epididymosomes which have
+different size, biogenesis, and cellular targeting [@sullivan_2015],
+leading to a dissociation between the RNA content of epididymosomes and
+transcriptional changes in zygotes. It has been suggested that different
+subsets of epididymosomes have different roles. While a subset
+communicates with spermatozoa during sperm epididymal transit
+[@reilly_2016; @sharma_2016], another subset serves in the communication
+within epididymal epithelial cells [@belleanne_2013a], and a third one
+is delivered as part of seminal fluid during fertilization
+[@belleanne_2013; @frenette_2005]. Thus owing to their heterogeneity,
+not all cauda epididymosomes or their cargo is delivered to the oocyte
+upon fertilization, which may explain the differences in miRNAs targets
+that are affected in sperm and zygotes.
 
-Several of the differentially expressed miRNAs in MSUS cauda epididymosomes play a role in metabolic processes and early development [@reza_2019]. For instance, miR-31-5p is involved in glucose metabolism and fatty acid oxidation [@reza_2019]. In humans, its target complement C1q Tumor Necrosis Factor-Related Protein 9A (CTRP9) protein is negatively correlated with the amount of visceral fat and positively associated with a beneficial glucose and metabolic phenotype [@shao_2017]. This is consistent with the observation that glucose and insulin metabolism are also affected by MSUS [@franklin_2010; @gapp_2014]. The level of other miRNAs is significantly increased or decreased in MSUS epididymosomes, such as miR-155-5p, which facilitates differentiation of mouse embryonic stem cells, or miR-34c-5p that initiates the first embryonic cleavage in mice [@reza_2019].
+Several of the differentially expressed miRNAs in MSUS cauda
+epididymosomes play a role in metabolic processes and early development
+[@reza_2019]. For instance, miR-31-5p is involved in glucose metabolism
+and fatty acid oxidation [@reza_2019]. In humans, its target complement
+C1q Tumor Necrosis Factor-Related Protein 9A (CTRP9) protein is
+negatively correlated with the amount of visceral fat and positively
+associated with a beneficial glucose and metabolic phenotype
+[@shao_2017]. This is consistent with the observation that glucose and
+insulin metabolism are also affected by MSUS [@franklin_2010;
+@gapp_2014]. The level of other miRNAs is significantly increased or
+decreased in MSUS epididymosomes, such as miR-155-5p, which facilitates
+differentiation of mouse embryonic stem cells, or miR-34c-5p that
+initiates the first embryonic cleavage in mice [@reza_2019].
 
-The first days after birth are a sensitive period for the development and the establishment of cellular niches in tissues. Epithelial cells in the epididymis, which are the source of epididymosomes, undergo differentiation and expansion postnatally until puberty [@na_2002]. Once their expansion is completed, epididymal epithelial cells remain at a nearly constant number in adulthood. If they can be modified by prior exposure, they may therefore carry a memory of exposure into adulthood. The postnatal development and differentiation of epididymal epithelial cells primarily depend on testicular signals [@biliska_2006; @na_2002; @robaire_2011; @zhu_2000]. Since chronic stress affects the coupling of the hypothalamus–pituitary and hypothalamus–gonadal axes, stress-related decrease in steroidogenesis can profoundly affect the differentiation and expansion of epididymal epithelial cells in early postnatal life. A number of studies have shown the importance of the abundance of androgens during postnatal life for epididymal development [@na_2002]. Thus, the availability of testicular cholesterol during epididymal cells differentiation has implications for these cells. Systemic alteration in cholesterol metabolism seen in young MSUS males (decreased total cholesterol in testis and increased HDL cholesterol in liver) may contribute to metabolic changes seen in adult animals, for instance in plasma steroidogenesis and fatty acid pathways, and to alterations in glucose and insulin metabolism in adult MSUS males. Moreover, androgen-dependent miRNAs miR-878-5p and miR-871-3p are significantly increased in cauda epididymosomes in MSUS.
+The first days after birth are a sensitive period for the development
+and the establishment of cellular niches in tissues. Epithelial cells in
+the epididymis, which are the source of epididymosomes, undergo
+differentiation and expansion postnatally until puberty [@na_2002]. Once
+their expansion is completed, epididymal epithelial cells remain at a
+nearly constant number in adulthood. If they can be modified by prior
+exposure, they may therefore carry a memory of exposure into adulthood.
+The postnatal development and differentiation of epididymal epithelial
+cells primarily depend on testicular signals [@biliska_2006; @na_2002;
+@robaire_2011; @zhu_2000]. Since chronic stress affects the coupling of
+the hypothalamus--pituitary and hypothalamus--gonadal axes,
+stress-related decrease in steroidogenesis can profoundly affect the
+differentiation and expansion of epididymal epithelial cells in early
+postnatal life. A number of studies have shown the importance of the
+abundance of androgens during postnatal life for epididymal development
+[@na_2002]. Thus, the availability of testicular cholesterol during
+epididymal cells differentiation has implications for these cells.
+Systemic alteration in cholesterol metabolism seen in young MSUS males
+(decreased total cholesterol in testis and increased HDL cholesterol in
+liver) may contribute to metabolic changes seen in adult animals, for
+instance in plasma steroidogenesis and fatty acid pathways, and to
+alterations in glucose and insulin metabolism in adult MSUS males.
+Moreover, androgen-dependent miRNAs miR-878-5p and miR-871-3p are
+significantly increased in cauda epididymosomes in MSUS.
 
-In conclusion, our results provide evidence that chronic stress in early postnatal life alters miRNAs in EVs of the male reproductive tract in adulthood, with effects in mature sperm and zygotes. These persistent and intergenerational effects in vivo point to the sensitivity of the reproductive system to stress exposure and the detrimental consequences for descendants. These consequences may differ depending on the time window and severity of paternal stress exposure. Further studies are necessary to more precisely define these effects and the source of vesicles and their cargo miRNAs.
+In conclusion, our results provide evidence that chronic stress in early
+postnatal life alters miRNAs in EVs of the male reproductive tract in
+adulthood, with effects in mature sperm and zygotes. These persistent
+and intergenerational effects in vivo point to the sensitivity of the
+reproductive system to stress exposure and the detrimental consequences
+for descendants. These consequences may differ depending on the time
+window and severity of paternal stress exposure. Further studies are
+necessary to more precisely define these effects and the source of
+vesicles and their cargo miRNAs.
 
 \newpage
 
@@ -156,82 +416,219 @@ In conclusion, our results provide evidence that chronic stress in early postnat
 
 ### Animals
 
-Animal experiments were conducted according to the Swiss Law for Animal Protection and were approved by the cantonal veterinary office in Zürich under license number 83/2018. C57Bl/6 J mice were obtained from Janvier (France) and bred in-house to generate animals for the experiments. Animals were maintained under a reverse light–dark cycle in a temperature and humidity-controlled environment with constant access to food and water. Nine months old age-matched MSUS and control males were used for small RNA-sequencing (sRNA-seq) of cauda epididymosomes, tissue collection for RT-qPCR, nanoparticle-tracking analysis, and total cholesterol measurements. HDL cholesterol and total cholesterol measurements were performed on MSUS and control males at postnatal day 28. Datasets from previous publication [@gapp_2020]: caudal sperm RNA-seq was performed on 5-months old males, and zygote RNA-seq was performed on zygotes from 3-months old males.
-
+Animal experiments were conducted according to the Swiss Law for Animal
+Protection and were approved by the cantonal veterinary office in Zürich
+under license number 83/2018. C57Bl/6 J mice were obtained from Janvier
+(France) and bred in-house to generate animals for the experiments.
+Animals were maintained under a reverse light--dark cycle in a
+temperature and humidity-controlled environment with constant access to
+food and water. Nine months old age-matched MSUS and control males were
+used for small RNA-sequencing (sRNA-seq) of cauda epididymosomes, tissue
+collection for RT-qPCR, nanoparticle-tracking analysis, and total
+cholesterol measurements. HDL cholesterol and total cholesterol
+measurements were performed on MSUS and control males at postnatal day
+28. Datasets from previous publication [@gapp_2020]: caudal sperm
+RNA-seq was performed on 5-months old males, and zygote RNA-seq was
+performed on zygotes from 3-months old males.
 
 ### MSUS
 
-To obtain MSUS mice, 3-months old C57Bl/6 J females and their litters were subjected to daily 3 h separation unpredictably and females were exposed to an unpredictable stressor during separation as previously described [@franklin_2010]. Control dams and pups were left undisturbed. After weaning at postnatal day 21, pups from different litters were randomly assigned to cages of 4–5 mice, in corresponding treatment groups to avoid litter effects.
+To obtain MSUS mice, 3-months old C57Bl/6 J females and their litters
+were subjected to daily 3 h separation unpredictably and females were
+exposed to an unpredictable stressor during separation as previously
+described [@franklin_2010]. Control dams and pups were left undisturbed.
+After weaning at postnatal day 21, pups from different litters were
+randomly assigned to cages of 4--5 mice, in corresponding treatment
+groups to avoid litter effects.
 
 ### Tissue collection
 
-After decapitation and blood collection, mice were pinned on a dissection board and cleaned with alcohol. Epididymis and testis were excised and separated from surrounding adipose tissue. The epididymis was separated into caput, corpus, and cauda. Cauda was excised with several incisions and sperm collected with a swim-up protocol. The supernatant was collected to isolate epididymosomes. The whole testis and caput epididymis were crushed with stainless steel beads in a tissue crusher in cold PBS, centrifuged at 3000 rcf for 10 min to pellet the tissue and cells and used for total cholesterol and HDL cholesterol measurements.
+After decapitation and blood collection, mice were pinned on a
+dissection board and cleaned with alcohol. Epididymis and testis were
+excised and separated from surrounding adipose tissue. The epididymis
+was separated into caput, corpus, and cauda. Cauda was excised with
+several incisions and sperm collected with a swim-up protocol. The
+supernatant was collected to isolate epididymosomes. The whole testis
+and caput epididymis were crushed with stainless steel beads in a tissue
+crusher in cold PBS, centrifuged at 3000 rcf for 10 min to pellet the
+tissue and cells and used for total cholesterol and HDL cholesterol
+measurements.
 
 ### Electron microscopy images
 
-Negative staining of cauda epididymosomes was performed with methylcellulose. Briefly, the carrier grid was glow-discharged in plasma for 10 min and washed with a drop of PBS, then incubated in 1% glutaraldehyde (GA) in water for 5 min and washed with water five times for 2 min each. Afterwards the grid was incubated in 1% UAc (uranyl acetate) for 5 min and then kept on ice in methylcellulose/UAc (900 ul methylcellulose 2% and 100 ul 3% UAc) solution. After incubation with methylcellulose/UAc, the excess liquid was removed by dipping onto a filter paper. The grid was air-dried on ice for 5 min. Imaging was performed with a transmission electron microscope.
+Negative staining of cauda epididymosomes was performed with
+methylcellulose. Briefly, the carrier grid was glow-discharged in plasma
+for 10 min and washed with a drop of PBS, then incubated in 1%
+glutaraldehyde (GA) in water for 5 min and washed with water five times
+for 2 min each. Afterwards the grid was incubated in 1% UAc (uranyl
+acetate) for 5 min and then kept on ice in methylcellulose/UAc (900 ul
+methylcellulose 2% and 100 ul 3% UAc) solution. After incubation with
+methylcellulose/UAc, the excess liquid was removed by dipping onto a
+filter paper. The grid was air-dried on ice for 5 min. Imaging was
+performed with a transmission electron microscope.
 
 ### Epididymosomes isolation by ultracentrifugation
 
-After pelleting sperm following the sperm swim-up protocol in M2 medium (Sigma, M7167), the supernatant was centrifuged at 2000 rcf for 10 min, 10 000 rcf for 30 min and then ultracentrifuged at 120 000 rcf at 4 $^{\circ}$C for 2 h (TH 64.1 rotor, Thermo Fisher Scientific). The epididymosomal pellet was then washed in PBS at 4 $^{\circ}$C and ultracentrifuged at 120 000 rcf at 4 $^{\circ}$C for 2 h. The resulting pellet was resuspended in 60 \textmu l of PBS for all downstream analysis.
+After pelleting sperm following the sperm swim-up protocol in M2 medium
+(Sigma, M7167), the supernatant was centrifuged at 2000 rcf for 10 min,
+10 000 rcf for 30 min and then ultracentrifuged at 120 000 rcf at 4
+$^{\circ}$C for 2 h (TH 64.1 rotor, Thermo Fisher Scientific). The
+epididymosomal pellet was then washed in PBS at 4 $^{\circ}$C and
+ultracentrifuged at 120 000 rcf at 4 $^{\circ}$C for 2 h. The resulting
+pellet was resuspended in 60 \textmu l of PBS for all downstream
+analysis.
 
 ### Immunoblotting
 
-PBS-resuspended pellet containing epididymosomes was lysed in 10x RIPA buffer for 5 min at 4 $^{\circ}$C. Equal amounts of protein were mixed with 4x Laemmli Sample Buffer (Bio-Rad Laboratories, USA) and loaded on 4–20% Tris-Glycine polyacrylamide gels (Bio-Rad Laboratories, USA). The membranes were blocked in 5% SureBlock (in Tris-buffer with 0.05% Tween-20) for 1 h at room temperature and incubated with overnight at 4 $^{\circ}$C with primary anti-Cd9 ([1:3000; System Biosciences, USA] and anti-Gapdh [1:5000; Cell Signaling, USA; 14C10]) antibodies.
+PBS-resuspended pellet containing epididymosomes was lysed in 10x RIPA
+buffer for 5 min at 4 $^{\circ}$C. Equal amounts of protein were mixed
+with 4x Laemmli Sample Buffer (Bio-Rad Laboratories, USA) and loaded on
+4--20% Tris-Glycine polyacrylamide gels (Bio-Rad Laboratories, USA). The
+membranes were blocked in 5% SureBlock (in Tris-buffer with 0.05%
+Tween-20) for 1 h at room temperature and incubated with overnight at 4
+$^{\circ}$C with primary anti-Cd9 ([1:3000; System Biosciences, USA] and
+anti-Gapdh [1:5000; Cell Signaling, USA; 14C10]) antibodies.
 
 ### Nanoparticle tracking analysis
 
-Particle number and size of epididymosomes were measured using a Nanosight NS300 (Malvern, UK) at 20 $^{\circ}$C, according to the manufacturer’s instructions and lots were generated using a published method [@dragovic_2011]. The following parameters were kept constant for all samples: "Camera level" = 14 and "Detection threshold" = 7. For measurements with Nanosight, the resuspended pellet from ultracentrifugation was diluted to a 1:1000 concentration.
+Particle number and size of epididymosomes were measured using a
+Nanosight NS300 (Malvern, UK) at 20 $^{\circ}$C, according to the
+manufacturer's instructions and lots were generated using a published
+method [@dragovic_2011]. The following parameters were kept constant for
+all samples: "Camera level" = 14 and "Detection threshold" = 7. For
+measurements with Nanosight, the resuspended pellet from
+ultracentrifugation was diluted to a 1:1000 concentration.
 
 ### RNA isolation and epididymosomes profiling
 
-To lyse purified epididymosomes, 33 \textmu l of lysis buffer (6.4 M guanidine HCl, 5% Tween 20, 5% Triton, 120 mM EDTA, and 120 mM Tris pH 8.0) per 60 \textmu l of PBS resuspended pellet was added to each sample, together with \textmu l Proteinase K and 3.3 \textmu l water. Samples were incubated at 60 $^{\circ}$C for 15 min with shaking. A total of 40 \textmu l water were added and RNA was extracted using Trizol LS protocol, according to the manufacturer's instructions. Profiling of extracted RNA was done using high-resolution automated electrophoresis on a 2100 Bioanalyzer (Agilent, G2939BA), according to instructions for the RNA 6000 Pico Kit (Agilent, 5067-1513) reagent.
+To lyse purified epididymosomes, 33 \textmu l of lysis buffer (6.4 M
+guanidine HCl, 5% Tween 20, 5% Triton, 120 mM EDTA, and 120 mM Tris pH
+8.0) per 60 \textmu l of PBS resuspended pellet was added to each
+sample, together with \textmu l Proteinase K and 3.3 \textmu l water.
+Samples were incubated at 60 $^{\circ}$C for 15 min with shaking. A
+total of 40 \textmu l water were added and RNA was extracted using
+Trizol LS protocol, according to the manufacturer's instructions.
+Profiling of extracted RNA was done using high-resolution automated
+electrophoresis on a 2100 Bioanalyzer (Agilent, G2939BA), according to
+instructions for the RNA 6000 Pico Kit (Agilent, 5067-1513) reagent.
 
 ### Preparation and sequencing of sRNA-seq libraries from epididymosomes
 
-sRNA-seq libraries were prepared using the NEB Next Small RNA-sequencing kit (NEB #E7300, New England BioLabs), according to the manufacturer's instructions. About 80–90 ng of total RNA per sample was used to prepare the libraries. The same libraries were sequenced before and after size-selection (target peak 150 bp) with the BluePippin System. 200 million reads were obtained for 10 samples, with 125 bp single-stranded read-length on a HiSeq2500 sequencer.
-
+sRNA-seq libraries were prepared using the NEB Next Small RNA-sequencing
+kit (NEB \#E7300, New England BioLabs), according to the manufacturer's
+instructions. About 80--90 ng of total RNA per sample was used to
+prepare the libraries. The same libraries were sequenced before and
+after size-selection (target peak 150 bp) with the BluePippin System.
+200 million reads were obtained for 10 samples, with 125 bp
+single-stranded read-length on a HiSeq2500 sequencer.
 
 ### RT-qPCR
 
-For gene expression analysis in caput epididymis, RNA was extracted using the phenol/chloroform extraction method (TRIzol; Thermo Fisher Scientific). Reverse transcription was performed using miScript \RN{2} RT reagents (Qiagen) - HiFlex buffer, and RT qPCR was performed with QuantiTect SYBR (Qiagen) on the Light-Cycler \RN{2} 480 (Roche). All samples were run in cycles as follows: 95 $^{\circ}$C for 15 min, 45 cycles of 15 s at 94 $^{\circ}$C, 30 s at 55 $^{\circ}$C and 30 s at 70 $^{\circ}$C, followed by gradual increase of temperature to $^{\circ}$C. The endogenous control \textit{Gapdh} was used for normalization. The expression level of genes was analyzed using two-tailed Student's \textit{t}-test.
-
+For gene expression analysis in caput epididymis, RNA was extracted
+using the phenol/chloroform extraction method (TRIzol; Thermo Fisher
+Scientific). Reverse transcription was performed using miScript \RN{2}
+RT reagents (Qiagen) - HiFlex buffer, and RT qPCR was performed with
+QuantiTect SYBR (Qiagen) on the Light-Cycler \RN{2} 480 (Roche). All
+samples were run in cycles as follows: 95 $^{\circ}$C for 15 min, 45
+cycles of 15 s at 94 $^{\circ}$C, 30 s at 55 $^{\circ}$C and 30 s at 70
+$^{\circ}$C, followed by gradual increase of temperature to $^{\circ}$C.
+The endogenous control \textit{Gapdh} was used for normalization. The
+expression level of genes was analyzed using two-tailed Student's
+\textit{t}-test.
 
 ### Cholesterol measurements
 
-Testicular and epididymal total cholesterol and HDL cholesterol levels were measured using the CHOL reagent, in conjunction with SYNCHRON LX System(s), UniCel DxC 600/800 System(s) and Synchron Systems Multi Calibrator (Beckman Coulter), according to the manufacturer’s instructions at the Zurich Integrative Rodent Physiology (ZIRP) facility of the University of Zurich.
+Testicular and epididymal total cholesterol and HDL cholesterol levels
+were measured using the CHOL reagent, in conjunction with SYNCHRON LX
+System(s), UniCel DxC 600/800 System(s) and Synchron Systems Multi
+Calibrator (Beckman Coulter), according to the manufacturer's
+instructions at the Zurich Integrative Rodent Physiology (ZIRP) facility
+of the University of Zurich.
 
 ### Bioinformatics data analysis
 
-sRNA-sequencing FASTQ files were processed using the `ExceRpt` pipeline, previously established for EV small RNA data analysis [@rozowsky_2019]. Briefly, `ExceRpt` first automatically identifies and removes known 3$'$ adapter sequences, then aligns against known spike-in sequences used for library construction, filters low-quality reads and aligns them to annotated sequences in the UniVec database. Reads not filtered out in pre-processing steps are then aligned to the mouse genome and transcriptome using `STAR` aligner [@dobin_2013]. The annotations were performed in the following order: miRbase, tRNAscan, piRNA, GENCODE, and circRNA. rRNA counts were obtained using `Oasis 2` tool. Reads mapped to miRNAs were combined from sequencing obtained before and after size-selection and corrected for batch effect using `RUVSeq` [@leek_2014]. Normalization factors were calculated using `TMM` [@robinson_2010] method and differential expression was performed using `edgeR` package [@robinson_2010a] in `R`. For cumulative distribution plots, miRNA targets (all and conserved) were downloaded from TargetScan release 7.2 [@agarwal_2015]. When using context++ scores, targets were split into three same-frequency groups according to their scores. \textit{P}-values were calculated using a `Kolmogorov–Smirnov` test between the first and last groups (i.e. strongest and weakest targets). The miRNA pathway analysis was conducted using a web-server tool `DIANA-miRPath` [@vlachos_2017], where targets were predicted-derived from DIANA-TarBase v6.0, a database of experimentally validated miRNA targets. The adjusted \textit{P} cutoff value of 0.05 was used for the identification of expressed pathways. The miRNAs and their corresponding target pathways information was extracted and plots were generated in `R`. `ggplot2` [@wickham_2016] and `ComplexHeatmap` [@gu_2016] `R` packages were used for generation of figures.
+sRNA-sequencing FASTQ files were processed using the `ExceRpt` pipeline,
+previously established for EV small RNA data analysis [@rozowsky_2019].
+Briefly, `ExceRpt` first automatically identifies and removes known 3$'$
+adapter sequences, then aligns against known spike-in sequences used for
+library construction, filters low-quality reads and aligns them to
+annotated sequences in the UniVec database. Reads not filtered out in
+pre-processing steps are then aligned to the mouse genome and
+transcriptome using `STAR` aligner [@dobin_2013]. The annotations were
+performed in the following order: miRbase, tRNAscan, piRNA, GENCODE, and
+circRNA. rRNA counts were obtained using `Oasis 2` tool. Reads mapped to
+miRNAs were combined from sequencing obtained before and after
+size-selection and corrected for batch effect using `RUVSeq`
+[@leek_2014]. Normalization factors were calculated using `TMM`
+[@robinson_2010] method and differential expression was performed using
+`edgeR` package [@robinson_2010a] in `R`. For cumulative distribution
+plots, miRNA targets (all and conserved) were downloaded from TargetScan
+release 7.2 [@agarwal_2015]. When using context++ scores, targets were
+split into three same-frequency groups according to their scores.
+\textit{P}-values were calculated using a `Kolmogorov–Smirnov` test
+between the first and last groups (i.e. strongest and weakest targets).
+The miRNA pathway analysis was conducted using a web-server tool
+`DIANA-miRPath` [@vlachos_2017], where targets were predicted-derived
+from DIANA-TarBase v6.0, a database of experimentally validated miRNA
+targets. The adjusted \textit{P} cutoff value of 0.05 was used for the
+identification of expressed pathways. The miRNAs and their corresponding
+target pathways information was extracted and plots were generated in
+`R`. `ggplot2` [@wickham_2016] and `ComplexHeatmap` [@gu_2016] `R`
+packages were used for generation of figures.
 
 ## Data availability
 
 The datasets collected for this study are available as follows:
 
-- sRNA-seq dataset of cauda epididymosomes before and after sizeselection: NCBI GEO under accession number [GSE175976](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE175976).
+-   sRNA-seq dataset of cauda epididymosomes before and after
+    sizeselection: NCBI GEO under accession number
+    [GSE175976](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE175976).
 
-- Codes for bioinformatics analysis of RNA-sequencing datasets and
-all corresponding differential expression analyses: Github repository [mansuylab/alshanbayeva_et_al_2021](https://github.com/mansuylab/alshanbayeva_et_al_2021).
+-   Codes for bioinformatics analysis of RNA-sequencing datasets and all
+    corresponding differential expression analyses: Github repository
+    [mansuylab/alshanbayeva_et_al_2021](https://github.com/mansuylab/alshanbayeva_et_al_2021).
 
-- Sperm and zygote sequencing datasets from previous publications
-can be found in ArrayExpress database at EMBL-EBI ([www.ebi.ac.uk/arrayexpress](www.ebi.ac.uk/arrayexpress)) with the accession number [E-MTAB-5834](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-5834/) (sperm) and [E-MTAB-6589](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-6589/) (zygotes).
+-   Sperm and zygote sequencing datasets from previous publications can
+    be found in ArrayExpress database at EMBL-EBI
+    ([www.ebi.ac.uk/arrayexpress](www.ebi.ac.uk/arrayexpress)) with the
+    accession number
+    [E-MTAB-5834](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-5834/)
+    (sperm) and
+    [E-MTAB-6589](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-6589/)
+    (zygotes).
 
 \newpage
 
 ## Authors' contributions
 
-AA and IMM conceived and designed the study. FM and MR performed the MSUS breeding and collected tissue samples. AA and DKT performed data analysis and generated figures. AA wrote the manuscript with input from DKT and IMM. AA performed all
-experiments for RNA sequencing and all molecular analyses. IMM supervised the project and raised funds.
+AA and IMM conceived and designed the study. FM and MR performed the
+MSUS breeding and collected tissue samples. AA and DKT performed data
+analysis and generated figures. AA wrote the manuscript with input from
+DKT and IMM. AA performed all experiments for RNA sequencing and all
+molecular analyses. IMM supervised the project and raised funds.
 
 ## Grant Support
-The work was supported by Swiss National Science Foundation (31003A-135715), ETH grants (ETH-10 15-2 and ETH-17 13-2), the Slack-Gyr Foundation, the Escher Foundation. The Mansuy lab is funded by the University Zürich, the Swiss Federal Institute of Technology, the Swiss National Science Foundation (31003A-135715), ETH grants (ETH-10 15-2 and ETH-17 13-2), the Slack-Gyr foundation, the Escher Foundation. Deepak K. Tanwar is supported by the Swiss Government Excellence Scholarship. Martin Roszkowski was funded by the ETH Zurich Fellowship (ETH-10 15-2).
+
+The work was supported by Swiss National Science Foundation
+(31003A-135715), ETH grants (ETH-10 15-2 and ETH-17 13-2), the Slack-Gyr
+Foundation, the Escher Foundation. The Mansuy lab is funded by the
+University Zürich, the Swiss Federal Institute of Technology, the Swiss
+National Science Foundation (31003A-135715), ETH grants (ETH-10 15-2 and
+ETH-17 13-2), the Slack-Gyr foundation, the Escher Foundation. Deepak K.
+Tanwar is supported by the Swiss Government Excellence Scholarship.
+Martin Roszkowski was funded by the ETH Zurich Fellowship (ETH-10 15-2).
 
 ## Acknowledgements
 
-We thank Pierre-Luc Germain for advice on data analysis and for generating cumulative distribution plots, Irina Lazar-Contes for help with MSUS breeding, Silvia Schelbert for work on the animal license, Emilio Yandez at Function Genomics Center Zurich (FGCZ) for advice on the sRNA sequencing, Alekhya Mazumkhar for help with nanoparticle-tracking analysis, Yvonne Zipfel for animal care, Zurich Integrative Rodent Physiology facility for performing cholesterol measurements. We also thank Eloise Kremer, Ali Jawaid, and Mea Holmes for their initial contributions to the project.
-
-
+We thank Pierre-Luc Germain for advice on data analysis and for
+generating cumulative distribution plots, Irina Lazar-Contes for help
+with MSUS breeding, Silvia Schelbert for work on the animal license,
+Emilio Yandez at Function Genomics Center Zurich (FGCZ) for advice on
+the sRNA sequencing, Alekhya Mazumkhar for help with
+nanoparticle-tracking analysis, Yvonne Zipfel for animal care, Zurich
+Integrative Rodent Physiology facility for performing cholesterol
+measurements. We also thank Eloise Kremer, Ali Jawaid, and Mea Holmes
+for their initial contributions to the project.
 
 **Conflict of interest:** The authors declare no conflict of interest.
 

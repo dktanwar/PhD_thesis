@@ -1,6 +1,24 @@
 book_filename: "thesis"
 chapter_name: "Chapter "
-rmd_files: ["index.Rmd", "rmd/01-summary.Rmd", "rmd/02-summaryDE.Rmd", "rmd/03-intro.Rmd", "rmd/04-methods.Rmd", "rmd/05-aims.Rmd", "rmd/06-dev.Rmd", "rmd/07-ev.Rmd", "rmd/08-shortRNA.Rmd", "rmd/09-discussion.Rmd", "rmd/10-conclusion.Rmd", "rmd/11-appendix1.Rmd", "rmd/12-appendix2.Rmd", "rmd/13-appendix3.Rmd", "rmd/99-references.Rmd"]
+rmd_files: ["index.Rmd", 
+"rmd/01-summary.Rmd",
+"rmd/02-summaryDE.Rmd",
+"rmd/03-overview.Rmd",
+"rmd/04-intro.Rmd",
+"rmd/05-methods.Rmd",
+"rmd/06-dev/1.Rmd",
+# "rmd/06-dev/2.Rmd",
+# "rmd/06-dev/3.Rmd",
+# "rmd/06-dev/4.Rmd",
+# "rmd/07-ev.Rmd",
+"rmd/08-shortRNA.Rmd",
+"rmd/09-outlook.Rmd",
+"rmd/11-appendix1.Rmd",
+"rmd/12-appendix2.Rmd",
+"rmd/13-appendix3.Rmd",
+"rmd/14-appendix4.Rmd",
+"rmd/15-cv.Rmd",
+"rmd/99-references.Rmd"]
 download: [
     ["thesis.pdf", "PDF"],
     ["thesis.epub", "EPUB"],
@@ -8,3 +26,9 @@ download: [
   ]
 delete_merged_file: true
 bibliography: [bib/anaraEV.bib]
+link-citations: true
+bookdown::pdf_book:
+  citation_package: biblatex
+bookdown::gitbook:
+  split_by: chapter
+  split_bib: yes

@@ -1,9 +1,11 @@
 graph LR
 
-a((Seq))-->t1
+
 
 
 t1(tRNA-Leu-CAG)
+t1-->t99(ambiguous)
+t99-->a((Seq))
 
 t1 -->t2[tRNA-Leu-CAG-1]
 t1 -->t8[tRNA-Leu-CAG-2]
@@ -30,3 +32,4 @@ style t7 fill:#F8F9F1,stroke:blue,stroke-width:2px;
 style t9 fill:#F8F9F1,stroke:green,stroke-width:2px;
 style t10 fill:#F8F9F1,stroke:green,stroke-width:2px;
 style t11 fill:#F8F9F1,stroke:green,stroke-width:2px;
+style t99 fill:yellow,stroke:red,stroke-width:2px;

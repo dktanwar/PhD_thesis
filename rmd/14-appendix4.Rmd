@@ -1,0 +1,95 @@
+# Appendix D {- #ad}
+
+\markboth{Simulated reads for testing shortRNA}{Appendix D}
+
+\noindent
+
+\setlength\parindent{0pt}
+
+
+## Simulated reads for testing shortRNA{-}
+
+### Libraries{-}
+```{r, eval=FALSE}
+library(Biostrings)
+library(rtracklayer)
+```
+
+### miRNAs{-}
+```{r, eval=FALSE}
+fa <- readRNAStringSet("https://www.mirbase.org/ftp/CURRENT/mature.fa.gz")
+fa <- DNAStringSet(fa)
+names(fa) <- gsub(" .+", "", names(fa))
+fa <- fa[grep(pattern = "mmu", x = names(fa))]
+```
+
+### cluster chr17:17830188-17830879{-}
+```{r, eval=FALSE}
+clusterMirs <- c(
+  "mmu-miR-125a-5p", "mmu-miR-99b-5p", "mmu-let-7e-5p",
+  "mmu-let-7e-3p", "mmu-miR-99b-3p", "mmu-miR-125a-3p"
+)
+clusterMirs <- fa[clusterMirs]
+```
+
+### Imputing differences for differential analysis{-}
+```{r, eval=FALSE}
+sizefacts <- c(
+  SRR13129036 = 1.2, SRR13129037 = 0.99, SRR13129038 = 1.01,
+  SRR13129039 = 1.01, SRR13129040 = 1.07, SRR13129041 = 0.56,
+  SRR13129042 = 0.72, SRR13129043 = 0.51
+)
+```
+### Read counts{-}
+```{r, eval=FALSE}
+set.seed(123)
+clusterMirsCounts <- t(sapply(rgamma(length(clusterMirs),
+  shape = 3
+), function(x) {
+  sizefacts *
+    exp(1 + x) *
+    rnorm(8, mean = rep(c(1, rnorm(1, 2, sd = 0.1)), each = 4), sd = 0.4)
+}))
+row.names(clusterMirsCounts) <- names(clusterMirs)
+clusterMirsCounts <- matrix(rpois(length(clusterMirsCounts),
+  lambda = clusterMirsCounts
+),
+nrow = nrow(clusterMirsCounts), dimnames = dimnames(clusterMirsCounts)
+)
+clusterMirsCounts
+row.names(clusterMirsCounts) <- as.character(clusterMirs)
+```
+### miRNA precursor{-}
+```{r, eval=FALSE}
+mir144prec <- DNAStringSet(c(mir144precursor = substr(
+  "GGCTGGGATATCATCATATACTGTAAGTTTGTGATGAGACACTACAGTATAGATGATGTACTAGTC",
+  1, 50
+)))
+mir144 <- c(
+  mir144prec, fa["mmu-miR-144-3p"], fa["mmu-miR-144-5p"],
+  DNAStringSet(c(
+    mir144_invalid1 = "AAGTTTGTGATGAGACACTAC",
+    mir144_invalid2 = "CTGTAAGTTTGTGATGAGAC",
+    mir144_invalid3 = "ATGTACTAGTCTGGGTA"
+  ))
+)
+
+set.seed(123)
+mu <- rbind(
+  abs(rnorm(8, 1)),
+  abs(rnorm(8, rep(2:1, each = 4), 0.3)),
+  abs(rnorm(8, rep(2:1, each = 4), 0.3)),
+  abs(rnorm(8, 1)), abs(rnorm(8, 1)), abs(rnorm(8, 1))
+)
+mu <- 300 * t(t(mu) * sizefacts)
+mir144Counts <- matrix(rpois(length(mu), lambda = mu),
+  nrow = nrow(mu),
+  dimnames = list(names(mir144), names(sizefacts))
+)
+row.names(mir144Counts) <- as.character(mir144)
+```
+### Data to be simulated{-}
+```{r, eval=FALSE}
+e <- rbind(clusterMirsCounts, mir144Counts)
+e
+```
