@@ -118,7 +118,7 @@ library(dplyr)
 library(kableExtra)
 # Set how wide the R output will go
 # options(width = 70)
-knitr::opts_chunk$set(fig.pos = "htbp")
+knitr::opts_chunk$set(fig.pos = "htbp", eval = TRUE)
 # defOut <- knitr::knit_hooks$get("plot")  # save the default plot hook 
 # knitr::knit_hooks$set(plot = function(x, options) {  # set new plot hook ...
 #   x <- defOut(x, options)  # first apply the default hook
@@ -203,10 +203,6 @@ This thesis is divided into three parts: introduction and methods, scientific co
 
 <!--chapter:end:rmd/03-overview.Rmd-->
 
----
-bibliography: rmd/references.bib
----
-<!-- \FloatBarrier -->
 # Introduction {#intro .unnumbered}
 
 ## Epigenetics {.unnumbered}
@@ -987,17 +983,6 @@ We defined the following goals for my thesis:
 
 <!--chapter:end:rmd/04-intro.Rmd-->
 
----
-bibliography: [rmd/references.bib, bib/thesis.bib]
-link-citations: true
----
-
-<!-- \FloatBarrier -->
-
-```{r setup, include=FALSE}
-# knitr::opts_chunk$set(dpi=300)
-```
-
 # Bioinformatics methods {#methods .unnumbered}
 
 ## Version controlled data analysis using git {#m1 .unnumbered}
@@ -1683,13 +1668,6 @@ log\textsubscript[2]-fold-changes obtained after the differential analysis.
 
 <!--chapter:end:rmd/05-methods.Rmd-->
 
----
-output: html_document
-editor_options: 
-  chunk_output_type: console
-bibliography: [rmd/references.bib,bib/thesis.bib]
----
-
 # Dynamic chromatin accessibility in spermatogonial cells for transcriptional programmings from early postnatal to adult stages {#chapter1}
 
 **Deepak K Tanwar**\textsuperscript{1,2,3,$\dagger$}, Irina
@@ -1923,13 +1901,6 @@ grid.raster(img)
 ```
 
 <!--chapter:end:rmd/06-dev/1.Rmd-->
-
----
-output: html_document
-editor_options: 
-  chunk_output_type: console
-bibliography: rmd/references.bib
----
 
 ## Graphical Abstract
 
@@ -2885,16 +2856,6 @@ analysis is available from
 
 <!--chapter:end:rmd/06-dev/2.Rmd-->
 
----
-output: html_document
-editor_options: 
-  chunk_output_type: console
-bibliography: rmd/references.bib
-# header-includes:
-  # \usepackage{float} \floatplacement{figure}{H}
-  # \newcommand{\beginfig}{\setcounter{table}{0}  \renewcommand{\thetable}{\arabic{table}} \setcounter{figure}{0} \renewcommand{\thefigure}{\arabic{figure}}}
----
-
 ## Figures
 
 \begin{subfigures}
@@ -2994,16 +2955,6 @@ grid.raster(img)
 
 <!--chapter:end:rmd/06-dev/3.Rmd-->
 
----
-output: html_document
-editor_options: 
-  chunk_output_type: console
-bibliography: rmd/references.bib
-# header-includes:
-#   \usepackage{float} \floatplacement{figure}{H}
-#   \newcommand{\beginsupplement}{\setcounter{table}{0}  \renewcommand{\thetable}{S\arabic{table}} \setcounter{figure}{0} \renewcommand{\thefigure}{S\arabic{figure}}}
----
-
 ## Supplementary Figures
 
 \begin{subfigures}
@@ -3096,7 +3047,6 @@ Supplementary tables are too big to be included in the thesis, hence they are pr
 output: html_document
 editor_options: 
   chunk_output_type: console
-# bibliography: []
 ---
 
 \chaptermark{Chapter 2}
@@ -3781,16 +3731,10 @@ kable_styling(latex_options = c("striped", "scale_down")) %>%
 
 <!--chapter:end:rmd/07-ev.Rmd-->
 
----
-bibliography: rmd/references.bib
-editor_options: 
-  chunk_output_type: console
----
-
-
 # shortRNA {#chapter3}
+
 \begingroup\LARGE
-`shortRNA`: a flexible framework for the analysis of short RNA sequencing data
+`shortRNA`: a flexible framework for the analysis of short RNA sequencing data\newline
 \begingroup\Large
 \normalsize
 

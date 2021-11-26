@@ -118,7 +118,7 @@ library(dplyr)
 library(kableExtra)
 # Set how wide the R output will go
 # options(width = 70)
-knitr::opts_chunk$set(fig.pos = "htbp")
+knitr::opts_chunk$set(fig.pos = "htbp", eval = TRUE)
 # defOut <- knitr::knit_hooks$get("plot")  # save the default plot hook 
 # knitr::knit_hooks$set(plot = function(x, options) {  # set new plot hook ...
 #   x <- defOut(x, options)  # first apply the default hook

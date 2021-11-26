@@ -1,13 +1,7 @@
----
-bibliography: rmd/references.bib
-editor_options: 
-  chunk_output_type: console
----
-
-
 # shortRNA {#chapter3}
+
 \begingroup\LARGE
-`shortRNA`: a flexible framework for the analysis of short RNA sequencing data
+`shortRNA`: a flexible framework for the analysis of short RNA sequencing data\newline
 \begingroup\Large
 \normalsize
 

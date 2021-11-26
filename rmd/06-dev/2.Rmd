@@ -1,10 +1,3 @@
----
-output: html_document
-editor_options: 
-  chunk_output_type: console
-bibliography: rmd/references.bib
----
-
 ## Graphical Abstract
 
 ```{r dga, echo=FALSE, fig.align='center', fig.cap="Graphical abstract.", fig.scap="Graphical abstract"}

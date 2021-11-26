@@ -1,14 +1,3 @@
----
-bibliography: [rmd/references.bib, bib/thesis.bib]
-link-citations: true
----
-
-<!-- \FloatBarrier -->
-
-```{r setup, include=FALSE}
-# knitr::opts_chunk$set(dpi=300)
-```
-
 # Bioinformatics methods {#methods .unnumbered}
 
 ## Version controlled data analysis using git {#m1 .unnumbered}

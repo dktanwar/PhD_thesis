@@ -1,13 +1,3 @@
----
-output: html_document
-editor_options: 
-  chunk_output_type: console
-bibliography: rmd/references.bib
-# header-includes:
-#   \usepackage{float} \floatplacement{figure}{H}
-#   \newcommand{\beginsupplement}{\setcounter{table}{0}  \renewcommand{\thetable}{S\arabic{table}} \setcounter{figure}{0} \renewcommand{\thefigure}{S\arabic{figure}}}
----
-
 ## Supplementary Figures
 
 \begin{subfigures}
