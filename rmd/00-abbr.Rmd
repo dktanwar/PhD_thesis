@@ -1,0 +1,11 @@
+# List of Abbreviations {.unnumbered}
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(readxl)
+library(dplyr)
+library(knitr)
+df <- read_xlsx("figure/abbr.xlsx")
+colnames(df) <- c("Abbreviation", "Term")
+df %>%  arrange(Term) %>% # i.e. alphabetical order by Term
+  kable(booktab = T) # booktab = T gives us a pretty APA-ish table
+```

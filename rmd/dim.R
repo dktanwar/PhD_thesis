@@ -8,4 +8,4 @@ calc_dim <- function(w,h){
   }
 }
 
-calc_dim(8, 4.35)
+calc_dim(6.67, 3.63)

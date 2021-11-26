@@ -8,11 +8,7 @@ bibliography: rmd/references.bib
 #   \newcommand{\beginsupplement}{\setcounter{table}{0}  \renewcommand{\thetable}{S\arabic{table}} \setcounter{figure}{0} \renewcommand{\thefigure}{S\arabic{figure}}}
 ---
 
-<!-- \newpage -->
-
 ## Supplementary Figures
-
-<!-- \beginsupplement -->
 
 \begin{subfigures}
 
@@ -23,7 +19,7 @@ img <- readPNG("figure/dev/s1a.png")
 grid.raster(img)
 ```
 
-(ref:dsc1b) \textbf{FACS leads to enrichment of PLZF+ cells in testicular preparations from mouse.} \newline \textbf{C} Heatmap of the expression profile of selected markers for spermatogonial and different testicular somatic cells from our PND8 and PND15  RNA-seq data, and PND14 and PNW8 datasets from the literature. Key genes for stem cell potential, stem and progenitor spermatogonia, and Leydig and Sertoli cells were chosen to evaluate spermatogonial cells enrichment in the populations. Gene expression is represented in Log2CPM (counts per million).
+(ref:dsc1b) \textbf{FACS leads to enrichment of PLZF+ cells in testicular preparations from mouse.} \newline \textbf{C} Heatmap of the expression profile of selected markers for spermatogonial and different testicular somatic cells from our PND8 and PND15  RNA-seq data, and PND14 and PNW8 datasets from the literature. Key genes for stem cell potential, stem and progenitor spermatogonia, and Leydig and Sertoli cells were chosen to evaluate spermatogonial cells enrichment in the populations. Gene expression is represented in Log\textsubscript{2}CPM (counts per million).
 
 ```{r ds1b, echo=FALSE, fig.align='center', fig.cap="(ref:dsc1b)", fig.scap="FACS leads to enrichment of PLZF+ cells in testicular preparations from mouse"}
 img <- readPNG("figure/dev/s1b.png")
@@ -59,13 +55,12 @@ img <- readPNG("figure/dev/s3.png")
 grid.raster(img)
 ```
 
-(ref:dsc4) \textbf{DNAme profiles of spermatogonial cells do not show major changes over the period of testis postnatal maturation.} Enriched heatmaps showing the overlap between Category 1-4 regions, literature ChIP-seq data in PNW8 spermatogonia for H3K4me3, H3K27ac and H3K27me3, and DNAme data from BS in PND7, PND14 and PNW8 spermatogonia. For each of the Category 1-4 the following sub-categorization was applied: regions that are enriched for H3K4me3 (with or w/o H3K27ac and/or H3K27me3), regions that are enriched for H3K27ac (and lack both H3K4me3 and H3K27me3) and regions that are enriched for H3K27me3 (and lack both H3K4me3 and H3K27ac).  Each line represents a peak region and the regions are ordered by the ATAC-seq signal. Mid-x-axis corresponds to the middle of a peak region and is extended to +/- 1 kbp. The colour-key of the ATAC-seq, ChIP-seq and BS heatmaps represent ATAC-seq, ChIP-seq and BS signal, respectively. For RNA-seq, log2 FC is shown from PND8 vs PND15 and PND14 vs PNW8 comparisons. For BS, the level of DNAme is between 0 and 1, with 0 representing completely unmethylated loci and 1 fully methylated loci, respectively.
+(ref:dsc4) \textbf{DNAme profiles of spermatogonial cells do not show major changes over the period of testis postnatal maturation.} Enriched heatmaps showing the overlap between Category 1-4 regions, literature ChIP-seq data in PNW8 spermatogonia for H3K4me3, H3K27ac and H3K27me3, and DNAme data from BS in PND7, PND14 and PNW8 spermatogonia. For each of the Category 1-4 the following sub-categorization was applied: regions that are enriched for H3K4me3 (with or w/o H3K27ac and/or H3K27me3), regions that are enriched for H3K27ac (and lack both H3K4me3 and H3K27me3) and regions that are enriched for H3K27me3 (and lack both H3K4me3 and H3K27ac).  Each line represents a peak region and the regions are ordered by the ATAC-seq signal. Mid-x-axis corresponds to the middle of a peak region and is extended to +/- 1 kbp. The colour-key of the ATAC-seq, ChIP-seq and BS heatmaps represent ATAC-seq, ChIP-seq and BS signal, respectively. For RNA-seq, Log\textsubscript{2} FC is shown from PND8 vs PND15 and PND14 vs PNW8 comparisons. For BS, the level of DNAme is between 0 and 1, with 0 representing completely unmethylated loci and 1 fully methylated loci, respectively.
 
 ```{r ds4, echo=FALSE, fig.align='center', fig.cap="(ref:dsc4)", fig.scap="DNAme profiles of spermatogonial cells do not show major changes over the period of testis postnatal maturation"}
 img <- readPNG("figure/dev/s4.png")
 grid.raster(img)
 ```
-
 
 
 (ref:dsc5) \textbf{Distinct chromatin profiles between PND15 and adult spermatogonia are present at distal regions across the genome.} \textbf{(A-B)} Enriched heatmaps showing the overlap between more accessible regions \textbf{(A)} and less accessible regions \textbf{(B)} situated in distal regions in spermatogonial cells, and literature ChIP-seq and DNAme data in PNW8 spermatogonia. The following sub-categorization was applied: regions that are enriched for H3K4me3 (with or w/o H3K27ac and/or H3K27me3), regions that are enriched for H3K27ac (and lack both H3K4me3 and H3K27me3) and regions that are enriched for H3K27me3 (and lack both H3K4me3 and H3K27ac).  Each line represents a peak region and the regions are ordered by the ATAC-seq signal. Mid-x-axis corresponds to the middle of a peak region and is extended to +/- 1 kbp. The colour-key of the ATAC-seq, ChIP-seq and BS heatmaps represent ATAC-seq, ChIP-seq and BS signal, respectively. For BS, the level of DNAme is between 0 and 1, with 0 representing completely unmethylated loci and 1 fully methylated loci, respectively.
@@ -84,3 +79,17 @@ grid.raster(img)
 img <- readPNG("figure/dev/s6.png")
 grid.raster(img)
 ```
+
+
+\newpage
+
+## Supplementary tables{#st}
+
+Supplementary tables are too big to be included in the thesis, hence they are provided as links
+
+1. [Supplementary table 1](../../figures/dev/t1.xlsx)
+2. [Supplementary table 1](../../figures/dev/t2.xlsx)
+3. [Supplementary table 1](../../figures/dev/t3.xlsx)
+4. [Supplementary table 1](../../figures/dev/t4.xlsx)
+5. [Supplementary table 1](../../figures/dev/t5.xlsx)
+6. [Supplementary table 1](../../figures/dev/t6.xlsx)

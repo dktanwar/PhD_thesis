@@ -29,7 +29,7 @@ header-includes:
     - \usepackage{lmodern}
     - \usepackage{pdflscape}
     - \usepackage{caption}
-    - \captionsetup{font=small}
+    - \captionsetup{font=footnotesize}
     - \usepackage[labelfont=bf]{caption}
     - \usepackage{wrapfig}
     - \usepackage{pdfpages}
@@ -118,7 +118,18 @@ library(dplyr)
 library(kableExtra)
 # Set how wide the R output will go
 # options(width = 70)
-knitr::opts_chunk$set(fig.pos = "H", out.extra = "")
+knitr::opts_chunk$set(fig.pos = "htbp")
+# defOut <- knitr::knit_hooks$get("plot")  # save the default plot hook 
+# knitr::knit_hooks$set(plot = function(x, options) {  # set new plot hook ...
+#   x <- defOut(x, options)  # first apply the default hook
+#   if(!is.null(options$wrapfigure)) {  # then, if option wrapfigure is given ...
+#     # create the new opening string for the wrapfigure environment ...
+#     wf <- sprintf("\\begin{wrapfigure}{%s}{%g\\textwidth}", options$wrapfigure[[1]], options$wrapfigure[[2]])
+#     x  <- gsub("\\begin{figure}", wf, x, fixed = T)  # and replace the default one with it.
+#     x  <- gsub("{figure}", "{wrapfigure}", x, fixed = T)  # also replace the environment ending
+#   }
+#   return(x)
+# })
 ```
 
 ```{=html}
@@ -136,7 +147,5 @@ Alternatively, you can put that content in files like 00--prelim.Rmd and
 <!-- ```{r eval=!knitr::is_latex_output(), child=here::here("prelims", "00-abstract.Rmd")} -->
 
 <!-- ``` -->
-
-# List of Abbreviations {.unnumbered}
 
 

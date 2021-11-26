@@ -87,8 +87,6 @@ spermatogonial cells during development, and its accessibility is
 increased at several genomic regions particularly transposable elements
 (TEs), that correlate with transcriptional and epigenetic signatures.
 
-\newpage
-
 ## Results
 
 ### Enrichment of spermatogonial cells from postnatal and adult mouse testis
@@ -119,20 +117,20 @@ Methods section for details). Most Tn5-accessible regions are intergenic
 transcription start site (TSS) (28% +/-1 kb from TSS) (Supp. Figure \ref{fig:ds2a}A). 3212
 differentially accessible regions were identified between PND15 and
 adult spermatogonia with the majority showing a gain in accessibility in
-adult cells (Figure \ref{fig:df1a}A and Table S1). Regions of differential
+adult cells (Figure \ref{fig:df1a}A and [Table S1](#st)). Regions of differential
 accessibility are predominantly intergenic (45%) and intronic (34%), and
 15% of all differentially accessible regions are +/- 1kb from a TSS
 (Figure \ref{fig:df1a}B). Gene ontology (GO) analysis, showed that regions with
 increased accessibility in adult spermatogonia are associated with cell
 fate and stem cell population maintenance, protein metabolism and RNA
-metabolic processes (Figure \ref{fig:df1b}C and Table S1). Separate GO analyses
+metabolic processes (Figure \ref{fig:df1b}C and [Table S1](#st)). Separate GO analyses
 depending on genomic location showed that regions located in gene bodies
 (mainly introns) are enriched for terms related to reproduction and
 protein metabolism, whilst regions close to or overlapping with a TSS
 relate to cell fate specification and tissue morphogenesis (Supp. Figure \ref{fig:ds2b}B and
-Table S1). Regions with decreased accessibility in adult spermatogonia
+[Table S1](#st)). Regions with decreased accessibility in adult spermatogonia
 are predominantly located in intergenic regions and associated with
-multiple terms related to embryonic development (Figure \ref{fig:df1b}C and Table S1).
+multiple terms related to embryonic development (Figure \ref{fig:df1b}C and [Table S1](#st)).
 
 ### Differentially accessible chromatin regions associated with distinct gene expression dynamics
 
@@ -142,20 +140,20 @@ the correlation between chromatin states and transcriptome. We conducted
 RNA-seq analyses on postnatal spermatogonial cells and used published
 data from Thy1+ adult spermatogonial cells. We found that 719 genes are
 differentially expressed in spermatogonial cells between PND8 and PND15,
-with 515 being upregulated and 212 downregulated (Figure \ref{fig:df2a}A and Table S2).
+with 515 being upregulated and 212 downregulated (Figure \ref{fig:df2a}A and [Table S2](#st)).
 Fast Gene Set Enrichment Analysis (FGSEA) showed that pathways related
 to RNA processing and splicing, cell cycle, redox homeostasis and
 protein catabolism are downregulated between PND8 and PND15 while
 pathways associated with cellular transport, exocytosis and signal
-transduction are upregulated (Figure \ref{fig:df2a}B and Table S2). Comparable analyses
+transduction are upregulated (Figure \ref{fig:df2a}B and [Table S2](#st)). Comparable analyses
 using published RNA-seq data from PND14 and adult spermatogonia cells
 [@hammoud2014; @hammoud2015] similarly identified transcriptional
-changes between postnatal and adult stages (Fig. S?A and Table S2) and
+changes between postnatal and adult stages (Fig. S?A and [Table S2](#st)) and
 downregulation of pathways related to RNA processing, ribosome
 biogenesis and cell cycle in adults compared to postnatal cells.
 Pathways related to developmental programs and mitochondrial functions
 were also downregulated and those related to spermatogenesis or
-involving cytokine signalling were upregulated (Fig. S? and Table S2).
+involving cytokine signalling were upregulated (Fig. S? and [Table S2](#st)).
 
 To integrate chromatin accessibility and transcriptomic datasets, we
 first divided differentially-accessible regions into proximal (situated
@@ -169,8 +167,7 @@ expression of the nearest gene. Category 3 and 4 include regions of less
 chromatin accessibility with the nearest gene either downregulated or
 upregulated, respectively. Category 5 and 6 include regions with
 increased or decreased chromatin accessibility respectively, whose
-nearest gene is not expressed in spermatogonial cells (Figure \ref{fig:df3a}A and Table
-S3).
+nearest gene is not expressed in spermatogonial cells (Figure \ref{fig:df3a}A and [Table S3](#st))).
 
 ### Differentially accessible chromatin regions associated with distinct epigenetic profiles
 
@@ -182,7 +179,7 @@ spermatogonial cells, and DNA methylation in PND7, PND14 and adult
 spermatogonial cells were used. .....analyses showed that for a subset
 of regions in Category 1, there is an overlap with active H3K4me3,
 H3K27ac or dual H3K4me3/K27ac modifications, and an overall lack of
-H3K27me3 (Figure \ref{fig:df3a}B and Table S3). Notably, several of the genes in
+H3K27me3 (Figure \ref{fig:df3a}B and [Table S3](#st)). Notably, several of the genes in
 Category 1 with chromatin opening marked by histone modification(s) are
 known regulators of stem cell potency. Pdpk1 promoter region was marked
 by dual H3K4me3/K27ac, while Pdpk1 mRNA was upregulated in adult
@@ -195,7 +192,7 @@ Gata2 (GATA-binding factor 2) is a known target of NANOS2, an essential
 regulator of spermatogonial stem cell potential [@barrios2010;
 @sada2009]. Other exemplary genes in Category 1 include pyruvate
 cellular carriers Slc25a18, Slc23a1 and Slc2a5, suggesting differences
-in glycolysis regulation in adult spermatogonial cells (Table S3).
+in glycolysis regulation in adult spermatogonial cells ([Table S3](#st)).
 Notably, we found increased chromatin accessibility at the TSS of GDNF
 receptor Gfra2 (Figure \ref{fig:df3b}C). At the mRNA level, Gfra2displayed a marked
 upregulation in adult spermatogonial cells, indicating an increased
@@ -203,19 +200,19 @@ utilization of GFRA2 receptors in adult spermatogonial cells compared to
 early postnatal stages, in which GFRA1-mediated signalling is dominant
 (Figure \ref{fig:df3b}C) [@hammoud2015; @grive2019]. We also observed increased
 chromatin accessibility and upregulation of DNA damage responsive gene
-Fus, and the multifunctional redox gene Prdx4 (Table S3).
+Fus, and the multifunctional redox gene Prdx4 ([Table S3](#st)).
 
 Interestingly, the highest number of differentially accessible chromatin
 regions were in Category 2, and included proximal regions with increased
 chromatin accessibility and decreased expression of nearby genes in
 adult spermatogonia, indicative of active repression taking place (Fig.
-3A and Table S3). A subset of Category 2 regions was marked by H3K27me3
+3A and [Table S3](#st)). A subset of Category 2 regions was marked by H3K27me3
 together with H3K4me3 and mainly associated with developmental genes
 such as Satb1 and Hmx1, (Supp. Figure \ref{fig:ds3}B). Other developmental genes such as
 Tbx4 also displayed a decreased accessibility and an increase in mRNA
 expression (Figure \ref{fig:df3b}C). GO enrichment analysis revealed that regions in
 Category 2 are associated with regulation of cell cycle, RNA processing,
-DNA repair and cell division (Table S4). Such an example is is Fgf8,
+DNA repair and cell division ([Table S4](#st)). Such an example is is Fgf8,
 important for Fgf8-Fgfr1 mediated maintenance of undifferentiated
 spermatogonia [@hasegawa2014]. Fgf8 showed increased chromatin
 accessibility close to its TSS and a downregulated expression in adult
@@ -225,9 +222,9 @@ S3B) [@grive2019; @hasegawa2014].
 
 Regions in Category 3 displayed decreased chromatin accessibility and
 downregulation of nearby genes in adult spermatogonia and were mostly
-depleted of any of the 3 histone marks investigated (Figure \ref{fig:df3a}A and 3B). GO
+depleted of any of the 3 histone marks investigated (Figure \ref{fig:df3a}A and \ref{fig:df3a}B). GO
 enrichment on the nearby genes revealed an association with
-developmental processes and WNT signalling (Table S4). A notable example
+developmental processes and WNT signalling ([Table S4](#st)). A notable example
 we identified in this category is Pdgfra, a gene involved in the hepatic
 stellate cell activation pathway, which was recently identified by
 scRNA-seq to be upregulated in spermatogonial stem cells in the immature
@@ -252,7 +249,7 @@ mainly increased in adult spermatogonial cells compared to the early
 postnatal stage. When integrating the literature ChIP-seq data, we
 observed enrichment for H3K4me3, H3K27ac and H3K27me3 at a small number
 of the differentially accessible distal regions, indicative of potential
-regulatory roles (Supp. Figure \ref{fig:ds4}B and Table S3). Similar to proximal regions,
+regulatory roles (Supp. Figure \ref{fig:ds4}B and [Table S3](#st)). Similar to proximal regions,
 DNAme levels did not display major changes in the transition from early
 postnatal to adult stage (Supp. Figure \ref{fig:ds4}B). Taken together, our data
 integration reveals novel associations between chromatin regions of
@@ -275,7 +272,7 @@ chromatin accessibility, we identified 41 enriched TF motifs (q-value
 $\leq$ 0.05) (Figure \ref{fig:df4a}A). Top candidates by significance (q-value $\leq$
 0.0001) are members of the Fos/Jun family (FOS, FOSB, FOSL1 and FOSL2,
 JUN, JUNB and JUND) (Figure \ref{fig:df4a}B). Notably, at the mRNA level, some of the
-TFs displayed age-specific differences (Log2CPM $\geq$ 1 and abs Log2
+TFs displayed age-specific differences (log\textsubscript{2}CPM $\geq$ 1 and abs log\textsubscript{2}
 fold change $\geq$ 1): Fos,Junb and Jund were downregulated in adult
 spermatogonial cells (Figure \ref{fig:df4b}C). JUN, FOS and CREB are all part of the
 AP-1 (activating protein-1) superfamily, and play an important role in
@@ -291,11 +288,10 @@ levels were downregulated in adult spermatogonial cells (Figure \ref{fig:df4b}C)
 been shown to play an important role in promoting spermatogonial cell
 self-renewal capacity [@wu2010a; @niu2011]. Notably, Pou3f1
 downregulation in adult spermatogonial cells coincides with marked
-downregulation of Gfra1 and upregulation of Gfra2 (Figure \ref{fig:df3b}C and Table
-S2).TF motif analysis using HOMER also revealed enriched binding sites
-for retinoic acid receptors such as RXR$$\alpha$$ and RAR$$\alpha$$
-(Figure \ref{fig:df4a}A). Recently, expression of RA receptors Rxr$$\alpha$$ and
-Rar$$\alpha$$ was reported in the stem cell-containing population of
+downregulation of Gfra1 and upregulation of Gfra2 (Figure \ref{fig:df3b}C and [Table S2](#st)).TF motif analysis using HOMER also revealed enriched binding sites
+for retinoic acid receptors such as RXRa and RARa
+(Figure \ref{fig:df4a}A). Recently, expression of RA receptors Rxra and
+Rara was reported in the stem cell-containing population of
 spermatogonial cells in both pup and adult testis, together with
 evidence that their utilization in spermatogonial cells is vastly
 dependent on the niche microenvironment [@lord2018].
@@ -362,7 +358,7 @@ reads overlapping TEs defined by UCSC RepeatMasker and performed
 differential accessibility analysis at the subtype level (see Methods
 section). Our results revealed that the transition from PND15 to the
 adult stage is accompanied by significant chromatin accessibility
-differences at 135 TE subtypes (Figure \ref{fig:df5a}A and 5B and Table S5). Although
+differences at 135 TE subtypes (Figure \ref{fig:df5a}A and 5B and [Table S5](#st)). Although
 most of the differentially accessible TE subtypes displayed a decrease
 in chromatin accessibility between PND15 and adult stages (68,9%,
 93/135) (Figure \ref{fig:df5a}A), we also observed 42 TE subtypes which increased in
@@ -375,7 +371,7 @@ around 6% were located in the proximity of a gene (+/- 1kb from a TSS)
 (Figure \ref{fig:df5a}C). LTRs were the most abundant TEs to display changes in
 chromatin accessibility, specifically ERVK and ERV1 subtypes (Figure \ref{fig:df5a}A
 and 5B). Exemplary ERVK subtypes harbouring less accessible chromatin
-included RLTR17, RLTR9A3, RLTR12B and RMER17B (Table S5). Enrichment of
+included RLTR17, RLTR9A3, RLTR12B and RMER17B ([Table S5](#st)). Enrichment of
 RLTR17 and RLTR9 repeats have been reported previously in mESCs,
 specifically at TFs important for pluripotency maintenance such as Oct4
 and Nanog [@fort2014]. Interestingly, we identified the promoter region
@@ -391,14 +387,14 @@ pluripotency-associated genes Oct4, Nanog and Zfp42 in mESCs [@wu2018;
 @dann2008; @bergmann2015]. We were also able to identify several other
 Platr genes, such as Platr27 and Platr14, for which the TSS overlapped
 LTRs with reduced accessibility, RLTR17 and RLTR16B_MM, respectively
-(Figure \ref{fig:df5a}D and Table S5). These 2 pluripotency-associated transcripts also
+(Figure \ref{fig:df5a}D and [Table S5](#st)). These 2 pluripotency-associated transcripts also
 showed a decrease in mRNA expression in adult spermatogonia, while their
-expression was unchanged between PND8 and PND15 (Figure \ref{fig:df5a}D and Table S5).
+expression was unchanged between PND8 and PND15 (Figure \ref{fig:df5a}D and [Table S5](#st)).
 The remaining LTR subtypes with decreased accessibility in adult
 spermatogonia belonged to the ERV1, ERVL and MaLR families (Figure \ref{fig:df5a}A).
 Only very few other non-LTR TEs showed a decrease in chromatin
 accessibility, with 7 DNA element subtypes, 2 Satellite subtypes and 1
-LINE subtype, respectively (Figure \ref{fig:df5a}A and Table S5). Emerging evidence
+LINE subtype, respectively (Figure \ref{fig:df5a}A and [Table S5](#st)). Emerging evidence
 suggests an important contribution of TEs in providing tissue-specific
 substrates for TF binding [@fort2014; @sundaram2020; @sundaram2014]. To
 investigate the regulatory potential of the less accessible LTR
@@ -423,7 +419,7 @@ spermatogonial cells (Figure \ref{fig:df5a}B). When parsing the data for more
 accessible loci within the L1 subtypes, we found several L1 loci
 situated less than +/- 5 kb from the TSS of numerous olfactory (Olfr)
 genes.Most of them were located in Olfr gene clusters on chromosomes 2,
-7 and 11 (Table S5). Furthermore, the increase in accessibility of the
+7 and 11 ([Table S5](#st)). Furthermore, the increase in accessibility of the
 L1 loci correlated with an increase in mRNA expression of the nearby
 Olfr gene in adult spermatogonial cells (Figure \ref{fig:df6}A). Representative
 examples were Olfr362 and Olfr1307, both situated in the Olfr gene
@@ -450,7 +446,6 @@ TF motif landscape at distinct subtypes of TEs between these 2-time
 points, and suggest potential gene programs that may be regulated by
 these changes.
 
-\newpage
 
 ## Discussion
 
@@ -655,13 +650,13 @@ resuspended in PBS-S and used for sorting.
 ### Spermatogonial cells enrichment by FACS
 
 For pup testis, dissociated cells were stained with BV421-conjugated
-anti-$$\beta$$2M, biotin-conjugated anti-THY1 (53-2.1), and
-PE-conjugated anti-$$\alpha$$v-integrin (RMV-7) antibodies. THY1 was
+anti-b2M, biotin-conjugated anti-THY1 (53-2.1), and
+PE-conjugated anti-av-integrin (RMV-7) antibodies. THY1 was
 detected by staining with Alexa Fluor 488-Sav. For adult testes, cells
-were stained with anti-$$\alpha$$6-integrin (CD49f; GoH3),
-BV421-conjugated anti-$$\beta$$2 microglobulin ($$\beta$$2M; S19.8), and
+were stained with anti-a6-integrin (CD49f; GoH3),
+BV421-conjugated anti-b2 microglobulin (b2M; S19.8), and
 R-phycoerythrin (PE)-conjugated anti-THY1 (CD90.2; 30H-12) antibodies.
-$$\alpha$$6-Integrin was detected by Alexa Fluor 488-SAv after staining
+a6-Integrin was detected by Alexa Fluor 488-SAv after staining
 with biotin-conjugated rat anti-mouse IgG1/2a (G28-5) antibody. Prior to
 FACS, 1 \textmu g/ml propidium iodide (Sigma) was added to the cell
 suspensions to discriminate dead cells. All antibody incubations were
@@ -757,14 +752,14 @@ using the filterByExpr function from edgeR [@robinson2010] (version
 (min.counts = 15). Normalization factors were obtained using TMM
 normalization [@robinson2010a] from edgeR package and differential gene
 expression (DGE) analysis was performed using limma-voom [@law2014]
-pipeline from limma [@ritchie2015] (version 3.42.2). Log2 fold change
-between samples was calculated by subtracting Log2 normalized expression
+pipeline from limma [@ritchie2015] (version 3.42.2). log\textsubscript{2} fold change
+between samples was calculated by subtracting log\textsubscript{2} normalized expression
 values. Gene ontology (GO) analysis was performed on expressed genes
 with fGSEA (version 1.15.2) using fGSEAMultilevel function on sets with
 10 to 1000 annotated genes (minSize = 10, maxSize = 1000), and p-values
 boundary of 1E-100 (eps = 1e-100) [@korotkevich2016]. For PND8 versus
 PND15 comparison, genes were pre-ranked using t-statistic; for PND14
-versus PNW8 comparison, Log2 fold change was used due to the lack of
+versus PNW8 comparison, log\textsubscript{2} fold change was used due to the lack of
 multiple replicates for each time point. REVIGO was used to summarize GO
 terms obtained following fGSEA [@supek2011].
 
@@ -812,7 +807,7 @@ regions using the TMM normalization method [@robinson2010a] and
 differential analysis on the peaks (adults vs PND15) was performed using
 the Genewise Negative Binomial Generalized Linear Models with
 Quasi-likelihood (glmQLFit) Tests from the edgeR package [@robinson2010]
-(version 3.28.1). Peak regions that had an absolute Log2 fold change
+(version 3.28.1). Peak regions that had an absolute log\textsubscript{2} fold change
 $\geq$ 1 and an FDR $\leq$ 0.05 were categorized as differentially
 accessible regions. GO analysis was performed on DARs with the rGREAT
 package [@gu2021] (version 1.18.0), which is a wrapper around the GREAT
@@ -839,9 +834,9 @@ the csaw package [@lun2015] (version 1.20.0). Subtypes which did not
 have at least 15 reads, and loci that did not have at least 5 reads in
 at least 40% of the samples, were filtered out. Normalization and
 differential accessibility analysis were performed as described above.
-Subtypes that had an absolute Log2fold change $\geq$ 0.5 and an FDR
+Subtypes that had an absolute log\textsubscript{2}fold change $\geq$ 0.5 and an FDR
 $\leq$ 0.05 were categorized as differentially accessible subtypes and
-the loci with an absolute Log2 fold change $\geq$ 1 and an FDR $\leq$
+the loci with an absolute log\textsubscript{2} fold change $\geq$ 1 and an FDR $\leq$
 0.05 were categorized as differentially accessible loci. For further
 downstream data analysis, only the differentially accessible loci of
 differentially accessible subtypes were considered. GO and motif
@@ -882,7 +877,7 @@ bismark_methylation_extractor tool from the Bismark package (version
 ### High-throughput sequencing data analysis
 
 Data availability:the datasets used in this study are available from the
-following GEO accessions: \*\*GSE\_\_\_\*\*, GSE49621, GSE49622,
+following GEO accessions: **GSE___**, GSE49621, GSE49622,
 GSE62355, and GSE49623. An overview of the datasets included in the
 study is shown in Table \ref{tab:devtab1}
 
@@ -959,3 +954,5 @@ Repository accession numbers will be available at publication or by
 request to the corresponding author. The code employed for the data
 analysis is available from
 <https://github.com/mansuylab/SC_postnatal_adult>.
+
+\newpage

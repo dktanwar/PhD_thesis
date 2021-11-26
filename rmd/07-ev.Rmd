@@ -2,8 +2,10 @@
 output: html_document
 editor_options: 
   chunk_output_type: console
-bibliography: [rmd/references.bib]
+bibliography: [bib/anaraEV.bib]
 ---
+
+\chaptermark{Chapter 2}
 
 # Early life stress affects the miRNA cargo of epididymal extracellular vesicles in mouse {#chapter2}
 
@@ -11,21 +13,30 @@ Anar Alshanbayeva\textsuperscript{1,2,3}, **Deepak K
 Tanwar**\textsuperscript{1,2,3}, Martin
 Roszkowski\textsuperscript{1,2,3}, Francesca
 Manuella\textsuperscript{1,2,3}, Isabelle M
-Mansuy\textsuperscript{1,2,3,\#} \newline \\newline
+Mansuy\textsuperscript{1,2,3,\#} \newline \newline
 \textsuperscript{1}Laboratory of Neuroepigenetics, Brain Research
 Institute at the Medical Faculty of the University of Zurich. \newline
 \textsuperscript{2}Institute for Neuroscience of the Department of
 Health Sciences and Technology, ETH Zurich, Zurich, Switzerland.
-\newline \\textsuperscript{3}Zurich Neuroscience Center, ETH and
-University of Zurich, Zurich, Switzerland. \newline \\newline
-\textsuperscript{\#}Corresponding author \newline \\newline
-\*\*Journal:\*\* *Biology of Reproduction* \newline DOI:
-[10.1093/biolre/ioab156](https://doi.org/10.1093/biolre/ioab156)
-\newline \\newline
-
-**Contributions:** *I performed data analysis with Anar Alshanbayeva,
-generated figures with Anar Alshanbayeva, helped Anar Alshanbayeva in
+\newline \textsuperscript{3}Zurich Neuroscience Center, ETH and
+University of Zurich, Zurich, Switzerland. \newline \newline
+\textsuperscript{\#}Corresponding author \newline \newline
+**Journal:** *Biology of Reproduction* \newline \newline 
+**DOI:** [10.1093/biolre/ioab156](https://doi.org/10.1093/biolre/ioab156)
+\newline \newline
+__Contributions:__ *I performed data analysis with Anar Alshanbayeva,
+generated figures with Anar Alshanbayeva, assisted Anar Alshanbayeva in
 writing the manuscript, and revised manuscript with Anar Alshanbayeva.*
+
+\newpage
+
+## Graphical Abstract
+
+```{r cf1, echo=FALSE, fig.align='center', fig.cap="Graphical abstract.", fig.scap="Graphical abstract", fig.width=6.4, fig.height=4.45}
+img <- readPNG("figure/anaraEV/ga.png")
+grid.raster(img)
+```
+
 
 \newpage
 
@@ -54,9 +65,6 @@ paternal exposure to early life stress. This correlates with changes in
 the expression of target genes in sperm and in zygotes generated from
 that sperm.
 
-\newpage
-
-## Graphical Abstract
 
 ## Key words
 
@@ -97,7 +105,7 @@ nevertheless been suggested to play a role in the transmission of
 information about paternal experiences to the progeny and can influence
 their developmental trajectory [@chan_2020; @gapp_2014; @sharma_2016].
 Epididymosomal small RNA content can also be altered by exposure, for
-instance, to dietary insult and stress [@chan2020; @sharma_2016]. For
+instance, to dietary insult and stress [@chan_2020; @sharma_2016]. For
 instance, epididymosomal miRNAs are changed by exposure to chronic
 stress [@chan_2020] and low-protein diet [@sharma_2016] in mice.
 
@@ -116,105 +124,37 @@ signature of cauda epididymosomes in adult males is altered by exposure,
 and that this alteration, correlates with changes in the expression of
 their target genes in sperm and in zygotes.
 
-\newpage
-
 ## Results
 
 ### Isolation of cauda epididymosomes confirmed by several methods
 
 To characterize the RNA composition of cauda epididymosomes,
 epididymosomes were isolated by high-speed ultracentrifugation from
-adult control males and males exposed to MSUS ([Figure 1A]). MSUS
+adult control males and males exposed to MSUS (Figure \ref{fig:ef1}A). MSUS
 consists of exposing newborn pups to unpredictable maternal separation
 for 3h daily and subjecting dams to unpredictable maternal stress during
-separation [@franklin2010]. Adult MSUS-exposed and control males were
+separation [@franklin_2010]. Adult MSUS-exposed and control males were
 euthanized and cauda epididymis was collected. Successful isolation of
 cauda epididymosomes was confirmed by electron microscopy,
-immunoblotting, and nanoparticle-tracking analyses ([Figure 1]). The
+immunoblotting, and nanoparticle-tracking analyses (Figure \ref{fig:ef1}). The
 presence and purity of epididymosomes was further validated by staining
 with the EV-specific marker CD9 and confirmation of the absence of the
 cellular marker Glyceraldehyde 3-phosphate dehydrogenase (GAPDH)
-([Figure 1B]). Size analysis by nanoparticle-tracking indicated that the
-collected particles are 50--300nm in diameter ([Figure 1D]). Imaging by
+(Figure \ref{fig:ef1}B). Size analysis by nanoparticle-tracking indicated that the
+collected particles are 50--300nm in diameter (Figure \ref{fig:ef1}D). Imaging by
 transmission electron microscopy showed the typical cup-shaped
-structures of epididymosomes ([Figure 1C], [Supplementary Figure
-S1A]) [[17]]. RNA profiling by high-resolution automated electrophoresis
+structures of epididymosomes (Figure \ref{fig:ef1}C, Supplementary Figure \ref{fig:es1}A)
+[@choi_2017]. RNA profiling by high-resolution automated electrophoresis
 showed enrichment for small RNAs of different length, similar to
-previous studies on cauda epididymosomal RNA ([Supplementary Figure
-S1B]) [@sharma2016; @conine2018].
+previous studies on cauda epididymosomal RNA (Supplementary Figure \ref{fig:es1}B) [@sharma_2016; @conine_2018].
 
-```{r fig1, echo=TRUE, eval = F, fig.align='center', fig.cap="testFig1", fig.width=6.65, fig.height=4.45}
-img <- readJPEG("figure/anaraEV/1.jpeg")
-grid.raster(img)
-# knitr::include_graphics("figure/anaraEV/1.jpeg")
-# magick::image_read("figure/anaraEV/1.jpeg")
-```
-
-```{r fig2, echo=TRUE, fig.align='center', fig.cap="testFig2", fig.width=5.85, fig.height=5.78}
-img <- readJPEG("figure/anaraEV/2.jpeg")
-grid.raster(img)
-```
-
-```{r fig3, echo=TRUE, fig.align='center', fig.cap="testFig3", fig.width=5.11, fig.height=7.53}
-img <- readJPEG("figure/anaraEV/3.jpeg")
-grid.raster(img)
-```
-
-```{r fig4, echo=TRUE, fig.align='center', fig.cap="testFig4", fig.width=6.7, fig.height=5.79}
-img <- readJPEG("figure/anaraEV/4.jpeg")
-grid.raster(img)
-```
-
-```{r sfig1, echo=TRUE, fig.align='center', fig.cap="testFig4", fig.width=5.15, fig.height=1.93}
-img <- readPNG("figure/anaraEV/s1.png")
-grid.raster(img)
-```
-
-```{r sfig2, echo=TRUE, fig.align='center', fig.cap="testFig4", fig.width=5.66, fig.height=4.83}
-img <- readPNG("figure/anaraEV/s2.png")
-grid.raster(img)
-```
-
-```{r sfig3, echo=TRUE, fig.align='center', fig.cap="testFig4", fig.width=1.9, fig.height=1.9}
-img <- readPNG("figure/anaraEV/s3.png")
-grid.raster(img)
-```
-
-```{r sfig4, echo=TRUE, fig.align='center', fig.cap="testFig4", fig.width=5.58, fig.height=3.99}
-img <- readPNG("figure/anaraEV/s4.png")
-grid.raster(img)
-```
-
-```{r sfig5, echo=TRUE, fig.align='center', fig.cap="testFig4", fig.width=5.33, fig.height=4.06}
-img <- readPNG("figure/anaraEV/s5.png")
-grid.raster(img)
-```
-
-```{r sfig6, echo=TRUE, fig.align='center', fig.cap="testFig4", fig.width=5.54, fig.height=2.19}
-img <- readPNG("figure/anaraEV/s6.png")
-grid.raster(img)
-```
-
-\ref{fig:fig1} is a figure
-
-```{r tab1, }
-df <- matrix(data = rnorm(100, 1,1), nrow = 10)
-knitr::kable(df,label = "tab1",
-  caption = "Maximum Delays by Airline",
-  caption.short = "Max Delays by Airline",
-  longtable = TRUE,
-  booktabs = TRUE
-)
-```
-
-<!-- \ref{tab:tab1} is a table -->
 
 ### The number and size of epididymosomes in adult males are not altered by postnatal stress
 
 We next examined the number and size of cauda epididymosomes in adult
 MSUS and control males by dynamic light scattering. No significant
-difference could be detected between MSUS and control males ([Figure 2A
-and B]). Since most epididymosomal production occurs via apocrine
+difference could be detected between MSUS and control males (Figure \ref{fig:ef2}A
+and B). Since most epididymosomal production occurs via apocrine
 secretion from principal cells located in caput epididymis, we also
 examined the expression of genes involved in EVs exocytosis. We chose
 Ras-related protein Rab-5A (*Rab5*) and Ras-related protein Rab-7A
@@ -223,10 +163,10 @@ attachment protein (SNARE) family protein vesicle-associated membrane
 protein 7 (*Vamp7*) and SNARE recognition molecule synaptobrevin homolog
 YKT6 (*Ykt6*), involved in vesicle fusion. No significant change in the
 expression of these genes could be detected in caput epididymis between
-MSUS and control adult males ([Figure 2C]). However, we observed a
+MSUS and control adult males (Figure \ref{fig:ef2}C). However, we observed a
 consistent trend (not statistically significant) for decreased
 expression of all genes involved in EVs secretion in caput epididymis of
-MSUS mice ([Figure 2C]).
+MSUS mice (Figure \ref{fig:ef2}C).
 
 ### miRNAs are persistently altered by postnatal stress in cauda epididymosomes
 
@@ -234,94 +174,83 @@ Epididymosomal small RNAs are known to be affected by changing
 environmental conditions in rodents. Small RNAs, like tRNA-derived
 fragments (tRFs), miRNAs and more recently rRNA-derived small RNA
 fragments are believed to act as messengers of a father's experiences
-that can be transferred to the offspring [@sharma2016; @chan2020;
-@wang2021; @zhang2018]. Our previous work showed that early postnatal
+that can be transferred to the offspring [@sharma_2016; @chan_2020;
+@wang_2021; @zhang_2018]. Our previous work showed that early postnatal
 stress alters small and long RNA content in sperm of adult males
-[@gapp2014; @gapp2020]. Since caudal sperm and epididymosomal small RNA
-profiles are highly similar [@sharma2016], we examined whether small RNA
+[@gapp_2014; @gapp_2020]. Since caudal sperm and epididymosomal small RNA
+profiles are highly similar [@sharma_2016], we examined whether small RNA
 content of cauda epididymosomes is also altered by postnatal stress. We
 extracted RNA from cauda epididymosomes of adult MSUS and control males
 and prepared small RNA-seq (sRNA-seq) libraries. RNAs of different size
 were observed in cauda epididymosomes, with the majority of small RNA
-reads mapping to tRNAs as previously observed ([Figure 3A])
-[@sharma2016]. When plotting the results of differential expression
+reads mapping to tRNAs as previously observed (Figure \ref{fig:ef3}A)
+[@sharma_2016]. When plotting the results of differential expression
 analysis of small RNAs (*P*\<0.05) between MSUS and control sample, the
 majority of nonsignificant differences in small RNAs appeared to be in
 miRNAs, although some differences in tRNAs and piRNAs were also detected
-([Figure 3B]). We next performed size-selection on the same libraries to
+(Figure \ref{fig:ef3}B). We next performed size-selection on the same libraries to
 enrich for miRNAs and then, we re-sequenced the libraries
-([Supplementary Figure S2A and C]).
-As expected, size-selection did not alter the abundance of miRNAs and
-uniformly enriched the miRNA fraction in all samples ([Supplementary
-Figure
-S2B--D]).
-Differential expression analysis of miRNAs biotypes from the combined
-sequencing datasets after batch effect correction revealed changes in
-several miRNAs in MSUS cauda epididymosomes ([Supplementary Table
-S1]).
-These include upregulation of miR-878-5p, miR34c-5p, miR-881-3p and
-downregulation of miR-31-5p and miR-155-5p (adjusted *P* $\geq$ 0.1).
-Differential expression analysis on all small RNA biotypes from the
-combined datasets showed that 70% of all significantly altered small
-RNAs correspond to miRNAs, 15% to tRNAs, 15% to piRNAs and snoRNAs,
-while rRNAs are not changed ([Supplementary Table
-S4]).
-Pathway analysis of top candidate RNAs from miRNA-based analysis after
-size-selection revealed that the most up- and down-regulated miRNAs
-(*P*\<0.05) have target mRNAs that encode proteins involved in fatty
-acid metabolism, steroid biosynthesis, lysine degradation, and thyroid
-hormone signaling ([Figure 3C]). Notably, similar pathways are altered
-in plasma of MSUS males during postnatal life and adulthood as shown by
-metabolomic analysis [[20]]. In particular, metabolites implicated in
-polyunsaturated fatty acid biogenesis were up-regulated, whereas
-steroidogenesis and the steroidogenic ligand aldosterone were
-down-regulated [@vansteenwyk2020]. Steroidogenesis was already altered
-at postnatal day 28 in MSUS males, with total cholesterol significantly
-decreased in testis ([Figure 3D]) and HDL cholesterol significantly
-increased in liver ([Figure 3F]). Since the primary role of HDL
-cholesterol in blood is to transport excess cholesterol from peripheral
-tissues to liver, an increase in HDL in liver is consistent with a
-decrease in testis. However, cholesterol was no longer altered in testis
-of adult MSUS males ([Figure 3E]), suggesting a transient alteration.
-The androgen receptor, which the cholesterol derivatives, androgens bind
-to, was decreased in adult caput epididymis ([Figure 3G]), suggesting
-potential secondary effects of lower cholesterol in testis when
-occurring in early postnatal life.
+(Supplementary Figure \ref{fig:es2}A and C). As expected, size-selection did not
+alter the abundance of miRNAs and uniformly enriched the miRNA fraction
+in all samples (Supplementary Figure \ref{fig:es2}B--D). Differential expression
+analysis of miRNAs biotypes from the combined sequencing datasets after
+batch effect correction revealed changes in several miRNAs in MSUS cauda
+epididymosomes (Supplementary Table S\ref{tab:est1}). These include upregulation of
+miR-878-5p, miR34c-5p, miR-881-3p and downregulation of miR-31-5p and
+miR-155-5p (adjusted *P* $\geq$ 0.1). Differential expression analysis
+on all small RNA biotypes from the combined datasets showed that 70% of
+all significantly altered small RNAs correspond to miRNAs, 15% to tRNAs,
+15% to piRNAs and snoRNAs, while rRNAs are not changed (Supplementary
+Table S\ref{tab:est4}). Pathway analysis of top candidate RNAs from miRNA-based
+analysis after size-selection revealed that the most up- and
+down-regulated miRNAs (*P*\<0.05) have target mRNAs that encode proteins
+involved in fatty acid metabolism, steroid biosynthesis, lysine
+degradation, and thyroid hormone signaling (Figure \ref{fig:ef3}C). Notably,
+similar pathways are altered in plasma of MSUS males during postnatal
+life and adulthood as shown by metabolomic analysis [@vansteenwyk_2020]. In
+particular, metabolites implicated in polyunsaturated fatty acid
+biogenesis were up-regulated, whereas steroidogenesis and the
+steroidogenic ligand aldosterone were down-regulated [@vansteenwyk_2020].
+Steroidogenesis was already altered at postnatal day 28 in MSUS males,
+with total cholesterol significantly decreased in testis (Figure \ref{fig:ef3}D)
+and HDL cholesterol significantly increased in liver (Figure \ref{fig:ef3}F).
+Since the primary role of HDL cholesterol in blood is to transport
+excess cholesterol from peripheral tissues to liver, an increase in HDL
+in liver is consistent with a decrease in testis. However, cholesterol
+was no longer altered in testis of adult MSUS males (Figure \ref{fig:ef3}E),
+suggesting a transient alteration. The androgen receptor, which the
+cholesterol derivatives, androgens bind to, was decreased in adult caput
+epididymis (Figure \ref{fig:ef3}G), suggesting potential secondary effects of
+lower cholesterol in testis when occurring in early postnatal life.
 
 ### mRNA targets of miRNAs from cauda epididymosomes are altered by postnatal stress in sperm and in zygotes
 
 The relative abundance of miRNAs in cauda epididymosomes and mature
-sperm significantly correlated ([Figure 4C]), consistent
-with prior findings [@sharma2016; @chan2020]. Since cauda epididymosomes
-carry small RNA payloads matching those of mature sperm and are part of
-the ejaculate [@frenette2005; @belleannée2013], they may contribute to
-the information delivered to the oocyte upon fertilization. Therefore,
-we looked at the mRNA targets of miRNAs significantly changed in MSUS
-cauda epididymosomes in two previously published analysis of genes
-identified in MSUS sperm and in zygotes derived from MSUS males
-(*P* \< 0.05) [@gapp2020]. For this, we plotted the cumulative log
-fold-change distribution of all genes from differential expression
-analysis of sperm or zygotes versus the number of conserved binding
-sites for miRNAs significantly changed by MSUS in cauda epididymosomes
-([Figure 4A and B], [Supplementary Figure
-S5]).
-Target genes with three binding sites for miR-31-5p, a miRNA
-differentially expressed in MSUS cauda epididymosomes, had increased
-expression in sperm and decreased expression in zygotes from MSUS males
-([Figure 4A and B], [Supplementary Table
-S2]
-and
-[S3]).
-However, not all targets of miRNAs significantly altered in MSUS cauda
-epididymosomes showed corresponding changes in expression in sperm and
-zygotes ([Supplementary Figure
-S5]).
-We then conducted miRNA-gene interaction analysis based on
-experimentally validated data from Tarbase [@vlachos2017]. This analysis
-showed that, overall, the five miRNAs significantly changed in MSUS
-cauda epididymosomes target genes that are part of pathways involved in
+sperm significantly correlated (Figure \ref{fig:ef4}C), consistent with prior
+findings [@sharma_2016; @chan_2020]. Since cauda epididymosomes carry
+small RNA payloads matching those of mature sperm and are part of the
+ejaculate [@frenette_2005; @belleanne_2013a], they may contribute to the
+information delivered to the oocyte upon fertilization. Therefore, we
+looked at the mRNA targets of miRNAs significantly changed in MSUS cauda
+epididymosomes in two previously published analysis of genes identified
+in MSUS sperm and in zygotes derived from MSUS males (*P* \< 0.05)
+[@gapp_2020]. For this, we plotted the cumulative log fold-change
+distribution of all genes from differential expression analysis of sperm
+or zygotes versus the number of conserved binding sites for miRNAs
+significantly changed by MSUS in cauda epididymosomes (Figure \ref{fig:ef4}A and
+B, Supplementary Figure \ref{fig:es5}). Target genes with three binding sites
+for miR-31-5p, a miRNA differentially expressed in MSUS cauda
+epididymosomes, had increased expression in sperm and decreased
+expression in zygotes from MSUS males (Figure \ref{fig:ef4}A and B, Supplementary
+Table S\ref{tab:est2} and S\ref{tab:est3}). However, not all targets of miRNAs significantly
+altered in MSUS cauda epididymosomes showed corresponding changes in
+expression in sperm and zygotes (Supplementary Figure \ref{fig:es5}). We then
+conducted miRNA-gene interaction analysis based on experimentally
+validated data from Tarbase [@vlachos_2017]. This analysis showed that,
+overall, the five miRNAs significantly changed in MSUS cauda
+epididymosomes target genes that are part of pathways involved in
 steroid biosynthesis, extracellular matrix (ECM)--receptor interaction,
-and cell-adhesion molecules ([Figure 4D]).
+and cell-adhesion molecules (Figure \ref{fig:ef4}D).
 
 ## Discussion
 
@@ -407,7 +336,6 @@ window and severity of paternal stress exposure. Further studies are
 necessary to more precisely define these effects and the source of
 vesicles and their cargo miRNAs.
 
-\newpage
 
 ## Materials and methods
 
@@ -594,8 +522,6 @@ The datasets collected for this study are available as follows:
     [E-MTAB-6589](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-6589/)
     (zygotes).
 
-\newpage
-
 ## Authors' contributions
 
 AA and IMM conceived and designed the study. FM and MR performed the
@@ -631,48 +557,130 @@ for their initial contributions to the project.
 
 \newpage
 
-## Supplementary Figures
+## Figures
 
-### Figure 1
+(ref:efc1) \textbf{Isolation and characterization of cauda epididymosomes.} \newline \textbf{A:} Schematic representation of cauda epididymosomes preparation. \newline \textbf{B:} Immunoblot analysis was used to confirm the purity of isolation by staining with epididymosomal marker CD9 and absence of cellular marker GAPDH in the ultracentrifuged pellet. \newline \textbf{C:} Electron microscopy images of the preparations were used to assess the size and heterogeneity of the isolated populations. Arrows indicate cauda epididymosomes. \newline \textbf{D:} Nanoparticle-tracking analysis by dynamic light scattering showed particles of expected size of 50–300 nm.
 
-\newpage
+```{r ef1, echo=FALSE, fig.align='center', fig.cap="(ref:efc1)", fig.scap="Isolation and characterization of cauda epididymosomes", fig.width=6.5, fig.height=3.54}
+img <- readJPEG("figure/anaraEV/1.jpeg")
+grid.raster(img)
+```
 
-### Figure 2
 
-\newpage
+(ref:efc2) \textbf{Comparison of epididymosomal number, size, and release machinery in adult MSUS and control males.} \newline \textbf{A:} Nanoparticle-tracking analysis showed no difference in the number of cauda epididymosomes between MSUS and control males. The plots were generated from average values across replicates (_N_ = 5 animals/group). Data are presented as mean ± standard error of the mean (SEM). _P_ < 0.05. \newline \textbf{B:} Quantification of nanoparticle-tracking analysis showed the mean size of cauda epididymosomes was not changed between the two groups (_N_ = 5 animals/group). Data are presented as mean ± SEM. _P_ < 0.05. \newline \textbf{C} Expression of genes involved in vesicular secretion in the caput epididymis from adult males measured by qRT-PCR. The experiments were performed in triplicates without pooling (_N_ = 8 animals/group). \newline Expression of GAPDH was used as endogenous control to normalize the expression level of the target genes. Data are presented as mean ± SEM. _P_ < 0.05.
 
-### Figure 3
+```{r ef2, echo=FALSE, fig.align='center', fig.cap="(ref:efc2)", fig.width=5.85, fig.height=5.78, fig.scap="Comparison of epididymosomal number, size, and release machinery in adult MSUS and control males"}
+img <- readJPEG("figure/anaraEV/2.jpeg")
+grid.raster(img)
+```
 
-\newpage
 
-### Figure 4
+(ref:efc3) \textbf{Target pathways of up- and down-regulated miRNAs in adult MSUS cauda epididymosomes and alterations in steroidogenesis in postnatal and adult MSUS males.} \newline \textbf{A:} Representative distribution of RNA biotypes from cauda epididymosomal sequencing (_N_ = 10 animals, 5 animals/group). \newline \textbf{B:} Heatmap of the most abundant small RNAs (_n_ = 39). Expression fold-change (log\textsubscript{2} FC) was calculated by subtracting log\textsubscript{2} counts per million of MSUS from controls. Each row depicts a small RNA and each column depicts a sample. Samples and RNAs are ordered by “PCA” method using `seriation` (R package). \newline \textbf{C:} Dot plot of miRNAs and pathways. Color-scale of the dot represents -log\textsubscript{10} adjusted _P_ of miRNA in a pathway and size of the dot represents –log\textsubscript{10} adjusted _P_ of the pathway. \newline Total cholesterol measurements in whole testes of males at postnatal day 28 (_N_ = 4 males/group) \textbf{D} and adulthood (_N_ = 10 controls, _N_ = 7 MSUS) \textbf{E}. \textbf{F:} HDL cholesterol level in the liver of males at postnatal day 28 (_N_ = 6 males/group). \newline \textbf{G:} Relative expression level of the androgen receptor in adult caput epididymis measured by qRT-PCR. qRT-PCR experiments were performed in triplicates, without pooling (_N_ = 10 animals/group). \newline \textbf{(D–G)} Data are presented as mean ± SEM. _P_ < 0.05.
 
-\newpage
+```{r ef3, echo=FALSE, fig.align='center', fig.cap="(ref:efc3)", fig.width=4, fig.height=6.3, fig.scap="Target pathways of up- and down-regulated miRNAs in adult MSUS cauda epididymosomes and alterations in steroidogenesis in postnatal and adult MSUS males"}
+img <- readJPEG("figure/anaraEV/3.jpeg")
+grid.raster(img)
+```
 
-### Figure 5
 
-\newpage
+(ref:efc4) \textbf{Targets of miRNAs from cauda epididymosomes are altered by MSUS in sperm and zygotes.} \newline Cumulative distribution plots of miR-31-5p targets from 5-months old MSUS and control caudal sperm RNA-seq \textbf{A} and from RNA-seq of zygotes originating from 3-months old MSUS and control males \textbf{B}. \newline \textbf{C:} miRNA abundance of sperm plotted against abundance in cauda epididymosomes. Coefficient of determination (_R_\textsuperscript{2}=0.74). \newline \textbf{D:} Dot plot of the top target pathways (adjusted _P_ < 0.05) of miRNAs differentially expressed (adjusted _P_ $\leq$ 0.1) in adult MSUS cauda epididymosomes. Color-scale of the dot represents –log\textsubscript{10} adjusted _P_ of miRNA in a pathway and size of the dot represents –log\textsubscript{10} adjusted _P_ of the pathway.
 
-### Figure 6
+```{r ef4, echo=FALSE, fig.align='center', fig.cap="(ref:efc4)", fig.width=6.49, fig.height=5.59}
+img <- readJPEG("figure/anaraEV/4.jpeg")
+grid.raster(img)
+```
 
-\newpage
+## Supplementary figures
+
+(ref:esc1) \textbf{Electron microscopy image and electrophoresis.} \newline \textbf{A:} Electron microscopy image of the preparations were used to access the size and heterogeneity of the isolated populations. \newline \textbf{B:} The RNA amount of epididymosomes preparations was assessed by high-resolution automated electrophoresis.
+
+```{r es1, echo=FALSE, fig.align='center', fig.cap="(ref:esc1)", fig.width=5.15, fig.height=1.93, fig.scap="Electron microscopy image and electrophoresis"}
+img <- readPNG("figure/anaraEV/s1.png")
+grid.raster(img)
+```
+
+
+(ref:esc2) \textbf{Data overview.} \newline \textbf{A:} RNA read-length distributions of cauda epididymosomal small RNAs after size-selection. \newline \textbf{B:} Heatmap of top miRNAs of cauda epididymosomal small RNA-seq before and after size-selection. Each row depicts a miRNA and each column depicts a sample. (_N_ = 10 Controls, _N_ = 10 MSUS). \newline \textbf{C:} Representative distribution of RNA biotypes from cauda epididymosomal small RNA-seq after size-selection. (_N_ = 5 Controls, _N_ = 5 MSUS). \newline \textbf{D} miRNA abundance distributions plot of cauda epididymosomal small RNA-seq. (_N_ = 10 Controls, _N_ = 10 MSUS)
+ 
+```{r es2, echo=FALSE, fig.align='center', fig.cap="(ref:esc2)", fig.width=5.66, fig.height=4.83, fig.scap="Data overview"}
+img <- readPNG("figure/anaraEV/s2.png")
+grid.raster(img)
+```
+
+(ref:esc3) \textbf{Scatterplot of log fold-change of miRNAs in sperm and cauda epididymosomes.} miRNAs down-regulated (blue) and up-regulated (red) in MSUS cauda epididymosomes.
+
+```{r es3, echo=FALSE, fig.align='center', fig.cap="(ref:esc3)", fig.width=1.9, fig.height=1.9, fig.scap="Scatterplot of log fold-change of miRNAs in sperm and cauda epididymosomes"}
+img <- readPNG("figure/anaraEV/s3.png")
+grid.raster(img)
+```
+
+(ref:esc4) \textbf{Profiles of cauda epididymosomal small RNAs by high-resolution automated electrophoresis.} (_N_ = 10 Controls, _N_ = 10 MSUS).
+
+```{r es4, echo=FALSE, fig.align='center', fig.cap="(ref:esc4)", fig.width=5.58, fig.height=3.99, fig.scap="Profiles of cauda epididymosomal small RNAs by high-resolution automated electrophoresis"}
+img <- readPNG("figure/anaraEV/s4.png")
+grid.raster(img)
+```
+
+(ref:esc5) \textbf{Cumulative distribution plots of miR-34c-5p, miR-155-5p targets in differentially expressed genes (P $\le$ 0.05) from MSUS sperm and zygote RNA-sequencing.}
+
+```{r es5, echo=FALSE, fig.align='center', fig.cap="(ref:esc5)", fig.width=5.33, fig.height=4.06, fig.scap="Cumulative distribution plots of miRNA targets in differentially expressed genes"}
+img <- readPNG("figure/anaraEV/s5.png")
+grid.raster(img)
+```
+
+(ref:esc6) \textbf{Immunoblot images of cauda epididymosomes and liver cell lysate, stained with cellular marker GAPDH (37kDa) and extracellular vesicle marker CD9 (25kDa).} Same membrane was incubated and imaged separately.
+
+```{r es6, echo=FALSE, fig.align='center', fig.cap="(ref:esc6)", fig.width=5.54, fig.height=2.19, fig.scap="Immunoblot images of cauda epididymosomes and liver cell lysate, stained with cellular marker GAPDH (37kDa) and extracellular vesicle marker CD9 (25kDa)"}
+img <- readPNG("figure/anaraEV/s6.png")
+grid.raster(img)
+```
+
+
+
 
 ## Supplementary Tables
 
-### Table 1
+```{r est1, message=FALSE, warning=FALSE, echo=FALSE}
+library(readxl)
+df1 <- data.frame(read_xlsx("figure/anaraEV/t1.xlsx", sheet = 1), check.names = F)
 
-\newpage
+library(kableExtra)
 
-### Table 2
+kbl(df1, booktabs = T, caption = "Supplementary table 1") %>%
+kable_styling(latex_options = c("striped", "scale_down")) %>%
+  kable_styling(latex_options = c("HOLD_position")) 
+```
 
-\newpage
 
-### Table 3
+```{r est2, message=FALSE, warning=FALSE, echo=FALSE}
+library(readxl)
+df2 <- data.frame(read_xlsx("figure/anaraEV/t2.xlsx", sheet = 1), check.names = F)
 
-\newpage
+library(kableExtra)
 
-### Table 4
+kbl(df2, booktabs = T, caption = "Supplementary table 2") %>%
+kable_styling(latex_options = c("striped", "scale_down")) %>%
+  kable_styling(latex_options = c("HOLD_position")) 
+```
 
-\newpage
+```{r est3, message=FALSE, warning=FALSE, echo=FALSE}
+library(readxl)
+df1 <- data.frame(read_xlsx("figure/anaraEV/t3.xlsx", sheet = 1), check.names = F)
 
-## References
+library(kableExtra)
+
+kbl(df1, booktabs = T, caption = "Supplementary table 3") %>%
+kable_styling(latex_options = c("striped", "scale_down")) %>%
+  kable_styling(latex_options = c("HOLD_position")) 
+```
+
+```{r est4, message=FALSE, warning=FALSE, echo=FALSE}
+library(readxl)
+df1 <- data.frame(read_xlsx("figure/anaraEV/t4.xlsx", sheet = 1), check.names = F)
+
+library(kableExtra)
+
+kbl(df1, booktabs = T, caption = "Supplementary table 4") %>%
+kable_styling(latex_options = c("striped", "scale_down")) %>%
+  kable_styling(latex_options = c("HOLD_position")) 
+```

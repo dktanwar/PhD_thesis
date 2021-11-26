@@ -1,7 +1,7 @@
 ---
 bibliography: rmd/references.bib
 ---
-\FloatBarrier
+<!-- \FloatBarrier -->
 # Introduction {#intro .unnumbered}
 
 ## Epigenetics {.unnumbered}
@@ -323,7 +323,17 @@ stress (MSUS) is a firmly established transgenerational model in the
 Mansuy lab, that does not involve any chemical or mutagenic agent but,
 depends only on psychological and emotional trauma, Figure \ref{fig:if4}. It is an
 ideal model to study the possible transgenerational effects of life
-experiences on the genome and the epigenome. MSUS consists in separating
+experiences on the genome and the epigenome. 
+
+(ref:ifc4) \textbf{MSUS paradigm.} MSUS consists of \textbf{(A)} separating mouse pups (F1) from their mother (F0, naïve primiparous control females mated with naïve males) daily for 3 hours per day at an unpredictable time during the 12 hours active cycle, starting 1 day after birth (postnatal day 1, PND1) until PND14. \textbf{(B)} During separation, dams are exposed to an additional unpredictable stressor by being subjected to either, a forced swim in 18°C water for 5 minutes or a 20-minute physical restraint in a tube, anytime (unpredictably) during the 3 hours. From PND15, mice are left undisturbed with their mother until PND21 (no further MSUS), are then weaned at PND21 and raised normally until adulthood \textbf{(C)}. Control litters are raised normally (left). Males used to generate the pups are removed from the breeding cage shortly after mating thus, fathers never encounter their offspring and do not contribute to their rearing. When adult (3–8 months of age), F1 males are paired with naïve primiparous control females to sire the F2 generation, then F2 and F3 males are bred with naïve primiparous control females to generate an F3 and F4 offspring, respectively. Males from each generation are tested on the elevated plus-maze, forced swim test, weight measurements and glucose response after physical restraint. MSUS is applied only to F1 mice, mice from F2, F3 and F4 generations are not exposed to any manipulation. Phenotypes transmitted from father to offspring are intergenerational, phenotypes that persist from father to offspring then grand-offspring or great grand-offspring are transgenerational. Taken from [@vansteenwyk2018].
+
+```{r if4, echo=FALSE, fig.align='center', fig.cap="(ref:ifc4)", fig.scap="MSUS paradigm", fig.width=5.3, fig.height=3.3}
+img <- readPNG("figure/intro/4.png")
+grid.raster(img)
+```
+
+
+MSUS consists in separating
 mouse pups from their mother unpredictably (any time during the day)
 each day for 3 hours from postnatal day 1 (PND1) to PND14 and exposing the mothers to stressful situations such as restraint stress or
 forced swim in cold water (18ºC), unpredictably during separation. F1 generation males are mated with naïve control females, and F2
@@ -336,13 +346,6 @@ and glucose intolerance are also observed. For studying the molecular
 mechanisms of epigenetic inheritance, a number of high-throughput sequencing (HTS) datasets have been
 collected and sequenced, Figure \ref{fig:if5}.
 
-
-(ref:ifc4) \textbf{MSUS paradigm.} MSUS consists of \textbf{(A)} separating mouse pups (F1) from their mother (F0, naïve primiparous control females mated with naïve males) daily for 3 hours per day at an unpredictable time during the 12 hours active cycle, starting 1 day after birth (postnatal day 1, PND1) until PND14. \textbf{(B)} During separation, dams are exposed to an additional unpredictable stressor by being subjected to either, a forced swim in 18°C water for 5 minutes or a 20-minute physical restraint in a tube, anytime (unpredictably) during the 3 hours. From PND15, mice are left undisturbed with their mother until PND21 (no further MSUS), are then weaned at PND21 and raised normally until adulthood \textbf{(C)}. Control litters are raised normally (left). Males used to generate the pups are removed from the breeding cage shortly after mating thus, fathers never encounter their offspring and do not contribute to their rearing. When adult (3–8 months of age), F1 males are paired with naïve primiparous control females to sire the F2 generation, then F2 and F3 males are bred with naïve primiparous control females to generate an F3 and F4 offspring, respectively. Males from each generation are tested on the elevated plus-maze, forced swim test, weight measurements and glucose response after physical restraint. MSUS is applied only to F1 mice, mice from F2, F3 and F4 generations are not exposed to any manipulation. Phenotypes transmitted from father to offspring are intergenerational, phenotypes that persist from father to offspring then grand-offspring or great grand-offspring are transgenerational. Taken from [@vansteenwyk2018].
-
-```{r if4, echo=FALSE, fig.align='center', fig.cap="(ref:ifc4)", fig.scap="MSUS paradigm", fig.width=6.42, fig.height=4.45}
-img <- readPNG("figure/intro/4.png")
-grid.raster(img)
-```
 
 
 (ref:ifc5) \textbf{Dataset collected from the MSUS model.}

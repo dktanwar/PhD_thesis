@@ -2,7 +2,7 @@
 output: html_document
 editor_options: 
   chunk_output_type: console
-bibliography: rmd/references.bib
+bibliography: [rmd/references.bib,bib/thesis.bib]
 ---
 
 # Dynamic chromatin accessibility in spermatogonial cells for transcriptional programmings from early postnatal to adult stages {#chapter1}
@@ -16,14 +16,12 @@ Institute at the Medical Faculty of the University of Zurich. \newline
 \textsuperscript{2}Institute for Neuroscience of the Department of
 Health Sciences and Technology, ETH Zurich, Zurich, Switzerland.\newline
 \textsuperscript{3}Zurich Neuroscience Center, ETH and University of
-Zurich, Zurich, Switzerland. \newline  \textsuperscript{4}Statistical
+Zurich, Zurich, Switzerland. \newline \textsuperscript{4}Statistical
 Bioinformatics Group, Swiss Institute of Bioinformatics, Zurich,
-Switzerland. \newline \newline  \textsuperscript{$\dagger$}Equal
-contributions \newline\newline \textsuperscript{\#}Corresponding author
-\newline\newline  
-**Contributions:** *I performed data analysis,
-generated figures, wrote computational methods and figure captions,
-revised manuscript.*
+Switzerland. \newline \newline \textsuperscript{$\dagger$}Equal
+contributions \newline\newline \textsuperscript{\#}Corresponding
+author \newline\newline 
+__Contributions:__ *I performed data analysis, generated figures, wrote computational methods and figure captions, revised manuscript.*
 
 \newpage
 
@@ -33,20 +31,40 @@ This project has undergone two major changes as a result of the
 replacement of one of the spermatogonial cells (SCs) RNA-seq datasets by
 a better one.
 
+### Code availibility
+
+-   BioRxiv version:
+    [bioRxiv_v1](https://github.com/mansuylab/SC_postnatal_adult/tree/bioRxiv_v1)
+
+-   This thesis version:
+    [thesis_manuscript](https://github.com/mansuylab/SC_postnatal_adult/tree/thesis_manuscript)
+
+-   New analysis after inclusion of new RNA-seq data:
+    [deepak](https://github.com/mansuylab/SC_postnatal_adult/tree/deepak)
+
 ### Inclusion of RNA-seq data from the literature
 
 Adult SCs RNA-seq data from the lab was excluded since it was obtained
 from polyA RNA-seq, as opposed to pups' RNA-seq, which was Total
-RNA-seq. In the preprint version of the manuscript [@lazar-contes2020],
+RNA-seq. In the preprint version of the manuscript [@lazarcontes_2020],
 we used RNA-seq data generated in the lab from SCs at the developmental
 stages postnatal day 8 (PND8), PND15, and postnatal week 21 (PNW21; also
 termed as adults in the manuscript). The RNA-seq datasets from PND8 and
 PND15 were generated using total RNA libraries, whereas the datasets
 from PNW21 were generated using polyA RNA libraries. Because polyA and
-total RNA-seq datasets are not directly comparable [@zhao2018], we
+total RNA-seq datasets are not directly comparable [@zhao_2018], we
 obtained RNA-seq data from the PND7, PND14, and PNW8 stages from the
 literature [@hammoud2014; @hammoud2015] and compared it to the lab's
 RNA-seq data.
+
+(ref:dnc1) \textbf{Log\textsubscript{2} fold-change comparison of RNA-seq data from the literature and lab (old and new).}
+(ref:dnsc1) Log\textsubscript{2} fold-change comparison of RNA-seq data
+from the literature and lab (old and new)
+
+```{r dn1, echo=FALSE, fig.align='center', fig.cap="(ref:dnc1)", fig.scap="(ref:dnsc1)", fig.width=5, fig.height=4}
+img <- readPNG("figure/dev/new/01.png")
+grid.raster(img)
+```
 
 First, we compared the gene expression of lab PND8 samples to PND7 from
 literature and lab PND15 samples to PND14 from literature and discovered
@@ -61,21 +79,13 @@ was 52% (R = 0.52, Pearson method) and that most of the genes were
 changing in the same direction, whereas the correlation between PNW8 vs
 PND14 and PNW21 vs PND15 was negative 16% (R = -0.16; Pearson method)
 and that around 50% of the genes were changing in the opposite
-direction, as shown in Figure 1A. As a result, we incorporated the PND14
+direction, as shown in Figure \ref{fig:dn1}A. As a result, we incorporated the PND14
 and PNW8 datasets into our project to better compare developmental
 stages. We used differential analysis between PNW8 and PND14 rather than
 PNW8 and PND15 because the PND14 and PND15 samples were sequenced
 separately and could have unaccountable batch effects. These analyses
-were then updated in the manuscript and appear in Chapter 1.
-
-(ref:dnc1) \textbf{Log\textsubscript{2} fold-change comparison of RNA-seq data from the literature and lab (old and new).}
-(ref:dnsc1) Log\textsubscript{2} fold-change comparison of RNA-seq data
-from the literature and lab (old and new)
-
-```{r dn1, echo=FALSE, fig.align='center', fig.cap="(ref:dnc1)", fig.scap="(ref:dnsc1)"}
-img <- readPNG("figure/dev/new/01.png")
-grid.raster(img)
-```
+were then updated in the manuscript and appear in [Chapter
+1](\#chapter1).
 
 ### New RNA-seq data from lab
 
@@ -98,17 +108,18 @@ in the lab previously and data from the literature. The data from the
 PNW21 stage is also well correlated with the literature (result not
 shown).
 
-(ref:dnc2) \textbf{Volcano plot of differentially expressed genes (adjusted \textit{P} $\leq$ 0.05 and absolute Log\textsubscript{2}FC $\geq$ 1)}.\newline \textbf{A:}
-PND15 and PND8. \textbf{B:} PNW21 and PND15.
+(ref:dnc2) \textbf{Volcano plot of differentially expressed genes (adjusted \textit{P} $\leq$ 0.05 and absolute Log\textsubscript{2}FC $\geq$ 1)}.\newline
+\textbf{A:} PND15 and PND8. \newline \textbf{B:} PNW21 and PND15.
 
-```{r dn2, echo=FALSE, fig.align='center', fig.cap="(ref:dnc2)", fig.scap="Volcano plot of differentially expressed genes"}
+```{r dn2, echo=FALSE, fig.align='center', fig.cap="(ref:dnc2)", fig.scap="Volcano plot of differentially expressed genes", fig.width=6.4, fig.height=2.6}
 img <- readPNG("figure/dev/new/02.png")
 grid.raster(img)
 ```
 
-We processed the RNA-seq data using the methods described in Chapter 1
-and Methods. Following that, we conducted a differential analysis
-between PND15 and PND8, as well as PNW21 and PND15. Figure 2 shows that
+We processed the RNA-seq data using the methods described in [Chapter
+1](\#chapter1)
+and [Methods](#methods). Following that, we conducted a differential analysis
+between PND15 and PND8, as well as PNW21 and PND15. Figure \ref{fig:dn2} shows that
 we found 663 genes that were differentially expressed between PND15 and
 PND8, and 2,493 genes that were differentially expressed between PNW21
 and PND15.
@@ -120,12 +131,12 @@ PND15 vs PND8 was 43% (R = 0.43, Pearson method) and that most of the
 genes were changing in the same direction, and that the correlation
 between PNW8 vs PND14 and PNW21 vs PND15 was 70% (R = 0.7; Pearson
 method) and that most of the genes were changing in the same direction,
-as shown in Figure 1C, 1D. Furthermore, we compared the lab's old data
+as shown in Figure \ref{fig:dn1}C, \ref{fig:dn1}D. Furthermore, we compared the lab's old data
 with the new data and discovered an 87% correlation (R = 0.87; Pearson
 method) and nearly all the genes changing in the same direction for
 PND15 vs PND8, whereas the correlation for PNW21 vs PND15 was 6% (R =
 0.06; Pearson method) and nearly 50% genes changing in the opposite
-direction, Figure 1E, 1F. This is due to the fact that the previous
+direction, Figure \ref{fig:dn1}E, \ref{fig:dn1}F. This is due to the fact that the previous
 PNW21 data were obtained from ployA libraries, whereas the new PNW21
 data were obtained from total RNA libraries.
 
@@ -137,7 +148,7 @@ and PND8, as well as PNW21 and PND15, and ran k-means clustering (k = 2
 to 10) on the log2 fold-changes of normalized expression values, using
 PND8 samples as the baseline. Based on visual inspection, we select 7
 clusters (k = 7) and merge the clusters with visually observed similar
-expression profiles to obtain 5 clusters, Figure 3.
+expression profiles to obtain 5 clusters, Figure \ref{fig:dn3}.
 
 (ref:dnc3) \textbf{K-means clustering (k = 5) of genes with differential expression in postnatal versus adult spermatogonial cells.}
 Each row depicts a gene and each column depicts a sample. Gene
@@ -146,7 +157,7 @@ log\textsubscript{2} counts per million (CPM) of PND8 from PND15 and
 PNW21. Samples are clustered using Ward's method and genes are ordered
 by the "MDS_angle method" using `seriation` (R package).
 
-```{r dn3, echo=FALSE, fig.align='center', fig.cap="(ref:dnc3)", fig.scap="K-means clustering of differentiallly expressed genes"}
+```{r dn3, echo=FALSE, fig.align='center', fig.cap="(ref:dnc3)", fig.scap="K-means clustering of differentiallly expressed genes", fig.width=4.5, fig.height=4}
 img <- readPNG("figure/dev/new/03.png")
 grid.raster(img)
 ```
@@ -155,14 +166,14 @@ grid.raster(img)
 
 After combining data from ATAC-seq, RNA-seq, and ChIP-seq, we were able
 to generate clusters of distinct genome activity. We combined these
-datasets, with ATAC-seq as the starting point, Methods. We classified
+datasets, with ATAC-seq as the starting point, [Methods](#methods). We classified
 the differentially accessible regions (DARs) based on ATAC-seq and
 RNA-seq data into distal (\> 2.5 kb of the transcription start site,
 TSS) and proximal (2.5kb of TSS). Following that, distal DARs were
 divided into two groups based on increased or decreased accessibility in
-PNW21, Figure 4,6,8, while proximal DARs were divided into six groups
+PNW21, Figure \ref{fig:dn4},\ref{fig:dn6}, while proximal DARs were divided into six groups
 based on increased or decreased accessibility in PNW21 and up or
-down-regulation of nearby gene expression in PNW21 Figure 5,7,9.
+down-regulation of nearby gene expression in PNW21 Figure \ref{fig:dn5}, \ref{fig:dn7}.
 Category 1: increased chromatin accessibility and upregulation of
 neighbouring genes; Category 2: increased chromatin accessibility and
 downregulation of neighbouring genes Category 3: decreased chromatin
@@ -171,9 +182,10 @@ decreased chromatin accessibility and upregulation of neighbouring
 genes, Category 5: increased chromatin accessibility with no detectable
 gene expression, and Category 6: decreased chromatin accessibility with
 no detectable gene expression. All such clusters had also been
-identified in the previous analysis (see Chapter 2 and
-[@lazar-contes2020], however one of the original categories (Category 5
-from Figure 5) disappeared in the new analysis. This category is related
+identified in the previous analysis (see [Chapter
+1](\#chapter1) and
+[@lazarcontes_2020], however one of the original categories (Category 5
+from Figure \ref{fig:dn5}) disappeared in the new analysis. This category is related
 to TSS-proximal DARs which, against expectations, increase in expression
 despite a decrease in accessibility. Since expression implies promoter
 accessibility, it is safe to assume that this category was attributable
@@ -189,7 +201,7 @@ obtained from multi-omics data integration; transcription factor motif
 analysis of clusters obtained from multi-omics data integration; and
 revision of figures and manuscript.
 
-Figures 4,5,6,7 are enriched heatmaps that show different clusters for
+Figures \ref{fig:dn4}, \ref{fig:dn5}, \ref{fig:dn6}, \ref{fig:dn7} are enriched heatmaps that show different clusters for
 distal and proximal regions. Each row represents a peak region, which is
 ordered by the ATAC signal. The mid-x-axis corresponds to the centre of
 a peak region and is extended to +/1 kbp. The ATAC heatmap's colour key
@@ -199,28 +211,28 @@ from all samples.
 
 (ref:dnc4) \textbf{Enriched heatmap of distal differentially accessible regions.}
 
-```{r dn4, echo=FALSE, fig.align='center', fig.cap="(ref:dnc4)", fig.scap="Enriched heatmap of distal DARs"}
+```{r dn4, echo=FALSE, fig.align='center', fig.cap="(ref:dnc4)", fig.scap="Enriched heatmap of distal DARs", fig.width=6.5, fig.height=8}
 img <- readPNG("figure/dev/new/04.png")
 grid.raster(img)
 ```
 
 (ref:dnc5) \textbf{Enriched heatmap of proximal differentially accessible regions.}
 
-```{r dn5, echo=FALSE, fig.align='center', fig.cap="(ref:dnc5)", fig.scap="Enriched heatmap of proximal DARs"}
+```{r dn5, echo=FALSE, fig.align='center', fig.cap="(ref:dnc5)", fig.scap="Enriched heatmap of proximal DARs", fig.width=6.5, fig.height=8}
 img <- readPNG("figure/dev/new/05.png")
 grid.raster(img)
 ```
 
 (ref:dnc6) \textbf{Enriched heatmap of distal differentially accessible regions with ChIP-seq and BS-seq data.}
 
-```{r dn6, echo=FALSE, fig.align='center', fig.cap="(ref:dnc6)", fig.scap="Enriched heatmap of distal DARs with ChIP-seq and BS-seq data"}
+```{r dn6, echo=FALSE, fig.align='center', fig.cap="(ref:dnc6)", fig.scap="Enriched heatmap of distal DARs with ChIP-seq and BS-seq data", fig.width=6.5, fig.height=8}
 img <- readPNG("figure/dev/new/06.png")
 grid.raster(img)
 ```
 
 (ref:dnc7) \textbf{Enriched heatmap of proximal differentially accessible regions with ChIP-seq and BS-seq data.}
 
-```{r dn7, echo=FALSE, fig.align='center', fig.cap="(ref:dnc7)", fig.scap="Enriched heatmap of proximal DARs with ChIP-seq and BS-seq data"}
+```{r dn7, echo=FALSE, fig.align='center', fig.cap="(ref:dnc7)", fig.scap="Enriched heatmap of proximal DARs with ChIP-seq and BS-seq data", fig.width=6.5, fig.height=8}
 img <- readPNG("figure/dev/new/07.png")
 grid.raster(img)
 ```
