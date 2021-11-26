@@ -2,7 +2,7 @@
 output: html_document
 editor_options: 
   chunk_output_type: console
-bibliography: [bib/anaraEV.bib]
+# bibliography: []
 ---
 
 \chaptermark{Chapter 2}

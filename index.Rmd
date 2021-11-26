@@ -60,7 +60,7 @@ acknowledgements: |
 #   To Palni
   
 # Specify the location of the bibliography below
-bibliography: [bib/anaraEV.bib]
+bibliography: [bib/anaraEV.bib, rmd/references.bib,  bib/thesis.bib]
 link-citations: true
 biblatexoptions: [refsegment=chapter]
 # Download your specific csl file and refer to it in the line below.
