@@ -1,0 +1,94 @@
+graph LR
+
+subgraph Data
+AS[ATAC-Seq]-->om(overlapMatrix)
+RS[RNA-Seq]-->om
+CS[ChIP-Seq]-->om
+end
+
+subgraph Step1
+om --> ds[Distal <br> >2.5kb TSS]
+om --> pa[Proximal active <br> <2.5kb TSS of <br> expressed genes]
+om --> pi[Proximal inactive <br> >2.5kb TSS of <br> expressed genes]
+end
+
+subgraph Step2
+
+pa --> ma1[More accessible]
+pa --> la1[Less accessible]
+
+pi --> ma2[More accessible]
+pi --> la2[Less accessible]
+
+ds --> ma[More accessible]
+ds --> la[Less accessible]
+
+end
+
+subgraph Step3
+ma1 --> eu1[Expression up]
+la1 --> ed1[Expression down]
+end
+
+subgraph Step4
+ma --> h1[H3K4me3?]
+la --> h2[H3K4me3?]
+eu1 --> h3[H3K4me3?]
+ed1 --> h4[H3K4me3?]
+ma2 --> h5[H3K4me3?]
+la2 --> h6[H3K4me3?]
+
+h1 --> h11[H3K27ac?]
+h2 --> h12[H3K27ac?]
+h3 --> h13[H3K27ac?]
+h4 --> h14[H3K27ac?]
+h5 --> h15[H3K27ac?]
+h6 --> h16[H3K27ac?]
+
+h11 --> h21[H3K27me3?]
+h12 --> h22[H3K27me3?]
+h13 --> h23[H3K27me3?]
+h14 --> h24[H3K27me3?]
+h15 --> h25[H3K27me3?]
+h16 --> h26[H3K27me3?]
+end
+
+style om fill:#C6F9BD,stroke:black,stroke-width:2px
+style AS fill:#F9C4BD,stroke:black,stroke-width:2px
+style RS fill:#F9C4BD,stroke:black,stroke-width:2px
+style CS fill:#F9C4BD,stroke:black,stroke-width:2px
+
+style ds fill:#EEE5F4,stroke:black,stroke-width:2px
+style pa fill:#EEE5F4,stroke:black,stroke-width:2px
+style pi fill:#EEE5F4,stroke:black,stroke-width:2px
+
+style ma fill:#E5F4F2,stroke:black,stroke-width:2px
+style la fill:#E5F4F2,stroke:black,stroke-width:2px
+style ma1 fill:#E5F4F2,stroke:black,stroke-width:2px
+style la1 fill:#E5F4F2,stroke:black,stroke-width:2px
+style ma2 fill:#E5F4F2,stroke:black,stroke-width:2px
+style la2 fill:#E5F4F2,stroke:black,stroke-width:2px
+
+style eu1 fill:#F4E5EB,stroke:black,stroke-width:2px
+style ed1 fill:#F4E5EB,stroke:black,stroke-width:2px
+
+style h1 fill:#EDC9B2,stroke:black,stroke-width:2px
+style h2 fill:#EDC9B2,stroke:black,stroke-width:2px
+style h3 fill:#EDC9B2,stroke:black,stroke-width:2px
+style h4 fill:#EDC9B2,stroke:black,stroke-width:2px
+style h5 fill:#EDC9B2,stroke:black,stroke-width:2px
+style h6 fill:#EDC9B2,stroke:black,stroke-width:2px
+
+style h11 fill:#E9EDB2,stroke:black,stroke-width:2px
+style h12 fill:#E9EDB2,stroke:black,stroke-width:2px
+style h13 fill:#E9EDB2,stroke:black,stroke-width:2px
+style h14 fill:#E9EDB2,stroke:black,stroke-width:2px
+style h15 fill:#E9EDB2,stroke:black,stroke-width:2px
+style h16 fill:#E9EDB2,stroke:black,stroke-width:2px
+
+style h21 stroke:black,stroke-width:2px
+style h22 stroke:black,stroke-width:2px
+style h23 stroke:black,stroke-width:2px
+style h24 stroke:black,stroke-width:2px
+style h25 stroke:black,stroke-width:2px
+style h26 stroke:black,stroke-width:2px

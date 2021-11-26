@@ -1,0 +1,26 @@
+graph TD
+
+QC(Quality control)
+QC-->|Bowtie2|atacAln[Alignment]
+
+style QC stroke:black,stroke-width:2px,fill:#fff2e6
+
+atacAln-->|"DeepTools (alignmentSieve)"|bamQC[Filter: blacklisted regions &<br>reads with MAPQ < 30]
+bamQC-->|sambamba|md[Mark duplicates]
+md-->|sambamba|merge[Merge all samples]
+merge-->|MACS2|PC[Peak calling]
+PC-->|csaw/edgeR|daPC[Counts reads in peaks,<br>filter by enrichment,<br>normalization factors, &<br>differential analysis]
+md-->daPC
+PC-->|multiQC|mQC[QC report]
+daPC-->|marge/HOMER|motif[Motif analysis]
+daPC-->|rGREAT/GREAT|atacTF["Functional analysis (GO)"]
+
+style atacAln fill:#F3E7FD,stroke:black,stroke-width:2px
+style PC fill:#F3E7FD,stroke:black,stroke-width:2px
+style daPC fill:#F3E7FD,stroke:black,stroke-width:2px
+style atacTF fill:#F3E7FD,stroke:black,stroke-width:2px
+style bamQC fill:#F3E7FD,stroke:black,stroke-width:2px
+style md fill:#F3E7FD,stroke:black,stroke-width:2px
+style motif fill:#F3E7FD,stroke:black,stroke-width:2px
+style mQC fill:#F3E7FD,stroke:black,stroke-width:2px
+style merge fill:#F3E7FD,stroke:black,stroke-width:2px

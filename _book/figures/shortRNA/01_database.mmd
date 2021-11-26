@@ -1,0 +1,35 @@
+graph TD
+
+mir(miRBase) -->|"miRNA<br>miRNA precursor"|db
+trna(GtRNADb) -->|tRNA|db
+mttrna(mitotRNAdb) -->|mt tRNA|db
+rrna(SiLVA) -->|rRNA|db
+pirna("Zamore Lab<br>(only mouse)") -->|piRNA precursor|db
+ens("Ensembl") -->|All RNAs<br>Reference genome|db
+
+db("Database<br>getDB()")-->pa["prepareAnnotation()"]
+pa-->fe["Features annotation<br>as GRanges()"]
+
+
+
+pa-->cg[Indexed custom genome]
+
+fe-->|"featuresAnnoToFL()"|fl["Convert features<br>to FactorList()"]
+fl-->FL>featuresFL]
+cg-->CG>customGenome]
+fe-->FE>featuresGR]
+
+style db stroke:black,stroke-width:2px,fill:#fff2e6;
+style mir fill:#F3E7FD,stroke:black,stroke-width:2px
+style trna fill:#F3E7FD,stroke:black,stroke-width:2px
+style mttrna fill:#F3E7FD,stroke:black,stroke-width:2px
+style rrna fill:#F3E7FD,stroke:black,stroke-width:2px
+style pirna fill:#F3E7FD,stroke:black,stroke-width:2px
+style ens fill:#F3E7FD,stroke:black,stroke-width:2px
+style fe stroke:black,stroke-width:2px,fill:#fff2e6;
+style fl stroke:black,stroke-width:2px,fill:#fff2e6;
+style cg stroke:black,stroke-width:2px,fill:#fff2e6;
+style CG stroke:black,stroke-width:2px,fill:#D8EED3;
+style FL stroke:black,stroke-width:2px,fill:#D8EED3;
+style FE stroke:black,stroke-width:2px,fill:#D8EED3;
+style pa stroke:blue,stroke-width:2px,fill:white;

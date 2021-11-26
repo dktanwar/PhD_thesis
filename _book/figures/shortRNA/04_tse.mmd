@@ -1,0 +1,32 @@
+graph TD
+
+ART["addReadsToTree()"]
+TSE["TreeSummarizedExperiment()"]
+
+AR>assignedReads]-->ART
+FL>featuresFL]-->ART
+
+
+tree-->pt>Phylogenetic tree]
+
+ART-->tree["Assignment of<br>reads to tree"]
+
+AR-->TSE
+pt-->TSE
+CO>countsMatrix]-->TSE
+TSE-->tse[TreeSummarizedExperiment<br>object]
+
+tse-->|treeClimbR|norm[Normalization,<br>differential analysis]
+norm-->|"TreeHeatmap<br>ggtree<br>castor<br>makeTracks()"|eda[Exploratory analysis,<br>Plotting]
+
+
+style AR stroke:black,stroke-width:2px,fill:#D8EED3;
+style FL stroke:black,stroke-width:2px,fill:#D8EED3;
+style pt stroke:black,stroke-width:2px,fill:#D8EED3;
+style CO stroke:black,stroke-width:2px,fill:#D8EED3;
+style norm stroke:black,stroke-width:2px,fill:#fff2e6;
+style eda stroke:black,stroke-width:2px,fill:#fff2e6;
+style tree stroke:black,stroke-width:2px,fill:#fff2e6;
+style tse fill:#F3E7FD,stroke:black,stroke-width:2px;
+style ART stroke:blue,stroke-width:2px,fill:white;
+style TSE stroke:blue,stroke-width:2px,fill:white;

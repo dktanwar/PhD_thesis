@@ -1,0 +1,34 @@
+graph TD
+
+
+QC(Quality control)
+QC-->|Bismark|bsAln[Alignment &<br>methylation call]
+style QC stroke:black,stroke-width:2px,fill:#fff2e6
+
+style QC stroke:black
+
+bsAln-->|edgeR|dml[Filter by counts &<br>DML analysis]
+bsAln-->|multiQC|mQC[QC report]
+bsAln-->|CNVkit|cnv[CNV analysis]
+bsAln-->|dmrseq|dmr[Filter by counts &<br>DMR analysis]
+
+dml-->|marge/HOMER|motif[Motif analysis]
+dml-->|rGREAT/GREAT|great["Functional analysis (GO)"]
+
+
+dmr-->|marge/HOMER|motif1[Motif analysis]
+dmr-->|rGREAT/GREAT|great1["Functional analysis (GO)"]
+
+
+
+style bsAln fill:#F3E7FD,stroke:black,stroke-width:2px
+style dml fill:#F3E7FD,stroke:black,stroke-width:2px
+style dmr fill:#F3E7FD,stroke:black,stroke-width:2px
+style great fill:#F3E7FD,stroke:black,stroke-width:2px
+
+style great fill:#F3E7FD,stroke:black,stroke-width:2px
+style great1 fill:#F3E7FD,stroke:black,stroke-width:2px
+style motif fill:#F3E7FD,stroke:black,stroke-width:2px
+style motif1 fill:#F3E7FD,stroke:black,stroke-width:2px
+style cnv fill:#F3E7FD,stroke:black,stroke-width:2px
+style mQC fill:#F3E7FD,stroke:black,stroke-width:2px

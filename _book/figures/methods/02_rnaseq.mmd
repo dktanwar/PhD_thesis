@@ -1,0 +1,28 @@
+graph TD
+
+QC(Quality control)
+QC-->|Salmon|rnaAln[Pseudo-alignment]
+QC-->|Rsubread|rnaAlnS[Alignment]
+
+style QC stroke:black,stroke-width:2px,fill:#fff2e6
+
+rnaAln-->|edgeR|rnaNorm[Filter by expression &<br> Normalization]
+rnaNorm-->|limma-voom|rnaDiff[Differential analysis]
+
+rnaDiff-->|multiGSEA|rnaPath[Functional analysis<br>KEGG, Reactome, GO]
+
+rnaAln-->|IsoformSwitchAnalyzeR|rnaExonS[Differential Splicing &<br>Isoform switching]
+
+rnaAlnS-->|sambamba|markDup[Mark duplicated reads]
+markDup-->|dupRadar|dupRadar[Examine duplication in data]
+rnaAlnS-->|diffUTR|rnaExon[Differential exon usage &<br>3' UTR usage]
+
+style rnaAln fill:#F3E7FD,stroke:black,stroke-width:2px
+style rnaAlnS fill:#F3E7FD,stroke:black,stroke-width:2px
+style rnaNorm fill:#F3E7FD,stroke:black,stroke-width:2px
+style rnaDiff fill:#F3E7FD,stroke:black,stroke-width:2px
+style rnaExon fill:#F3E7FD,stroke:black,stroke-width:2px
+style rnaPath fill:#F3E7FD,stroke:black,stroke-width:2px
+style rnaExonS fill:#F3E7FD,stroke:black,stroke-width:2px
+style markDup fill:#F3E7FD,stroke:black,stroke-width:2px
+style dupRadar fill:#F3E7FD,stroke:black,stroke-width:2px

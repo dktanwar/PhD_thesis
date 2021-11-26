@@ -1,0 +1,24 @@
+graph TD
+
+CG>customGenome]-->ALN["alignShortRNA()"]
+FA>sequenceFasta]-->ALN
+ALN-->aln[Alignment]
+
+
+FE>featuresGR]-->TX["overlapWithTx2()"]
+TX-->ov[find overlaps<br>between aligned<br>reads and features]
+
+aln-->TX
+
+ov-->|"assignReads()"|ar["Reads assignment with<br>defaultAssignRules()"]
+ar-->AR>assignedReads]
+
+style FE stroke:black,stroke-width:2px,fill:#D8EED3;
+style CG stroke:black,stroke-width:2px,fill:#D8EED3;
+style FA stroke:black,stroke-width:2px,fill:#D8EED3;
+style ov stroke:black,stroke-width:2px,fill:#fff2e6;
+style aln stroke:black,stroke-width:2px,fill:#fff2e6;
+style ar stroke:black,stroke-width:2px,fill:#fff2e6;
+style AR stroke:black,stroke-width:2px,fill:#D8EED3;
+style ALN stroke:blue,stroke-width:2px,fill:white;
+style TX stroke:blue,stroke-width:2px,fill:white;

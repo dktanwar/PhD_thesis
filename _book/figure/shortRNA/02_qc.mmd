@@ -1,0 +1,20 @@
+graph TD
+
+fastq("FASTQ")-->umi{UMIs?}
+
+umi-->|"(Yes)<br>UMIc"|col[Collapse reads<br>with UMIs]
+umi-->|"(No)<br>Rfastp"|qc[Quality check &<br>Quality control]
+col-->|Rfastp|qc
+qc-->|"fastq2SeqCountMatrix()"|counts[Sequence by samples<br>count matrix]
+counts-->fa["save unique<br>sequences<br>(fasta file)"]
+counts-->CO>countsMatrix]
+fa-->FA>sequenceFasta]
+
+style fastq fill:#F3E7FD,stroke:black,stroke-width:2px
+style umi stroke:black,stroke-width:2px,fill:#fff2e6;
+style col stroke:black,stroke-width:2px,fill:#fff2e6;
+style qc stroke:black,stroke-width:2px,fill:#fff2e6;
+style counts stroke:black,stroke-width:2px,fill:#fff2e6;
+style fa stroke:black,stroke-width:2px,fill:#fff2e6;
+style FA stroke:black,stroke-width:2px,fill:#D8EED3;
+style CO stroke:black,stroke-width:2px,fill:#D8EED3;
