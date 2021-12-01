@@ -310,7 +310,7 @@
 
   \begin{center}
     \setcounter{page}{1}
-    {\fontsize{16}{2}\selectfont  DISS. ETH NO. ..........}
+    {\fontsize{16}{2}\selectfont  DISS. ETH NO. 28142}
     \null\vfil
     {\fontsize{20}{2}\selectfont \bf \@title}
     \vfil
@@ -329,9 +329,10 @@
     \vfil
     accepted on the recommendation of
     \vfil
-    Prof. Isabelle Mansuy, examiner\\
-    Prof. Tuncay Baubec, co-examiner\\
-    Prof. Mark Robinson, co-examiner
+    Prof. Dr. Isabelle Mansuy, examiner\\
+    Prof. Dr. Tuncay Baubec, co-examiner\\
+    Prof. Dr. Mark Robinson, co-examiner\\
+    Dr. Pierre-Luc Germain, co-examiner
     \vfil
     2022
     
