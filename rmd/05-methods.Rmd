@@ -101,16 +101,15 @@ understand the pre-processing steps required. The quality assessment is
 done using the quality scores (Q-scores) in the FASTQ files, which are
 translated to quality statistics in `FastQC` reports and plotted as
 boxplots. Q score is defined as the base-calling error probabilities and
-is calculated by the formula: `**Q = -log10 (P)**`. For instance, if a
+is calculated by the formula: `Q = -log10 (P)`. For instance, if a
 nucleotide base is assigned a Q score of 30, this is equivalent to the
 probability of an incorrect base call of 1/1000 times, which means that
 the accuracy of base calling is 99.9%. A Q score of 30 represents
 perfect base calling with no errors and ambiguities and is considered a
 benchmark for quality in high-throughput sequencing (HTS) [@ewing1998].
 
-(ref:mfc3)
-\textbf{Workflow for quality check and quality control for sequencing data.}
-QC: Quality Control.
+(ref:mfc3) \textbf{Workflow for quality check and quality control for sequencing data. QC: Quality Control.}
+
 
 ```{r mf3, echo=FALSE, fig.align='center', fig.cap="(ref:mfc3)", fig.scap="Workflow for quality check and quality control for sequencing data", fig.width = 4, fig.height=3.9}
 img <- readPNG("figure/methods/in/3.png")
@@ -157,7 +156,7 @@ ChIP-seq, and whole-genome sequencing (WGS).
 
 ### RNA sequencing {#m3.2 .unnumbered}
 
-RNA sequencing (RNA-seq) is a technique that uses high-throughput
+RNA-seq is a technique that uses high-throughput
 sequencing (HTS) to investigate the quantity and sequences of RNA. It
 examines the transcriptome to determine, which of our DNA-encoded genes
 are turned on or off, and to what degree. RNA-seq pipeline schematic is
@@ -244,7 +243,7 @@ expressed genes. A pre-filtering of counts is therefore performed using
 the `filterByExpr()` function from `edgeR` [@robinson2010] with a design
 matrix (matrix containing data about multiple characteristics of several
 samples, such as biological group, age, and batch for library
-preparation) and requiring at least 20 counts (min.counts = 20)
+preparation) and requiring at least 20 counts (`min.counts = 20`)
 [@germain2020]. Next, the counts are normalized for different sequencing
 depths between samples and to eliminate composition biases between
 samples, for example, if there are a few highly expressed genes
@@ -254,8 +253,8 @@ Normalization factors are obtained using the `TMM` normalization method
 function. `TMM` stands for Trimmed Mean of M values, in which the counts
 for the samples are scaled using a weighted trimmed mean of the log
 expression ratios. Differential expression analysis at gene and
-transcript level is performed using limma-voom [@law2014] pipeline from
-limma [@ritchie2015] package.
+transcript level is performed using `limma-voom` [@law2014] pipeline from
+`limma` [@ritchie2015] package.
 
 #### Exploratory data analysis {#m3.2.4 .unnumbered}
 
@@ -292,7 +291,7 @@ as mRNA localization, stability, and translation [@mayr2019].
 Differential UTR usage looks for variations in 3' UTR usage between
 experimental conditions.
 
-DEU and differential 3' UTR usage are performed using the diffUTR R
+DEU and differential 3' UTR usage are performed using the `diffUTR` `R`
 package [@gerber2021].
 
 #### Functional analysis {#m3.2.7 .unnumbered}
@@ -304,27 +303,26 @@ analysis on Kyoto Encyclopedia of Genes and Genomes (KEGG)
 [@kanehisa2021], Reactome [@jassal2020], Gene Ontology (GO)
 [@consortium2021] and curated pathway list from the Gene Set Enrichment
 Analysis (GSEA) [@subramanian2005] databases is performed using
-multiGSEA
+`multiGSEA`
 ([github.com/lianos/multiGSEA](https://github.com/lianos/multiGSEA)),
-which facilitates the analysis with GOseq [@young2010], fGSEA
+which facilitates the analysis with `GOseq` [@young2010], `fGSEA`
 [@korotkevich2016], Correlation Adjusted MEan RAnk gene set test
-(CAMERA) and camera pre-ranked (CAMERA-PR) [@wu2012], ROtation testing
-using MEan Ranks (ROMER) and fry [@ritchie2015], and ROtAtion gene Set
-Testing (ROAST) [@wu2010]. An advantage of using multiGSEA is that it
-has standardized input and output and provides a Shiny app for
+(`CAMERA`) and camera pre-ranked (`CAMERA-PR`) [@wu2012], ROtation testing
+using MEan Ranks (`ROMER`) and `fry` [@ritchie2015], and ROtAtion gene Set
+Testing (`ROAST`) [@wu2010]. An advantage of using `multiGSEA` is that it
+has standardized input and output and provides a Shiny app, `multiGSEA.shiny`, for
 exploratory data analysis
 ([github.com/lianos/multiGSEA.shiny](https://github.com/lianos/multiGSEA.shiny)).
-With multiGSEA, it is easy to specify to use testing relative to a
-threshold (TREAT) method [@mccarthy2009], which takes a user-specified
+With `multiGSEA`, it is easy to specify to use testing relative to a
+threshold (`TREAT`) method [@mccarthy2009], which takes a user-specified
 log fold change cut-off and recalculates the moderated t-statistics and
-p-values. Using TREAT only affects enrichment tests that first threshold
-the genes in the experiment as "significant" or not, like GOseq and not
-tests like the camera.
+p-values. Using `TREAT` only affects enrichment tests that first threshold
+the genes in the experiment as "significant" or not, like `GOseq` and not
+tests like the `camera`.
 
 ### Assay of Transposase Accessible Chromatin sequencing {#m3.3 .unnumbered}
 
-The Assay of Transposase Accessible Chromatin sequencing (ATAC-seq) is
-widely used in studying chromatin biology to study chromatin
+ATAC-seq is widely used in studying chromatin biology to study chromatin
 accessibility and to identify open chromatin regions (OCRs). The
 nucleosome is the most basic component of chromatin. Each nucleosome is
 made up of about two turns of DNA wrapped around a set of eight proteins
@@ -337,7 +335,7 @@ factors have a role in the activation and inactivation of genes. The
 genome is treated with a hyperactive version of the Tn5 transposase to
 insert sequencing adapters into OCRs [@buenrostro2015]. Because it is
 easier, faster, and uses fewer cells than competing approaches like
-FAIRE-Seq and DNase-Seq, ATAC-Seq has become popular for discovering
+Formaldehyde-Assisted Isolation of Regulatory Elements sequencing (FAIRE-Seq) and DNase I hypersensitive sites sequencing (DNase-Seq), ATAC-Seq has become popular for discovering
 accessible regions of the genome. The schematic of the ATAC-seq pipeline
 is shown in Figure \ref{fig:mf5}.
 
@@ -352,21 +350,21 @@ grid.raster(img)
 #### Alignment, post-alignment quality control, and peak calling {#m3.3.1 .unnumbered}
 
 Alignment of the ATAC-seq data is performed using `Bowtie2`
-[@langmead2012] with the following parameters: fragments up to 2 kb were
-allowed to align (-X 2000), entire read alignment (--end-to-end),
-suppressing unpaired alignments for paired reads (--no-mixed),
-suppressing discordant alignments for paired reads (--no-discordant) and
+[@langmead2012] with the following parameters: fragments up to 2 kilobase (kb) were
+allowed to align (`-X 2000`), entire read alignment (`--end-to-end`),
+suppressing unpaired alignments for paired reads (`--no-mixed`),
+suppressing discordant alignments for paired reads (`--no-discordant`) and
 minimum acceptable alignment score with respect to the read length
-(--score-min L,-0.4,-0.4). Tn5 inserts adapters separated by 9bp when it
+(`--score-min L,-0.4,-0.4`). Tn5 inserts adapters separated by 9 basepair (bp) when it
 cuts an accessible chromatin region [@kia2017]. This indicates that
 reads on the positive strand should be adjusted 4 bp to the right and
 reads on the negative strands should be shifted 5 bp to the left in
 order for the read start site to reflect the centre of where Tn5 binds
 as done in [@buenrostro2013], which is important for the footprint
-analysis. Using alignmentSieve from deepTools [@ramirez2016], aligned
+analysis. Using `alignmentSieve` from `deepTools` [@ramirez2016], aligned
 data (BAM files) are adjusted for the read start sites to represent the
-centre of the transposon cutting event (--ATACshift), and filtered for
-reads with a high mapping quality (--minMappingQuality 30). In addition,
+centre of the transposon cutting event (`--ATACshift`), and filtered for
+reads with a high mapping quality (`--minMappingQuality 30`). In addition,
 because the mitochondrial genome is devoid of chromatin packaging
 [@bogenhagen2012] a large number of mitochondrial reads can be a concern
 in ATAC-seq. Some ATAC-Seq samples have been found to include 80%
@@ -376,7 +374,7 @@ regions of interest are typically found in the nuclear genome,
 mitochondrial reads are typically excluded from the analysis. Hence,
 reads mapping to the mitochondrial chromosome and ENCODE blacklisted
 regions (regions where genome assembly results in erroneous signal) were
-filtered using alignmentSieve. Because ATAC-seq does not require
+filtered using `alignmentSieve`. Because ATAC-seq does not require
 rigorous size selection during library preparation, it can identify
 nucleosome positions using fragments representing nucleosome-free
 fragments (NFFs) nucleosome monomers, and multimers. There is
@@ -384,17 +382,17 @@ approximately 147 bp of DNA wrapped around a nucleosome, and in order to
 obtain NFFs, which are indicative of transcription factor bindings, the
 fragments less than 147 bp must be extracted. To extract NFFs, all
 aligned files are merged within experimental groups, reads are sorted by
-left-most coordinates and indexed using SAMtools [@li2009], and NFFs
-were obtained by selecting alignments with a template length between 40
-and 140 inclusively [@jung2017; @goodnight2019]. Peak calling is a
+left-most coordinates and indexed using `SAMtools` [@li2009], and NFFs
+were obtained by selecting alignments with a template length between 40 bp
+and 140 bp inclusively [@jung2017; @goodnight2019]. Peak calling is a
 statistical approach that leverages data coverage properties to identify
 locations that are enriched as a result of protein/ transcription factor
 binding. To find regions corresponding to potential OCRs in the
 nucleosome-free regions, we want to identify regions where reads have
 piled up greater than the background read coverage. Peak calling on the
-NFFs is performed using MACS2 [@zhang2008] with genome size in base-pair
-(-g genomeSize) and specifying the paired-end BAM file format (-f
-BAMPE).
+NFFs is performed using `MACS2` [@zhang2008] with genome size in bp
+(`-g genomeSize`) and specifying the paired-end BAM file format (`-f
+BAMPE`).
 
 #### Peaks annotation and differential accessibility analysis {#m3.3.2 .unnumbered}
 
@@ -402,7 +400,7 @@ The goal of peak annotation is to map peaks to the regulatory elements.
 The peaks are annotated with transcript, and the distance to the nearest
 transcription start site, based on overlap with gene transfer format
 (GTF) file obtained from the GENCODE. The number of extended reads
-overlapping in the peak regions is calculated using the csaw package
+overlapping in the peak regions is calculated using the `csaw` package
 [@lun2015]. Peak regions that did not have at least 15 reads in at least
 40% of the samples were filtered out. Normalization factors were
 obtained on the filtered peak regions using the `TMM` normalization
@@ -415,28 +413,28 @@ accessibility analysis [@gontarz2020].
 #### Functional analysis {#m3.3.3 .unnumbered}
 
 GO analysis is performed on differentially accessible regions (DARs)
-with the rGREAT package
+with the `rGREAT` package
 ([github.com/jokergoo/rGREAT](https://github.com/jokergoo/rGREAT)),
 which is a wrapper around the Genomic Regions Enrichment of Annotations
 Tool (GREAT) [@mclean2010]. Transcription factor motif enrichment
-analysis is performed using the marge package [@amezquita2018], which is
-a wrapper around the Homer tool [@heinz2010].
+analysis is performed using the `marge` package [@amezquita2018], which is
+a wrapper around the `Homer` tool [@heinz2010].
 
 #### Differential accessibility analysis at transposable elements {#m3.3.4 .unnumbered}
 
 Transposable elements (TEs) GTF file is obtained from
-[http://labshare.cshl.edu/shares/mhammelllab/www-data/TEtranscripts/TE_GTF/mm10_rmsk_TE.gtf.gz](http://labshare.cshl.edu/shares/mhammelllab/www-data/TEtranscripts/TE_GTF/mm10_rmsk_TE.gtf.gz%20on%2003.02.2020).
+[labshare.cshl.edu/shares/mhammelllab/www-data/TEtranscripts/TE_GTF/mm10_rmsk_TE.gtf.gz](http://labshare.cshl.edu/shares/mhammelllab/www-data/TEtranscripts/TE_GTF/mm10_rmsk_TE.gtf.gz).
 The GTF file provides hierarchical information about TEs: **Class**
 (level 1, eg. LTR), **Family** (level 2, eg. LTR L1), **Subtype** (level
 3, eg. LTR L1 L1_Rod), and **Locus** (level 4, eg. LTR L1 L1_Rod
 L1_Rod_dup1). TE loci are annotated based on overlap with GENCODE as
 described above for ATAC-seq peaks. Filtered BAM files (without reads
 mapping to blacklisted or mitochondrial regions) are used for analyzing
-TEs. Mapped reads are assigned to TEs using featureCounts from the R
+TEs. Mapped reads are assigned to TEs using featureCounts from the `R`
 package `Rsubread` [@liao2019] and were summarized to Subtypes (level
 3), allowing for multi-overlap with fractional counts, while ignoring
 duplicates. The number of extended reads overlapping at the TE loci is
-obtained using the csaw package [@lun2015]. Subtypes that did not have
+obtained using the `csaw` package [@lun2015]. Subtypes that did not have
 at least 15 reads, and loci that did not have at least 5 reads in at
 least 40% of the samples, were filtered out. Normalization and
 differential accessibility analysis is performed as described above for
@@ -474,11 +472,11 @@ grid.raster(img)
 
 Alignment is performed using `Bowtie2`. Reads with more than 3
 mismatches are removed from the aligned data, as suggested in
-[@royo2016], and reads with low mapping quality (--minMappingQuality 30)
+[@royo2016], and reads with low mapping quality (`--minMappingQuality 30`)
 or mapping to the mitochondrial chromosome or aforementioned blacklisted
-regions are also filtered out. Peak calling is performed using MACS2
-with mouse genome size in base-pair (-g genomeSize) and the BAM file
-format (-f BAM/PEBAM), together with the ChIP input sample.
+regions are also filtered out. Peak calling is performed using `MACS2`
+with mouse genome size in bp (`-g genomeSize`) and the BAM file
+format (`-f BAM/PEBAM`), together with the ChIP input sample.
 
 #### Peaks annotation, differential analysis, and functional analysis {#m3.4.2 .unnumbered}
 
@@ -501,7 +499,7 @@ cytosine bases to be distinguished. Following PCR amplification, these
 uracils are converted to thymines. This is followed by the WGBS. WGBS is
 considered a gold-standard technology for DNA methylation detection as
 it provides a qualitative, quantitative, and efficient technique to
-identify 5-methylcytosine at single base-pair resolution. The cost of
+identify 5-methylcytosine at single bp resolution. The cost of
 sequencing an entire genome is typically quite high. As a result,
 despite its use on huge genomes like the human genome, significant
 numbers of individual samples are rarely sequenced. For this reason,
@@ -535,9 +533,9 @@ Further, the DNA code's complexity is reduced. Hence, specialized tools
 are required for aligning the bisulfite sequencing data. Alignment of
 the bisulfite sequencing data is performed using `Bismark`
 [@krueger2011] on a genome index built using
-`Bismark`\_genome_preparation. Methylation information for individual
+`bismark_genome_preparation`. Methylation information for individual
 cytosines (methylation calls) is extracted using the
-`Bismark`\_methylation_extractor tool from the `Bismark` package.
+`bismark_methylation_extractor` tool from the `Bismark` package.
 
 #### Differential methylation analysis {#m3.5.2 .unnumbered}
 
@@ -552,7 +550,7 @@ benchmarked different tools for detecting DMRs
 [dktanwar.github.io/sta426-project-dmr-comparison](https://dktanwar.github.io/sta426-project-dmr-comparison/report/project_report.html)
 and found dmrseq to outperform all other methods that we compared. DMRs
 from RRBS data are identified using the parameters recommended by Dr.
-Keegan Korthauer**,** author of dmrseq
+Keegan Korthauer, author of `dmrseq`,
 ([github.com/kdkorthauer/dmrseq/issues/14](https://github.com/kdkorthauer/dmrseq/issues/14)).
 
 #### Copy number variation analysis {#m3.5.3 .unnumbered}
@@ -560,8 +558,7 @@ Keegan Korthauer**,** author of dmrseq
 The phenomenon of copy number variation (CNV) occurs when regions of the
 genome are repeated and the amount of repeats differs between
 individuals. CNV is a type of structural variation that occurs when a
-duplication or deletion event occurs that impacts a large number of base
-pairs. To infer and visualize CNV from WGBS data, we use the CNVkit
+duplication or deletion event occurs that impacts a large number of bp. To infer and visualize CNV from WGBS data, we use the `CNVkit`
 [@talevich2016].
 
 #### DML and DMR annotation, and functional analysis {#m3.5.4 .unnumbered}
@@ -574,7 +571,7 @@ The short RNA-seq pipeline is not described in this section, as a method
 for analyzing small RNA-seq data has been developed and is discussed in
 detail in Chapter 3.
 
-### Multi-omics analysis {#m3.7 .unnumbered}
+## Multi-omics analysis {#m3.7 .unnumbered}
 
 Using different experiments, followed by sequencing, on the same samples
 or cells/tissues, such as RNA-seq, ATAC-seq, ChIP-seq, and BS-seq,
@@ -626,15 +623,15 @@ grid.raster(img)
 \end{landscape}
 ```
 Visualization of these regions is an essential step. We used
-EnrichedHeatmap [@gu2018] and ComplexHeatmap [@gu2016] packages for the
+`EnrichedHeatmap` [@gu2018] and `ComplexHeatmap` [@gu2016] packages for the
 visualization of categorized DARs.
 
 **ATAC-seq:** ATAC-seq data is the starting point and we first find the
 middle of each DARs. After that, we obtain the coverage for 1kb upstream
 and downstream from the middle of DARs. We use the `normalizeToMatrix`
-function from the EnrichedHeatmap package and normalized the signal
+function from the `EnrichedHeatmap` package and normalized the signal
 using the weighted mean between the intersected parts and un-intersected
-parts(mean_mode = "w0") in a window of 50bp. In the normalized matrix,
+parts(`mean_mode = "w0"`) in a window of 50bp. In the normalized matrix,
 each row corresponds to DAR and each column corresponds to a window
 either on upstream or downstream of middle of the peak.
 
@@ -659,24 +656,24 @@ $$
 $$
 
 Moreover, we also plot the log\textsubscript[2]fold-changes of DARs using
-ComplexHeatmap.
+`ComplexHeatmap`.
 
-**ChIP-seq:** ChIP-seq data coverage for 1kb upstream and downstream
+**ChIP-seq:** ChIP-seq data coverage for 1 kb upstream and downstream
 from the mid of DARs is obtained. We use the `normalizeToMatrix` function
-from the EnrichedHeatmap package and normalized the signal using the
+from the `EnrichedHeatmap` package and normalized the signal using the
 weighted mean between the intersected parts and un-intersected parts
-(mean_mode = "w0") in a window of 50bp.
+(`mean_mode = "w0"`) in a window of 50 bp.
 
-**BS-seq:** BS-seq data methylation values for 1kb upstream and
+**BS-seq:** BS-seq data methylation values for 1 kb upstream and
 downstream from the mid of DARs is obtained. We use the
-`normalizeToMatrix` function from the EnrichedHeatmap package and
-normalized the signal using the mean of all the signals (mean_mode =
-"absolute") in a window of 50bp.
+`normalizeToMatrix` function from the `EnrichedHeatmap` package and
+normalized the signal using the mean of all the signals (`mean_mode =
+"absolute"`) in a window of 50 bp.
 
 $$
 v_{a}=\frac{\sum_{i=1}^{n} x_{i}}{n}
 $$
 
-**RNA-seq:** For RNA-seq data, we used ComplexHeatmap to plot the
+**RNA-seq:** For RNA-seq data, we used `ComplexHeatmap` to plot the
 log\textsubscript[2]-fold-changes of expression values between the groups, and also the
 log\textsubscript[2]-fold-changes obtained after the differential analysis.

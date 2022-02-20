@@ -584,7 +584,7 @@ grid.raster(img)
 
 (ref:efc4) \textbf{Targets of miRNAs from cauda epididymosomes are altered by MSUS in sperm and zygotes.} \newline Cumulative distribution plots of miR-31-5p targets from 5-months old MSUS and control caudal sperm RNA-seq \textbf{A} and from RNA-seq of zygotes originating from 3-months old MSUS and control males \textbf{B}. \newline \textbf{C:} miRNA abundance of sperm plotted against abundance in cauda epididymosomes. Coefficient of determination (_R_\textsuperscript{2}=0.74). \newline \textbf{D:} Dot plot of the top target pathways (adjusted _P_ < 0.05) of miRNAs differentially expressed (adjusted _P_ $\leq$ 0.1) in adult MSUS cauda epididymosomes. Color-scale of the dot represents –log\textsubscript{10} adjusted _P_ of miRNA in a pathway and size of the dot represents –log\textsubscript{10} adjusted _P_ of the pathway.
 
-```{r ef4, echo=FALSE, fig.align='center', fig.cap="(ref:efc4)", fig.width=6.49, fig.height=5.59}
+```{r ef4, echo=FALSE, fig.align='center', fig.cap="(ref:efc4)", fig.width=6.49, fig.height=5.59, fig.scap="Targets of miRNAs from cauda epididymosomes are altered by MSUS in sperm and zygotes"}
 img <- readJPEG("figure/anaraEV/4.jpeg")
 grid.raster(img)
 ```

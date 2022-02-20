@@ -128,7 +128,7 @@ above for processing sRNA-seq data. Our tool is cross-platform (it may
 run on any operating system) and built on the Bioconductor framework, in
 particular making use of efficient data structures (e.g., `DataFrame`,
 `FactorList`, and `TreeSummarizedExperiment`) enabling interoperability with
-other Bioconducto`R` packages. Users can use `shortRNA` to conduct a
+other Bioconductor packages. Users can use `shortRNA` to conduct a
 thorough analysis of their data, from quality control (trimming, adapter
 removal, UMI compressing) and alignment to quantification and downstream
 analysis. `shortRNA` also has a set of customizable criteria for assigning
@@ -142,77 +142,77 @@ unpublished).
 
 ### Development and testing environment
 
-The `shortRNA` package is developed and tested on the Linux (GNU/Linux
-4.4.0-210-generic x86_64) operating system, Ubuntu (version 16.04.7 LTS)
-with 16 processors and 124 GB of RAM, using R 3.6.3 and R 4.0.5. As the
+The `shortRNA` package is developed and tested on the `Linux` (`GNU/Linux
+4.4.0-210-generic x86_64`) operating system, `Ubuntu` (`version 16.04.7 LTS`)
+with 16 processors and 124 GB of RAM, using `R` `v3.6.3` and `R` `v4.0.5`. As the
 `shortRNA` tool is developed as an `R` package, it is platform-independent
 (can easily be installed and run on other operating systems).
 
 ### Backbone data structures of `shortRNA`
 
 The `shortRNA` package is developed around four main data structures from
-Bioconductor: phylo, `FactorList`, `DataFrame`, and
+Bioconductor: `phylo`, `FactorList`, `DataFrame`, and
 `TreeSummarizedExperiment`. These four data structures store the data and
 results in the most efficient manner and enable fast computation.
 
 #### phylo
 
 The phylogenetic tree is a branching diagram used to depict evolutionary
-relationships. In R, the phylo class stores the phylogenetic
+relationships. In `R`, the `phylo` class stores the phylogenetic
 relationship. In `shortRNA`, we save the relationship between RNA
-biotypes, features, and reads as a phylo object, section [Features Tree](#ft).
+biotypes, features, and reads as a `phylo` object, section [Features Tree](#ft).
 
 #### `FactorList`
 
-In the case of a long vector of repeated characters, R takes more memory
+In the case of a long vector of repeated characters, `R` takes more memory
 to store them and also the computation could be quite slow. These
 repeated character vectors could be stored as factors, where levels are
 provided to each unique character in the vector
 (<https://datascience.stackexchange.com/questions/12018/when-to-choose-character-instead-of-factor-in-r>).
 However, when factors are stored in a list, the levels are traditionally
 defined for each element of the list, which can be very inefficient
-memory-wise. The `FactorList`, a class from the IRanges Bioconductor
+memory-wise. The `FactorList`, a class from the `IRanges` Bioconductor
 package, instead stores lists of factors as a single factor vector with
-added list membership information. In addition, like other AtomicList
+added list membership information. In addition, like other `AtomicList`
 objects, it enables list operations without iteration. This is helpful
-for efficiently saving the object in R memory and for fast computations.
+for efficiently saving the object in `R` memory and for fast computations.
 
 #### `DataFrame`
 
-Rectangular data can be stored as `data.frame` class object in R.
-`DataFrame` functions from S4Vectors Bioconducto`R` package and behaves
+Rectangular data can be stored as `data.frame` class object in `R`.
+`DataFrame` functions from `S4Vectors` Bioconductor package and behaves
 similar to `data.frame` in terms of construction and subsetting. An
 advantage of using `DataFrame` is that it can store any type of object in
 a column, for example, a `FactorList`, or even another `DataFrame`, while
 retaining all the methods and functionalities of traditional
-`data.frame`s.
+`data.frame`.
 
 #### `TreeSummarizedExperiment`
 
-`TreeSummarizedExperiment` is a Bioconducto`R` package extending the
+`TreeSummarizedExperiment` is a Bioconductor package extending the
 classical `SummarizedExperiment` [@morgan2020] and with additional
 hierarchy data and operations [@huang2020]. The `SummarizedExperiment`
 class holds rectangular matrices of experiment data, accompanied by row
 and column annotation data. There are two classes in the
-SummarizedExperiment package: `SummarizedExperiment` and
-RangedSummarizedExperiment. Instead of a `DataFrame` of features,
-RangedSummarizedExperiment objects represent genomic ranges of interest.
+`SummarizedExperiment` package: `SummarizedExperiment` and
+`RangedSummarizedExperiment`. Instead of a `DataFrame` of features,
+`RangedSummarizedExperiment` objects represent genomic ranges of interest.
 Figure \ref{fig:3f1}A depicts the structure of the `SummarizedExperiment`. The
-rectangular data matrices are stored as assays, rowData stores
-annotation for corresponding rows in the assays, colData stores
-annotation for corresponding columns in the assays, ranges are described
-by a GRanges or a GRangesList object, which are stored as rowRanges, and
-metadata can be used to store additional data-related information.
+rectangular data matrices are stored as assays, `rowData` stores
+annotation for corresponding rows in the assays, `colData` stores
+annotation for corresponding columns in the `assays`, ranges are described
+by a `GRanges` or a `GRangesList` object, which are stored as `rowRanges`, and
+`metadata` can be used to store additional data-related information.
 
 In extension to the `SummarizedExperiment`, `TreeSummarizedExperiment` has
-rowTree, which stores the hierarchical structure of rows of assays;
-colTree, which stores hierarchical structure of columns of the assays;
-rowLinks, which stores the link information between the rows of the
-assays and rowTree; colLinks, which stores the link information between
-the columns of the assays; and referenceSeq, which stores the reference
+`rowTree`, which stores the hierarchical structure of rows of `assays`;
+`colTree`, which stores hierarchical structure of columns of the `assays`;
+`rowLinks`, which stores the link information between the rows of the
+`assays` and `rowTree`; `colLinks`, which stores the link information between
+the columns of the `assays`; and `referenceSeq`, which stores the reference
 sequence for the features, depicted in Figure \ref{fig:3f1}B.
 
-(ref:3cf1) Schematic of A: `SummarizedExperiment` [@morgan2020], B: `TreeSummarizedExperiment` [@huang2020]
+(ref:3cf1) Schematic of A: `SummarizedExperiment`, taken from [@morgan2020], B: `TreeSummarizedExperiment`, taken from [@huang2020]
 
 ```{r 3f1, echo=FALSE, fig.align='center', fig.cap="(ref:3cf1)", fig.width = 6.44, fig.height=7.18}
 img <- readPNG("figure/shortRNA/in/1.png")
@@ -249,15 +249,15 @@ grid.raster(img)
 
 Quality control (QC) and trimming is a vital step in HTS data analysis.
 To assess and control the quality of sRNA-Seq data, we adapted the
-functionalities from two `R` packages: `Rfastp` [@wang2020] and seqTools
+functionalities from two `R` packages: `Rfastp` [@wang2020] and `seqTools`
 [@kaisers2020]. `Rfastp` is used for trimming the low-quality reads and
 adapter trimming. Further, with the summary files from `Rfastp`, the
 functions in our tool could be used for making a table of comparison for
 before and after QC, plots for duplicated reads, reads quality plot, and
-base-content plots. We benchmarked Biostrings [@pagès2020], qrqc
-[@buffalo2020], ShortRead [@morgan2009], and seqTools for reading and
+base-content plots. We benchmarked `Biostrings` [@pagès2020], `qrqc`
+[@buffalo2020], `ShortRead` [@morgan2009], and `seqTools` for reading and
 storing FASTQ files quality data in `R`, using an 863 MB FASTQ file.
-seqTools outperformed the other three tools in terms of reading and
+`seqTools` outperformed the other three tools in terms of reading and
 storing the FASTQ file quality data, as shown in Figure \ref{fig:3f3}. Hence, we
 used it for reading the FASTQ files quality data, before and after QC,
 to make reads length distribution plots. To summarize, the QC functions
@@ -269,14 +269,14 @@ report of a sample are shown in Figure \ref{fig:3f4}.
 
 (ref:3cf3) Benchmark of four different Bioconductor tools for reading and storing FASTQ file quality data. Performance of four tools is measured in **A:** the amount of time they take for reading the file, **B:** the amount of memory they take to store the data.
 
-```{r 3f3, echo=FALSE, fig.align='center', fig.cap="(ref:3cf3)", fig.width = 5.34, fig.height=2.45}
+```{r 3f3, echo=FALSE, fig.align='center', fig.cap="(ref:3cf3)", fig.width = 5.34, fig.height=2.45, fig.scap="Benchmark of four different Bioconductor tools for reading and storing FASTQ file quality data"}
 img <- readPNG("figure/shortRNA/in/3.png")
 grid.raster(img)
 ```
 
 (ref:3cf4) Exemplary QC report plots of a sperm sample from [@gapp2021]. **A:** Quality control table, **B:** Quality score lines plot at each nucleotide in the sequencing reads, **C:** Barplot of reads duplication level with the mean GC ratio represented as lines, **D:** Histogram of reads distribution, before and after quality control
 
-```{r 3f4, echo=FALSE, fig.align='center', fig.cap="(ref:3cf4)", fig.width = 6.5, fig.height=6.72}
+```{r 3f4, echo=FALSE, fig.align='center', fig.cap="(ref:3cf4)", fig.width = 6.5, fig.height=6.72, fig.scap="Exemplary QC report plots"}
 img <- readPNG("figure/shortRNA/in/4.png")
 grid.raster(img)
 ```
@@ -344,11 +344,7 @@ precursors.
 A miRNA cluster is a group of two or more miRNA hairpins that are
 transcribed from miRNA genes that are physically adjacent, transcribed
 in the same direction, and are not separated by a transcription unit or
-a miRNA in the opposite orientation. There are mostly 2-3 mature miRNAs
-in a miRNA cluster, but there is an existence of a bigger miRNA cluster,
-which is found in humans on chromosome 13: miR-17 to miR-92, involved in
-tumour formation, and development of heart lungs and immune systems
-[@lai2013]. Researchers group the miRNAs to form a miRNA cluster by the
+a miRNA in the opposite orientation. A miRNA cluster typically has 2-3 mature miRNAs, although there is a larger miRNA cluster located on chromosome 13 in humans: miR-17 to miR-92, which is implicated in tumour formation, as well as the development of the heart, lungs, and immune systems [@lai2013]. Researchers group the miRNAs to form a miRNA cluster by the
 distance between them. For example, [@griffiths-jones2008;
 @baumgart2017] call a group of miRNA as clusters if miRNAs are within
 10kb and [@yuan2009] used a distance of 50kb. In `shortRNA`, we use a
@@ -371,7 +367,7 @@ a particular isotype and anticodon. The fifth position represents the
 gene locus ID and for tRNA genes with multiple identical copies, this
 gene locus ID represents the particular gene copy in the genome. For the
 mitochondrial tRNAs, we obtained the sequences from mitotRNAdb
-[@jühling2009] using the tRNAdbImport [@gm2018] `R` package. Further, we
+[@jühling2009] using the `tRNAdbImport` [@gm2018] `R` package. Further, we
 removed all the duplicated sequences and renamed the mitochondrial tRNAs
 as per the naming convention of GtRNADb, adding "mt" as a prefix. Mature
 tRNAs receive a post-transcriptional addition of "CCA" [@barraud2019],
@@ -630,7 +626,7 @@ annotation, `prepareAnnotation()`.
 
 (ref:3cf8) General framework of feature tree and assignment of sequences to the tree. **A:** Example of two sequences. **B:** Alignment of both the sequences to miRNA. **C:** General outline of the feature tree and assignment of both the sequences to the tree
 
-```{r 3f8, echo=FALSE, fig.align='center', fig.cap="(ref:3cf8)", fig.width = 6.41, fig.height=4.43}
+```{r 3f8, echo=FALSE, fig.align='center', fig.cap="(ref:3cf8)", fig.width = 6.41, fig.height=4.43, fig.scap="General framework of feature tree and assignment of sequences to the tree"}
 img <- readPNG("figure/shortRNA/in/8.png")
 grid.raster(img)
 ```
@@ -667,7 +663,7 @@ mapping to; in this case, tRNA-Leu-CAG, Figure \ref{fig:3f11}C.
 
 (ref:3cf11) Multiple assignments of a sequence mapping to a tRNA. **A:** Exemplary sequence. **B:** Multiple sequence alignment plot of the sequence and the features to which it is mapping. **C:** Assignment of the reads to the tRNA feature tree
 
-```{r 3f11, echo=FALSE, fig.align='center', fig.cap="(ref:3cf11)", fig.width = 6.43, fig.height=6}
+```{r 3f11, echo=FALSE, fig.align='center', fig.cap="(ref:3cf11)", fig.width = 6.43, fig.height=6, fig.scap="Multiple assignments of a sequence mapping to a tRNA"}
 img <- readPNG("figure/shortRNA/in/11.png")
 grid.raster(img)
 ```
@@ -699,7 +695,7 @@ hypotheses implemented in `treeclimbR` [@huang2021] for differential
 analysis of features.
 
 Following normalization and differential analysis, users can use the
-`TreeHeatmap`, `ggtree`, and `castro` `R` packages for exploratory data analysis
+`TreeHeatmap`, `ggtree`, and `castor` `R` packages for exploratory data analysis
 and figure creation. The `shortRNA` `makeTracks()` function can be used to
 create genomic tracks, as shown in Figures \ref{fig:3f15}, \ref{fig:3f18a}, and \ref{fig:3f18b}. We intend to
 expand ou`R` package by writing wrappers for these packages in order to
@@ -727,7 +723,7 @@ kable_styling(latex_options = c("striped", "scale_down")) %>%
 ### Datasets used for testing the pipeline
 
 We used a previously published sperm sRNA-seq dataset from [@gapp2021]
-(GEO accession: GSE162112), in which we additionally spiked simulated
+(GEO accession: [GSE162112](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE162112)), in which we additionally spiked simulated
 reads. We also used an unpublished PBMC human dataset from the Schratt
 Lab (<https://schrattlab.ethz.ch/>) at the ETH Zurich, on which qPCR
 were additionally performed for 5 miRNAs (miR-30b-5p, miR-30e-5p,
@@ -890,7 +886,7 @@ correlated with qPCR quantifications than the other methods.
 
 (ref:3cf17) Comparison of quantifications of five miRNAs from four different tools with -Delta Ct values from qPCR. **A:** Overall correlation. **B:** Correlation at indivisual miRNA
 
-```{r 3f17, echo=FALSE, fig.align='center', fig.cap="(ref:3cf17)", fig.width = 6.41, fig.height=8}
+```{r 3f17, echo=FALSE, fig.align='center', fig.cap="(ref:3cf17)", fig.width = 6.41, fig.height=8, fig.scap="Comparison of quantifications of five miRNAs from four different tools with -Delta Ct values from qPCR"}
 img <- readPNG("figure/shortRNA/in/17.png")
 grid.raster(img)
 ```
@@ -935,11 +931,11 @@ tools in the field.
 We present `shortRNA`, an `R` package, a novel tool, for analyzing sRNA-seq
 data, which can reduce the likelihood of false discoveries from the
 sRNA-seq data. `shortRNA` is available from github.com/mansuylab/`shortRNA`
-and is planned to be submitted to the Bioconductor. The `shortRNA` R
+and is planned to be submitted to the Bioconductor. The `shortRNA` `R`
 package is developed around the existing frameworks of Bioconductor:
-phylo, `FactorList`, `DataFrame`, and `TreeSummarizedExperiment`. Hence, it is
+`phylo`, `FactorList`, `DataFrame`, and `TreeSummarizedExperiment`. Hence, it is
 expected to be able to interact seamlessly with many other tools, such
-as `ggtree`, castor, and `TreeHeatmap`. `shortRNA` performs preprocessing,
+as `ggtree`, `castor`, and `TreeHeatmap`. `shortRNA` performs preprocessing,
 alignment, and downstream analysis of the sRNA-seq data. Moreover,
 `shortRNA` is able to deal with the sequencing data with UMIs using `UMIc`.
 Further, if an adapter sequence is unknown, it is possible to detect the

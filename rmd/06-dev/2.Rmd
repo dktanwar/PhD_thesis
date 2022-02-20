@@ -870,7 +870,7 @@ bismark_methylation_extractor tool from the Bismark package (version
 ### High-throughput sequencing data analysis
 
 Data availability:the datasets used in this study are available from the
-following GEO accessions: **GSE___**, GSE49621, GSE49622,
+following GEO accessions: GSE___, GSE49621, GSE49622,
 GSE62355, and GSE49623. An overview of the datasets included in the
 study is shown in Table \ref{tab:devtab1}
 

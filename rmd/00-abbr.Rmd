@@ -1,11 +1,16 @@
 # List of Abbreviations {.unnumbered}
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, eval = TRUE}
 library(readxl)
 library(dplyr)
 library(knitr)
+library(gt)
 df <- read_xlsx("figure/abbr.xlsx")
 colnames(df) <- c("Abbreviation", "Term")
 df %>%  arrange(Term) %>% # i.e. alphabetical order by Term
-  kable(booktab = T) # booktab = T gives us a pretty APA-ish table
+  kable(booktab = T, format = "markdown") # booktab = T gives us a pretty  APA-ish table
+  # gt() %>%
+  # gt::cols_label(Abbreviation = md("**Abbreviation**"),
+  #                Term = md("**Term**"))
 ```
+

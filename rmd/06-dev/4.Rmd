@@ -83,3 +83,5 @@ Supplementary tables are too big to be included in the thesis, hence they are pr
 4. [Supplementary table 1](../../figures/dev/t4.xlsx)
 5. [Supplementary table 1](../../figures/dev/t5.xlsx)
 6. [Supplementary table 1](../../figures/dev/t6.xlsx)
+
+\newpage
