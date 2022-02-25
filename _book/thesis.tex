@@ -4389,11 +4389,12 @@ iMet & 0.8698821 & 9.497592 & 12.18997 & 0.0004805 & 0.0472578\\
 
 \begingroup\LARGE
 
-\texttt{shortRNA}: a flexible framework for the analysis of short RNA sequencing data\newline
-\begingroup\Large
-\normalsize
+\texttt{shortRNA}: a flexible framework for the analysis of short RNA
+sequencing data\newline \begingroup\Large \normalsize
 
-\textbf{Contributions:} \emph{I worked towards the tool development, data analysis, results interpretation. This has been done together with Pierre-Luc Germain.}
+\textbf{Contributions:} \emph{I worked towards the tool development, data
+analysis, results interpretation. This has been done together with
+Pierre-Luc Germain.}
 
 \hypertarget{abstract-2}{%
 \section{Abstract}\label{abstract-2}}
@@ -4416,8 +4417,8 @@ therefore, a need for an analysis framework that is: sufficiently
 tailored to consider the specificities of different classes of short RNA
 and their biogenesis, and sufficiently general and exhaustive to perform
 global analyses. We developed a user-friendly, highly flexible and
-comprehensive \texttt{R} package for a thorough end-to-end analysis of short RNA
-sequencing data (planned submission to Bioconductor). Our package is
+comprehensive \texttt{R} package for a thorough end-to-end analysis of short
+RNA sequencing data (planned submission to Bioconductor). Our package is
 appropriately adapted to take into account the differences between
 different types of short RNA and their biogenesis and is seamlessly
 expandable to include additional annotation. We use a customized genome
@@ -4427,7 +4428,8 @@ to assign reads along a tree of hierarchically organized features. This
 enables the systematic querying, exploration, and differential
 expression analysis of short RNAs at various degrees of granularity,
 from specific sequences to RNA classes. We also include various
-normalization and experimental-bias correction methods.The \texttt{shortRNA} \texttt{R} package is developed to perform all the steps from within \texttt{R} and is
+normalization and experimental-bias correction methods.The \texttt{shortRNA}
+\texttt{R} package is developed to perform all the steps from within \texttt{R} and is
 platform-independent.
 
 \hypertarget{introduction-and-background}{%
@@ -4462,69 +4464,69 @@ The small RNA sequencing (sRNA-Seq) bears challenges and biases that
 researchers need to be informed of in order to properly analyze the
 data. First, most of the methods concentrate on a specific type of short
 RNA, such as \texttt{MINTmap} (\protect\hyperlink{ref-loher2017}{Loher, Telonis, \& Rigoutsos, 2017}) focus on analyzing tRFs, \texttt{TAM\ 2.0}
-(\protect\hyperlink{ref-li2018}{J. Li et al., 2018}), \texttt{Prost!} (\protect\hyperlink{ref-desvignes2019}{Desvignes, Batzel, Sydes, Eames, \& Postlethwait, 2019}), \texttt{Chimira} (\protect\hyperlink{ref-vitsios2015}{Vitsios \& Enright, 2015}), and \texttt{mirTools}
-2.0 (\protect\hyperlink{ref-wu2013}{J. Wu et al., 2013}) focus on miRNAs. Next, a few tools concentrate on most
-types of short RNAs (not all), such as \texttt{ncPRO-seq} (\protect\hyperlink{ref-chen2012}{C.-J. Chen et al., 2012}),
-\texttt{sRNAtoolbox} (\protect\hyperlink{ref-rueda2015}{Rueda et al., 2015}), \texttt{SPAR} (\protect\hyperlink{ref-kuksa2018}{Kuksa et al., 2018}), \texttt{Threshold-seq} (\protect\hyperlink{ref-magee2017}{Magee, Loher, Londin, \& Rigoutsos, 2017}),
-\texttt{sRNAnalyzer} (\protect\hyperlink{ref-wu2017}{Xiaogang Wu et al., 2017}), \texttt{UEA\ sRNA\ Workbench} (\protect\hyperlink{ref-stocks2012}{Stocks et al., 2012}), \texttt{Sports1}
-(\protect\hyperlink{ref-shi2018}{Shi, Ko, Sanders, Chen, \& Zhou, 2018}), and \texttt{Oasis2} (\protect\hyperlink{ref-rahman2018}{Rahman et al., 2018}). Tools that concentrate on many
-types of short RNAs, such as \texttt{Oasis2} and \texttt{Sports1}, perform sequential
-mapping, for example, they perform sequential mapping by first assigning
-the reads to miRNAs, then assigning the leftover to tRNAs, and then the
-remaining ones to mRNAs, which can create a misassignment problem as
-short reads can map to multiple locations. But this information is lost
-because only unmapped reads are aligned against the next annotation. In
-addition, althoughthe libraries for sequencing are tailored to short
-RNAs, other long RNAs are also often detected in the sequencing data,
-and also because short RNAs often overlap with other features,
-prioritization between the biotypes is crucial. Further, there are quite
-a high number of sequenced reads left that map to the reference genome
-but are not assigned to the known features. Moreover, although most of
-the tools do not consider assignment rules for reads assignment, few
-tools such as Prost! have a set of defined rules for reads assignment.
-But, the rules are only for the miRNAs. Furthermore, the multi-mapping
-reads are either excluded or randomly assigned to the multi-mapping
-positions in the genome. As well as, not all the tools deal with the
-post-transcriptional modifications, such as the addition of ``CCA''
-towards the 3' end of tRNAs (\protect\hyperlink{ref-barraud2019}{Barraud \& Tisné, 2019}; \protect\hyperlink{ref-hou2010}{Hou, 2010}; \protect\hyperlink{ref-ibba2000}{Ibba \& Soll, 2000}), which
-is important for the recognition of tRNA by enzymes and translation
-(\protect\hyperlink{ref-green1997}{R. Green \& Noller, 1997}; \protect\hyperlink{ref-sprinzl1979}{Sprinzl \& Cramer, 1979}); and the addition of ``G'' towards the 5' end
-in histidine tRNAs (\protect\hyperlink{ref-cooley1982}{Cooley et al., 1982}; \protect\hyperlink{ref-cozen2015}{Cozen et al., 2015}), this is critical for
-histidyl-tRNA synthetase (HisRS) recognition (\protect\hyperlink{ref-fromant2000}{Fromant, Plateau, \& Blanquet, 2000}), which is
-responsible for the integration of histidine into proteins
-(\protect\hyperlink{ref-freist1999}{Freist, Verhey, Rühlmann, Gauss, \& Arnez, 1999}). On top of these limitations, most of the tools are
-written in different programming languages, are platform-dependent and
-depend on external tools, which can create a barrier for installation
-for the user; and the tools are either web-based, which restrict the
-user for additional downstream analysis or command-line based, which
-creates a restriction for the non-computational researchers. Besides,
-the available tools use feature-based counting (number of reads, counts,
-associated with each feature), except for \texttt{seqpac} (\protect\hyperlink{ref-skog2021}{Skog et al., 2021}), a recently
-published tool, which uses sequence-based counting (number of reads,
-counts, associated with each unique sequence). Sequence-based counting
-would prevent the same sequence from being annotated multiple times
-within and across samples, hence increasing the efficiency for alignment
-and reads assignment. Also, it directly enables looking at specific
-variations in sequences or their boundaries. However, due to this
-complexity, it can be challenging to explore data at the level of
-individual sequences, which calls for methods that can afford different
-levels of granularity. Hence, specialized tools are required with
-specialized pipelines to analyze sRNA-seq data.
+(\protect\hyperlink{ref-li2018}{J. Li et al., 2018}), \texttt{Prost!} (\protect\hyperlink{ref-desvignes2019}{Desvignes, Batzel, Sydes, Eames, \& Postlethwait, 2019}), \texttt{Chimira} (\protect\hyperlink{ref-vitsios2015}{Vitsios \& Enright, 2015}), and
+\texttt{mirTools} 2.0 (\protect\hyperlink{ref-wu2013}{J. Wu et al., 2013}) focus on miRNAs. Next, a few tools concentrate
+on most types of short RNAs (not all), such as \texttt{ncPRO-seq} (\protect\hyperlink{ref-chen2012}{C.-J. Chen et al., 2012}),
+\texttt{sRNAtoolbox} (\protect\hyperlink{ref-rueda2015}{Rueda et al., 2015}), \texttt{SPAR} (\protect\hyperlink{ref-kuksa2018}{Kuksa et al., 2018}), \texttt{Threshold-seq}
+(\protect\hyperlink{ref-magee2017}{Magee, Loher, Londin, \& Rigoutsos, 2017}), \texttt{sRNAnalyzer} (\protect\hyperlink{ref-wu2017}{Xiaogang Wu et al., 2017}), \texttt{UEA\ sRNA\ Workbench}
+(\protect\hyperlink{ref-stocks2012}{Stocks et al., 2012}), \texttt{Sports1} (\protect\hyperlink{ref-shi2018}{Shi, Ko, Sanders, Chen, \& Zhou, 2018}), and \texttt{Oasis2} (\protect\hyperlink{ref-rahman2018}{Rahman et al., 2018}). Tools
+that concentrate on many types of short RNAs, such as \texttt{Oasis2} and
+\texttt{Sports1}, perform sequential mapping, for example, they perform
+sequential mapping by first assigning the reads to miRNAs, then
+assigning the leftover to tRNAs, and then the remaining ones to mRNAs,
+which can create a misassignment problem as short reads can map to
+multiple locations. But this information is lost because only unmapped
+reads are aligned against the next annotation. In addition, althoughthe
+libraries for sequencing are tailored to short RNAs, other long RNAs are
+also often detected in the sequencing data, and also because short RNAs
+often overlap with other features, prioritization between the biotypes
+is crucial. Further, there are quite a high number of sequenced reads
+left that map to the reference genome but are not assigned to the known
+features. Moreover, although most of the tools do not consider
+assignment rules for reads assignment, few tools such as Prost! have a
+set of defined rules for reads assignment. But, the rules are only for
+the miRNAs. Furthermore, the multi-mapping reads are either excluded or
+randomly assigned to the multi-mapping positions in the genome. As well
+as, not all the tools deal with the post-transcriptional modifications,
+such as the addition of ``CCA'' towards the 3' end of tRNAs (\protect\hyperlink{ref-barraud2019}{Barraud \& Tisné, 2019}; \protect\hyperlink{ref-hou2010}{Hou, 2010}; \protect\hyperlink{ref-ibba2000}{Ibba \& Soll, 2000}), which is important for the recognition of tRNA
+by enzymes and translation (\protect\hyperlink{ref-green1997}{R. Green \& Noller, 1997}; \protect\hyperlink{ref-sprinzl1979}{Sprinzl \& Cramer, 1979}); and the addition
+of ``G'' towards the 5' end in histidine tRNAs (\protect\hyperlink{ref-cooley1982}{Cooley et al., 1982}; \protect\hyperlink{ref-cozen2015}{Cozen et al., 2015}),
+this is critical for histidyl-tRNA synthetase (HisRS) recognition
+(\protect\hyperlink{ref-fromant2000}{Fromant, Plateau, \& Blanquet, 2000}), which is responsible for the integration of histidine
+into proteins (\protect\hyperlink{ref-freist1999}{Freist, Verhey, Rühlmann, Gauss, \& Arnez, 1999}). On top of these limitations, most of the
+tools are written in different programming languages, are
+platform-dependent and depend on external tools, which can create a
+barrier for installation for the user; and the tools are either
+web-based, which restrict the user for additional downstream analysis or
+command-line based, which creates a restriction for the
+non-computational researchers. Besides, the available tools use
+feature-based counting (number of reads, counts, associated with each
+feature), except for \texttt{seqpac} (\protect\hyperlink{ref-skog2021}{Skog et al., 2021}), a recently published tool,
+which uses sequence-based counting (number of reads, counts, associated
+with each unique sequence). Sequence-based counting would prevent the
+same sequence from being annotated multiple times within and across
+samples, hence increasing the efficiency for alignment and reads
+assignment. Also, it directly enables looking at specific variations in
+sequences or their boundaries. However, due to this complexity, it can
+be challenging to explore data at the level of individual sequences,
+which calls for methods that can afford different levels of granularity.
+Hence, specialized tools are required with specialized pipelines to
+analyze sRNA-seq data.
 
-We developed \texttt{shortRNA}, an R tool that addresses all of the issues listed
-above for processing sRNA-seq data. Our tool is cross-platform (it may
-run on any operating system) and built on the Bioconductor framework, in
-particular making use of efficient data structures (e.g., \texttt{DataFrame},
-\texttt{FactorList}, and \texttt{TreeSummarizedExperiment}) enabling interoperability with
-other Bioconductor packages. Users can use \texttt{shortRNA} to conduct a
-thorough analysis of their data, from quality control (trimming, adapter
-removal, UMI compressing) and alignment to quantification and downstream
-analysis. \texttt{shortRNA} also has a set of customizable criteria for assigning
-reads to various types of short RNAs and seamlessly enables querying
-features at the level of individual fragments. We have tested our tool
-using a published mouse dataset from sperm, simulated data from sperm,
-and human data from peripheral blood mononuclear cells (PBMC;
-unpublished).
+We developed \texttt{shortRNA}, an R tool that addresses all of the issues
+listed above for processing sRNA-seq data. Our tool is cross-platform
+(it may run on any operating system) and built on the Bioconductor
+framework, in particular making use of efficient data structures (e.g.,
+\texttt{DataFrame}, \texttt{FactorList}, and \texttt{TreeSummarizedExperiment}) enabling
+interoperability with other Bioconductor packages. Users can use
+\texttt{shortRNA} to conduct a thorough analysis of their data, from quality
+control (trimming, adapter removal, UMI compressing) and alignment to
+quantification and downstream analysis. \texttt{shortRNA} also has a set of
+customizable criteria for assigning reads to various types of short RNAs
+and seamlessly enables querying features at the level of individual
+fragments. We have tested our tool using a published mouse dataset from
+sperm, simulated data from sperm, and human data from peripheral blood
+mononuclear cells (PBMC; unpublished).
 
 \hypertarget{methods-2}{%
 \section{Methods}\label{methods-2}}
@@ -4532,18 +4534,20 @@ unpublished).
 \hypertarget{development-and-testing-environment}{%
 \subsection{Development and testing environment}\label{development-and-testing-environment}}
 
-The \texttt{shortRNA} package is developed and tested on the \texttt{Linux} (\texttt{GNU/Linux\ 4.4.0-210-generic\ x86\_64}) operating system, \texttt{Ubuntu} (\texttt{version\ 16.04.7\ LTS})
-with 16 processors and 124 GB of RAM, using \texttt{R} \texttt{v3.6.3} and \texttt{R} \texttt{v4.0.5}. As the
-\texttt{shortRNA} tool is developed as an \texttt{R} package, it is platform-independent
-(can easily be installed and run on other operating systems).
+The \texttt{shortRNA} package is developed and tested on the \texttt{Linux}
+(\texttt{GNU/Linux\ 4.4.0-210-generic\ x86\_64}) operating system, \texttt{Ubuntu}
+(\texttt{version\ 16.04.7\ LTS}) with 16 processors and 124 GB of RAM, using \texttt{R}
+\texttt{v3.6.3} and \texttt{R} \texttt{v4.0.5}. As the \texttt{shortRNA} tool is developed as an \texttt{R}
+package, it is platform-independent (can easily be installed and run on
+other operating systems).
 
 \hypertarget{backbone-data-structures-of-shortrna}{%
 \subsection{\texorpdfstring{Backbone data structures of \texttt{shortRNA}}{Backbone data structures of shortRNA}}\label{backbone-data-structures-of-shortrna}}
 
-The \texttt{shortRNA} package is developed around four main data structures from
-Bioconductor: \texttt{phylo}, \texttt{FactorList}, \texttt{DataFrame}, and
-\texttt{TreeSummarizedExperiment}. These four data structures store the data and
-results in the most efficient manner and enable fast computation.
+The \texttt{shortRNA} package is developed around four main data structures
+from Bioconductor: \texttt{phylo}, \texttt{FactorList}, \texttt{DataFrame}, and
+\texttt{TreeSummarizedExperiment}. These four data structures store the data
+and results in the most efficient manner and enable fast computation.
 
 \hypertarget{phylo}{%
 \subsubsection{phylo}\label{phylo}}
@@ -4551,13 +4555,14 @@ results in the most efficient manner and enable fast computation.
 The phylogenetic tree is a branching diagram used to depict evolutionary
 relationships. In \texttt{R}, the \texttt{phylo} class stores the phylogenetic
 relationship. In \texttt{shortRNA}, we save the relationship between RNA
-biotypes, features, and reads as a \texttt{phylo} object, section \protect\hyperlink{ft}{Features Tree}.
+biotypes, features, and reads as a \texttt{phylo} object, section \protect\hyperlink{ft}{Features
+Tree}.
 
 \hypertarget{factorlist}{%
 \subsubsection{\texorpdfstring{\texttt{FactorList}}{FactorList}}\label{factorlist}}
 
-In the case of a long vector of repeated characters, \texttt{R} takes more memory
-to store them and also the computation could be quite slow. These
+In the case of a long vector of repeated characters, \texttt{R} takes more
+memory to store them and also the computation could be quite slow. These
 repeated character vectors could be stored as factors, where levels are
 provided to each unique character in the vector
 (\url{https://datascience.stackexchange.com/questions/12018/when-to-choose-character-instead-of-factor-in-r}).
@@ -4567,7 +4572,8 @@ memory-wise. The \texttt{FactorList}, a class from the \texttt{IRanges} Biocondu
 package, instead stores lists of factors as a single factor vector with
 added list membership information. In addition, like other \texttt{AtomicList}
 objects, it enables list operations without iteration. This is helpful
-for efficiently saving the object in \texttt{R} memory and for fast computations.
+for efficiently saving the object in \texttt{R} memory and for fast
+computations.
 
 \hypertarget{dataframe}{%
 \subsubsection{\texorpdfstring{\texttt{DataFrame}}{DataFrame}}\label{dataframe}}
@@ -4575,9 +4581,9 @@ for efficiently saving the object in \texttt{R} memory and for fast computations
 Rectangular data can be stored as \texttt{data.frame} class object in \texttt{R}.
 \texttt{DataFrame} functions from \texttt{S4Vectors} Bioconductor package and behaves
 similar to \texttt{data.frame} in terms of construction and subsetting. An
-advantage of using \texttt{DataFrame} is that it can store any type of object in
-a column, for example, a \texttt{FactorList}, or even another \texttt{DataFrame}, while
-retaining all the methods and functionalities of traditional
+advantage of using \texttt{DataFrame} is that it can store any type of object
+in a column, for example, a \texttt{FactorList}, or even another \texttt{DataFrame},
+while retaining all the methods and functionalities of traditional
 \texttt{data.frame}.
 
 \hypertarget{treesummarizedexperiment}{%
@@ -4590,21 +4596,24 @@ class holds rectangular matrices of experiment data, accompanied by row
 and column annotation data. There are two classes in the
 \texttt{SummarizedExperiment} package: \texttt{SummarizedExperiment} and
 \texttt{RangedSummarizedExperiment}. Instead of a \texttt{DataFrame} of features,
-\texttt{RangedSummarizedExperiment} objects represent genomic ranges of interest.
-Figure \ref{fig:3f1}A depicts the structure of the \texttt{SummarizedExperiment}. The
-rectangular data matrices are stored as assays, \texttt{rowData} stores
-annotation for corresponding rows in the assays, \texttt{colData} stores
-annotation for corresponding columns in the \texttt{assays}, ranges are described
-by a \texttt{GRanges} or a \texttt{GRangesList} object, which are stored as \texttt{rowRanges}, and
-\texttt{metadata} can be used to store additional data-related information.
+\texttt{RangedSummarizedExperiment} objects represent genomic ranges of
+interest. Figure \ref{fig:3f1}A depicts the structure of the
+\texttt{SummarizedExperiment}. The rectangular data matrices are stored as
+assays, \texttt{rowData} stores annotation for corresponding rows in the
+assays, \texttt{colData} stores annotation for corresponding columns in the
+\texttt{assays}, ranges are described by a \texttt{GRanges} or a \texttt{GRangesList} object,
+which are stored as \texttt{rowRanges}, and \texttt{metadata} can be used to store
+additional data-related information.
 
-In extension to the \texttt{SummarizedExperiment}, \texttt{TreeSummarizedExperiment} has
-\texttt{rowTree}, which stores the hierarchical structure of rows of \texttt{assays};
-\texttt{colTree}, which stores hierarchical structure of columns of the \texttt{assays};
-\texttt{rowLinks}, which stores the link information between the rows of the
-\texttt{assays} and \texttt{rowTree}; \texttt{colLinks}, which stores the link information between
-the columns of the \texttt{assays}; and \texttt{referenceSeq}, which stores the reference
-sequence for the features, depicted in Figure \ref{fig:3f1}B.
+In extension to the \texttt{SummarizedExperiment}, \texttt{TreeSummarizedExperiment}
+has \texttt{rowTree}, which stores the hierarchical structure of rows of
+\texttt{assays}; \texttt{colTree}, which stores hierarchical structure of columns of
+the \texttt{assays}; \texttt{rowLinks}, which stores the link information between the
+rows of the \texttt{assays} and \texttt{rowTree}; \texttt{colLinks}, which stores the link
+information between the columns of the \texttt{assays}; and \texttt{referenceSeq},
+which stores the reference sequence for the features, depicted in Figure
+\ref{fig:3f1}B.
+
 
 
 \begin{figure}[htbp]
@@ -4613,7 +4622,8 @@ sequence for the features, depicted in Figure \ref{fig:3f1}B.
 
 }
 
-\caption{Schematic of A: \texttt{SummarizedExperiment}, taken from (\protect\hyperlink{ref-morgan2020}{M. Morgan et al., 2020}), B: \texttt{TreeSummarizedExperiment}, taken from (\protect\hyperlink{ref-huang2020}{R. Huang et al., 2020})}\label{fig:3f1}
+\caption{Schematic of A: \texttt{SummarizedExperiment}, taken from
+(\protect\hyperlink{ref-morgan2020}{M. Morgan et al., 2020}), B: \texttt{TreeSummarizedExperiment}, taken from (\protect\hyperlink{ref-huang2020}{R. Huang et al., 2020})}\label{fig:3f1}
 \end{figure}
 \hypertarget{pipeline}{%
 \subsection{Pipeline}\label{pipeline}}
@@ -4621,20 +4631,21 @@ sequence for the features, depicted in Figure \ref{fig:3f1}B.
 The \texttt{shortRNA} pipeline includes three major data analysis steps:
 preprocessing of data, alignment and reads assignment with the
 customisable assignment rules, and statistical analysis and
-visualization. Figure \ref{fig:3f2} shows the outline of the pipeline. First, the
-data goes through the preprocessing steps that consist of filtering and
-alignment of unique sequenced reads. The raw data undergo quality
-assessment and then the quality control steps are performed. The data is
-then aligned to a custom genome containing, in addition to the reference
-genome, extra pseudo-chromosomes for handling post-transcriptional
-modifications. Aligned reads are then overlapped with the features
-annotation and reads are assigned to the features using customisable
-assignment rules, which is an important part of this pipeline, after
-that, a features tree is formed. After the reads assignment, the data
-goes through the statistical analysis steps that consist of
-normalization and differential analysis. The quality controlled data are
-normalized and then the test for differential expression of short RNAs
-is performed in the user-defined biological groups.
+visualization. Figure \ref{fig:3f2} shows the outline of the pipeline.
+First, the data goes through the preprocessing steps that consist of
+filtering and alignment of unique sequenced reads. The raw data undergo
+quality assessment and then the quality control steps are performed. The
+data is then aligned to a custom genome containing, in addition to the
+reference genome, extra pseudo-chromosomes for handling
+post-transcriptional modifications. Aligned reads are then overlapped
+with the features annotation and reads are assigned to the features
+using customisable assignment rules, which is an important part of this
+pipeline, after that, a features tree is formed. After the reads
+assignment, the data goes through the statistical analysis steps that
+consist of normalization and differential analysis. The quality
+controlled data are normalized and then the test for differential
+expression of short RNAs is performed in the user-defined biological
+groups.
 
 
 \begin{figure}[htbp]
@@ -4650,23 +4661,27 @@ is performed in the user-defined biological groups.
 
 Quality control (QC) and trimming is a vital step in HTS data analysis.
 To assess and control the quality of sRNA-Seq data, we adapted the
-functionalities from two \texttt{R} packages: \texttt{Rfastp} (\protect\hyperlink{ref-wang2020}{W. Wang \& Carroll, 2020}) and \texttt{seqTools}
-(\protect\hyperlink{ref-kaisers2020}{Kaisers, 2020}). \texttt{Rfastp} is used for trimming the low-quality reads and
-adapter trimming. Further, with the summary files from \texttt{Rfastp}, the
-functions in our tool could be used for making a table of comparison for
-before and after QC, plots for duplicated reads, reads quality plot, and
-base-content plots. We benchmarked \texttt{Biostrings} (\protect\hyperlink{ref-paguxe8s2020}{Pagès, Aboyoun, Gentleman, \& DebRoy, 2020}), \texttt{qrqc}
-(\protect\hyperlink{ref-buffalo2020}{Buffalo, 2020}), \texttt{ShortRead} (\protect\hyperlink{ref-morgan2009}{M. Morgan et al., 2009}), and \texttt{seqTools} for reading and
-storing FASTQ files quality data in \texttt{R}, using an 863 MB FASTQ file.
-\texttt{seqTools} outperformed the other three tools in terms of reading and
-storing the FASTQ file quality data, as shown in Figure \ref{fig:3f3}. Hence, we
-used it for reading the FASTQ files quality data, before and after QC,
-to make reads length distribution plots. To summarize, the QC functions
-provide information about sequencing depth, reads quality, possible
-adapter sequences, duplicated reads, and sequence length distribution,
-both before and after QC. The interactive plots provide users with
-greater insight into their data. Exemplary plots and tables from the QC
-report of a sample are shown in Figure \ref{fig:3f4}.
+functionalities from two \texttt{R} packages: \texttt{Rfastp} (\protect\hyperlink{ref-wang2020}{W. Wang \& Carroll, 2020}) and
+\texttt{seqTools} (\protect\hyperlink{ref-kaisers2020}{Kaisers, 2020}). \texttt{Rfastp} is used for trimming the low-quality
+reads and adapter trimming. Further, with the summary files from
+\texttt{Rfastp}, the functions in our tool could be used for making a table of
+comparison for before and after QC, plots for duplicated reads, reads
+quality plot, and base-content plots. We benchmarked \texttt{Biostrings}
+(\protect\hyperlink{ref-paguxe8s2020}{Pagès, Aboyoun, Gentleman, \& DebRoy, 2020}), \texttt{qrqc} (\protect\hyperlink{ref-buffalo2020}{Buffalo, 2020}), \texttt{ShortRead} (\protect\hyperlink{ref-morgan2009}{M. Morgan et al., 2009}), and
+\texttt{seqTools} for reading and storing FASTQ files quality data in \texttt{R},
+using an 863 MB FASTQ file. \texttt{seqTools} outperformed the other three
+tools in terms of reading and storing the FASTQ file quality data, as
+shown in Figure \ref{fig:3f3}. Hence, we used it for reading the FASTQ
+files quality data, before and after QC, to make reads length
+distribution plots. To summarize, the QC functions provide information
+about sequencing depth, reads quality, possible adapter sequences,
+duplicated reads, and sequence length distribution, both before and
+after QC. The interactive plots provide users with greater insight into
+their data. Exemplary plots and tables from the QC report of a sample
+are shown in Figure \ref{fig:3f4}.
+
+
+
 
 
 \begin{figure}[htbp]
@@ -4675,8 +4690,15 @@ report of a sample are shown in Figure \ref{fig:3f4}.
 
 }
 
-\caption[Benchmark of four different Bioconductor tools for reading and storing FASTQ file quality data]{Benchmark of four different Bioconductor tools for reading and storing FASTQ file quality data. Performance of four tools is measured in \textbf{A:} the amount of time they take for reading the file, \textbf{B:} the amount of memory they take to store the data.}\label{fig:3f3}
+\caption[Benchmark of four different Bioconductor tools for reading and storing FASTQ file quality data]{Benchmark of four different Bioconductor tools for reading
+and storing FASTQ file quality data. Performance of four tools is
+measured in \textbf{A:} the amount of time they take for reading the file,
+\textbf{B:} the amount of memory they take to store the data.}\label{fig:3f3}
 \end{figure}
+
+
+
+
 
 \begin{figure}[htbp]
 
@@ -4684,7 +4706,11 @@ report of a sample are shown in Figure \ref{fig:3f4}.
 
 }
 
-\caption[Exemplary QC report plots]{Exemplary QC report plots of a sperm sample from (\protect\hyperlink{ref-gapp2021}{Katharina Gapp et al., 2021}). \textbf{A:} Quality control table, \textbf{B:} Quality score lines plot at each nucleotide in the sequencing reads, \textbf{C:} Barplot of reads duplication level with the mean GC ratio represented as lines, \textbf{D:} Histogram of reads distribution, before and after quality control}\label{fig:3f4}
+\caption[Exemplary QC report plots]{Exemplary QC report plots of a sperm sample from (\protect\hyperlink{ref-gapp2021}{Katharina Gapp et al., 2021}).
+\textbf{A:} Quality control table, \textbf{B:} Quality score lines plot at each
+nucleotide in the sequencing reads, \textbf{C:} Barplot of reads duplication
+level with the mean GC ratio represented as lines, \textbf{D:} Histogram of
+reads distribution, before and after quality control}\label{fig:3f4}
 \end{figure}
 Unique Molecular Identifiers (UMIs) are complex indices of 8-16
 nucleotide lengths that are introduced to sequencing libraries before
@@ -4699,7 +4725,11 @@ takes into account the frequency and the Phred quality of nucleotides
 and the distances between the UMIs and the actual sequences for
 collapsing the sequences.
 
-Schematic of quality checks and quality control is shown in Figure \ref{fig:3f5}.
+Schematic of quality checks and quality control is shown in Figure
+\ref{fig:3f5}.
+
+
+
 
 
 \begin{figure}[htbp]
@@ -4708,7 +4738,10 @@ Schematic of quality checks and quality control is shown in Figure \ref{fig:3f5}
 
 }
 
-\caption{Schematic of quality check and quality control of FASTQ files, UMIs collapsing (if present), and collapsing FASTQ files to obtain unique sequences for alignment and making a sequence by samples counts matrix}\label{fig:3f5}
+\caption{Schematic of quality check and quality control of FASTQ
+files, UMIs collapsing (if present), and collapsing FASTQ files to
+obtain unique sequences for alignment and making a sequence by samples
+counts matrix}\label{fig:3f5}
 \end{figure}
 \hypertarget{sequence-count-matrix}{%
 \subsubsection{Sequence count matrix}\label{sequence-count-matrix}}
@@ -4716,11 +4749,11 @@ Schematic of quality checks and quality control is shown in Figure \ref{fig:3f5}
 From the trimmed FASTQ files, we extract the unique reads sequences and
 make a sample by sequence count matrix. This matrix represents the
 counts of sequences in each sample, keeping only sequences occurring
-more than once. This is done by the \texttt{fastq2SeqCountMatrix()} function from
-\texttt{shortRNA}. Further, we export these sequences as a fasta file. An
-overview of this step is shown in Figure \ref{fig:3f5}. The two main outputs from
-this step are sequenceFasta, which would be used for alignment, and
-countsMatrix.
+more than once. This is done by the \texttt{fastq2SeqCountMatrix()} function
+from \texttt{shortRNA}. Further, we export these sequences as a fasta file. An
+overview of this step is shown in Figure \ref{fig:3f5}. The two main
+outputs from this step are sequenceFasta, which would be used for
+alignment, and countsMatrix.
 
 \hypertarget{annotation-preparation}{%
 \subsubsection{Annotation preparation}\label{annotation-preparation}}
@@ -4753,8 +4786,12 @@ precursors.
 A miRNA cluster is a group of two or more miRNA hairpins that are
 transcribed from miRNA genes that are physically adjacent, transcribed
 in the same direction, and are not separated by a transcription unit or
-a miRNA in the opposite orientation. A miRNA cluster typically has 2-3 mature miRNAs, although there is a larger miRNA cluster located on chromosome 13 in humans: miR-17 to miR-92, which is implicated in tumour formation, as well as the development of the heart, lungs, and immune systems (\protect\hyperlink{ref-lai2013}{Lai \& Vera, 2013}). Researchers group the miRNAs to form a miRNA cluster by the
-distance between them. For example, (\protect\hyperlink{ref-baumgart2017}{Baumgart et al., 2017}; \protect\hyperlink{ref-griffiths-jones2008}{Griffiths-Jones et al., 2008}) call a group of miRNA as clusters if miRNAs are within
+a miRNA in the opposite orientation. A miRNA cluster typically has 2-3
+mature miRNAs, although there is a larger miRNA cluster located on
+chromosome 13 in humans: miR-17 to miR-92, which is implicated in tumour
+formation, as well as the development of the heart, lungs, and immune
+systems (\protect\hyperlink{ref-lai2013}{Lai \& Vera, 2013}). Researchers group the miRNAs to form a miRNA cluster
+by the distance between them. For example, (\protect\hyperlink{ref-baumgart2017}{Baumgart et al., 2017}; \protect\hyperlink{ref-griffiths-jones2008}{Griffiths-Jones et al., 2008}) call a group of miRNA as clusters if miRNAs are within
 10kb and (\protect\hyperlink{ref-yuan2009}{Yuan et al., 2009}) used a distance of 50kb. In \texttt{shortRNA}, we use a
 distance of 10kb for clustering miRNAs as more than 40\% of
 experimentally validated human miRNA cluster genes have been identified
@@ -4774,14 +4811,16 @@ a particular isotype and anticodon. The fifth position represents the
 gene locus ID and for tRNA genes with multiple identical copies, this
 gene locus ID represents the particular gene copy in the genome. For the
 mitochondrial tRNAs, we obtained the sequences from mitotRNAdb
-(\protect\hyperlink{ref-juxfchling2009}{Jühling et al., 2009}) using the \texttt{tRNAdbImport} (\protect\hyperlink{ref-gm2018}{GM, 2018}) \texttt{R} package. Further, we
-removed all the duplicated sequences and renamed the mitochondrial tRNAs
-as per the naming convention of GtRNADb, adding ``mt'' as a prefix. Mature
-tRNAs receive a post-transcriptional addition of ``CCA'' (\protect\hyperlink{ref-barraud2019}{Barraud \& Tisné, 2019}),
-hence, we added ``CCA'' to all the tRNA/ mt-tRNA sequences at the 3' end.
-All histidine tRNAs of known sequence are one nucleotide longer at the
-5' end than are other tRNA species(\protect\hyperlink{ref-cozen2015}{Cozen et al., 2015}),hence we added ``G'' at the 5' end of the sequences of Histidine tRNAs/ mt-tRNAs to account for this post-translational modification, as also
-done in (\protect\hyperlink{ref-cozen2015}{Cozen et al., 2015}; \protect\hyperlink{ref-shi2018}{Shi et al., 2018}). Because of these post-transcriptional
+(\protect\hyperlink{ref-juxfchling2009}{Jühling et al., 2009}) using the \texttt{tRNAdbImport} (\protect\hyperlink{ref-gm2018}{GM, 2018}) \texttt{R} package. Further,
+we removed all the duplicated sequences and renamed the mitochondrial
+tRNAs as per the naming convention of GtRNADb, adding ``mt'' as a prefix.
+Mature tRNAs receive a post-transcriptional addition of ``CCA''
+(\protect\hyperlink{ref-barraud2019}{Barraud \& Tisné, 2019}), hence, we added ``CCA'' to all the tRNA/ mt-tRNA sequences
+at the 3' end. All histidine tRNAs of known sequence are one nucleotide
+longer at the 5' end than are other tRNA species(\protect\hyperlink{ref-cozen2015}{Cozen et al., 2015}),hence we
+added ``G'' at the 5' end of the sequences of Histidine tRNAs/ mt-tRNAs to
+account for this post-translational modification, as also done in
+(\protect\hyperlink{ref-cozen2015}{Cozen et al., 2015}; \protect\hyperlink{ref-shi2018}{Shi et al., 2018}). Because of these post-transcriptional
 modifications, we add the sequences of tRNA into the genome FASTA file
 as pseudo chromosomes. For example:
 \begin{Shaded}
@@ -4804,15 +4843,17 @@ sequences and are masked in the genomes in the Ensembl database, and are
 not listed in the features annotation. Hence, we add them as well as
 pseudo chromosomes to the genome FASTA file, similar to tRNAs.
 
-\texttt{getDB()}, Figure \ref{fig:3f6}, function retrieve the databases, account for the
-post-translational modifications of tRNAs, alter mitochondrial tRNA
-database, and create miRNA clusters and assign miRNAs and miRNA
-precursors to miRNA clusters. The output from \texttt{getDB()} is then parsed to
-the \texttt{prepareAnnotation()} function, which prepares features annotation as
-\texttt{GRanges()}, save the genome and pseudo-genomes and index that for
-alignment. Features annotation are then converted to \texttt{FactorList} using
-\texttt{featuresAnnoToFL()}. The main three outputs from the annotation
-preparation are features as \texttt{GRanges()} and \texttt{FactorList()}, and \texttt{indexed\ customGenome}.
+\texttt{getDB()}, Figure \ref{fig:3f6}, function retrieve the databases,
+account for the post-translational modifications of tRNAs, alter
+mitochondrial tRNA database, and create miRNA clusters and assign miRNAs
+and miRNA precursors to miRNA clusters. The output from \texttt{getDB()} is
+then parsed to the \texttt{prepareAnnotation()} function, which prepares
+features annotation as \texttt{GRanges()}, save the genome and pseudo-genomes
+and index that for alignment. Features annotation are then converted to
+\texttt{FactorList} using \texttt{featuresAnnoToFL()}. The main three outputs from the
+annotation preparation are features as \texttt{GRanges()} and \texttt{FactorList()},
+and \texttt{indexed\ customGenome}.
+
 
 
 \begin{figure}[htbp]
@@ -4821,7 +4862,8 @@ preparation are features as \texttt{GRanges()} and \texttt{FactorList()}, and \t
 
 }
 
-\caption{Schematic of obtaining database, preparing annotations and custom genome indexes for alignment}\label{fig:3f6}
+\caption{Schematic of obtaining database, preparing annotations and
+custom genome indexes for alignment}\label{fig:3f6}
 \end{figure}
 \hypertarget{alignment}{%
 \subsubsection{Alignment}\label{alignment}}
@@ -4832,10 +4874,11 @@ align the FASTA file of sequences with the custom genome prepared in the
 annotation step. For alignment, we use the \texttt{Rsubread} \texttt{R} package
 (\protect\hyperlink{ref-liao2019}{Liao et al., 2019}) with the index of custom genome generated on the genome and
 pseudo-chromosomes (\texttt{index\ =\ "customGenome"}), with the GTF from Ensembl
-database obtained from \texttt{getDB()} of \texttt{shortRNA} (\texttt{GTF\ =\ exonsBy(db\$ensdb)}),
-and allowing to report the maximal number of equally-best mapping
-locations (\texttt{nBestLocations\ =\ 16}). Please refer to the schematic in Figure
-\ref{fig:3f7}.
+database obtained from \texttt{getDB()} of \texttt{shortRNA}
+(\texttt{GTF\ =\ exonsBy(db\$ensdb)}), and allowing to report the maximal number
+of equally-best mapping locations (\texttt{nBestLocations\ =\ 16}). Please refer
+to the schematic in Figure \ref{fig:3f7}.
+
 
 
 \begin{figure}[htbp]
@@ -4844,27 +4887,28 @@ locations (\texttt{nBestLocations\ =\ 16}). Please refer to the schematic in Fig
 
 }
 
-\caption{Schematic of alignment, overlapping features and aligned sequences, and assigning reads to features using assignment rules}\label{fig:3f7}
+\caption{Schematic of alignment, overlapping features and aligned
+sequences, and assigning reads to features using assignment rules}\label{fig:3f7}
 \end{figure}
 \hypertarget{reads-annotation-and-assignment}{%
 \subsubsection{Reads annotation and assignment}\label{reads-annotation-and-assignment}}
 
 After alignment, the aligned file (BAM file) is overlapped with the
-features annotation (\texttt{featuresGR}) using the \texttt{overlapWithTx2()} function. It
-is possible that a read overlaps with multiple features. Next, the
-overlaps are parsed with the \texttt{assignReads()} function with the assignment
-rules, \texttt{defaultAssignRules()}, for validating the overlap and finding
-assignment of multi mapping reads. Please refer to the schematic in
-Figure \ref{fig:3f7}.
+features annotation (\texttt{featuresGR}) using the \texttt{overlapWithTx2()}
+function. It is possible that a read overlaps with multiple features.
+Next, the overlaps are parsed with the \texttt{assignReads()} function with the
+assignment rules, \texttt{defaultAssignRules()}, for validating the overlap and
+finding assignment of multi mapping reads. Please refer to the schematic
+in Figure \ref{fig:3f7}.
 
 \hypertarget{assignment-rules}{%
 \subsubsection{Assignment rules}\label{assignment-rules}}
 
 A sequence read can be mapped to multiple locations in the genome. It is
 critical to ensure that the reads are properly mapped to the feature and
-that they are assigned to one or more features. In the \texttt{shortRNA} package,
-we defined a set of customizable rules for this purpose. The output of
-the function \texttt{defaultAssignRules()} is described below:
+that they are assigned to one or more features. In the \texttt{shortRNA}
+package, we defined a set of customizable rules for this purpose. The
+output of the function \texttt{defaultAssignRules()} is described below:
 
 We consider reads with at least 50\% overlap to the features to be valid
 read assignments.
@@ -5030,18 +5074,22 @@ miRNAs by changing the number from 1 to 2 or higher.
 
 We organized the features and reads in the form of a rooted phylogenetic
 tree in a hierarchical fashion. This is done by the function
-\texttt{assignReadsToTree()} in \texttt{shortRNA}, Figure \ref{fig:3f12}. From the root, we have two
-main branches: \texttt{shortRNA} and long RNA, Figure \ref{fig:3f8}C. We keep the features
-that are longer than 200 bp in long RNA and the features that are
-shorter than 200 bp in short RNA. Each branch is then further divided
-into RNA types. The miRNAs and tRNAs are further divided into
-sub-branches to account for the multi-mapping problems, Figure \ref{fig:3f9} and
-Figure \ref{fig:3f10}. Sequence quality and a follow up trimming, may result in one
-nucleotide shorter sequence. Because of the hierarchical organization,
-unique reads mapping to a feature are kept in the hierarchy, Figure \ref{fig:3f8}.
-If the user would like to include an additional database for short RNAs,
-an additional branch can be added to the tree while preparing
-annotation, \texttt{prepareAnnotation()}.
+\texttt{assignReadsToTree()} in \texttt{shortRNA}, Figure \ref{fig:3f12}. From the
+root, we have two main branches: \texttt{shortRNA} and long RNA, Figure
+\ref{fig:3f8}C. We keep the features that are longer than 200 bp in long
+RNA and the features that are shorter than 200 bp in short RNA. Each
+branch is then further divided into RNA types. The miRNAs and tRNAs are
+further divided into sub-branches to account for the multi-mapping
+problems, Figure \ref{fig:3f9} and Figure \ref{fig:3f10}. Sequence
+quality and a follow up trimming, may result in one nucleotide shorter
+sequence. Because of the hierarchical organization, unique reads mapping
+to a feature are kept in the hierarchy, Figure \ref{fig:3f8}. If the
+user would like to include an additional database for short RNAs, an
+additional branch can be added to the tree while preparing annotation,
+\texttt{prepareAnnotation()}.
+
+
+
 
 
 \begin{figure}[htbp]
@@ -5050,8 +5098,12 @@ annotation, \texttt{prepareAnnotation()}.
 
 }
 
-\caption[General framework of feature tree and assignment of sequences to the tree]{General framework of feature tree and assignment of sequences to the tree. \textbf{A:} Example of two sequences. \textbf{B:} Alignment of both the sequences to miRNA. \textbf{C:} General outline of the feature tree and assignment of both the sequences to the tree}\label{fig:3f8}
+\caption[General framework of feature tree and assignment of sequences to the tree]{General framework of feature tree and assignment of sequences
+to the tree. \textbf{A:} Example of two sequences. \textbf{B:} Alignment of both
+the sequences to miRNA. \textbf{C:} General outline of the feature tree and
+assignment of both the sequences to the tree}\label{fig:3f8}
 \end{figure}
+
 
 \begin{figure}[htbp]
 
@@ -5059,7 +5111,8 @@ annotation, \texttt{prepareAnnotation()}.
 
 }
 
-\caption{Hierarchical organization of \textbf{A:} tRNA features and \textbf{B:} mitochondrial tRNA features.}\label{fig:3f9}
+\caption{Hierarchical organization of \textbf{A:} tRNA features and \textbf{B:}
+mitochondrial tRNA features.}\label{fig:3f9}
 \end{figure}
 
 \begin{figure}[htbp]
@@ -5078,10 +5131,14 @@ the case, typical workflows will either randomly align to one location
 or not report any alignment. We allow for multi-mapping during
 alignment, and address ambiguities when we assign reads to features.
 Specifically, we assign it to the parent of all the features to which
-the read maps. Figure \ref{fig:3f11}A depicts a read that can be mapped to multiple
-tRNAs, Figure \ref{fig:3f11}B. While assigning reads to the features tree, we assign
-this read as an ambiguous read to the parent of all the features it is
-mapping to; in this case, tRNA-Leu-CAG, Figure \ref{fig:3f11}C.
+the read maps. Figure \ref{fig:3f11}A depicts a read that can be mapped
+to multiple tRNAs, Figure \ref{fig:3f11}B. While assigning reads to the
+features tree, we assign this read as an ambiguous read to the parent of
+all the features it is mapping to; in this case, tRNA-Leu-CAG, Figure
+\ref{fig:3f11}C.
+
+
+
 
 
 \begin{figure}[htbp]
@@ -5090,15 +5147,20 @@ mapping to; in this case, tRNA-Leu-CAG, Figure \ref{fig:3f11}C.
 
 }
 
-\caption[Multiple assignments of a sequence mapping to a tRNA]{Multiple assignments of a sequence mapping to a tRNA. \textbf{A:} Exemplary sequence. \textbf{B:} Multiple sequence alignment plot of the sequence and the features to which it is mapping. \textbf{C:} Assignment of the reads to the tRNA feature tree}\label{fig:3f11}
+\caption[Multiple assignments of a sequence mapping to a tRNA]{Multiple assignments of a sequence mapping to a tRNA. \textbf{A:}
+Exemplary sequence. \textbf{B:} Multiple sequence alignment plot of the
+sequence and the features to which it is mapping. \textbf{C:} Assignment of
+the reads to the tRNA feature tree}\label{fig:3f11}
 \end{figure}
 \hypertarget{construction-of-treesummarizedexperiment-object}{%
 \subsubsection{\texorpdfstring{Construction of \texttt{TreeSummarizedExperiment} object}{Construction of TreeSummarizedExperiment object}}\label{construction-of-treesummarizedexperiment-object}}
 
 The feature tree and the assigned reads \texttt{DataFrame} is then used for the
-construction of the \texttt{TreeSummarizedExperiment} object, which is then used
-for all the downstream analysis, including differential analysis. This
-is depicted in Figure \ref{fig:3f12}.
+construction of the \texttt{TreeSummarizedExperiment} object, which is then
+used for all the downstream analysis, including differential analysis.
+This is depicted in Figure \ref{fig:3f12}.
+
+
 
 
 \begin{figure}[htbp]
@@ -5107,7 +5169,9 @@ is depicted in Figure \ref{fig:3f12}.
 
 }
 
-\caption{Schematic of assigning reads to the features tree of features, creation of \texttt{TreeSummarizedExperiment} object, and downstream analysis and plotting}\label{fig:3f12}
+\caption{Schematic of assigning reads to the features tree of
+features, creation of \texttt{TreeSummarizedExperiment} object, and downstream
+analysis and plotting}\label{fig:3f12}
 \end{figure}
 \hypertarget{differential-analysis}{%
 \subsubsection{Differential analysis}\label{differential-analysis}}
@@ -5120,18 +5184,19 @@ hypotheses implemented in \texttt{treeclimbR} (\protect\hyperlink{ref-huang2021}
 analysis of features.
 
 Following normalization and differential analysis, users can use the
-\texttt{TreeHeatmap}, \texttt{ggtree}, and \texttt{castor} \texttt{R} packages for exploratory data analysis
-and figure creation. The \texttt{shortRNA} \texttt{makeTracks()} function can be used to
-create genomic tracks, as shown in Figures \ref{fig:3f15}, \ref{fig:3f18a}, and \ref{fig:3f18b}. We intend to
-expand ou\texttt{R} package by writing wrappers for these packages in order to
-generate plots from within \texttt{shortRNA}.
+\texttt{TreeHeatmap}, \texttt{ggtree}, and \texttt{castor} \texttt{R} packages for exploratory data
+analysis and figure creation. The \texttt{shortRNA} \texttt{makeTracks()} function can
+be used to create genomic tracks, as shown in Figures \ref{fig:3f15},
+\ref{fig:3f18a}, and \ref{fig:3f18b}. We intend to expand ou\texttt{R} package
+by writing wrappers for these packages in order to generate plots from
+within \texttt{shortRNA}.
 
 \hypertarget{table-of-important-functions}{%
 \subsubsection{Table of important functions}\label{table-of-important-functions}}
 
-Table \ref{tab:sht1} shows some of the most important functions of the \texttt{shortRNA}
-package. In the table, the functions are organized in the chronological
-order of data analysis.
+Table \ref{tab:sht1} shows some of the most important functions of the
+\texttt{shortRNA} package. In the table, the functions are organized in the
+chronological order of data analysis.
 \begin{table}[H]
 
 \caption{\label{tab:sht1}Important functions from shortRNA}
@@ -5164,13 +5229,15 @@ addReadsToTree & Assign reads to the FactorList of features as per output of ass
 \subsection{Datasets used for testing the pipeline}\label{datasets-used-for-testing-the-pipeline}}
 
 We used a previously published sperm sRNA-seq dataset from (\protect\hyperlink{ref-gapp2021}{Katharina Gapp et al., 2021})
-(GEO accession: \href{https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE162112}{GSE162112}), in which we additionally spiked simulated
-reads. We also used an unpublished PBMC human dataset from the Schratt
-Lab (\url{https://schrattlab.ethz.ch/}) at the ETH Zurich, on which qPCR
-were additionally performed for 5 miRNAs (miR-30b-5p, miR-30e-5p,
-miR-30d-5p, miR-499-5p, and miR-1248). We used these human data to
-correlate quantifications from \texttt{shortRNA}, \texttt{seqpac}, \texttt{Sports1}, and \texttt{Oasis2}
-with delta Ct values from qPCR. We analyzed both of these datasets with
+(GEO accession:
+\href{https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE162112}{GSE162112}),
+in which we additionally spiked simulated reads. We also used an
+unpublished PBMC human dataset from the Schratt Lab
+(\url{https://schrattlab.ethz.ch/}) at the ETH Zurich, on which qPCR were
+additionally performed for 5 miRNAs (miR-30b-5p, miR-30e-5p, miR-30d-5p,
+miR-499-5p, and miR-1248). We used these human data to correlate
+quantifications from \texttt{shortRNA}, \texttt{seqpac}, \texttt{Sports1}, and \texttt{Oasis2} with
+delta Ct values from qPCR. We analyzed both of these datasets with
 \texttt{shortRNA}, \texttt{seqpac}, \texttt{Sports1}, and \texttt{Oasis2} tools to compare the
 quantification of miRNAs. Further, we used the simulated reads from
 miRNAs to test the reads assignment and to assess differential analysis.
@@ -5188,16 +5255,18 @@ from the mouse, we also used piRNA precursors.
 We used \texttt{Sports1}, \texttt{seqpac}, \texttt{Oasis2}, and \texttt{shortRNA} with the default
 parameters to analyze the sperm dataset. Following the data analysis, we
 limited our assessment to miRNAs for comparison across tools. We found
-1970 miRNAs using \texttt{Oasis2}, 1137 using \texttt{Sports1}, 1024 using \texttt{seqpac}, and 503
-using \texttt{shortRNA}. We began by examining the quantification with all four
-tools. Figure \ref{fig:3f13} shows a comparison of the quantification of miRNAs from
-\texttt{Sports1}, \texttt{Oasis2}, and \texttt{seqpac} with \texttt{shortRNA}. We discovered that the
-quantifications of \texttt{shortRNA} and \texttt{Oasis2}, as well as \texttt{shortRNA} and \texttt{Sports1},
-are highly correlated. In contrast, the correlation of quantification
-between \texttt{shortRNA} and \texttt{seqpac} was negative. We investigated this
-discrepancy and discovered a large number of short reads (length: less
-than 15 nucleotides) mapping to miRNAs and assigned by \texttt{seqpac}, but which
-were considered invalid overlaps in light of our assignment rules.
+1970 miRNAs using \texttt{Oasis2}, 1137 using \texttt{Sports1}, 1024 using \texttt{seqpac},
+and 503 using \texttt{shortRNA}. We began by examining the quantification with
+all four tools. Figure \ref{fig:3f13} shows a comparison of the
+quantification of miRNAs from \texttt{Sports1}, \texttt{Oasis2}, and \texttt{seqpac} with
+\texttt{shortRNA}. We discovered that the quantifications of \texttt{shortRNA} and
+\texttt{Oasis2}, as well as \texttt{shortRNA} and \texttt{Sports1}, are highly correlated. In
+contrast, the correlation of quantification between \texttt{shortRNA} and
+\texttt{seqpac} was negative. We investigated this discrepancy and discovered a
+large number of short reads (length: less than 15 nucleotides) mapping
+to miRNAs and assigned by \texttt{seqpac}, but which were considered invalid
+overlaps in light of our assignment rules.
+
 
 
 \begin{figure}[htbp]
@@ -5206,7 +5275,8 @@ were considered invalid overlaps in light of our assignment rules.
 
 }
 
-\caption{Comparison of Log2 TMM normalized quantification of miRNAs from \texttt{shortRNA} with \texttt{Oasis2}, \texttt{Sports1}, and \texttt{seqpac}}\label{fig:3f13}
+\caption{Comparison of Log2 TMM normalized quantification of miRNAs
+from \texttt{shortRNA} with \texttt{Oasis2}, \texttt{Sports1}, and \texttt{seqpac}}\label{fig:3f13}
 \end{figure}
 \hypertarget{shortrna-accurately-identify-mirnas}{%
 \subsubsection{\texorpdfstring{\texttt{shortRNA} accurately identify miRNAs}{shortRNA accurately identify miRNAs}}\label{shortrna-accurately-identify-mirnas}}
@@ -5214,22 +5284,24 @@ were considered invalid overlaps in light of our assignment rules.
 Following that, we examined the overlaps of identified miRNAs between
 four tools. Despite the fact that all of the tools use miRBase, we
 discovered that only 44 miRNAs were commonly detected by all of the
-tools, Figure \ref{fig:3f14}. One possible explanation is that the miRBase for
-mouse genome contains approximately 2000 mature miRNAs and approximately
-1300 miRNA precursors, and \texttt{seqpac} and \texttt{Sports1} only use miRNA precursors
-in the data analysis pipeline, whereas \texttt{Oasis2} and \texttt{shortRNA} use both
-mature and miRNA precursors. Figure \ref{fig:3f14} shows that there were 231 miRNAs
-that were commonly detected by \texttt{Oasis2}, \texttt{Sports1}, and \texttt{seqpac}, but not by
-\texttt{shortRNA}. Next, we looked into these miRNAs and discovered that three
-were removed from the most recent version of miRBase; for the other 228,
-we did not find alignment in the genome using \texttt{shortRNA}, despite
-accepting mismatches and soft-clipping. Based on our findings, we
-believe that these miRNAs are the result of misalignment or sequential
-alignment by the other three tools. When we examined the sequences
-mapping to these miRNAs according to \texttt{seqpac}, we discovered that all of
-the reads mapping to these miRNAs were shorter than 15 bp, and as a
-result, are very unlikely to represent functional miRNAs. In conclusion,
-we discovered that \texttt{shortRNA} can accurately identify miRNAs.
+tools, Figure \ref{fig:3f14}. One possible explanation is that the
+miRBase for mouse genome contains approximately 2000 mature miRNAs and
+approximately 1300 miRNA precursors, and \texttt{seqpac} and \texttt{Sports1} only use
+miRNA precursors in the data analysis pipeline, whereas \texttt{Oasis2} and
+\texttt{shortRNA} use both mature and miRNA precursors. Figure \ref{fig:3f14}
+shows that there were 231 miRNAs that were commonly detected by
+\texttt{Oasis2}, \texttt{Sports1}, and \texttt{seqpac}, but not by \texttt{shortRNA}. Next, we
+looked into these miRNAs and discovered that three were removed from the
+most recent version of miRBase; for the other 228, we did not find
+alignment in the genome using \texttt{shortRNA}, despite accepting mismatches
+and soft-clipping. Based on our findings, we believe that these miRNAs
+are the result of misalignment or sequential alignment by the other
+three tools. When we examined the sequences mapping to these miRNAs
+according to \texttt{seqpac}, we discovered that all of the reads mapping to
+these miRNAs were shorter than 15 bp, and as a result, are very unlikely
+to represent functional miRNAs. In conclusion, we discovered that
+\texttt{shortRNA} can accurately identify miRNAs.
+
 
 
 \begin{figure}[htbp]
@@ -5238,20 +5310,22 @@ we discovered that \texttt{shortRNA} can accurately identify miRNAs.
 
 }
 
-\caption{Upset plot of overlaps of detected features between four methods: \texttt{shortRNA}, \texttt{Oasis2}, \texttt{Sports1}, and \texttt{seqpac}}\label{fig:3f14}
+\caption{Upset plot of overlaps of detected features between four
+methods: \texttt{shortRNA}, \texttt{Oasis2}, \texttt{Sports1}, and \texttt{seqpac}}\label{fig:3f14}
 \end{figure}
 \hypertarget{data-simulation-to-check-the-alignment-and-reads-assignment-by-shortrna}{%
 \subsection{\texorpdfstring{Data simulation to check the alignment and reads assignment by \texttt{shortRNA}}{Data simulation to check the alignment and reads assignment by shortRNA}}\label{data-simulation-to-check-the-alignment-and-reads-assignment-by-shortrna}}
 
 We validated the alignment and reads assignment by spiking the reads in
-the sperm dataset (\protect\hyperlink{ac}{Appendix C}). In brief, we simulated reads for a miRNA
-cluster containing mmu-miR-125a-5p, mmu-miR-99b-5p, mmu-let-7e-5p,
-mmu-let-7e-3p, mmu-miR-99b-3p, and mmu-miR-125a-3p, as well as reads
-from a miRNA precursor, mmu-miR-144. To test for differential analysis,
-the sequences from these miRNAs were spiked while also creating
-differences between groups. Three invalid sequences were also simulated
-for the precursor to test the accuracy of read assignment and were
-properly aligned to miRNA precursors, as shown in Figure \ref{fig:3f15}.
+the sperm dataset (\protect\hyperlink{ac}{Appendix C}). In brief, we simulated reads for
+a miRNA cluster containing mmu-miR-125a-5p, mmu-miR-99b-5p,
+mmu-let-7e-5p, mmu-let-7e-3p, mmu-miR-99b-3p, and mmu-miR-125a-3p, as
+well as reads from a miRNA precursor, mmu-miR-144. To test for
+differential analysis, the sequences from these miRNAs were spiked while
+also creating differences between groups. Three invalid sequences were
+also simulated for the precursor to test the accuracy of read assignment
+and were properly aligned to miRNA precursors, as shown in Figure
+\ref{fig:3f15}.
 
 
 \begin{figure}[htbp]
@@ -5262,7 +5336,8 @@ properly aligned to miRNA precursors, as shown in Figure \ref{fig:3f15}.
 
 \caption{Genomic plots of simulated reads from miRNA precursor.}\label{fig:3f15}
 \end{figure}
-Further, the reads were assigned accurately to miRNAs, Table \ref{tab:sht2}.
+Further, the reads were assigned accurately to miRNAs, Table
+\ref{tab:sht2}.
 \begin{table}[H]
 
 \caption{\label{tab:sht2}Assignment of simulated reads by shortRNA}
@@ -5291,18 +5366,21 @@ TCCCTGAGACCCTTTAACCTGTGA & 24 & miR-125a-5p & miRNA & 24 & TRUE & TRUE\\
 \hypertarget{differential-expression-analysis}{%
 \subsection{Differential expression analysis}\label{differential-expression-analysis}}
 
-We performed differential analysis using the \texttt{treeClimbR} package. Through
-differential analysis, candidate proposal, multiple testing correction,
-and candidate evaluation, \texttt{treeclimbR} integrates the observations with a
-tree that reflects the hierarchical relationship between entities and
-finds an appropriate resolution on the tree to interpret the
-association. During simulations, we spiked the mature miRNAs miR-99b-5p
-and miR-99b-3p to be different. After differential analysis, because
-both miR-99b-5p and miR-99b-3p were simulated to be different, we found
-that miR-99b was called to be differentially expressed, Figure \ref{fig:3f16}.
-Looking at the cluster, miRNAcluster\_17:17830188-17830879, the full
-cluster would have been differentially expressed if one read mapping to
-miR-125a-5p, in grey, would also have been significantly different.
+We performed differential analysis using the \texttt{treeClimbR} package.
+Through differential analysis, candidate proposal, multiple testing
+correction, and candidate evaluation, \texttt{treeclimbR} integrates the
+observations with a tree that reflects the hierarchical relationship
+between entities and finds an appropriate resolution on the tree to
+interpret the association. During simulations, we spiked the mature
+miRNAs miR-99b-5p and miR-99b-3p to be different. After differential
+analysis, because both miR-99b-5p and miR-99b-3p were simulated to be
+different, we found that miR-99b was called to be differentially
+expressed, Figure \ref{fig:3f16}. Looking at the cluster,
+miRNAcluster\_17:17830188-17830879, the full cluster would have been
+differentially expressed if one read mapping to miR-125a-5p, in grey,
+would also have been significantly different.
+
+
 
 
 \begin{figure}[htbp]
@@ -5311,31 +5389,38 @@ miR-125a-5p, in grey, would also have been significantly different.
 
 }
 
-\caption{Hierarchical representation of features and assigned reads to them. Differential expression analysis of features from two miRNA clusters. Simulated read nodes are highlighted in orange colour}\label{fig:3f16}
+\caption{Hierarchical representation of features and assigned reads
+to them. Differential expression analysis of features from two miRNA
+clusters. Simulated read nodes are highlighted in orange colour}\label{fig:3f16}
 \end{figure}
 \hypertarget{validation-using-human-data-and-quantitative-real-time-pcr}{%
 \subsection{Validation using human data and quantitative real-time PCR}\label{validation-using-human-data-and-quantitative-real-time-pcr}}
 
-To validate the \texttt{Oasis2}, \texttt{Sports1}, \texttt{seqpac}, and \texttt{shortRNA} quantifications,
-we used an unpublished PBMC human dataset and corresponding quantitative
-real-time PCR (qPCR) quantifications. The PBMC dataset was analyzed
-using the default parameters from \texttt{Oasis2}, \texttt{Sports1}, \texttt{seqpac}, and \texttt{shortRNA}.
-Then, we correlated the qPCR quantification of five miRNAs with the
-quantification using all four tools, Figure \ref{fig:3f17}. Because \texttt{Sports1} and
-\texttt{seqpac} only report miRNA quantification at the level of precursors, the
-precursor of mature miRNAs quantification was used for the correlation
-of these tools with the qPCR. When we looked at the overall correlation
-of miRNAs with qPCR quantifications, we discovered that except \texttt{seqpac}, all tools have a good correlation, Figure \ref{fig:3f17}A. Overall, we found a low correlation of
-quantifications between four tools and qPCR. We found that \texttt{Oasis2}
-quantification was negatively correlated with qPCR Ct values for miRNAs
-miR-30d-5p and miR-30e-5p, as shown in Figure \ref{fig:3f18}B. The quantification of
-miRNAs using short RNAs was found to be positively correlated with the
-quantification of miRNAs using qPCR. In addition, we performed a visual
-inspection of the reads mapping to these miRNAs by creating genomic
-tracks, as shown in Figures \ref{fig:3f18a} and \ref{fig:3f18b}. As a result, while \texttt{shortRNA}
+To validate the \texttt{Oasis2}, \texttt{Sports1}, \texttt{seqpac}, and \texttt{shortRNA}
+quantifications, we used an unpublished PBMC human dataset and
+corresponding quantitative real-time PCR (qPCR) quantifications. The
+PBMC dataset was analyzed using the default parameters from \texttt{Oasis2},
+\texttt{Sports1}, \texttt{seqpac}, and \texttt{shortRNA}. Then, we correlated the qPCR
+quantification of five miRNAs with the quantification using all four
+tools, Figure \ref{fig:3f17}. Because \texttt{Sports1} and \texttt{seqpac} only report
+miRNA quantification at the level of precursors, the precursor of mature
+miRNAs quantification was used for the correlation of these tools with
+the qPCR. When we looked at the overall correlation of miRNAs with qPCR
+quantifications, we discovered that except \texttt{seqpac}, all tools have a
+good correlation, Figure \ref{fig:3f17}A. Overall, we found a low
+correlation of quantifications between four tools and qPCR. We found
+that \texttt{Oasis2} quantification was negatively correlated with qPCR Ct
+values for miRNAs miR-30d-5p and miR-30e-5p, as shown in Figure
+\ref{fig:3f18}B. The quantification of miRNAs using short RNAs was found
+to be positively correlated with the quantification of miRNAs using
+qPCR. In addition, we performed a visual inspection of the reads mapping
+to these miRNAs by creating genomic tracks, as shown in Figures
+\ref{fig:3f18a} and \ref{fig:3f18b}. As a result, while \texttt{shortRNA}
 quantifications were visually observed to correctly count reads, they
 were not substantially correlated with qPCR, but were generally better
 correlated with qPCR quantifications than the other methods.
+
+
 
 
 \begin{figure}[htbp]
@@ -5344,7 +5429,9 @@ correlated with qPCR quantifications than the other methods.
 
 }
 
-\caption[Comparison of quantifications of five miRNAs from four different tools with -Delta Ct values from qPCR]{Comparison of quantifications of five miRNAs from four different tools with -Delta Ct values from qPCR. \textbf{A:} Overall correlation. \textbf{B:} Correlation at indivisual miRNA}\label{fig:3f17}
+\caption[Comparison of quantifications of five miRNAs from four different tools with -Delta Ct values from qPCR]{Comparison of quantifications of five miRNAs from four
+different tools with -Delta Ct values from qPCR. \textbf{A:} Overall
+correlation. \textbf{B:} Correlation at indivisual miRNA}\label{fig:3f17}
 \end{figure}
 \begin{subfigures}
 
@@ -5370,7 +5457,9 @@ correlated with qPCR quantifications than the other methods.
 \subsection{Qualitative comparison with other tools}\label{qualitative-comparison-with-other-tools}}
 
 There are several tools published for analyzing the sRNA-seq data. In
-Table: \href{figures/shortRNA/in/t3.xlsx}{Qualitative comparison}, we made a qualitative comparison of 20 other tools. Table is too big to be displayed here.
+Table: \href{figures/shortRNA/in/t3.xlsx}{Qualitative comparison}, we made a
+qualitative comparison of 20 other tools. Table is too big to be
+displayed here.
 
 \hypertarget{discussion-outlook}{%
 \section{Discussion \& Outlook}\label{discussion-outlook}}
@@ -5386,34 +5475,36 @@ large extent, different tools provide varying quantification. This is
 startling, and it highlights the need for further research and better
 tools in the field.
 
-We present \texttt{shortRNA}, an \texttt{R} package, a novel tool, for analyzing sRNA-seq
-data, which can reduce the likelihood of false discoveries from the
-sRNA-seq data. \texttt{shortRNA} is available from github.com/mansuylab/\texttt{shortRNA}
-and is planned to be submitted to the Bioconductor. The \texttt{shortRNA} \texttt{R}
-package is developed around the existing frameworks of Bioconductor:
-\texttt{phylo}, \texttt{FactorList}, \texttt{DataFrame}, and \texttt{TreeSummarizedExperiment}. Hence, it is
-expected to be able to interact seamlessly with many other tools, such
-as \texttt{ggtree}, \texttt{castor}, and \texttt{TreeHeatmap}. \texttt{shortRNA} performs preprocessing,
-alignment, and downstream analysis of the sRNA-seq data. Moreover,
-\texttt{shortRNA} is able to deal with the sequencing data with UMIs using \texttt{UMIc}.
-Further, if an adapter sequence is unknown, it is possible to detect the
-adapter sequence using \texttt{shortRNA}.
+We present \texttt{shortRNA}, an \texttt{R} package, a novel tool, for analyzing
+sRNA-seq data, which can reduce the likelihood of false discoveries from
+the sRNA-seq data. \texttt{shortRNA} is available from
+github.com/mansuylab/\texttt{shortRNA} and is planned to be submitted to the
+Bioconductor. The \texttt{shortRNA} \texttt{R} package is developed around the
+existing frameworks of Bioconductor: \texttt{phylo}, \texttt{FactorList}, \texttt{DataFrame},
+and \texttt{TreeSummarizedExperiment}. Hence, it is expected to be able to
+interact seamlessly with many other tools, such as \texttt{ggtree}, \texttt{castor},
+and \texttt{TreeHeatmap}. \texttt{shortRNA} performs preprocessing, alignment, and
+downstream analysis of the sRNA-seq data. Moreover, \texttt{shortRNA} is able
+to deal with the sequencing data with UMIs using \texttt{UMIc}. Further, if an
+adapter sequence is unknown, it is possible to detect the adapter
+sequence using \texttt{shortRNA}.
 
 We tested the package on various human and mouse datasets and
 demonstrated it using the mouse sperm dataset, simulated mouse sperm
 dataset, and human dataset from PBMCs. We compared the quantifications
-of miRNAs from \texttt{shortRNA} to those of three other tools: \texttt{Sports1}, \texttt{Oasis2},
-and \texttt{seqpac} and found them to be well correlated with \texttt{Sports1} and \texttt{Oasis2}.
-We demonstrated \texttt{shortRNA}'s ability to assign reads to features in a
-meaningful way by customisable assignment rules. \texttt{shortRNA} uses a
-considerable proportion of reads, multi-mapping reads, that are either
-discarded by other methods or aligned randomly. We demonstrated that
-\texttt{shortRNA} correctly annotates reads to features using simulated reads
-from the sperm dataset. In addition, we demonstrated that \texttt{shortRNA}
-correctly identifies differentially expressed reads. Finally, using the
-human PBMC data and corresponding qPCR quantifications from five mature
-miRNAs, we demonstrated that \texttt{shortRNA} quantification is better
-correlated with qPCR data than the other three tools.
+of miRNAs from \texttt{shortRNA} to those of three other tools: \texttt{Sports1},
+\texttt{Oasis2}, and \texttt{seqpac} and found them to be well correlated with
+\texttt{Sports1} and \texttt{Oasis2}. We demonstrated \texttt{shortRNA}'s ability to assign
+reads to features in a meaningful way by customisable assignment rules.
+\texttt{shortRNA} uses a considerable proportion of reads, multi-mapping reads,
+that are either discarded by other methods or aligned randomly. We
+demonstrated that \texttt{shortRNA} correctly annotates reads to features using
+simulated reads from the sperm dataset. In addition, we demonstrated
+that \texttt{shortRNA} correctly identifies differentially expressed reads.
+Finally, using the human PBMC data and corresponding qPCR
+quantifications from five mature miRNAs, we demonstrated that \texttt{shortRNA}
+quantification is better correlated with qPCR data than the other three
+tools.
 
 In general, however, we observed a very low correlation of all methods
 against qPCR in terms of the relative miRNA expression across samples.
@@ -5433,28 +5524,29 @@ amplification biases(\protect\hyperlink{ref-fu2018}{Y. Fu et al., 2018}). The la
 have resulted in technical duplication, and hence affecting the
 correlation with the qPCR data.
 
-Most tools for the sRNA-seq data analysis, including \texttt{Sports1} and \texttt{Oasis2},
-use feature-based counting, whereas \texttt{seqpac} uses sequence-based counting
-for sRNA-seq data analysis. The benefit of sequence-based counting is
-that it preserves sequence integrity and allows users to BLAST
-(\protect\hyperlink{ref-altschul1990}{Altschul, Gish, Miller, Myers, \& Lipman, 1990}) candidate sequences to confirm classification and obtain
-additional information. In addition, sequence-based counting allows for
-the examination of sequence-specific variations or their boundaries.
-Further, when using sequence-based counting, users can choose to remove
-sequences that have low evidence and do not replicate across samples in
-their data. \texttt{shortRNA}, on the other hand, has the advantage of both
-sequence-based and feature-based counting due to the hierarchical
-organization of features and mapping sequences. Because of the short
-lengths of the reads and their proclivity to originate from higher-copy
-number regions of the genome, multi-mapping reads are much more common
-in sRNA-seq data. Commonly used sRNA-seq alignment methods for
-multi-mapping reads are either very low precision (choosing an alignment
-at random and make it difficult to determine their true origins) or
-sensibility (ignoring multi-mapping reads, which result in losing a high
-proportion of reads). \texttt{shortRNA} allows these reads to be aligned multiple
-times and then assign them, using a set of customisable rules, either to
-a specific feature or to a position in the feature tree which makes it
-usable while preserving knowledge of eventual ambiguities.
+Most tools for the sRNA-seq data analysis, including \texttt{Sports1} and
+\texttt{Oasis2}, use feature-based counting, whereas \texttt{seqpac} uses
+sequence-based counting for sRNA-seq data analysis. The benefit of
+sequence-based counting is that it preserves sequence integrity and
+allows users to BLAST (\protect\hyperlink{ref-altschul1990}{Altschul, Gish, Miller, Myers, \& Lipman, 1990}) candidate sequences to confirm
+classification and obtain additional information. In addition,
+sequence-based counting allows for the examination of sequence-specific
+variations or their boundaries. Further, when using sequence-based
+counting, users can choose to remove sequences that have low evidence
+and do not replicate across samples in their data. \texttt{shortRNA}, on the
+other hand, has the advantage of both sequence-based and feature-based
+counting due to the hierarchical organization of features and mapping
+sequences. Because of the short lengths of the reads and their
+proclivity to originate from higher-copy number regions of the genome,
+multi-mapping reads are much more common in sRNA-seq data. Commonly used
+sRNA-seq alignment methods for multi-mapping reads are either very low
+precision (choosing an alignment at random and make it difficult to
+determine their true origins) or sensibility (ignoring multi-mapping
+reads, which result in losing a high proportion of reads). \texttt{shortRNA}
+allows these reads to be aligned multiple times and then assign them,
+using a set of customisable rules, either to a specific feature or to a
+position in the feature tree which makes it usable while preserving
+knowledge of eventual ambiguities.
 
 \texttt{shortRNA} makes use of miRBase, GtRNADb, MttRNADb, SILVA and Ensembl
 databases, but it is possible to manually add databases and extend the
@@ -5479,26 +5571,27 @@ so at a later date. In addition, we also intend to extensively benchmark
 Simulations for other types of RNA are necessary to benchmark the read
 assignment. We have only simulated reads from miRNAs and miRNA
 precursors and demonstrated the proper assignment of reads using
-\texttt{shortRNA}. Simulations of reads mapping to tRNAs, reads mapping to piRNAs
-and reads mapping to rRNAs will be performed to better assess the reads
-assignment.
+\texttt{shortRNA}. Simulations of reads mapping to tRNAs, reads mapping to
+piRNAs and reads mapping to rRNAs will be performed to better assess the
+reads assignment.
 
 The ambiguous assignment of multi-mapping reads to the parent of all
 mappable features is not always biologically meaningful. If a read is
-assigned to multiple tRNAs, Figure \ref{fig:3f11}, it is still meaningful to assign
-it to the parent of all mapping tRNAs. In contrast, if a read maps to
-both a tRNA and a protein-coding gene, assigning it to the parent of
-both protein coding and tRNA provides less biological insight. Hence, we
-plan to compare \texttt{shortRNA} to other read assignment strategies for
-multi-mapping reads in depth. Other strategies for assigning
-multi-mapping reads exist (\protect\hyperlink{ref-handzlik2020}{Handzlik, Tastsoglou, Vlachos, \& Hatzigeorgiou, 2020}; \protect\hyperlink{ref-johnson2016}{Johnson, Yeoh, Coruh, \& Axtell, 2016}), and a benchmark
-with simulations would be required to assess the \texttt{shortRNA} assignment of
-multi-mapping reads. Instead of assigning reads to the parent of all
-mappable features, this would aid in the proper assignment and provide
-more biological insight for the reads mapping to multiple biotypes.
+assigned to multiple tRNAs, Figure \ref{fig:3f11}, it is still
+meaningful to assign it to the parent of all mapping tRNAs. In contrast,
+if a read maps to both a tRNA and a protein-coding gene, assigning it to
+the parent of both protein coding and tRNA provides less biological
+insight. Hence, we plan to compare \texttt{shortRNA} to other read assignment
+strategies for multi-mapping reads in depth. Other strategies for
+assigning multi-mapping reads exist (\protect\hyperlink{ref-handzlik2020}{Handzlik, Tastsoglou, Vlachos, \& Hatzigeorgiou, 2020}; \protect\hyperlink{ref-johnson2016}{Johnson, Yeoh, Coruh, \& Axtell, 2016}), and a
+benchmark with simulations would be required to assess the \texttt{shortRNA}
+assignment of multi-mapping reads. Instead of assigning reads to the
+parent of all mappable features, this would aid in the proper assignment
+and provide more biological insight for the reads mapping to multiple
+biotypes.
 
-The current implementation of \texttt{UMIc} for dealing with sRNA-seq data based
-on UMIs is extremely slow. There are several for-loops for running
+The current implementation of \texttt{UMIc} for dealing with sRNA-seq data
+based on UMIs is extremely slow. There are several for-loops for running
 analysis, as well as a non-parallel implementation of the code by the
 authors of \texttt{UMIc}. We intend to optimize the code for speed by
 parallelizing it and replacing for-loops with parallel apply functions.
@@ -5506,24 +5599,25 @@ parallelizing it and replacing for-loops with parallel apply functions.
 \texttt{shortRNA} has limited user-friendly plotting capabilities. Users can
 currently use data visualization packages developed for
 \texttt{TreeSummarizedExperiment}, such as \texttt{TreeHeatmap}, directly. However, we
-intend to create wrappers for othe\texttt{R} packages in order to facilitate the
-visualization of data and results. Also, we will be creating a Shiny app
-for exploratory analysis of the data and results.
+intend to create wrappers for othe\texttt{R} packages in order to facilitate
+the visualization of data and results. Also, we will be creating a Shiny
+app for exploratory analysis of the data and results.
 
-IsomiRs analysis could be implemented in \texttt{shortRNA}. IsomiRs are miRNAs
-that vary slightly in sequence, which result from variations in the
-cleavage site during miRNA biogenesis (5'-trimming and 3'-trimming
-variants), nucleotide additions to the 3'-end of the mature miRNA
-(3'-addition variants) and nucleotide modifications (substitution
-variants). While in principle our hierarchical and sequence-based
-approach is ideal for their investigation, tailored functions would make
-this more straightforward for the users. We plan to extend ou\texttt{R} package
-to include isoMiRs analysis by adapting functionalities of the \texttt{isomiR} \texttt{R}
+IsomiRs analysis could be implemented in \texttt{shortRNA}. ``IsomiRs are miRNAs
+with minor sequence differences caused by changes in the cleavage site
+during miRNA biogenesis (5'-trimming and 3'-trimming variants),
+nucleotide additions to the mature miRNA's 3'-end (3'-addition
+variants), and nucleotide alterations (substitution variants)''
+(\protect\hyperlink{ref-lorenapantanoautcregeorgiaescaramisautchristosargyropoulosaut2017}{Lorena Pantano {[}Aut, Cre{]}, Georgia Escaramis {[}Aut{]}, ChristosArgyropoulos {[}Aut{]}, 2017}).
+While in principle our hierarchical and sequence-based approach is ideal
+for their investigation, tailored functions would make this more
+straightforward for the users. We plan to extend ou\texttt{R} package to
+include isoMiRs analysis by adapting functionalities of the \texttt{isomiR} \texttt{R}
 package
 (\protect\hyperlink{ref-lorenapantanoautcregeorgiaescaramisautchristosargyropoulosaut2017}{Lorena Pantano {[}Aut, Cre{]}, Georgia Escaramis {[}Aut{]}, ChristosArgyropoulos {[}Aut{]}, 2017}).
 
-\texttt{shortRNA} is developed to work with single-end sRNA-seq data. We plan to
-extend our package to work with paired-end sRNA-seq data.
+\texttt{shortRNA} is developed to work with single-end sRNA-seq data. We plan
+to extend our package to work with paired-end sRNA-seq data.
 
 \hypertarget{conclusion}{%
 \section{Conclusion}\label{conclusion}}
@@ -5534,7 +5628,8 @@ the quality, performs QC, aligns the data to custom made genome,
 performs reads annotation and assignment with adaptable assignment
 rules, organizes reads and features as a phylogenetic tree, performs
 differential analysis, and provides interactive plots for exploratory
-data analysis. \texttt{shortRNA} currently works with single-end sequencing data.
+data analysis. \texttt{shortRNA} currently works with single-end sequencing
+data.
 
 \hypertarget{data-and-code-availibility}{%
 \section{Data and code availibility}\label{data-and-code-availibility}}
