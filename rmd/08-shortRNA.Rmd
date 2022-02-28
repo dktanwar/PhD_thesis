@@ -913,7 +913,7 @@ good correlation, Figure \ref{fig:3f17}A. Overall, we found a low
 correlation of quantifications between four tools and qPCR. We found
 that `Oasis2` quantification was negatively correlated with qPCR Ct
 values for miRNAs miR-30d-5p and miR-30e-5p, as shown in Figure
-\ref{fig:3f18}B. The quantification of miRNAs using short RNAs was found
+\ref{fig:3f17}B. The quantification of miRNAs using short RNAs was found
 to be positively correlated with the quantification of miRNAs using
 qPCR. In addition, we performed a visual inspection of the reads mapping
 to these miRNAs by creating genomic tracks, as shown in Figures

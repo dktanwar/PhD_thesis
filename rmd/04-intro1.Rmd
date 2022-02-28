@@ -9,13 +9,13 @@ What came to be known as "Waddington's landscape" describes how genes
 interact with the environment to produce, from the same genotype, the
 variety of cellular phenotypes of a multicellular organism
 [@waddington_1942]. While epigenetics has been given various meanings
-throughout history (Figure \ref{fig:if1}, taken from [@pisco2016], it
-can be broadly understood as the study of how our genes, which we
-inherit from our forefathers and mothers, are controlled and interact
-with the environment: how our genes form who we are. Epigenetics is the
-study of how additional factors communicate with genes to guide the
-processes that make our cells and bodies function. "Epi" means "on top
-of" or "in addition to."
+throughout history, reviewed in [@pisco2016], it can be broadly
+understood as the study of how our genes, which we inherit from our
+forefathers and mothers, are controlled and interact with the
+environment: how our genes form who we are. Epigenetics is the study of
+how additional factors communicate with genes to guide the processes
+that make our cells and bodies function. "Epi" means "on top of" or "in
+addition to."
 
 Epigenetic mechanisms regulate the transcriptional programs in response
 to developmental and environmental cues and encompass a variety of
@@ -31,17 +31,216 @@ generations, known as transgenerational epigenetic inheritance, section
 [Transgenerational epigenetic inheritance](#tei), and contribute to
 changes in susceptibility to health and disease.
 
-(ref:inc1) \textbf{A brief background of the term "epigenetics".} The
-timeline is representedon the X-axis, while the normalized proportion of
-articles containing the generickeywords 'cell' and 'function' is
-represented on the y-axis. The red curve shows theamount of "Medline"
-entries per year that contain the wildcarded search word 'epigen\*'.
-This figure is taken from [@pisco2016].
+## Epigenetic vectors and mechanisms {.unnumbered}
 
-```{r if1, echo=FALSE, fig.align='center', fig.cap="(ref:inc1)", fig.scap="A brief background of the term 'epigenetics'", fig.width=6.42, fig.height=4.45}
-img <- readPNG("figure/intro/1.png")
-grid.raster(img)
-```
+Epigenetic marks, such as DNAme, histone modifications, and non-coding
+RNAs, have been proposed as information-carrying vectors passed down
+through generations. These three candidates have been investigated in a
+variety of epigenetic inheritance paradigms. It is hypothesized that
+stable changes in epigenetic marks caused by an environmental insult
+(epimutations) may affect gene expression or chromatin stability,
+increasing the risk of a phenotype or disease in offspring [@miska2016].
+DNAme, histone modifications, RNA, and ncRNAs are all interconnected and
+interdependent within individual cells. They are likely to act in a
+coordinated and collaborative manner to cause disease phenotypes in the
+context of epigenetic inheritance.
+
+### DNA methylation {.unnumbered}
+
+The most common type of DNAme in mammals is cytosine residue
+methylation. Cytosine residues are methylated on the 5' carbon and are
+referred to as 5-methylcytosines (5mC). Methylation of a cytosine
+residue is a binary process -- either methylation or non-methylation. In
+mammals, DNA methylation is typically found in the context of CpG
+dinucleotides [@bird2002]. Cytosine methylation can be copied from one
+DNA strand to the next in this manner during replication and meiosis.
+DNAme patterns, on the other hand, are dynamic. The patterns of DNAme
+vary over time and space, changing during development and differing
+between cell types [@luo2018]. DNA methyltransferase (DNMT) enzymes
+methylate cytosine residues. DNMT1 is a methyltransferase that reads
+hemimethylated DNA after cell division and adds methylation to the newly
+synthesized strand [@chen2011]. The de novo methyltransferases DNMT3a
+and 3b can add methylation to previously unmethylated residues
+[@smith2013]. Although DNAme in gene control regions is generally
+associated with gene repression, its precise role in gene regulation is
+likely locus dependent [@deaton2011]. Methylated DNA is a true
+epigenetic mark because there are "readers" that preferentially
+recognize 5mC and can interpret the methylation mark's meaning
+[@zhu2016a]. Many properties of DNAme make it an appealing mechanistic
+candidate for epigenetic inheritance, including the following: it can be
+environmentally modulated; machinery exists to replicate methylation
+patterns onto newly synthesised DNA, making it mitotically heritable;
+and methylated loci resistant to epigenetic reprogramming have been
+identified in the zygote and germline. Disruption of the DNAme machinery
+may also play a role in the initiation of epigenetic inheritance.
+
+### Histone modifications {.unnumbered}
+
+In somatic cells, DNA is wrapped around an octameric core of histone
+proteins (H2A, H2B, H3, and H4) to form a nucleosome [@marmorstein2009].
+Histones' N-terminal tails and globular domains undergo
+post-translational modifications (PTMs). Histone modifications are
+dynamic during development, vary across tissues, are regulated by
+specific enzymes, play a significant role in gene expression, and
+interact with other epigenetic control systems such as DNAme
+[@barth2010]. On the histone tails, there are over 60 different amino
+acid residues where modifications have been detected [@iwasaki2013].
+Histones can undergo various modifications, including acetylation,
+methylation, phosphorylation, ubiquitination and sumoylation among
+others [@kouzarides2007]. Histone methyltransferase (HMT) enzymes
+methylate histones on Lysine (K) and Arginine (R) amino acids. Histone
+lysine residues can be mono-, di-, or tri-methylated, and these
+modifications can function as either active or repressive marks.
+Methylation of H3K4, H3K36, and H3K79 is associated with transcriptional
+activation, whereas methylation of H3K9, H3K27, and H4K20 is associated
+with transcriptional repression [@vakoc2006; @sims2006]. These
+modifications can influence chromatin packaging and nucleosome
+positioning. Histone modifications, like DNAme, are spatially and
+temporally dynamic. Certain histone modifications, such as
+trimethylation of lysine 27 on histone 3 (H3K27me3), are generally
+associated with gene repression, whereas acetylation of the same residue
+(H3K27ac) is generally associated with gene activation [@lawrence2016].
+Histone modifications regulate gene expression by recruiting protein
+complexes and controlling the accessibility of DNA to the transcription
+machinery [@lawrence2016]. Histone modifications are a plausible
+mechanistic candidate in epigenetic inheritance because they can be
+modulated by the environment. During epigenetic reprogramming, some
+histone modifications in the germline and zygote are retained. Histones
+are spread onto newly assembled chromatin by sophisticated machinery
+[@marmorstein2009]. However, it is still unclear how histone codes are
+maintained during mitosis and meiosis [@erkek2013]. Furthermore, during
+spermatogenesis, most histones are removed and replaced with protamines
+[@casas2014]. Sperm contains protamine modifications that are similar to
+histone modifications [@brunner2014], despite this, their functional
+significance remains unknown, particularly during epigenetic
+inheritance. Disruption of the machinery that regulates histone
+modification could also be a key initiator of epigenetic inheritance
+[@siklenka2015]. H3K9 and H3K27 methylation appear to be the most likely
+to be epigenetic among the various histone lysine methylation states,
+not only because they are key regulators of classic epigenetic phenomena
+[@huang2013]. According to one model of epigenetic inheritance, marked
+parental histones inherited via DNA replication recruit histone
+modifiers to deposit similar marks on new adjacent nucleosomes,
+reestablishing the previous local landscape of histone modification
+[@saxton2019]. These findings suggest that histone modifications can aid
+in epigenetic inheritance, though such a mechanism is normally obscured
+by H3K9 demethylation activity [@saxton2019].
+
+### RNA {.unnumbered}
+
+One haploid copy of the genome exists in the sperm nucleus, which is
+transcriptionally silent and not replicated due to the packaging of
+sperm chromatins during spermiogenesis [@ren2017]. ncRNAs are found to
+be abundant in the sperm. ncRNAs are broadly classified into two types:
+1) long-ncRNA, greater than 200 nucleotides in length (lncRNAs)
+[@li2012] and 2) small-ncRNA, less than 200 nucleotides (sncRNA)
+[@bouckenheimer2018]. Small regulatory RNAs (siRNAs, miRNAs, tRNAs, and
+piRNAs) are non-coding RNAs that are expressed in the majority of
+eukaryotic cells. These short RNAs are bound by the Argonaute (AGO) or
+PIWI proteins and operate as specificity factors (guide RNAs) in the
+transcription and translation of other homologous RNAs. Most eukaryotes
+have short RNAs in their nucleus, which govern genome stability,
+heterochromatin formation, and transcription. The sources of sperm RNAs
+are unknown. Some RNAs are probably expressed endogenously within germ
+cells, but considering that short RNAs have been demonstrated to impact
+gene expression outside of their tissue of origin, sperm RNA could come
+from elsewhere. Because RNAs are easily degraded, they are transported
+with protein chaperones and, more likely, enclosed in extracellular
+vesicles. For example, in epididymosomes, which are extracellular
+vesicles that are released from the epididymal epithelium contain
+proteins, ncRNAs and a distinct set of lipids that are transferred to
+spermatozoa while they pass through the different epididymal regions
+[@sullivan2016]. Aside from epididymosomes, RNAs have been found in
+exosomes and high-density lipoproteins (HDLs) in the bloodstream, as
+well as vesicles secreted by prostate cells (protostomes) and Sertoli
+cells, which come into direct contact with developing sperm. These
+interactions have not been studied in the context of transgenerational
+inheritance. ncRNAs are uniquely suited to transmit information across
+generations. A variety of ncRNA species can be found in both sperm and
+oocytes [@rando2016; @veselovska2015]. There is evidence that sperm can
+acquire ncRNAs from surrounding somatic tissues [@robles2019]. Thus,
+RNAs can circumvent and penetrate the theoretically impenetrable wall
+between somatic cells and the germline (the so-called Weismann barrier).
+This has significant implications for our understanding of epigenetic
+inheritance as a result of adult-life environmental insults. However, it
+is currently unknown how epigenetic messages transmitted by RNA are
+maintained across multiple cell divisions, let alone multiple
+generations. Using the MSUS mouse model, microinjection investigations
+revealed that sperm RNA plays a role in the transgenerational response
+to early traumatic stress and that sperm RNA injections can replicate
+behavioural and metabolic features in other mice [@gapp2014]. These
+findings imply that RNA plays a significant role in non-genetic
+inheritance. It is unclear how these transient RNA molecules can mediate
+epigenetic inheritance across cell divisions and generations on their
+own. Nonetheless, a growing body of evidence suggests that RNA may aid
+in the stable propagation of paternal effects from the soma to the
+germline, where they will be inherited by the next generation
+[@vansteenwyk2020; @andersson2014; @gapp2020; @conine2021].
+
+### Extracellular vesicles {.unnumbered}
+
+Sperm can either transmit epigenetic information to the next generation
+directly through epigenetic marks, or they can uptake information from
+cellular vesicles and pass it on to the next generation. All cells can
+secrete various types of membrane vesicles known as extracellular
+vesicles (EVs). EVs vary greatly in size (30 nm to several micrometres
+in diameter), chemical composition, secretion mechanism and carrying
+molecules, all of the properties that lead to their different functions.
+EVs mediate cell-to-cell communication by activating receptors on the
+surface of acceptor cells [@bonsergent2021] and play roles in a variety
+of physiological and pathological processes, including blood
+coagulation, inflammation, stem cell expansion, neuronal communication,
+and tumorigenesis [@locicero2015]. There are two major EV biogenesis
+pathways. The first biogenesis pathway buds EVs directly from the plasma
+membrane, resulting in what is known as microvesicles. The second
+biogenesis pathway involves intraluminal vesicle release caused by
+multivesicular endosome fusion with the plasma membrane, resulting in
+the formation of exosomes [@bissig2013]. Exosomes and microvesicles
+contain cargoes such as nucleic acids, proteins and lipids, RNAs
+(extracellular RNAs, exRNAs) and DNA [@obrien2020]. The majority of
+known ncRNA biotypes, including small nuclear RNAs, small nucleolar RNAs
+(snoRNAs), rRNAs, lncRNAs, piRNAs, tRNAs, mitochondrial RNAs, Y RNAs,
+and vault RNAs (vtRNAs), have been discovered in EVs in more
+comprehensive studies [@obrien2020; @abels2016]. ExRNA extraction,
+purification, and sequencing methods are much more susceptible to
+contamination and artefacts than cellular RNA preparations, due to the
+low amount of RNA available from EVs. As a result, analyzing exRNA
+samples can be difficult, and a specific tool for EV ncRNA data analysis
+has been developed [@rozowsky2019]. A number of studies have shown the
+role of extracellular vesicles in epigenetic inheritance. In a mouse
+model of stress, a recent study discovered a causative function for the
+somatic-to-germline transmission of environmental information, which can
+alter fetal development through changes in EV cargo [@cheng2020] . Also,
+we found that extracellular vesicles are vectors of communication with
+the germline that play a role in epigenetic inheritance
+[@alshanbayeva2021], [Chapter 2](#chapter2).
+
+### Transcription factors {.unnumbered}
+
+Transcription factors (TFs) may also act as epigenetic information
+carriers. TFs are proteins that play a role in the process of
+transcribing DNA to RNA. TFs are found on the genomes of mature gametes,
+and there is evidence that TF binding can influence DNAme at the binding
+sites [@smith2013; @jones2001]. CpG sites bound by TFs during germ cell
+re-methylation are protected from methylation throughout development
+[@kremsky2020]. During PGC and preimplantation development, DNAme can
+only occur at CpGs that are resistant to demethylation. This is due to
+the fact that TF binding during the re-methylation phase maintains the
+methylation status between generations [@kremsky2020]. This suggests
+that transcription factors can act as carriers of epigenetic information
+during germ cell and pre-implantation development by maintaining CpG
+methylation status, and serve as the foundation for a mechanistic
+description of the transgenerational transmission of such information in
+mammals [@kremsky2020]. Mammalian gametes contain complex patterns of 3D
+interactions that can also be transmitted to the zygote after
+fertilization [@jung2019]. TFs may remain bound to chromatin after
+fertilization and influence gene expression in the developing embryo.
+According to a recent publication, BPA, either directly or indirectly,
+induces the binding of TFs at different regions of the genome in F1
+generation sperm, altering the 3D organization of chromatin in mature F1
+generation sperm, many of which are conserved in subsequent generations
+[@jung2020]. Thus, TFs are a plausible candidate for transmitting
+epigenetic information.
 
 ## Germline epigenetics {.unnumbered}
 
@@ -61,6 +260,15 @@ purpose throughout adulthood. SSCs are the male adult stem cells of the
 seminiferous epithelium in the testis that are capable of transferring a
 species' genome from generation to generation while also possessing the
 ability to differentiate into pluripotent stem cells [@kubota2018].
+
+
+(ref:ifc2) \textbf{A diagram depicting the biology of germline stem cell differentiation and transitions.}
+This figure is adapted from [@hammoud2015]
+
+```{r if2, echo=FALSE, fig.align='center', fig.cap="(ref:ifc2)", fig.scap="A diagram depicting the biology of germline stem celldifferentiation and transitions", fig.width=6.42, fig.height=4.45}
+img <- readPNG("figure/intro/2.png")
+grid.raster(img)
+```
 
 At 5.5 days post-coitum, mice's primordial germ cells (PGCs), the
 precursors of prospermatogonia, arise. SSCs are formed by
@@ -96,16 +304,6 @@ spermatogonial stem cells is so complex during proliferation and
 differentiation, drastic changes in the environment may not go
 unnoticed.
 
-(ref:ifc2) \textbf{A diagram depicting the biology of germline stem celldifferentiation and transitions.}
-This figure is adapted from [@hammoud2015]
-
-
-```{r if2, echo=FALSE, fig.align='center', fig.cap="(ref:ifc2)", fig.scap="A diagram depicting the biology of germline stem celldifferentiation and transitions", fig.width=6.42, fig.height=4.45}
-img <- readPNG("figure/intro/2.png")
-grid.raster(img)
-```
-
-
 It is difficult to distinguish SSCs from progenitor spermatogonia that
 don't have stem cell activity and are committed to differentiation.
 Specific cell surface markers like Thy1 and TSPAN8 can be used to enrich
@@ -114,21 +312,24 @@ express a high amount of GFP signal, and combinations of reporter gene
 and cell surface marker signal can be used to further enrich the
 population [@mutoji2016; @chan2014].
 
+###  {.unnumbered}
+
 ### Reprogramming {.unnumbered}
 
 Throughout mammalian development, reprogramming involves the erasure and
-modification of epigenetic markers such as DNAme [@reik2001]. During the
-evolution of multicellular organisms, many cells and tissues acquire
-distinct gene expression patterns [@morgan2005]. In normal developmental
-or pathological settings, some cells undergo significant epigenetic
-reprogramming, which entails the removal of epigenetic marks in the
-nucleus and the installation of a new set of marks [@morgan2005].
-Genome-wide epigenetic reprogramming happens when the developmental
-potential of cells changes [@morgan2005]. During reprogramming, histone
-modifications are reorganized and passive DNA demethylation occurs
-[@morgan2005]. This is thought to be required for totipotency, correct
-embryonic gene expression initiation, and early development in the
-embryo [@morgan2005].
+modification of epigenetic markers such as DNAme [@reik2001] and histone
+modifications [@xu2018]. During the evolution of multicellular
+organisms, many cells and tissues acquire distinct gene expression
+patterns [@morgan2005]. In normal developmental or pathological
+settings, some cells undergo significant epigenetic reprogramming, which
+entails the removal of epigenetic marks in the nucleus and the
+installation of a new set of marks [@morgan2005]. Genome-wide epigenetic
+reprogramming happens when the developmental potential of cells changes
+[@morgan2005]. During reprogramming, histone modifications are
+reorganized and passive DNA demethylation occurs [@morgan2005]. This is
+thought to be required for totipotency, correct embryonic gene
+expression initiation, and early development in the embryo
+[@morgan2005].
 
 The germ cell lineage is unique in carrying genetic and epigenetic
 information from one generation to the next. In the germline, epigenetic
@@ -136,45 +337,43 @@ reprogramming resets genomic potential and erases epigenetic memory.
 Epigenetic reprogramming involves genome-wide demethylation of 5mC,
 which is important for genome imprinting, X inactivation, transposon
 silencing, centromeric/telomeric structural stability, and gene
-expression [@surani2007]. After a sperm fertilizes an ovum, nearly all
-epigenetic marks are reprogrammed in two short intervals early in
-development. Reprogramming reinstates the capability of the zygote to
-mature into all the various cell types and tissues by removing
-epimutations, which might have taken place in the germ cells
-[@reik2001]. During embryo development, there are two waves of
-epigenetic reprogramming, Figure \ref{fig:if3}. After fertilization in
-the preimplantation embryo (i.e., the blastocyst), the first phase
-begins; preimplantation refers to the time between the embryo implanting
-and forming a placenta. The embryo in mice undergoes genome-wide
-demethylation after fertilization, which is finished by E5 [@reik2001;
-@smallwood2012]. The father's genome is demethylated swiftly and
-aggressively, whereas the mother's genome is slowly demethylated
-[@reik2001]. On day E5, embryonic DNA begins to be re-methylated, and
-remethylation is completed before birth. The second phase of epigenetic
-reprogramming takes place in developing embryonic germ cells that will
-eventually produce gametes with sex-specific epigenetic markers
-[@reik2001]. The PGCs, which are progenitors of both male and female
-germ cells in the developing embryo, contain the parental genome's
-methylation signatures [@reik2001]. PGCs are epiblast cells that first
-form in the posterior primitive streak at E7.5, then travel to the
-genital ridge starting at E8.5 and arriving by E11.5 [@morgan2005]. PGCs
-undergo rapid demethylation beginning around E7--8, which is completed
-by E15--16. In PGCs, parental imprints are erased and totipotency is
-restored, followed by the restoration of sex-specific methylation
-[@morgan2005]. Reprogramming is complete in the male germline at birth,
-but not in the female germline until adolescence.
-
-(ref:ifc3) \textbf{Changes in DNA methylation during developmental
-epigenetic reprogramming.} The developmental timeline is represented on
-the x-axis, while DNA methylation level is represented on the y-axis.
-The methylation in the male embryo is represented by the blue line,
-whereas the methylation in the female embryo is represented by the red
-line. This figure is taken from [@smallwood2012].
-
-```{r if3, echo=FALSE, fig.align='center', fig.cap="(ref:ifc3)", fig.scap="Changes in DNA methylation during developmental epigenetic reprogramming", fig.width=6.42, fig.height=4.45}
-img <- readPNG("figure/intro/3.png")
-grid.raster(img)
-```
+expression [@surani2007]. In addition to DNA demethylation, the
+reprogramming process in PGCs is linked to the loss of a variety of
+histone modifications [@hajkova2008]. The disappearance of restrictive
+histone marks, such as H3K9me3, H3K27me3, and H2A/H4R3me2s, as well as
+marks associated with active chromatin (H3K9ac), has been observed, and
+while some of the changes are transient, others are irreversible
+[@hajkova2011]. After a sperm fertilizes an ovum, nearly all epigenetic
+marks are reprogrammed in two short intervals early in development.
+Reprogramming reinstates the capability of the zygote to mature into all
+the various cell types and tissues by removing epimutations, which might
+have taken place in the germ cells [@reik2001]. During embryo
+development, there are two waves of epigenetic reprogramming, reviewed
+in [@smallwood2012]. After fertilization in the preimplantation embryo
+(i.e., the blastocyst), the first phase begins; preimplantation refers
+to the time between the embryo implanting and forming a placenta. The
+embryo in mice undergoes genome-wide demethylation after fertilization,
+which is finished by E5 [@reik2001; @smallwood2012]. The father's genome
+is demethylated swiftly and aggressively, whereas the mother's genome is
+slowly demethylated [@reik2001]. On day E5, embryonic DNA begins to be
+re-methylated, and remethylation is completed before birth. The second
+phase of epigenetic reprogramming takes place in developing embryonic
+germ cells that will eventually produce gametes with sex-specific
+epigenetic markers [@reik2001]. The PGCs, which are progenitors of both
+male and female germ cells in the developing embryo, contain the
+parental genome's methylation signatures [@reik2001]. PGCs are epiblast
+cells that first form in the posterior primitive streak at E7.5, then
+travel to the genital ridge starting at E8.5 and arriving by E11.5
+[@morgan2005]. PGCs undergo rapid demethylation beginning around E7--8,
+which is completed by E15--16. In PGCs, parental imprints are erased and
+totipotency is restored, followed by the restoration of sex-specific
+methylation [@morgan2005]. In PGCs, histone marks are also significantly
+remodelled [@seki2005]. When epigenetic reprogramming in PGCs is
+completed at E11.5, the epigenome achieves its most 'naive' state---the
+PGCs lack most DNA methylation, lack genomic imprinting, have extremely
+low levels of H3K9me2, and transiently also have very low levels of
+H3K27me3 [@hajkova2011]. Reprogramming is complete in the male germline
+at birth, but not in the female germline until adolescence.
 
 Embryonic development involves epigenetic reprogramming to replenish
 totipotency from a germline state in each generation. To begin with,
@@ -188,11 +387,18 @@ passed down to nascent PGCs from their predecessors [@hajkova2011].
 Another goal of epigenetic reprogramming could be to counteract the
 effects of cumulative epigenetic alterations caused by both genetic and
 epigenetic factors [@hajkova2011]. Epigenetic information can, on
-exceptional cases, be passed down through the germline (or after
-fertilization), which is most likely due to insufficient germline
-erasure [@hajkova2011]. Finally, demethylation in the germline may have
-the added benefit of reducing the frequency of mutations caused by
-5-methylcytosine (5mC) deamination.
+exceptional cases, including histone modifications, be passed down
+through the germline (or after fertilization), which is most likely due
+to insufficient germline erasure [@hajkova2011]. Finally, demethylation
+in the germline may have the added benefit of reducing the frequency of
+mutations caused by 5-methylcytosine (5mC) deamination.
+
+High-throughput sequencing (HTS) technologies have revealed novel
+reprogramming principles for histone modifications, chromatin
+accessibility, and 3D chromatin architecture, revied in [@xu2018].
+However, to properly understand the molecular mechanisms underpinning
+epigenome reprogramming, future studies will need to fully integrate
+multilayer information [@xu2018].
 
 ## Epigenetic Inheritance {.unnumbered}
 
@@ -266,16 +472,19 @@ relevant epigenetic information in germ cells, which is primarily
 accomplished through DNA demethylation. Epigenetic reprogramming
 prevents the transmission of epigenetic information from mature gametes,
 which is in line with the germ-plasm theory of Weissman [@weismann1893].
-Although epigenetic modifications can occur at any moment in life, they
-are thought to be more likely to occur during the early stages of
-development, notably during germ cell or embryo epigenetic
-reprogramming, when the genome is susceptible [@wang2017]. The extent of
-epigenetic reprogramming, however, is unknown, leaving the question of
-how much epigenetic information from adult gametes is preserved in the
-embryo unanswered. In mammals, DNAme and histone marks are efficiently
-reset during reprogramming both in the germline and in the zygote,
-shortly after conception, leaving epigenetic modifications with a low
-chance of being passed down [@sharma2015; @wei2014a].
+However, there are now a wide array research suggesting that one's life
+experiences can alter a fraction of one's heritable epigenetic payload,
+reviewed in [@conine2021]. Although epigenetic modifications can occur
+at any moment in life, they are thought to be more likely to occur
+during the early stages of development, notably during germ cell or
+embryo epigenetic reprogramming, when the genome is susceptible
+[@wang2017]. The extent of epigenetic reprogramming, however, is
+unknown, leaving the question of how much epigenetic information from
+adult gametes is preserved in the embryo unanswered. In mammals, DNAme
+and histone marks are efficiently reset during reprogramming both in the
+germline and in the zygote, shortly after conception, leaving epigenetic
+modifications with a low chance of being passed down [@sharma2015;
+@wei2014a].
 
 Mammalian epigenetic inheritance is still a much-debated topic. Those
 who are suspicious of epigenetic inheritance have long asserted that the
@@ -296,10 +505,10 @@ agouti coat, was utilized to show that genetic differences were unlikely
 to account for the two Avy littermates' coat phenotypes [@oey2015]. When
 [@kazachenka2018] looked for murine metastable epialleles, they found 87
 candidates, however, experimental validation revealed that not all
-metastable epialleles were involved in TEI. Only one of the six
-experimentally validated candidates showed parental methylation pattern
-inheritance, raising the question of how ubiquitous this phenomenon is
-[@kazachenka2018].
+metastable epialleles were involved in transgenerational epigenetic
+inheritance. Only one of the six experimentally validated candidates
+showed parental methylation pattern inheritance, raising the question of
+how ubiquitous this phenomenon is [@kazachenka2018].
 
 In mammals, genomic imprinting provides the greatest evidence for
 epigenetic inheritance [@otterdijk2016]. One of the two parentally
@@ -352,7 +561,7 @@ been extensively studied for transgenerational epigenetic inheritance
 [@casas2020]. The great-grandchildren of starving young worms have been
 shown to live longer [@rechavi2014]. Also, exposure to the chemical
 Bisphenol A (found in plastics) is found to be associated with
-transnational phenotypes [@camacho2018]. Furthermore, rearing
+translational phenotypes [@camacho2018]. Furthermore, rearing
 temperature is another factor that resulted in multi-copy transgene
 overexpression that can last up to 14 generations when animals are
 reared at 25°C for several generations and then returned to 20°C
@@ -447,8 +656,8 @@ model.} Until PND14, mouse pups (F1) are separated from their mother
 subjected to an additional unpredictable stressor during separation by
 being made to swim for 5 minutes in 18°C water or to be held in a tube
 for 20 minutes at any moment, unpredictably, during the 3 hours
-separation period (van Steenwyk, Roszkowski, Manuella, Franklin, &
-Mansuy, 2018). This figure is adapted from [@vansteenwyk2018].
+separation period [@franklin2010]. This figure is adapted from
+[@vansteenwyk2018].
 
 ```{r if4, echo=FALSE, fig.align='center', fig.cap="(ref:ifc4)", fig.scap="MSUS paradigm", fig.width=5.3, fig.height=3.3}
 img <- readPNG("figure/intro/4.png")
@@ -468,14 +677,6 @@ deficits, and metabolic alterations across several generations
 decreased bodyweight, insulin hypersensitivity and glucose intolerance
 are also observed [@franklin2010; @vansteenwyk2018].
 
-For studying the molecular mechanisms of epigenetic inheritance, a
-number of high-throughput sequencing (HTS) datasets have been collected
-and sequenced, Figure \ref{fig:if5}. In this thesis, the data generated
-from the MSUS model is used for studying the developmental changes in
-the spermatogonial cells (only control samples), [Chapter 1](#chapter1),
-and to investigate how early life stress alters epididymal extracellular
-vesicle miRNA cargo, [Chapter 2](#chapter2).
-
 (ref:ifc5) \textbf{Dataset collected from the MSUS model.} Colour scale
 of the heatmap represents the number of samples.
 
@@ -483,6 +684,15 @@ of the heatmap represents the number of samples.
 img <- readPNG("figure/intro/5.png")
 grid.raster(img)
 ```
+
+For studying the molecular mechanisms of epigenetic inheritance, a
+number of HTS datasets have been collected and sequenced, Figure
+\ref{fig:if5}. In this thesis, the data generated from the MSUS model is
+used for studying the developmental changes in the spermatogonial cells
+(only control samples), [Chapter 1](#chapter1), and to investigate how
+early life stress alters epididymal extracellular vesicle miRNA cargo,
+[Chapter 2](#chapter2).
+
 
 ## Vectors of epigenetic inheritance {.unnumbered}
 
@@ -516,7 +726,7 @@ the differentially methylated regions are preserved in the successive
 generation. In addition, fear conditioning via a father's odour
 [@dias2014], maternal endocrine disruptor exposure during pregnancy
 [@manikkam2013], and paternal low-dose streptozotocin [@wei2014] in
-rodent sperm had been investigated.\
+rodent sperm had been investigated.
 
 Given their importance for epigenetic inheritance in worms, the RNA
 cargo of sperm has also been investigated as a possible vector.
@@ -525,13 +735,14 @@ several non-coding RNAs, such as siRNAs, piRNAs, miRNAs, lncRNAs, and
 tsRNAs [@fitz-james2022]. tsRNAs are prevalent in the mammalian sperm
 [@peng2012], and various studies in mice have shown alteration of sperm
 RNAs, particularly miRNAs and tsRNAs, upon paternal exposure to insults
-or dietary change [@rodgers2015; @fullston2013]. Microinjection
-experiments using the MSUS mouse model showed that sperm RNA plays a
-role in the transgenerational response to early traumatic stress and
-that sperm RNA injections can mimic behavioural traits in other mice
-[@gapp2014]. Nevertheless, given the short lifetime of most RNAs, it is
-difficult to describe how ncRNA might mediate transgenerational
-epigenetic inheritance on its own.
+or dietary change [@rodgers2015; @fullston2013; @gapp2014; @chen2013;
+@sharma2016]. Microinjection experiments using the MSUS mouse model, in
+which the injections were done in the fertilized oocytes, showed that
+sperm RNA plays a role in the transgenerational response to early
+traumatic stress and that sperm RNA injections can mimic behavioural and
+metabolic traits in other mice [@gapp2014]. Nevertheless, given the
+short lifetime of most RNAs, it is difficult to describe how ncRNA might
+mediate transgenerational epigenetic inheritance on its own.
 
 Sperm chromatin is unique. During spermatogenesis, sperm chromatin
 undergoes substantial modifications, with the majority of histones being
@@ -563,222 +774,11 @@ have shown through immunofluorescence that post-translationally modified
 sperm histones are detectable in the early zygote [@vanderheijden2008],
 which may explain the structural importance of nucleosomes.
 
-\
+
 These studies suggest that DNA methylation, RNA, and chromatin are
 implicated in epigenetic inheritance via sperm.
 
-### Epigenetic information-carrying vectors {.unnumbered}
-
-Epigenetic marks, such as DNAme, histone modifications, and non-coding
-RNAs, have been proposed as information-carrying vectors passed down
-through generations. These three candidates have been investigated in a
-variety of epigenetic inheritance paradigms. It is hypothesized that
-stable changes in epigenetic marks caused by an environmental insult
-(epimutations) may affect gene expression or chromatin stability,
-increasing the risk of a phenotype or disease in offspring [@miska2016].
-DNAme, histone modifications, RNA, and ncRNAs are all interconnected and
-interdependent within individual cells. They are likely to act in a
-coordinated and collaborative manner to cause disease phenotypes in the
-context of epigenetic inheritance.
-
-#### DNA methylation {.unnumbered}
-
-The most common type of DNAme in mammals is cytosine residue
-methylation. Cytosine residues are methylated on the 5' carbon and are
-referred to as 5-methylcytosines (5mC). Methylation of a cytosine
-residue is a binary process -- either methylation or non-methylation. In
-mammals, DNA methylation is typically found in the context of CpG
-dinucleotides [@bird2002]. Cytosine methylation can be copied from one
-DNA strand to the next in this manner during replication and meiosis.
-DNAme patterns, on the other hand, are dynamic. The patterns of DNAme
-vary over time and space, changing during development and differing
-between cell types [@luo2018]. DNA methyltransferase (DNMT) enzymes
-methylate cytosine residues. DNMT1 is a methyltransferase that reads
-hemimethylated DNA after cell division and adds methylation to the newly
-synthesized strand [@chen2011]. The de novo methyltransferases DNMT3a
-and 3b can add methylation to previously unmethylated residues
-[@smith2013]. Although DNAme in gene control regions is generally
-associated with gene repression, its precise role in gene regulation is
-likely locus dependent [@deaton2011]. Methylated DNA is a true
-epigenetic mark because there are "readers" that preferentially
-recognize 5mC and can interpret the methylation mark's meaning
-[@zhu2016a]. Many properties of DNAme make it an appealing mechanistic
-candidate for epigenetic inheritance, including the following: it can be
-environmentally modulated; machinery exists to replicate methylation
-patterns onto newly synthesised DNA, making it mitotically heritable;
-and methylated loci resistant to epigenetic reprogramming have been
-identified in the zygote and germline. Disruption of the DNAme machinery
-may also play a role in the initiation of EI.
-
-#### Histone modifications {.unnumbered}
-
-In somatic cells, DNA is wrapped around an octameric core of histone
-proteins (H2A, H2B, H3, and H4) to form a nucleosome [@marmorstein2009].
-Histones' N-terminal tails and globular domains undergo
-post-translational modifications (PTMs). Histone modifications are
-dynamic during development, vary across tissues, are regulated by
-specific enzymes, play a significant role in gene expression, and
-interact with other epigenetic control systems such as DNAme
-[@barth2010]. On the histone tails, there are over 60 different amino
-acid residues where modifications have been detected [@iwasaki2013].
-Histones can undergo various modifications, including acetylation,
-methylation, phosphorylation, ubiquitination and sumoylation among
-others [@kouzarides2007]. Histone methyltransferase (HMT) enzymes
-methylate histones on Lysine (K) and Arginine (R) amino acids. Histone
-lysine residues can be mono-, di-, or tri-methylated, and these
-modifications can function as either active or repressive marks.
-Methylation of H3K4, H3K36, and H3K79 is associated with transcriptional
-activation, whereas methylation of H3K9, H3K27, and H4K20 is associated
-with transcriptional repression [@vakoc2006; @sims2006]. These
-modifications can influence chromatin packaging and nucleosome
-positioning. Histone modifications, like DNAme, are spatially and
-temporally dynamic. Certain histone modifications, such as
-trimethylation of lysine 27 on histone 3 (H3K27me3), are generally
-associated with gene repression, whereas acetylation of the same residue
-(H3K27ac) is generally associated with gene activation [@lawrence2016].
-Histone modifications regulate gene expression by recruiting protein
-complexes and controlling the accessibility of DNA to the transcription
-machinery [@lawrence2016]. Histone modifications are a plausible
-mechanistic candidate in epigenetic inheritance because they can be
-modulated by the environment. During epigenetic reprogramming, some
-histone modifications in the germline and zygote are retained. Histones
-are spread onto newly assembled chromatin by sophisticated machinery
-[@marmorstein2009]. However, it is still unclear how histone codes are
-maintained during mitosis and meiosis [@erkek2013]. Furthermore, during
-spermatogenesis, most histones are removed and replaced with protamines
-[@casas2014]. Sperm contains protamine modifications that are similar to
-histone modifications [@brunner2014], despite this, their functional
-significance remains unknown, particularly during epigenetic
-inheritance. Disruption of the machinery that regulates histone
-modification could also be a key initiator of epigenetic inheritance
-[@siklenka2015]. H3K9 and H3K27 methylation appear to be the most likely
-to be epigenetic among the various histone lysine methylation states,
-not only because they are key regulators of classic epigenetic phenomena
-[@huang2013]. According to one model of epigenetic inheritance, marked
-parental histones inherited via DNA replication recruit histone
-modifiers to deposit similar marks on new adjacent nucleosomes,
-reestablishing the previous local landscape of histone modification
-[@saxton2019]. These findings suggest that histone modifications can aid
-in epigenetic inheritance, though such a mechanism is normally obscured
-by H3K9 demethylation activity [@saxton2019].
-
-#### RNA {.unnumbered}
-
-One haploid copy of the genome exists in the sperm nucleus, which is
-transcriptionally silent and not replicated due to the packaging of
-sperm chromatins during spermiogenesis [@ren2017] . Also, the sources of
-sperm RNAs are unknown. Some RNAs are probably expressed endogenously
-within germ cells, but considering that short RNAs have been
-demonstrated to impact gene expression outside of their tissue of
-origin, sperm RNA could come from elsewhere. Because RNAs are easily
-degraded, they are most likely transported with protein chaperones and,
-more likely, enclosed in extracellular vesicles. For example, in
-epididymosomes, which are extracellular vesicles that are released from
-the epididymal epithelium contain proteins, ncRNAs and a distinct set of
-lipids that are transferred to spermatozoa while they pass through the
-different epididymal regions [@sullivan2016]. Aside from epididymosomes,
-RNAs have been found in exosomes and high-density lipoproteins (HDLs) in
-the bloodstream, as well as vesicles secreted by prostate cells
-(protostomes) and Sertoli cells, which come into direct contact with
-developing sperm. These interactions have not been studied in the
-context of transgenerational inheritance. Microinjections of RNA
-mixtures were used to recapitulate mutant phenotypes in functional tests
-of RNAs contribution to inheritance patterns. These findings imply that
-RNA plays a significant role in non-genetic inheritance. It is unclear
-how these transient RNA molecules can mediate epigenetic inheritance
-across cell divisions and generations on their own. Nonetheless, a
-growing body of evidence suggests that RNA may aid in the stable
-propagation of paternal effects from the soma to the germline, where
-they will be inherited by the next generation [@vansteenwyk2020;
-@andersson2014; @gapp2020].
-
-#### Non-coding RNA {.unnumbered}
-
-ncRNAs are broadly classified into two types: 1) long-ncRNA, greater
-than 200 nucleotides in length (lncRNAs) [@li2012] and 2) small-ncRNA,
-less than 200 nucleotides (sncRNA) [@bouckenheimer2018]. Small
-regulatory RNAs (siRNAs, miRNAs, tRNAs, and piRNAs) are non-coding RNAs
-that are expressed in the majority of eukaryotic cells. These short RNAs
-are bound by the Argonaute (AGO) or PIWI proteins and operate as
-specificity factors (guide RNAs) in the transcription and translation of
-other homologous RNAs. Most eukaryotes have short RNAs in their nucleus,
-which govern genome stability, heterochromatin formation, and
-transcription. ncRNAs are uniquely suited to transmit information across
-generations. A variety of ncRNA species can be found in both sperm and
-oocytes [@rando2016; @veselovska2015]. There is evidence that sperm can
-acquire ncRNAs from surrounding somatic tissues [@robles2019]. Thus,
-RNAs can circumvent and penetrate the theoretically impenetrable wall
-between somatic cells and the germline (the so-called Weismann barrier).
-This has significant implications for our understanding of epigenetic
-inheritance as a result of adult-life environmental insults. However, it
-is currently unknown how epigenetic messages transmitted by RNA are
-maintained across multiple cell divisions, let alone multiple
-generations.
-
-#### Transcription factors {.unnumbered}
-
-Transcription factors (TFs) may also act as epigenetic information
-carriers. TFs are proteins that play a role in the process of
-transcribing DNA to RNA. TFs are found on the genomes of mature gametes,
-and there is evidence that TF binding can influence DNAme at the binding
-sites [@smith2013; @jones2001]. CpG sites bound by TFs during germ cell
-re-methylation are protected from methylation throughout development
-[@kremsky2020]. During PGC and preimplantation development, DNAme can
-only occur at CpGs that are resistant to demethylation. This is due to
-the fact that TF binding during the re-methylation phase maintains the
-methylation status between generations [@kremsky2020]. This suggests
-that transcription factors can act as carriers of epigenetic information
-during germ cell and pre-implantation development by maintaining CpG
-methylation status, and serve as the foundation for a mechanistic
-description of the transgenerational transmission of such information in
-mammals [@kremsky2020]. Mammalian gametes contain complex patterns of 3D
-interactions that can also be transmitted to the zygote after
-fertilization [@jung2019]. TFs may remain bound to chromatin after
-fertilization and influence gene expression in the developing embryo.
-According to a recent publication, BPA, either directly or indirectly,
-induces the binding of TFs at different regions of the genome in F1
-generation sperm, altering the 3D organization of chromatin in mature F1
-generation sperm, many of which are conserved in subsequent generations
-[@jung2020]. Thus, TFs are a plausible candidate for transmitting
-epigenetic information.
-
-#### Extracellular vesicles {.unnumbered}
-
-Sperm can either transmit epigenetic information to the next generation
-directly through epigenetic marks, or they can uptake information from
-cellular vesicles and pass it on to the next generation. All cells can
-secrete various types of membrane vesicles known as extracellular
-vesicles (EVs). EVs vary greatly in size (30 nm to several micrometres
-in diameter), chemical composition, secretion mechanism and carrying
-molecules, all of the properties that lead to their different functions.
-EVs mediate cell-to-cell communication by activating receptors on the
-surface of acceptor cells [@bonsergent2021] and play roles in a variety
-of physiological and pathological processes, including blood
-coagulation, inflammation, stem cell expansion, neuronal communication,
-and tumorigenesis [@locicero2015]. There are two major EV biogenesis
-pathways. The first biogenesis pathway buds EVs directly from the plasma
-membrane, resulting in what is known as microvesicles. The second
-biogenesis pathway involves intraluminal vesicle release caused by
-multivesicular endosome fusion with the plasma membrane, resulting in
-the formation of exosomes [@bissig2013]. Exosomes and microvesicles
-contain cargoes such as nucleic acids, proteins and lipids, RNAs
-(extracellular RNAs, exRNAs) and DNA [@obrien2020]. The majority of
-known ncRNA biotypes, including small nuclear RNAs, small nucleolar RNAs
-(snoRNAs), rRNAs, lncRNAs, piRNAs, tRNAs, mitochondrial RNAs, Y RNAs,
-and vault RNAs (vtRNAs), have been discovered in EVs in more
-comprehensive studies [@obrien2020; @abels2016]. ExRNA extraction,
-purification, and sequencing methods are much more susceptible to
-contamination and artefacts than cellular RNA preparations, due to the
-low amount of RNA available from EVs. As a result, analyzing exRNA
-samples can be difficult, and a specific tool for EV ncRNA data analysis
-has been developed [@rozowsky2019]. A number of studies have shown the
-role of extracellular vesicles in epigenetic inheritance. In a mouse
-model of stress, a recent study discovered a causative function for the
-somatic-to-germline transmission of environmental information, which can
-alter fetal development through changes in EV cargo [@cheng2020] . Also,
-we found that extracellular vesicles are vectors of communication with
-the germline that play a role in epigenetic inheritance
-[@alshanbayeva2021], [Chapter 2](#chapter2).
+###  {.unnumbered}
 
 ## Challenges in data analysis {.unnumbered}
 
