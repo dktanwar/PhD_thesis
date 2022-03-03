@@ -3,11 +3,14 @@
 \begingroup\LARGE
 
 `shortRNA`: a flexible framework for the analysis of short RNA
-sequencing data\newline \begingroup\Large \normalsize
+sequencing data\newline \begingroup\Large \normalsize\newline\newline
+\begingroup\large
+**Contributions**\begingroup\large \normalsize\newline
+**Deepak Tanwar:** tool development, data analysis, writing, results interpretation\newline
+**Pierre-Luc Germain:** tool development, writing, results interpretation\newline
+**Isabelle Mansuy:** supervisor of Deepak Tanwar, raised funding\newline
+\begingroup\normalsize
 
-**Contributions:** *I worked towards the tool development, data
-analysis, results interpretation. This has been done together with
-Pierre-Luc Germain.*
 
 ## Abstract
 
@@ -1131,3 +1134,7 @@ reads is presented in [Appendix D](#ad).
 
 Data analysis steps for sRNA-seq data with `shortRNA` is available in
 [Appendix C](#ac).
+
+
+## Acknowledgements
+We thank Ruizhu Huang for help with implementation of `TreeSummarized-` `Experiment`. **Deepak Tanwar** was supported by Swiss Government Excellence Scholarship.
